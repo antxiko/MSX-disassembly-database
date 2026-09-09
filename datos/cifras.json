@@ -1,0 +1,1957 @@
+[
+ {
+  "repo": "3DGOLF_DISAM",
+  "listados": [],
+  "medido": null,
+  "declarado": null,
+  "nota": "no publica ningun .asm"
+ },
+ {
+  "repo": "ALEHOP_DISAM",
+  "listados": [
+   "src/alehop_game_cola.asm",
+   "src/alehop_game_datos.asm",
+   "src/alehop_game_extra.asm",
+   "src/alehop_game_nucleo.asm",
+   "src/alehop_game_sonido.asm",
+   "src/alehop_portada.asm",
+   "src/alehop_slots.asm",
+   "src/alehop_topo.asm"
+  ],
+  "medido": {
+   "instrucciones": 2838,
+   "comentarios": 929,
+   "densidad": 32.7,
+   "flojas": 0,
+   "bloques": 294
+  },
+  "por_listado": [
+   {
+    "instrucciones": 1329,
+    "comentarios": 393,
+    "flojas": 0,
+    "bloques": 111,
+    "asm": "src/alehop_game_extra.asm"
+   },
+   {
+    "instrucciones": 473,
+    "comentarios": 132,
+    "flojas": 0,
+    "bloques": 46,
+    "asm": "src/alehop_game_nucleo.asm"
+   },
+   {
+    "instrucciones": 469,
+    "comentarios": 158,
+    "flojas": 0,
+    "bloques": 61,
+    "asm": "src/alehop_game_sonido.asm"
+   },
+   {
+    "instrucciones": 14,
+    "comentarios": 7,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/alehop_portada.asm"
+   },
+   {
+    "instrucciones": 271,
+    "comentarios": 114,
+    "flojas": 0,
+    "bloques": 33,
+    "asm": "src/alehop_slots.asm"
+   },
+   {
+    "instrucciones": 282,
+    "comentarios": 125,
+    "flojas": 0,
+    "bloques": 42,
+    "asm": "src/alehop_topo.asm"
+   }
+  ],
+  "declarado": null,
+  "fallos": [
+   {
+    "asm": "src/alehop_game_cola.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/alehop_game_datos.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": null
+ },
+ {
+  "repo": "ANTARCTIC_DISAM",
+  "listados": [
+   "src/eu/antarctic.asm",
+   "src/jap1/antarctic.asm",
+   "src/jap2/antarctic.asm"
+  ],
+  "medido": {
+   "instrucciones": 9363,
+   "comentarios": 2246,
+   "densidad": 24.0,
+   "flojas": 0,
+   "bloques": 1181
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3112,
+    "comentarios": 765,
+    "flojas": 0,
+    "bloques": 393,
+    "asm": "src/eu/antarctic.asm"
+   },
+   {
+    "instrucciones": 3113,
+    "comentarios": 758,
+    "flojas": 0,
+    "bloques": 394,
+    "asm": "src/jap1/antarctic.asm"
+   },
+   {
+    "instrucciones": 3138,
+    "comentarios": 723,
+    "flojas": 0,
+    "bloques": 394,
+    "asm": "src/jap2/antarctic.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "ANTXIKO_GITHUB_IO",
+  "listados": [],
+  "medido": null,
+  "declarado": null,
+  "nota": "no publica ningun .asm"
+ },
+ {
+  "repo": "ATHLETIC_DISAM",
+  "listados": [
+   "src/athletic.asm"
+  ],
+  "medido": {
+   "instrucciones": 3718,
+   "comentarios": 1103,
+   "densidad": 29.7,
+   "flojas": 0,
+   "bloques": 513
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3718,
+    "comentarios": 1103,
+    "flojas": 0,
+    "bloques": 513,
+    "asm": "src/athletic.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "BASEBALL_DISAM",
+  "listados": [
+   "src/baseball.asm"
+  ],
+  "medido": {
+   "instrucciones": 5301,
+   "comentarios": 2357,
+   "densidad": 44.5,
+   "flojas": 0,
+   "bloques": 629
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5301,
+    "comentarios": 2357,
+    "flojas": 0,
+    "bloques": 629,
+    "asm": "src/baseball.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 5301,
+   "comentarios": 2357,
+   "flojas": 0,
+   "bloques": 629,
+   "densidad": 44.5
+  },
+  "coteja": true
+ },
+ {
+  "repo": "BBDD_DESASMs",
+  "listados": [],
+  "medido": null,
+  "declarado": null,
+  "nota": "no publica ningun .asm"
+ },
+ {
+  "repo": "BILLIARDS_DISAM",
+  "listados": [
+   "src/billiards.asm"
+  ],
+  "medido": {
+   "instrucciones": 2957,
+   "comentarios": 1162,
+   "densidad": 39.3,
+   "flojas": 0,
+   "bloques": 333
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2957,
+    "comentarios": 1162,
+    "flojas": 0,
+    "bloques": 333,
+    "asm": "src/billiards.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 2957,
+   "comentarios": 1162,
+   "flojas": 0,
+   "bloques": 333,
+   "densidad": 39.3
+  },
+  "coteja": true
+ },
+ {
+  "repo": "BOMBERMAN_DISAM",
+  "listados": [
+   "src/bomberman.asm"
+  ],
+  "medido": {
+   "instrucciones": 1836,
+   "comentarios": 921,
+   "densidad": 50.2,
+   "flojas": 0,
+   "bloques": 200
+  },
+  "por_listado": [
+   {
+    "instrucciones": 1836,
+    "comentarios": 921,
+    "flojas": 0,
+    "bloques": 200,
+    "asm": "src/bomberman.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 1836,
+   "comentarios": 921,
+   "flojas": 0,
+   "bloques": 200,
+   "densidad": 50.2
+  },
+  "coteja": true
+ },
+ {
+  "repo": "BOXING_DISAM",
+  "listados": [
+   "src/boxing.asm"
+  ],
+  "medido": {
+   "instrucciones": 3740,
+   "comentarios": 1966,
+   "densidad": 52.6,
+   "flojas": 0,
+   "bloques": 475
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3740,
+    "comentarios": 1966,
+    "flojas": 0,
+    "bloques": 475,
+    "asm": "src/boxing.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3740,
+   "comentarios": 1966,
+   "flojas": 0,
+   "bloques": 475,
+   "densidad": 52.6
+  },
+  "coteja": true
+ },
+ {
+  "repo": "CABBAGEPATCH_DISAM",
+  "listados": [
+   "src/cabbagepatch.asm"
+  ],
+  "medido": {
+   "instrucciones": 4038,
+   "comentarios": 988,
+   "densidad": 24.5,
+   "flojas": 0,
+   "bloques": 562
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4038,
+    "comentarios": 988,
+    "flojas": 0,
+    "bloques": 562,
+    "asm": "src/cabbagepatch.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4038,
+   "comentarios": 988,
+   "flojas": 0,
+   "bloques": 562,
+   "densidad": 24.5
+  },
+  "coteja": true
+ },
+ {
+  "repo": "CASIOWORLDOPEN_DISAM",
+  "listados": [
+   "src/casioworldopen.asm"
+  ],
+  "medido": {
+   "instrucciones": 4141,
+   "comentarios": 1532,
+   "densidad": 37.0,
+   "flojas": 0,
+   "bloques": 435
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4141,
+    "comentarios": 1532,
+    "flojas": 0,
+    "bloques": 435,
+    "asm": "src/casioworldopen.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4141,
+   "comentarios": 1532,
+   "flojas": 0,
+   "bloques": 435,
+   "densidad": 37.0
+  },
+  "coteja": true
+ },
+ {
+  "repo": "COLT36_DISAM",
+  "listados": [
+   "src/colt36_arranque.asm",
+   "src/colt36_cm2.asm",
+   "src/colt36_scr.asm",
+   "src/colt36_topo.asm"
+  ],
+  "medido": {
+   "instrucciones": 440,
+   "comentarios": 166,
+   "densidad": 37.7,
+   "flojas": 0,
+   "bloques": 55
+  },
+  "por_listado": [
+   {
+    "instrucciones": 158,
+    "comentarios": 41,
+    "flojas": 0,
+    "bloques": 13,
+    "asm": "src/colt36_cm2.asm"
+   },
+   {
+    "instrucciones": 282,
+    "comentarios": 125,
+    "flojas": 0,
+    "bloques": 42,
+    "asm": "src/colt36_topo.asm"
+   }
+  ],
+  "declarado": null,
+  "fallos": [
+   {
+    "asm": "src/colt36_arranque.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/colt36_scr.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": null
+ },
+ {
+  "repo": "DEMONIA_DISAM",
+  "listados": [
+   "debugger/driver.asm",
+   "debugger/helpers.asm",
+   "debugger/lanzador.asm",
+   "src/demonia_arranque.asm",
+   "src/demonia_bajo0000.asm",
+   "src/demonia_bajo4000.asm",
+   "src/demonia_bajo6000.asm",
+   "src/demonia_bajo7900.asm",
+   "src/demonia_carga1.asm",
+   "src/demonia_carga2.asm",
+   "src/demonia_carga3cola.asm",
+   "src/demonia_carga4cola.asm",
+   "src/demonia_carga5cola.asm",
+   "src/demonia_carga6cab.asm",
+   "src/demonia_carga7cola.asm",
+   "src/demonia_juego.asm"
+  ],
+  "medido": {
+   "instrucciones": 9790,
+   "comentarios": 3230,
+   "densidad": 33.0,
+   "flojas": 0,
+   "bloques": 1308
+  },
+  "por_listado": [
+   {
+    "instrucciones": 41,
+    "comentarios": 32,
+    "flojas": 0,
+    "bloques": 4,
+    "asm": "src/demonia_arranque.asm"
+   },
+   {
+    "instrucciones": 44,
+    "comentarios": 35,
+    "flojas": 0,
+    "bloques": 3,
+    "asm": "src/demonia_bajo7900.asm"
+   },
+   {
+    "instrucciones": 7,
+    "comentarios": 7,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/demonia_carga1.asm"
+   },
+   {
+    "instrucciones": 47,
+    "comentarios": 30,
+    "flojas": 0,
+    "bloques": 3,
+    "asm": "src/demonia_carga2.asm"
+   },
+   {
+    "instrucciones": 81,
+    "comentarios": 44,
+    "flojas": 0,
+    "bloques": 8,
+    "asm": "src/demonia_carga3cola.asm"
+   },
+   {
+    "instrucciones": 15,
+    "comentarios": 8,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/demonia_carga4cola.asm"
+   },
+   {
+    "instrucciones": 15,
+    "comentarios": 8,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/demonia_carga5cola.asm"
+   },
+   {
+    "instrucciones": 17,
+    "comentarios": 12,
+    "flojas": 0,
+    "bloques": 2,
+    "asm": "src/demonia_carga6cab.asm"
+   },
+   {
+    "instrucciones": 15,
+    "comentarios": 9,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/demonia_carga7cola.asm"
+   },
+   {
+    "instrucciones": 9508,
+    "comentarios": 3045,
+    "flojas": 0,
+    "bloques": 1284,
+    "asm": "src/demonia_juego.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 9790,
+   "comentarios": 3230,
+   "bloques": 1308,
+   "flojas": 0,
+   "densidad": 33.0
+  },
+  "fallos": [
+   {
+    "asm": "debugger/driver.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "debugger/helpers.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "debugger/lanzador.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/demonia_bajo0000.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/demonia_bajo4000.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/demonia_bajo6000.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": true
+ },
+ {
+  "repo": "DESCUBRIMIENTO_DISAM",
+  "listados": [
+   "src/descubrimiento_carga.asm",
+   "src/descubrimiento_p1alto.asm",
+   "src/descubrimiento_p1bajo.asm",
+   "src/descubrimiento_p2alto.asm",
+   "src/descubrimiento_p2bajo.asm"
+  ],
+  "medido": {
+   "instrucciones": 6665,
+   "comentarios": 1782,
+   "densidad": 26.7,
+   "flojas": 0,
+   "bloques": 733
+  },
+  "por_listado": [
+   {
+    "instrucciones": 88,
+    "comentarios": 23,
+    "flojas": 0,
+    "bloques": 9,
+    "asm": "src/descubrimiento_carga.asm"
+   },
+   {
+    "instrucciones": 3451,
+    "comentarios": 938,
+    "flojas": 0,
+    "bloques": 371,
+    "asm": "src/descubrimiento_p1bajo.asm"
+   },
+   {
+    "instrucciones": 3126,
+    "comentarios": 821,
+    "flojas": 0,
+    "bloques": 353,
+    "asm": "src/descubrimiento_p2bajo.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 6665,
+   "comentarios": 1782,
+   "bloques": 733,
+   "flojas": 0,
+   "densidad": 26.7
+  },
+  "fallos": [
+   {
+    "asm": "src/descubrimiento_p1alto.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/descubrimiento_p2alto.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": true
+ },
+ {
+  "repo": "F1SPIRIT_DISAM",
+  "listados": [
+   "src/f1spirit_p00.asm",
+   "src/f1spirit_p01.asm",
+   "src/f1spirit_p02.asm",
+   "src/f1spirit_p03.asm",
+   "src/f1spirit_p04.asm",
+   "src/f1spirit_p05.asm",
+   "src/f1spirit_p06.asm",
+   "src/f1spirit_p07.asm",
+   "src/f1spirit_p08.asm",
+   "src/f1spirit_p09.asm",
+   "src/f1spirit_p10.asm",
+   "src/f1spirit_p11.asm",
+   "src/f1spirit_p12.asm",
+   "src/f1spirit_p13.asm",
+   "src/f1spirit_p14.asm",
+   "src/f1spirit_p15.asm"
+  ],
+  "medido": {
+   "instrucciones": 15328,
+   "comentarios": 3715,
+   "densidad": 24.2,
+   "flojas": 0,
+   "bloques": 1953
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3914,
+    "comentarios": 928,
+    "flojas": 0,
+    "bloques": 497,
+    "asm": "src/f1spirit_p00.asm"
+   },
+   {
+    "instrucciones": 3465,
+    "comentarios": 836,
+    "flojas": 0,
+    "bloques": 426,
+    "asm": "src/f1spirit_p01.asm"
+   },
+   {
+    "instrucciones": 3309,
+    "comentarios": 766,
+    "flojas": 0,
+    "bloques": 416,
+    "asm": "src/f1spirit_p02.asm"
+   },
+   {
+    "instrucciones": 2977,
+    "comentarios": 696,
+    "flojas": 0,
+    "bloques": 378,
+    "asm": "src/f1spirit_p03.asm"
+   },
+   {
+    "instrucciones": 1,
+    "comentarios": 0,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/f1spirit_p12.asm"
+   },
+   {
+    "instrucciones": 1357,
+    "comentarios": 380,
+    "flojas": 0,
+    "bloques": 176,
+    "asm": "src/f1spirit_p13.asm"
+   },
+   {
+    "instrucciones": 305,
+    "comentarios": 109,
+    "flojas": 0,
+    "bloques": 59,
+    "asm": "src/f1spirit_p15.asm"
+   }
+  ],
+  "declarado": null,
+  "fallos": [
+   {
+    "asm": "src/f1spirit_p04.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p05.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p06.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p07.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p08.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p09.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p10.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p11.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/f1spirit_p14.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": null
+ },
+ {
+  "repo": "FROGGER_DISAM",
+  "listados": [
+   "src/frogger.asm"
+  ],
+  "medido": {
+   "instrucciones": 2559,
+   "comentarios": 656,
+   "densidad": 25.6,
+   "flojas": 0,
+   "bloques": 314
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2559,
+    "comentarios": 656,
+    "flojas": 0,
+    "bloques": 314,
+    "asm": "src/frogger.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "GAMEMASTER_DISAM",
+  "listados": [
+   "src/gamemaster.asm"
+  ],
+  "medido": {
+   "instrucciones": 5130,
+   "comentarios": 1134,
+   "densidad": 22.1,
+   "flojas": 0,
+   "bloques": 663
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5130,
+    "comentarios": 1134,
+    "flojas": 0,
+    "bloques": 663,
+    "asm": "src/gamemaster.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 5130,
+   "comentarios": 1134,
+   "flojas": 0,
+   "bloques": 663,
+   "densidad": 22.1
+  },
+  "coteja": true
+ },
+ {
+  "repo": "GOLF_DISAM",
+  "listados": [
+   "src/golf.asm"
+  ],
+  "medido": {
+   "instrucciones": 4638,
+   "comentarios": 1643,
+   "densidad": 35.4,
+   "flojas": 0,
+   "bloques": 558
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4638,
+    "comentarios": 1643,
+    "flojas": 0,
+    "bloques": 558,
+    "asm": "src/golf.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4638,
+   "comentarios": 1643,
+   "flojas": 0,
+   "bloques": 558,
+   "densidad": 35.4
+  },
+  "coteja": true
+ },
+ {
+  "repo": "GOONIES_DISAM",
+  "listados": [
+   "src/goonies.asm"
+  ],
+  "medido": {
+   "instrucciones": 8774,
+   "comentarios": 3236,
+   "densidad": 36.9,
+   "flojas": 0,
+   "bloques": 1176
+  },
+  "por_listado": [
+   {
+    "instrucciones": 8774,
+    "comentarios": 3236,
+    "flojas": 0,
+    "bloques": 1176,
+    "asm": "src/goonies.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 8774,
+   "comentarios": 3236,
+   "flojas": 0,
+   "bloques": 1176,
+   "densidad": 36.9
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HOLEINONE_DISAM",
+  "listados": [
+   "src/holeinone.asm"
+  ],
+  "medido": {
+   "instrucciones": 3076,
+   "comentarios": 1290,
+   "densidad": 41.9,
+   "flojas": 0,
+   "bloques": 358
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3076,
+    "comentarios": 1290,
+    "flojas": 0,
+    "bloques": 358,
+    "asm": "src/holeinone.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3076,
+   "comentarios": 1290,
+   "flojas": 0,
+   "bloques": 358,
+   "densidad": 41.9
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPEROLYMPIC1_DISAM",
+  "listados": [
+   "src/hyperolympic1.asm"
+  ],
+  "medido": {
+   "instrucciones": 5032,
+   "comentarios": 1681,
+   "densidad": 33.4,
+   "flojas": 0,
+   "bloques": 569
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5032,
+    "comentarios": 1681,
+    "flojas": 0,
+    "bloques": 569,
+    "asm": "src/hyperolympic1.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 5032,
+   "comentarios": 1681,
+   "flojas": 0,
+   "bloques": 569,
+   "densidad": 33.4
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPEROLYMPIC2_DISAM",
+  "listados": [
+   "src/hyperolympic2.asm"
+  ],
+  "medido": {
+   "instrucciones": 5345,
+   "comentarios": 1600,
+   "densidad": 29.9,
+   "flojas": 0,
+   "bloques": 647
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5345,
+    "comentarios": 1600,
+    "flojas": 0,
+    "bloques": 647,
+    "asm": "src/hyperolympic2.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 5345,
+   "comentarios": 1600,
+   "flojas": 0,
+   "bloques": 647,
+   "densidad": 29.9
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPERRALLY_DISAM",
+  "listados": [
+   "src/hyperrally.asm"
+  ],
+  "medido": {
+   "instrucciones": 3356,
+   "comentarios": 758,
+   "densidad": 22.6,
+   "flojas": 0,
+   "bloques": 430
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3356,
+    "comentarios": 758,
+    "flojas": 0,
+    "bloques": 430,
+    "asm": "src/hyperrally.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3356,
+   "comentarios": 758,
+   "flojas": 0,
+   "bloques": 430,
+   "densidad": 22.6
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPERSPORTS1_DISAM",
+  "listados": [
+   "src/hypersports1.asm"
+  ],
+  "medido": {
+   "instrucciones": 3177,
+   "comentarios": 788,
+   "densidad": 24.8,
+   "flojas": 0,
+   "bloques": 386
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3177,
+    "comentarios": 788,
+    "flojas": 0,
+    "bloques": 386,
+    "asm": "src/hypersports1.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3177,
+   "comentarios": 788,
+   "flojas": 0,
+   "bloques": 386,
+   "densidad": 24.8
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPERSPORTS2_DISAM",
+  "listados": [
+   "src/hypersports2.asm"
+  ],
+  "medido": {
+   "instrucciones": 3680,
+   "comentarios": 837,
+   "densidad": 22.7,
+   "flojas": 0,
+   "bloques": 500
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3680,
+    "comentarios": 837,
+    "flojas": 0,
+    "bloques": 500,
+    "asm": "src/hypersports2.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3680,
+   "comentarios": 837,
+   "flojas": 0,
+   "bloques": 500,
+   "densidad": 22.7
+  },
+  "coteja": true
+ },
+ {
+  "repo": "HYPERSPORTS3_DISAM",
+  "listados": [
+   "src/hypersports3.asm"
+  ],
+  "medido": {
+   "instrucciones": 7328,
+   "comentarios": 2528,
+   "densidad": 34.5,
+   "flojas": 0,
+   "bloques": 931
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7328,
+    "comentarios": 2528,
+    "flojas": 0,
+    "bloques": 931,
+    "asm": "src/hypersports3.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7328,
+   "comentarios": 2528,
+   "flojas": 0,
+   "bloques": 931,
+   "densidad": 34.5
+  },
+  "coteja": true
+ },
+ {
+  "repo": "KINGSVALLEY_DISAM",
+  "listados": [
+   "src/kingsvalley.asm"
+  ],
+  "medido": {
+   "instrucciones": 5424,
+   "comentarios": 2468,
+   "densidad": 45.5,
+   "flojas": 0,
+   "bloques": 651
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5424,
+    "comentarios": 2468,
+    "flojas": 0,
+    "bloques": 651,
+    "asm": "src/kingsvalley.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 5424,
+   "comentarios": 2468,
+   "flojas": 0,
+   "bloques": 651,
+   "densidad": 45.5
+  },
+  "coteja": true
+ },
+ {
+  "repo": "KNIGHTMARE_DISAM",
+  "listados": [
+   "src/knightmare.asm"
+  ],
+  "medido": {
+   "instrucciones": 7509,
+   "comentarios": 1681,
+   "densidad": 22.4,
+   "flojas": 0,
+   "bloques": 985
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7509,
+    "comentarios": 1681,
+    "flojas": 0,
+    "bloques": 985,
+    "asm": "src/knightmare.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7509,
+   "comentarios": 1681,
+   "flojas": 0,
+   "bloques": 985,
+   "densidad": 22.4
+  },
+  "coteja": true
+ },
+ {
+  "repo": "MAHJONGDOJO_ENPATCH",
+  "listados": [
+   "src/mahjong.asm"
+  ],
+  "medido": {
+   "instrucciones": 7548,
+   "comentarios": 2320,
+   "densidad": 30.7,
+   "flojas": 0,
+   "bloques": 1001
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "flojas": 0,
+    "bloques": 1001,
+    "asm": "src/mahjong.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7548,
+   "comentarios": 2320,
+   "flojas": 0,
+   "bloques": 1001,
+   "densidad": 30.7
+  },
+  "coteja": true
+ },
+ {
+  "repo": "MAHJONG_DISAM",
+  "listados": [
+   "src/mahjong.asm"
+  ],
+  "medido": {
+   "instrucciones": 7548,
+   "comentarios": 2320,
+   "densidad": 30.7,
+   "flojas": 0,
+   "bloques": 1001
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "flojas": 0,
+    "bloques": 1001,
+    "asm": "src/mahjong.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7548,
+   "comentarios": 2320,
+   "flojas": 0,
+   "bloques": 1001,
+   "densidad": 30.7
+  },
+  "coteja": true
+ },
+ {
+  "repo": "MONKEY_DISAM",
+  "listados": [
+   "src/monkey.asm"
+  ],
+  "medido": {
+   "instrucciones": 4691,
+   "comentarios": 1216,
+   "densidad": 25.9,
+   "flojas": 0,
+   "bloques": 498
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4691,
+    "comentarios": 1216,
+    "flojas": 0,
+    "bloques": 498,
+    "asm": "src/monkey.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "MOPIRANGER_DISAM",
+  "listados": [
+   "src/mopiranger.asm"
+  ],
+  "medido": {
+   "instrucciones": 3802,
+   "comentarios": 2012,
+   "densidad": 52.9,
+   "flojas": 0,
+   "bloques": 512
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3802,
+    "comentarios": 2012,
+    "flojas": 0,
+    "bloques": 512,
+    "asm": "src/mopiranger.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3802,
+   "comentarios": 2012,
+   "flojas": 0,
+   "bloques": 512,
+   "densidad": 52.9
+  },
+  "coteja": true
+ },
+ {
+  "repo": "NEMESIS_DISAM",
+  "listados": [
+   "src/nemesis_p00.asm",
+   "src/nemesis_p01.asm",
+   "src/nemesis_p02.asm",
+   "src/nemesis_p03.asm",
+   "src/nemesis_p04.asm",
+   "src/nemesis_p05.asm",
+   "src/nemesis_p06.asm",
+   "src/nemesis_p07.asm",
+   "src/nemesis_p08.asm",
+   "src/nemesis_p09.asm",
+   "src/nemesis_p10.asm",
+   "src/nemesis_p11.asm",
+   "src/nemesis_p12.asm",
+   "src/nemesis_p13.asm",
+   "src/nemesis_p14.asm",
+   "src/nemesis_p15.asm"
+  ],
+  "medido": {
+   "instrucciones": 12959,
+   "comentarios": 3027,
+   "densidad": 23.4,
+   "flojas": 0,
+   "bloques": 1540
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3158,
+    "comentarios": 697,
+    "flojas": 0,
+    "bloques": 341,
+    "asm": "src/nemesis_p00.asm"
+   },
+   {
+    "instrucciones": 3231,
+    "comentarios": 729,
+    "flojas": 0,
+    "bloques": 387,
+    "asm": "src/nemesis_p01.asm"
+   },
+   {
+    "instrucciones": 2849,
+    "comentarios": 645,
+    "flojas": 0,
+    "bloques": 351,
+    "asm": "src/nemesis_p02.asm"
+   },
+   {
+    "instrucciones": 3074,
+    "comentarios": 769,
+    "flojas": 0,
+    "bloques": 386,
+    "asm": "src/nemesis_p03.asm"
+   },
+   {
+    "instrucciones": 420,
+    "comentarios": 134,
+    "flojas": 0,
+    "bloques": 48,
+    "asm": "src/nemesis_p07.asm"
+   },
+   {
+    "instrucciones": 227,
+    "comentarios": 53,
+    "flojas": 0,
+    "bloques": 27,
+    "asm": "src/nemesis_p10.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 12959,
+   "comentarios": 3027,
+   "flojas": 0,
+   "bloques": 1540,
+   "densidad": 23.4
+  },
+  "fallos": [
+   {
+    "asm": "src/nemesis_p04.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p05.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p06.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p08.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p09.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p11.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p12.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p13.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p14.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/nemesis_p15.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": true
+ },
+ {
+  "repo": "PINGPONG_DISAM",
+  "listados": [
+   "src/pingpong.asm"
+  ],
+  "medido": {
+   "instrucciones": 3893,
+   "comentarios": 2503,
+   "densidad": 64.3,
+   "flojas": 0,
+   "bloques": 548
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3893,
+    "comentarios": 2503,
+    "flojas": 0,
+    "bloques": 548,
+    "asm": "src/pingpong.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3893,
+   "comentarios": 2503,
+   "flojas": 0,
+   "bloques": 548,
+   "densidad": 64.3
+  },
+  "coteja": true
+ },
+ {
+  "repo": "PIPPOLS_DISAM",
+  "listados": [
+   "src/pippols.asm"
+  ],
+  "medido": {
+   "instrucciones": 4861,
+   "comentarios": 1122,
+   "densidad": 23.1,
+   "flojas": 0,
+   "bloques": 675
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4861,
+    "comentarios": 1122,
+    "flojas": 0,
+    "bloques": 675,
+    "asm": "src/pippols.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "PITFALL_DISAM",
+  "listados": [
+   "src/pitfall.asm"
+  ],
+  "medido": {
+   "instrucciones": 4038,
+   "comentarios": 988,
+   "densidad": 24.5,
+   "flojas": 0,
+   "bloques": 337
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4038,
+    "comentarios": 988,
+    "flojas": 0,
+    "bloques": 337,
+    "asm": "src/pitfall.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "ROADFIGHTER_DISAM",
+  "listados": [
+   "src/roadfighter.asm"
+  ],
+  "medido": {
+   "instrucciones": 4053,
+   "comentarios": 2234,
+   "densidad": 55.1,
+   "flojas": 0,
+   "bloques": 482
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4053,
+    "comentarios": 2234,
+    "flojas": 0,
+    "bloques": 482,
+    "asm": "src/roadfighter.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4053,
+   "comentarios": 2234,
+   "flojas": 0,
+   "bloques": 482,
+   "densidad": 55.1
+  },
+  "coteja": true
+ },
+ {
+  "repo": "SERIE_DB",
+  "listados": [],
+  "medido": null,
+  "declarado": null,
+  "nota": "no publica ningun .asm"
+ },
+ {
+  "repo": "SKYJAGUAR_DISAM",
+  "listados": [
+   "src/skyjaguar.asm"
+  ],
+  "medido": {
+   "instrucciones": 4145,
+   "comentarios": 1329,
+   "densidad": 32.1,
+   "flojas": 0,
+   "bloques": 461
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4145,
+    "comentarios": 1329,
+    "flojas": 0,
+    "bloques": 461,
+    "asm": "src/skyjaguar.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4145,
+   "comentarios": 1329,
+   "flojas": 0,
+   "bloques": 461,
+   "densidad": 32.1
+  },
+  "coteja": true
+ },
+ {
+  "repo": "SOCCER_DISAM",
+  "listados": [
+   "src/soccer.asm"
+  ],
+  "medido": {
+   "instrucciones": 9755,
+   "comentarios": 3561,
+   "densidad": 36.5,
+   "flojas": 0,
+   "bloques": 1213
+  },
+  "por_listado": [
+   {
+    "instrucciones": 9755,
+    "comentarios": 3561,
+    "flojas": 0,
+    "bloques": 1213,
+    "asm": "src/soccer.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 9755,
+   "comentarios": 3561,
+   "flojas": 0,
+   "bloques": 1213,
+   "densidad": 36.5
+  },
+  "coteja": true
+ },
+ {
+  "repo": "STARDUST_DISAM",
+  "listados": [
+   "src/stardust_juego.asm",
+   "src/stardust_loader.asm",
+   "src/stardust_parte2.asm",
+   "src/stardust_pre.asm",
+   "src/stardust_topo.asm"
+  ],
+  "medido": {
+   "instrucciones": 10432,
+   "comentarios": 3260,
+   "densidad": 31.2,
+   "flojas": 0,
+   "bloques": 1148
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5575,
+    "comentarios": 1755,
+    "flojas": 0,
+    "bloques": 616,
+    "asm": "src/stardust_juego.asm"
+   },
+   {
+    "instrucciones": 40,
+    "comentarios": 25,
+    "flojas": 0,
+    "bloques": 7,
+    "asm": "src/stardust_loader.asm"
+   },
+   {
+    "instrucciones": 4454,
+    "comentarios": 1298,
+    "flojas": 0,
+    "bloques": 469,
+    "asm": "src/stardust_parte2.asm"
+   },
+   {
+    "instrucciones": 81,
+    "comentarios": 57,
+    "flojas": 0,
+    "bloques": 14,
+    "asm": "src/stardust_pre.asm"
+   },
+   {
+    "instrucciones": 282,
+    "comentarios": 125,
+    "flojas": 0,
+    "bloques": 42,
+    "asm": "src/stardust_topo.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "SUPERCOBRA_DISAM",
+  "listados": [
+   "src/supercobra.asm"
+  ],
+  "medido": {
+   "instrucciones": 3192,
+   "comentarios": 771,
+   "densidad": 24.2,
+   "flojas": 0,
+   "bloques": 407
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3192,
+    "comentarios": 771,
+    "flojas": 0,
+    "bloques": 407,
+    "asm": "src/supercobra.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3192,
+   "comentarios": 771,
+   "flojas": 0,
+   "bloques": 407,
+   "densidad": 24.2
+  },
+  "coteja": true
+ },
+ {
+  "repo": "TEMPTATIONS_DISAM",
+  "listados": [
+   "src/temptations_game.asm",
+   "src/temptations_portada.asm",
+   "src/temptations_slots.asm",
+   "src/temptations_topo.asm"
+  ],
+  "medido": {
+   "instrucciones": 2923,
+   "comentarios": 1045,
+   "densidad": 35.8,
+   "flojas": 0,
+   "bloques": 548
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2403,
+    "comentarios": 798,
+    "flojas": 0,
+    "bloques": 477,
+    "asm": "src/temptations_game.asm"
+   },
+   {
+    "instrucciones": 14,
+    "comentarios": 7,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/temptations_portada.asm"
+   },
+   {
+    "instrucciones": 224,
+    "comentarios": 115,
+    "flojas": 0,
+    "bloques": 28,
+    "asm": "src/temptations_slots.asm"
+   },
+   {
+    "instrucciones": 282,
+    "comentarios": 125,
+    "flojas": 0,
+    "bloques": 42,
+    "asm": "src/temptations_topo.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "TENNIS_DISAM",
+  "listados": [
+   "src/tennis.asm"
+  ],
+  "medido": {
+   "instrucciones": 4253,
+   "comentarios": 1380,
+   "densidad": 32.4,
+   "flojas": 0,
+   "bloques": 492
+  },
+  "por_listado": [
+   {
+    "instrucciones": 4253,
+    "comentarios": 1380,
+    "flojas": 0,
+    "bloques": 492,
+    "asm": "src/tennis.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 4253,
+   "comentarios": 1380,
+   "flojas": 0,
+   "bloques": 492,
+   "densidad": 32.4
+  },
+  "coteja": true
+ },
+ {
+  "repo": "TIMEPILOT_DISAM",
+  "listados": [
+   "src/timepilot.asm"
+  ],
+  "medido": {
+   "instrucciones": 5178,
+   "comentarios": 1213,
+   "densidad": 23.4,
+   "flojas": 0,
+   "bloques": 593
+  },
+  "por_listado": [
+   {
+    "instrucciones": 5178,
+    "comentarios": 1213,
+    "flojas": 0,
+    "bloques": 593,
+    "asm": "src/timepilot.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "TRAILBLAZER_DISAM",
+  "listados": [
+   "src/trailblazer_cargador.asm",
+   "src/trailblazer_datos.asm",
+   "src/trailblazer_juego.asm",
+   "src/trailblazer_portada.asm",
+   "src/trailblazer_slots.asm"
+  ],
+  "medido": {
+   "instrucciones": 3637,
+   "comentarios": 1119,
+   "densidad": 30.8,
+   "flojas": 0,
+   "bloques": 355
+  },
+  "por_listado": [
+   {
+    "instrucciones": 146,
+    "comentarios": 63,
+    "flojas": 0,
+    "bloques": 12,
+    "asm": "src/trailblazer_cargador.asm"
+   },
+   {
+    "instrucciones": 9,
+    "comentarios": 7,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/trailblazer_datos.asm"
+   },
+   {
+    "instrucciones": 3318,
+    "comentarios": 955,
+    "flojas": 0,
+    "bloques": 330,
+    "asm": "src/trailblazer_juego.asm"
+   },
+   {
+    "instrucciones": 109,
+    "comentarios": 54,
+    "flojas": 0,
+    "bloques": 8,
+    "asm": "src/trailblazer_portada.asm"
+   },
+   {
+    "instrucciones": 55,
+    "comentarios": 40,
+    "flojas": 0,
+    "bloques": 4,
+    "asm": "src/trailblazer_slots.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3637,
+   "comentarios": 1119,
+   "flojas": 0,
+   "bloques": 355,
+   "densidad": 30.8
+  },
+  "coteja": true
+ },
+ {
+  "repo": "TWINBEE_DISAM",
+  "listados": [
+   "src/twinbee.asm"
+  ],
+  "medido": {
+   "instrucciones": 7405,
+   "comentarios": 3062,
+   "densidad": 41.4,
+   "flojas": 0,
+   "bloques": 1000
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7405,
+    "comentarios": 3062,
+    "flojas": 0,
+    "bloques": 1000,
+    "asm": "src/twinbee.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7405,
+   "comentarios": 3062,
+   "flojas": 0,
+   "bloques": 1000,
+   "densidad": 41.4
+  },
+  "coteja": true
+ },
+ {
+  "repo": "WARINMIDDLEEARTH_DISAM",
+  "listados": [
+   "src/war_alto.asm",
+   "src/war_bajo.asm",
+   "src/war_loader.asm",
+   "src/war_medio.asm",
+   "src/war_pantalla.asm"
+  ],
+  "medido": {
+   "instrucciones": 6844,
+   "comentarios": 2031,
+   "densidad": 29.7,
+   "flojas": 0,
+   "bloques": 767
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2,
+    "comentarios": 0,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/war_alto.asm"
+   },
+   {
+    "instrucciones": 785,
+    "comentarios": 226,
+    "flojas": 0,
+    "bloques": 96,
+    "asm": "src/war_bajo.asm"
+   },
+   {
+    "instrucciones": 379,
+    "comentarios": 150,
+    "flojas": 0,
+    "bloques": 48,
+    "asm": "src/war_loader.asm"
+   },
+   {
+    "instrucciones": 5664,
+    "comentarios": 1645,
+    "flojas": 0,
+    "bloques": 621,
+    "asm": "src/war_medio.asm"
+   },
+   {
+    "instrucciones": 14,
+    "comentarios": 10,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/war_pantalla.asm"
+   }
+  ],
+  "declarado": null,
+  "coteja": null
+ },
+ {
+  "repo": "WARINMIDDLEEARTH_PATCH",
+  "listados": [
+   "src/parche/ficha_valores.asm",
+   "src/parche/icono_enemigo.asm",
+   "src/war_alto.asm",
+   "src/war_bajo.asm",
+   "src/war_loader.asm",
+   "src/war_medio.asm",
+   "src/war_pantalla.asm"
+  ],
+  "medido": {
+   "instrucciones": 6844,
+   "comentarios": 2031,
+   "densidad": 29.7,
+   "flojas": 0,
+   "bloques": 767
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2,
+    "comentarios": 0,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/war_alto.asm"
+   },
+   {
+    "instrucciones": 785,
+    "comentarios": 226,
+    "flojas": 0,
+    "bloques": 96,
+    "asm": "src/war_bajo.asm"
+   },
+   {
+    "instrucciones": 379,
+    "comentarios": 150,
+    "flojas": 0,
+    "bloques": 48,
+    "asm": "src/war_loader.asm"
+   },
+   {
+    "instrucciones": 5664,
+    "comentarios": 1645,
+    "flojas": 0,
+    "bloques": 621,
+    "asm": "src/war_medio.asm"
+   },
+   {
+    "instrucciones": 14,
+    "comentarios": 10,
+    "flojas": 0,
+    "bloques": 1,
+    "asm": "src/war_pantalla.asm"
+   }
+  ],
+  "declarado": null,
+  "fallos": [
+   {
+    "asm": "src/parche/ficha_valores.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/parche/icono_enemigo.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": null
+ },
+ {
+  "repo": "YIEARKUNGFU2_DISAM",
+  "listados": [
+   "src/yiear2.asm"
+  ],
+  "medido": {
+   "instrucciones": 7142,
+   "comentarios": 2919,
+   "densidad": 40.9,
+   "flojas": 0,
+   "bloques": 1027
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7142,
+    "comentarios": 2919,
+    "flojas": 0,
+    "bloques": 1027,
+    "asm": "src/yiear2.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7142,
+   "comentarios": 2919,
+   "flojas": 0,
+   "bloques": 1027,
+   "densidad": 40.9
+  },
+  "coteja": true
+ },
+ {
+  "repo": "YIEARKUNGFU_DISAM",
+  "listados": [
+   "src/yiear.asm"
+  ],
+  "medido": {
+   "instrucciones": 3917,
+   "comentarios": 1725,
+   "densidad": 44.0,
+   "flojas": 0,
+   "bloques": 568
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3917,
+    "comentarios": 1725,
+    "flojas": 0,
+    "bloques": 568,
+    "asm": "src/yiear.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3917,
+   "comentarios": 1725,
+   "flojas": 0,
+   "bloques": 568,
+   "densidad": 44.0
+  },
+  "coteja": true
+ }
+]

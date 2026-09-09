@@ -1,0 +1,2113 @@
+{
+ "generado": "2026-09-09",
+ "proyectos": [
+  {
+   "clave": "3dgolf",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "3D Golf Simulation",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/3DGolfSimulation-disassembly",
+   "web_url": "https://antxiko.github.io/3DGolfSimulation-disassembly/",
+   "meta_en": "T&E Soft · MSX · 16 KB cartridge",
+   "meta_es": "T&E Soft · MSX · cartucho de 16 KB",
+   "directorio": "3DGOLF_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "3dgolf.rom",
+    "fichero": "3DGOLF_DISAM/3dgolf.rom",
+    "bytes": 16384,
+    "sha256": "95d4e9dd82e60c614a471520d4e22ede94a5440a48f62376df62a74f093a8514"
+   },
+   "cifras": null,
+   "listados": [],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "bomberman",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Bomber Man",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/Bomberman-disassembly",
+   "web_url": "https://antxiko.github.io/Bomberman-disassembly/",
+   "meta_en": "Hudson Soft · MSX · 8 KB cartridge",
+   "meta_es": "Hudson Soft · MSX · cartucho de 8 KB",
+   "directorio": "BOMBERMAN_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "bomberman.rom",
+    "fichero": "BOMBERMAN_DISAM/bomberman.rom",
+    "bytes": 8192,
+    "sha256": "eab39bab547089facf9df3021e729b65fba2b263c505325d034ed1b6e3df8eea"
+   },
+   "cifras": {
+    "instrucciones": 1836,
+    "comentarios": 921,
+    "densidad": 50.2,
+    "flojas": 0,
+    "bloques": 200
+   },
+   "listados": [
+    "src/bomberman.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 1836,
+    "comentarios": 921,
+    "flojas": 0,
+    "bloques": 200,
+    "densidad": 50.2
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "timepilot",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Time Pilot",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/TimePilot-disassembly",
+   "web_url": "https://antxiko.github.io/TimePilot-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-703",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-703",
+   "directorio": "TIMEPILOT_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "timepilot.rom",
+    "fichero": "TIMEPILOT_DISAM/timepilot.rom",
+    "bytes": 16384,
+    "sha256": "183e80262301b18d41762d64a2fc326f4a4bef17832109225637e184d54a70d9"
+   },
+   "cifras": {
+    "instrucciones": 5178,
+    "comentarios": 1213,
+    "densidad": 23.4,
+    "flojas": 0,
+    "bloques": 593
+   },
+   "listados": [
+    "src/timepilot.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "frogger",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Frogger",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/Frogger-disassembly",
+   "web_url": "https://antxiko.github.io/Frogger-disassembly/",
+   "meta_en": "Konami · MSX · 8 KB cartridge · RC-704",
+   "meta_es": "Konami · MSX · cartucho de 8 KB · RC-704",
+   "directorio": "FROGGER_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "frogger.rom",
+    "fichero": "FROGGER_DISAM/frogger.rom",
+    "bytes": 8192,
+    "sha256": "0d60ff78e1ab466bce6e888193ca62d6df71fa07344c8ea31f7a8b486323c5f5"
+   },
+   "cifras": {
+    "instrucciones": 2559,
+    "comentarios": 656,
+    "densidad": 25.6,
+    "flojas": 0,
+    "bloques": 314
+   },
+   "listados": [
+    "src/frogger.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "supercobra",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Super Cobra",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/SuperCobra-disassembly",
+   "web_url": "https://antxiko.github.io/SuperCobra-disassembly/",
+   "meta_en": "Konami · MSX · 8 KB cartridge · RC-705",
+   "meta_es": "Konami · MSX · cartucho de 8 KB · RC-705",
+   "directorio": "SUPERCOBRA_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "supercobra.rom",
+    "fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+    "bytes": 8192,
+    "sha256": "062aeefd04e6ac28f565c15bd1010fc2a007bfbe8d3898ff8586778462091470"
+   },
+   "cifras": {
+    "instrucciones": 3192,
+    "comentarios": 771,
+    "densidad": 24.2,
+    "flojas": 0,
+    "bloques": 407
+   },
+   "listados": [
+    "src/supercobra.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3192,
+    "comentarios": 771,
+    "flojas": 0,
+    "bloques": 407,
+    "densidad": 24.2
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "athletic",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Athletic Land",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/AthleticLand-disassembly",
+   "web_url": "https://antxiko.github.io/AthleticLand-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-700",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-700",
+   "directorio": "ATHLETIC_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "athletic.rom",
+    "fichero": "ATHLETIC_DISAM/athletic.rom",
+    "bytes": 16384,
+    "sha256": "7bd280ae4147a5bf5676b15fde310a8106887786c78873344d97a1cd81285485"
+   },
+   "cifras": {
+    "instrucciones": 3718,
+    "comentarios": 1103,
+    "densidad": 29.7,
+    "flojas": 0,
+    "bloques": 513
+   },
+   "listados": [
+    "src/athletic.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "antarctic",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Antarctic Adventure",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/AntarcticAdventure-disassembly",
+   "web_url": "https://antxiko.github.io/AntarcticAdventure-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-701",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-701",
+   "directorio": "ANTARCTIC_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "antarctic-$(V).rom",
+    "fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+    "bytes": 16384,
+    "sha256": "a33f9298bf6f740ebe8d88bdc8ed75c855404d804e07679d6c2f2ad00dc3c452"
+   },
+   "cifras": {
+    "instrucciones": 9363,
+    "comentarios": 2246,
+    "densidad": 24.0,
+    "flojas": 0,
+    "bloques": 1181
+   },
+   "listados": [
+    "src/eu/antarctic.asm",
+    "src/jap1/antarctic.asm",
+    "src/jap2/antarctic.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "monkey",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Monkey Academy",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/MonkeyAcademy-disassembly",
+   "web_url": "https://antxiko.github.io/MonkeyAcademy-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-702",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-702",
+   "directorio": "MONKEY_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "monkey.rom",
+    "fichero": "MONKEY_DISAM/monkey.rom",
+    "bytes": 16384,
+    "sha256": "fdf62cfa6db239fcaa3614b56263dd58e8797b206663e491588c062220b16b01"
+   },
+   "cifras": {
+    "instrucciones": 4691,
+    "comentarios": 1216,
+    "densidad": 25.9,
+    "flojas": 0,
+    "bloques": 498
+   },
+   "listados": [
+    "src/monkey.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "billiards",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami’s Billiards",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/KonamisBilliards-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisBilliards-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-706",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-706",
+   "directorio": "BILLIARDS_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "billiards.rom",
+    "fichero": "BILLIARDS_DISAM/billiards.rom",
+    "bytes": 16384,
+    "sha256": "38741612e0b20e39dfd834106a3d5ef5a24c06fb947a104c044f1cdd269c46d9"
+   },
+   "cifras": {
+    "instrucciones": 2957,
+    "comentarios": 1162,
+    "densidad": 39.3,
+    "flojas": 0,
+    "bloques": 333
+   },
+   "listados": [
+    "src/billiards.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 2957,
+    "comentarios": 1162,
+    "flojas": 0,
+    "bloques": 333,
+    "densidad": 39.3
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "mahjong",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami’s Mahjong Dojo",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/KonamisMahjongDojo-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisMahjongDojo-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-707",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-707",
+   "directorio": "MAHJONG_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "mahjong.rom",
+    "fichero": "MAHJONG_DISAM/mahjong.rom",
+    "bytes": 32768,
+    "sha256": "24cb5bda5f55dcd5ab1343fb61ebac67e8c292f9714ee7a492431e33188b9b40"
+   },
+   "cifras": {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "densidad": 30.7,
+    "flojas": 0,
+    "bloques": 1001
+   },
+   "listados": [
+    "src/mahjong.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "flojas": 0,
+    "bloques": 1001,
+    "densidad": 30.7
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hyperolympic1",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Olympic 1",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/HyperOlympic1-disassembly",
+   "web_url": "https://antxiko.github.io/HyperOlympic1-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-710",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-710",
+   "directorio": "HYPEROLYMPIC1_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hyperolympic1.rom",
+    "fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+    "bytes": 16384,
+    "sha256": "0cd8a7928e10a8551d7f6fd68943a6d4a008e04a254d258413c120dda18b792e"
+   },
+   "cifras": {
+    "instrucciones": 5032,
+    "comentarios": 1681,
+    "densidad": 33.4,
+    "flojas": 0,
+    "bloques": 569
+   },
+   "listados": [
+    "src/hyperolympic1.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 5032,
+    "comentarios": 1681,
+    "flojas": 0,
+    "bloques": 569,
+    "densidad": 33.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hyperolympic2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Olympic 2",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/HyperOlympic2-disassembly",
+   "web_url": "https://antxiko.github.io/HyperOlympic2-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-711",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-711",
+   "directorio": "HYPEROLYMPIC2_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hyperolympic2.rom",
+    "fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+    "bytes": 16384,
+    "sha256": "f254764f4bd1634f50abcdabe5813d133d719197216071772845983ffabad22d"
+   },
+   "cifras": {
+    "instrucciones": 5345,
+    "comentarios": 1600,
+    "densidad": 29.9,
+    "flojas": 0,
+    "bloques": 647
+   },
+   "listados": [
+    "src/hyperolympic2.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 5345,
+    "comentarios": 1600,
+    "flojas": 0,
+    "bloques": 647,
+    "densidad": 29.9
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "holeinone",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Hole in One",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/HoleInOne-disassembly",
+   "web_url": "https://antxiko.github.io/HoleInOne-disassembly/",
+   "meta_en": "HAL Laboratory · MSX · 16 KB cartridge",
+   "meta_es": "HAL Laboratory · MSX · cartucho de 16 KB",
+   "directorio": "HOLEINONE_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "holeinone.rom",
+    "fichero": "HOLEINONE_DISAM/holeinone.rom",
+    "bytes": 16384,
+    "sha256": "14311cc241c53b6ebbf3b0d18101405a5584a259ab0fa265391abe2b791b9eab"
+   },
+   "cifras": {
+    "instrucciones": 3076,
+    "comentarios": 1290,
+    "densidad": 41.9,
+    "flojas": 0,
+    "bloques": 358
+   },
+   "listados": [
+    "src/holeinone.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3076,
+    "comentarios": 1290,
+    "flojas": 0,
+    "bloques": 358,
+    "densidad": 41.9
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "casioworldopen",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Casio World Open",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/CasioWorldOpen-disassembly",
+   "web_url": "https://antxiko.github.io/CasioWorldOpen-disassembly/",
+   "meta_en": "Casio · MSX · 32 KB cartridge",
+   "meta_es": "Casio · MSX · cartucho de 32 KB",
+   "directorio": "CASIOWORLDOPEN_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "casioworldopen.rom",
+    "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+    "bytes": 32768,
+    "sha256": "7b03fd41c11975131db7c2303aa0757b369c4f6e1e54586da8f2b70d68b8d19d"
+   },
+   "cifras": {
+    "instrucciones": 4141,
+    "comentarios": 1532,
+    "densidad": 37.0,
+    "flojas": 0,
+    "bloques": 435
+   },
+   "listados": [
+    "src/casioworldopen.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4141,
+    "comentarios": 1532,
+    "flojas": 0,
+    "bloques": 435,
+    "densidad": 37.0
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hyperrally",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Rally",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/HyperRally-disassembly",
+   "web_url": "https://antxiko.github.io/HyperRally-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-718",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-718",
+   "directorio": "HYPERRALLY_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hyperrally.rom",
+    "fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+    "bytes": 16384,
+    "sha256": "eca2c0d6057b3829210b5fccd0d0005ea6ada7560f5446d9bbc2db2d06d96aae"
+   },
+   "cifras": {
+    "instrucciones": 3356,
+    "comentarios": 758,
+    "densidad": 22.6,
+    "flojas": 0,
+    "bloques": 430
+   },
+   "listados": [
+    "src/hyperrally.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3356,
+    "comentarios": 758,
+    "flojas": 0,
+    "bloques": 430,
+    "densidad": 22.6
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "skyjaguar",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Sky Jaguar",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/SkyJaguar-disassembly",
+   "web_url": "https://antxiko.github.io/SkyJaguar-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-721",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-721",
+   "directorio": "SKYJAGUAR_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "skyjaguar.rom",
+    "fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+    "bytes": 16384,
+    "sha256": "58abc5aec19dbca6f6aaf278b233a85219afde9622a9c3b34544b94a350d2a3b"
+   },
+   "cifras": {
+    "instrucciones": 4145,
+    "comentarios": 1329,
+    "densidad": 32.1,
+    "flojas": 0,
+    "bloques": 461
+   },
+   "listados": [
+    "src/skyjaguar.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4145,
+    "comentarios": 1329,
+    "flojas": 0,
+    "bloques": 461,
+    "densidad": 32.1
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "golf",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Golf",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/KonamisGolf-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisGolf-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-723",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-723",
+   "directorio": "GOLF_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "golf.rom",
+    "fichero": "GOLF_DISAM/golf.rom",
+    "bytes": 16384,
+    "sha256": "6c539f0a4b46b3f723ded723a3bac036550e58385a6a9be73afb8ceb8c7ecae3"
+   },
+   "cifras": {
+    "instrucciones": 4638,
+    "comentarios": 1643,
+    "densidad": 35.4,
+    "flojas": 0,
+    "bloques": 558
+   },
+   "listados": [
+    "src/golf.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4638,
+    "comentarios": 1643,
+    "flojas": 0,
+    "bloques": 558,
+    "densidad": 35.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "mopiranger",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Mopi Ranger",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/MopiRanger-disassembly",
+   "web_url": "https://antxiko.github.io/MopiRanger-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-728",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-728",
+   "directorio": "MOPIRANGER_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "mopiranger.rom",
+    "fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+    "bytes": 16384,
+    "sha256": "89ae5bdd1541c38c2593a91d36bdacf36634c0c8b85977ff2fff046bae4dadbf"
+   },
+   "cifras": {
+    "instrucciones": 3802,
+    "comentarios": 2012,
+    "densidad": 52.9,
+    "flojas": 0,
+    "bloques": 512
+   },
+   "listados": [
+    "src/mopiranger.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3802,
+    "comentarios": 2012,
+    "flojas": 0,
+    "bloques": 512,
+    "densidad": 52.9
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "roadfighter",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Road Fighter",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/RoadFighter-disassembly",
+   "web_url": "https://antxiko.github.io/RoadFighter-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-730",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-730",
+   "directorio": "ROADFIGHTER_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "roadfighter.rom",
+    "fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+    "bytes": 16384,
+    "sha256": "6d36c9e9b6a6b93f642722dcd314834d01e519ab3a98d7e4ca257468bcaf29e1"
+   },
+   "cifras": {
+    "instrucciones": 4053,
+    "comentarios": 2234,
+    "densidad": 55.1,
+    "flojas": 0,
+    "bloques": 482
+   },
+   "listados": [
+    "src/roadfighter.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4053,
+    "comentarios": 2234,
+    "flojas": 0,
+    "bloques": 482,
+    "densidad": 55.1
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "pingpong",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Ping Pong",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/KonamisPingPong-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisPingPong-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-731",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-731",
+   "directorio": "PINGPONG_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "pingpong.rom",
+    "fichero": "PINGPONG_DISAM/pingpong.rom",
+    "bytes": 16384,
+    "sha256": "8e0f57b2c52e85505505c1d4bb4643eb7311213676f0ecfe21dd06571fc0bbd5"
+   },
+   "cifras": {
+    "instrucciones": 3893,
+    "comentarios": 2503,
+    "densidad": 64.3,
+    "flojas": 0,
+    "bloques": 548
+   },
+   "listados": [
+    "src/pingpong.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3893,
+    "comentarios": 2503,
+    "flojas": 0,
+    "bloques": 548,
+    "densidad": 64.3
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "soccer",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami’s Soccer",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/KonamisSoccer-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisSoccer-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-732",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-732",
+   "directorio": "SOCCER_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "soccer.rom",
+    "fichero": "SOCCER_DISAM/soccer.rom",
+    "bytes": 32768,
+    "sha256": "b9536809a1784afb2e49a43d80ba9c6c8c15cd31ecbd6c284e9bf62c6927dcd4"
+   },
+   "cifras": {
+    "instrucciones": 9755,
+    "comentarios": 3561,
+    "densidad": 36.5,
+    "flojas": 0,
+    "bloques": 1213
+   },
+   "listados": [
+    "src/soccer.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 9755,
+    "comentarios": 3561,
+    "flojas": 0,
+    "bloques": 1213,
+    "densidad": 36.5
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "kingsvalley",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "King's Valley",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/KingsValley-disassembly",
+   "web_url": "https://antxiko.github.io/KingsValley-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-727",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-727",
+   "directorio": "KINGSVALLEY_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "kingsvalley.rom",
+    "fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+    "bytes": 16384,
+    "sha256": "a8f807a0be90db6a01c43a948215a8761d1d7b92358279d6f2ce2dcfefab5d73"
+   },
+   "cifras": {
+    "instrucciones": 5424,
+    "comentarios": 2468,
+    "densidad": 45.5,
+    "flojas": 0,
+    "bloques": 651
+   },
+   "listados": [
+    "src/kingsvalley.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 5424,
+    "comentarios": 2468,
+    "flojas": 0,
+    "bloques": 651,
+    "densidad": 45.5
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "baseball",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Baseball",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/KonamisBaseball-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisBaseball-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-724",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-724",
+   "directorio": "BASEBALL_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "baseball.rom",
+    "fichero": "BASEBALL_DISAM/baseball.rom",
+    "bytes": 16384,
+    "sha256": "06504efb72d1cd3351dae8eb1f7b073f69d599fa7018663937f85535658ad3e7"
+   },
+   "cifras": {
+    "instrucciones": 5301,
+    "comentarios": 2357,
+    "densidad": 44.5,
+    "flojas": 0,
+    "bloques": 629
+   },
+   "listados": [
+    "src/baseball.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 5301,
+    "comentarios": 2357,
+    "flojas": 0,
+    "bloques": 629,
+    "densidad": 44.5
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "knightmare",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Knightmare",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Knightmare-disassembly",
+   "web_url": "https://antxiko.github.io/Knightmare-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-739",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-739",
+   "directorio": "KNIGHTMARE_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "knightmare.rom",
+    "fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+    "bytes": 32768,
+    "sha256": "6e7a8a2d2fadc078ec9043deee804cfa5efcf2eb64f2fb6291a5161776220cf6"
+   },
+   "cifras": {
+    "instrucciones": 7509,
+    "comentarios": 1681,
+    "densidad": 22.4,
+    "flojas": 0,
+    "bloques": 985
+   },
+   "listados": [
+    "src/knightmare.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7509,
+    "comentarios": 1681,
+    "flojas": 0,
+    "bloques": 985,
+    "densidad": 22.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "twinbee",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Twin Bee",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/TwinBee-disassembly",
+   "web_url": "https://antxiko.github.io/TwinBee-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-740",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-740",
+   "directorio": "TWINBEE_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "twinbee.rom",
+    "fichero": "TWINBEE_DISAM/twinbee.rom",
+    "bytes": 32768,
+    "sha256": "02bdce8ceafe6af05a45b61a689e78807551df663afd152090f7cd9cac827dd4"
+   },
+   "cifras": {
+    "instrucciones": 7405,
+    "comentarios": 3062,
+    "densidad": 41.4,
+    "flojas": 0,
+    "bloques": 1000
+   },
+   "listados": [
+    "src/twinbee.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7405,
+    "comentarios": 3062,
+    "flojas": 0,
+    "bloques": 1000,
+    "densidad": 41.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "boxing",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Boxing",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/Boxing-disassembly",
+   "web_url": "https://antxiko.github.io/Boxing-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-736",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-736",
+   "directorio": "BOXING_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "boxing.rom",
+    "fichero": "BOXING_DISAM/boxing.rom",
+    "bytes": 32768,
+    "sha256": "43b23739d63b636922f0a98c33322bfdeafbefeccc01dd74fb0a45107581d0e6"
+   },
+   "cifras": {
+    "instrucciones": 3740,
+    "comentarios": 1966,
+    "densidad": 52.6,
+    "flojas": 0,
+    "bloques": 475
+   },
+   "listados": [
+    "src/boxing.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3740,
+    "comentarios": 1966,
+    "flojas": 0,
+    "bloques": 475,
+    "densidad": 52.6
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "yiearkungfu2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Yie Ar Kung-Fu II",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/YieArKungFu2-disassembly",
+   "web_url": "https://antxiko.github.io/YieArKungFu2-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-737",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-737",
+   "directorio": "YIEARKUNGFU2_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "yiear2.rom",
+    "fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+    "bytes": 32768,
+    "sha256": "bcb41b35ec0dddfd81ee9bd46998c0ea9c9435d6292e973d46c1324cc36e6150"
+   },
+   "cifras": {
+    "instrucciones": 7142,
+    "comentarios": 2919,
+    "densidad": 40.9,
+    "flojas": 0,
+    "bloques": 1027
+   },
+   "listados": [
+    "src/yiear2.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7142,
+    "comentarios": 2919,
+    "flojas": 0,
+    "bloques": 1027,
+    "densidad": 40.9
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "yiearkungfu",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Yie Ar Kung-Fu",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/YieArKungFu-disassembly",
+   "web_url": "https://antxiko.github.io/YieArKungFu-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-725",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-725",
+   "directorio": "YIEARKUNGFU_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "yiear.rom",
+    "fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+    "bytes": 16384,
+    "sha256": "644c78c7d20bb30802888b513b384cf0ce4f9d8b6fd490f30e6211ac92274848"
+   },
+   "cifras": {
+    "instrucciones": 3917,
+    "comentarios": 1725,
+    "densidad": 44.0,
+    "flojas": 0,
+    "bloques": 568
+   },
+   "listados": [
+    "src/yiear.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3917,
+    "comentarios": 1725,
+    "flojas": 0,
+    "bloques": 568,
+    "densidad": 44.0
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "tennis",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Tennis",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/KonamisTennis-disassembly",
+   "web_url": "https://antxiko.github.io/KonamisTennis-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-720",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-720",
+   "directorio": "TENNIS_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "tennis.rom",
+    "fichero": "TENNIS_DISAM/tennis.rom",
+    "bytes": 16384,
+    "sha256": "68bec8172d816025a21dd47482e9413fd8bd726b2cafb49236ca58a65c73e07f"
+   },
+   "cifras": {
+    "instrucciones": 4253,
+    "comentarios": 1380,
+    "densidad": 32.4,
+    "flojas": 0,
+    "bloques": 492
+   },
+   "listados": [
+    "src/tennis.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4253,
+    "comentarios": 1380,
+    "flojas": 0,
+    "bloques": 492,
+    "densidad": 32.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hypersports1",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Sports 1",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/HyperSports1-disassembly",
+   "web_url": "https://antxiko.github.io/HyperSports1-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-715",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-715",
+   "directorio": "HYPERSPORTS1_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hypersports1.rom",
+    "fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+    "bytes": 16384,
+    "sha256": "440dae57676a98b5a3dd29f3e97b9c83a8cbe58a3d3f2172c6072d07e6f00754"
+   },
+   "cifras": {
+    "instrucciones": 3177,
+    "comentarios": 788,
+    "densidad": 24.8,
+    "flojas": 0,
+    "bloques": 386
+   },
+   "listados": [
+    "src/hypersports1.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3177,
+    "comentarios": 788,
+    "flojas": 0,
+    "bloques": 386,
+    "densidad": 24.8
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hypersports2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Sports 2",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/HyperSports2-disassembly",
+   "web_url": "https://antxiko.github.io/HyperSports2-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-717",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-717",
+   "directorio": "HYPERSPORTS2_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hypersports2.rom",
+    "fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+    "bytes": 16384,
+    "sha256": "f4273f5290edb8b55a319bdfc40d99c0f7863a4cbd93b75519508cb129d288f6"
+   },
+   "cifras": {
+    "instrucciones": 3680,
+    "comentarios": 837,
+    "densidad": 22.7,
+    "flojas": 0,
+    "bloques": 500
+   },
+   "listados": [
+    "src/hypersports2.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3680,
+    "comentarios": 837,
+    "flojas": 0,
+    "bloques": 500,
+    "densidad": 22.7
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "hypersports3",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hyper Sports 3",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/HyperSports3-disassembly",
+   "web_url": "https://antxiko.github.io/HyperSports3-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-733",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-733",
+   "directorio": "HYPERSPORTS3_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "hypersports3.rom",
+    "fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+    "bytes": 32768,
+    "sha256": "247a14766d3c64c88707ee0bfd1a0255182acab98006d2c2646085e00db29936"
+   },
+   "cifras": {
+    "instrucciones": 7328,
+    "comentarios": 2528,
+    "densidad": 34.5,
+    "flojas": 0,
+    "bloques": 931
+   },
+   "listados": [
+    "src/hypersports3.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7328,
+    "comentarios": 2528,
+    "flojas": 0,
+    "bloques": 931,
+    "densidad": 34.5
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "gamemaster",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami’s Game Master",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/GameMaster-disassembly",
+   "web_url": "https://antxiko.github.io/GameMaster-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-735",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-735",
+   "directorio": "GAMEMASTER_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "gamemaster.rom",
+    "fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+    "bytes": 16384,
+    "sha256": "3160911ae025207c80c40630f8ce94f857e7e820c97a437152124def25b0f7ee"
+   },
+   "cifras": {
+    "instrucciones": 5130,
+    "comentarios": 1134,
+    "densidad": 22.1,
+    "flojas": 0,
+    "bloques": 663
+   },
+   "listados": [
+    "src/gamemaster.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 5130,
+    "comentarios": 1134,
+    "flojas": 0,
+    "bloques": 663,
+    "densidad": 22.1
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "goonies",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "The Goonies",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Goonies-disassembly",
+   "web_url": "https://antxiko.github.io/Goonies-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-734",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-734",
+   "directorio": "GOONIES_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "goonies.rom",
+    "fichero": "GOONIES_DISAM/goonies.rom",
+    "bytes": 32768,
+    "sha256": "2ba602b1a17e4797da1588afe6e65640331c15746bf5959f4778b404be929dde"
+   },
+   "cifras": {
+    "instrucciones": 8774,
+    "comentarios": 3236,
+    "densidad": 36.9,
+    "flojas": 0,
+    "bloques": 1176
+   },
+   "listados": [
+    "src/goonies.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 8774,
+    "comentarios": 3236,
+    "flojas": 0,
+    "bloques": 1176,
+    "densidad": 36.9
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "cabbagepatch",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Cabbage Patch Kids",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/CabbagePatchKids-disassembly",
+   "web_url": "https://antxiko.github.io/CabbagePatchKids-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-716",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-716",
+   "directorio": "CABBAGEPATCH_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "cabbagepatch.rom",
+    "fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+    "bytes": 16384,
+    "sha256": "114945c770531db3ae61eb330d7ed870a3c00d3a90db2a29a4c134135c2c0707"
+   },
+   "cifras": {
+    "instrucciones": 4038,
+    "comentarios": 988,
+    "densidad": 24.5,
+    "flojas": 0,
+    "bloques": 562
+   },
+   "listados": [
+    "src/cabbagepatch.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 4038,
+    "comentarios": 988,
+    "flojas": 0,
+    "bloques": 562,
+    "densidad": 24.5
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "pitfall",
+   "categoria": "desensamblado",
+   "grupo": "ports",
+   "titulo": "Pitfall!",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/Pitfall-MSX-disassembly",
+   "web_url": "https://antxiko.github.io/Pitfall-MSX-disassembly/",
+   "meta_en": "Activision · MSX · 16 KB cartridge",
+   "meta_es": "Activision · MSX · cartucho de 16 KB",
+   "directorio": "PITFALL_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "pitfall.rom",
+    "fichero": "PITFALL_DISAM/pitfall.rom",
+    "bytes": 16384,
+    "sha256": "4d899d6258a8b06dfae8c91a8c57230fa23ff364136d6a243fafeaf282c8be58"
+   },
+   "cifras": {
+    "instrucciones": 4038,
+    "comentarios": 988,
+    "densidad": 24.5,
+    "flojas": 0,
+    "bloques": 337
+   },
+   "listados": [
+    "src/pitfall.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "pippols",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Pippols",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/Pippols-disassembly",
+   "web_url": "https://antxiko.github.io/Pippols-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-729",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-729",
+   "directorio": "PIPPOLS_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "pippols.rom",
+    "fichero": "PIPPOLS_DISAM/pippols.rom",
+    "bytes": 16384,
+    "sha256": "ad011203f1295bf75fc30423cead68e12f96169ffeb9f13474303d9a553e41f7"
+   },
+   "cifras": {
+    "instrucciones": 4861,
+    "comentarios": 1122,
+    "densidad": 23.1,
+    "flojas": 0,
+    "bloques": 675
+   },
+   "listados": [
+    "src/pippols.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "demonia",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Demonia",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Demonia-disassembly",
+   "web_url": "https://antxiko.github.io/Demonia-disassembly/",
+   "meta_en": "Microids · MSX · 58,334-byte cassette",
+   "meta_es": "Microids · MSX · cinta de 58.334 bytes",
+   "directorio": "DEMONIA_DISAM",
+   "binario": {
+    "var": "CAS",
+    "valor": "demonia.cas",
+    "fichero": "DEMONIA_DISAM/demonia.cas",
+    "bytes": 58334,
+    "sha256": "69031ee25099df0703332ca74a64b52e6dd9909e4cfded4c3699be153adc5fc9"
+   },
+   "cifras": {
+    "instrucciones": 9790,
+    "comentarios": 3230,
+    "densidad": 33.0,
+    "flojas": 0,
+    "bloques": 1308
+   },
+   "listados": [
+    "debugger/driver.asm",
+    "debugger/helpers.asm",
+    "debugger/lanzador.asm",
+    "src/demonia_arranque.asm",
+    "src/demonia_bajo0000.asm",
+    "src/demonia_bajo4000.asm",
+    "src/demonia_bajo6000.asm",
+    "src/demonia_bajo7900.asm",
+    "src/demonia_carga1.asm",
+    "src/demonia_carga2.asm",
+    "src/demonia_carga3cola.asm",
+    "src/demonia_carga4cola.asm",
+    "src/demonia_carga5cola.asm",
+    "src/demonia_carga6cab.asm",
+    "src/demonia_carga7cola.asm",
+    "src/demonia_juego.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 9790,
+    "comentarios": 3230,
+    "bloques": 1308,
+    "flojas": 0,
+    "densidad": 33.0
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "nemesis",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Nemesis / Gradius",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Nemesis-disassembly",
+   "web_url": "https://antxiko.github.io/Nemesis-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB MegaROM · RC-742",
+   "meta_es": "Konami · MSX · MegaROM de 128 KB · RC-742",
+   "directorio": "NEMESIS_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "nemesis.rom",
+    "fichero": "NEMESIS_DISAM/nemesis.rom",
+    "bytes": 131072,
+    "sha256": "3210f8a0f2309dd4b9a89fc2b24d0f178ce4393a0a1f2854fbce545c361261bc"
+   },
+   "cifras": {
+    "instrucciones": 12959,
+    "comentarios": 3027,
+    "densidad": 23.4,
+    "flojas": 0,
+    "bloques": 1540
+   },
+   "listados": [
+    "src/nemesis_p00.asm",
+    "src/nemesis_p01.asm",
+    "src/nemesis_p02.asm",
+    "src/nemesis_p03.asm",
+    "src/nemesis_p04.asm",
+    "src/nemesis_p05.asm",
+    "src/nemesis_p06.asm",
+    "src/nemesis_p07.asm",
+    "src/nemesis_p08.asm",
+    "src/nemesis_p09.asm",
+    "src/nemesis_p10.asm",
+    "src/nemesis_p11.asm",
+    "src/nemesis_p12.asm",
+    "src/nemesis_p13.asm",
+    "src/nemesis_p14.asm",
+    "src/nemesis_p15.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 12959,
+    "comentarios": 3027,
+    "flojas": 0,
+    "bloques": 1540,
+    "densidad": 23.4
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "f1spirit",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "F-1 Spirit — The Way to Formula 1",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/F1Spirit-disassembly",
+   "web_url": "https://antxiko.github.io/F1Spirit-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB MegaROM · RC-752",
+   "meta_es": "Konami · MSX · MegaROM de 128 KB · RC-752",
+   "directorio": "F1SPIRIT_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "f1spirit.rom",
+    "fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+    "bytes": 131072,
+    "sha256": "3b9afd12b29680abb655f05d24e0970954c38e48c5ccb24227d6c710474396a7"
+   },
+   "cifras": {
+    "instrucciones": 15328,
+    "comentarios": 3715,
+    "densidad": 24.2,
+    "flojas": 0,
+    "bloques": 1953
+   },
+   "listados": [
+    "src/f1spirit_p00.asm",
+    "src/f1spirit_p01.asm",
+    "src/f1spirit_p02.asm",
+    "src/f1spirit_p03.asm",
+    "src/f1spirit_p04.asm",
+    "src/f1spirit_p05.asm",
+    "src/f1spirit_p06.asm",
+    "src/f1spirit_p07.asm",
+    "src/f1spirit_p08.asm",
+    "src/f1spirit_p09.asm",
+    "src/f1spirit_p10.asm",
+    "src/f1spirit_p11.asm",
+    "src/f1spirit_p12.asm",
+    "src/f1spirit_p13.asm",
+    "src/f1spirit_p14.asm",
+    "src/f1spirit_p15.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "colt36",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Colt 36",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Colt36-disassembly",
+   "web_url": "https://antxiko.github.io/Colt36-disassembly/",
+   "meta_en": "Topo Soft · MSX · cassette tape",
+   "meta_es": "Topo Soft · MSX · cinta de cassette",
+   "directorio": "COLT36_DISAM",
+   "binario": {
+    "var": "TSX",
+    "valor": "colt36.tsx",
+    "fichero": "COLT36_DISAM/colt36.tsx",
+    "bytes": 34722,
+    "sha256": "4f3090407ff22826a0ce1281908c497396cda972fe10dd0af694330cd62ebe13"
+   },
+   "cifras": {
+    "instrucciones": 440,
+    "comentarios": 166,
+    "densidad": 37.7,
+    "flojas": 0,
+    "bloques": 55
+   },
+   "listados": [
+    "src/colt36_arranque.asm",
+    "src/colt36_cm2.asm",
+    "src/colt36_scr.asm",
+    "src/colt36_topo.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "trailblazer",
+   "categoria": "desensamblado",
+   "grupo": "ports",
+   "titulo": "Trailblazer",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Trailblazer-disassembly",
+   "web_url": "https://antxiko.github.io/Trailblazer-disassembly/",
+   "meta_en": "Gremlin Graphics · MSX · cassette tape",
+   "meta_es": "Gremlin Graphics · MSX · cinta de cassette",
+   "directorio": "TRAILBLAZER_DISAM",
+   "binario": {
+    "var": "CAS",
+    "valor": "trailblazer.cas",
+    "fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+    "bytes": 38458,
+    "sha256": "779b662747fdd04b641fbf898124611562d9913e570f5050b5d73580ce63cf50"
+   },
+   "cifras": {
+    "instrucciones": 3637,
+    "comentarios": 1119,
+    "densidad": 30.8,
+    "flojas": 0,
+    "bloques": 355
+   },
+   "listados": [
+    "src/trailblazer_cargador.asm",
+    "src/trailblazer_datos.asm",
+    "src/trailblazer_juego.asm",
+    "src/trailblazer_portada.asm",
+    "src/trailblazer_slots.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3637,
+    "comentarios": 1119,
+    "flojas": 0,
+    "bloques": 355,
+    "densidad": 30.8
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "stardust",
+   "categoria": "desensamblado",
+   "grupo": "ports",
+   "titulo": "Stardust",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Stardust-MSX-disassembly",
+   "web_url": "https://antxiko.github.io/Stardust-MSX-disassembly/",
+   "meta_en": "Topo Soft · MSX · cassette tape",
+   "meta_es": "Topo Soft · MSX · cinta de cassette",
+   "directorio": "STARDUST_DISAM",
+   "binario": {
+    "var": "TSX",
+    "valor": "stardust.tsx",
+    "fichero": "STARDUST_DISAM/stardust.tsx",
+    "bytes": 94228,
+    "sha256": "8f4fb3840e5ad043d8d694faeaa86a6e4a5cd2cabe5dd99fec08e5cf0a7dbb13"
+   },
+   "cifras": {
+    "instrucciones": 10432,
+    "comentarios": 3260,
+    "densidad": 31.2,
+    "flojas": 0,
+    "bloques": 1148
+   },
+   "listados": [
+    "src/stardust_juego.asm",
+    "src/stardust_loader.asm",
+    "src/stardust_parte2.asm",
+    "src/stardust_pre.asm",
+    "src/stardust_topo.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "temptations",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Temptations",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/temptations-disassembly",
+   "web_url": "https://antxiko.github.io/temptations-disassembly/",
+   "meta_en": "Topo Soft · MSX · cassette tape",
+   "meta_es": "Topo Soft · MSX · cinta de cassette",
+   "directorio": "TEMPTATIONS_DISAM",
+   "binario": {
+    "var": "TSX",
+    "valor": "Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+    "fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+    "bytes": 58440,
+    "sha256": "8337f9077026128efafa52d2672c9ffa81ea26835553a8aab172b1de117cfd12"
+   },
+   "cifras": {
+    "instrucciones": 2923,
+    "comentarios": 1045,
+    "densidad": 35.8,
+    "flojas": 0,
+    "bloques": 548
+   },
+   "listados": [
+    "src/temptations_game.asm",
+    "src/temptations_portada.asm",
+    "src/temptations_slots.asm",
+    "src/temptations_topo.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "alehop",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Ale Hop!",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/AleHop-disassembly",
+   "web_url": "https://antxiko.github.io/AleHop-disassembly/",
+   "meta_en": "Topo Soft · MSX · cassette tape",
+   "meta_es": "Topo Soft · MSX · cinta de cassette",
+   "directorio": "ALEHOP_DISAM",
+   "binario": {
+    "var": "TSX",
+    "valor": "alehop.tsx",
+    "fichero": "ALEHOP_DISAM/alehop.tsx",
+    "bytes": 60680,
+    "sha256": "499d74c7a3612e8db402d041c909f3d1b5ae193f11194a85586a665edc73bb64"
+   },
+   "cifras": {
+    "instrucciones": 2838,
+    "comentarios": 929,
+    "densidad": 32.7,
+    "flojas": 0,
+    "bloques": 294
+   },
+   "listados": [
+    "src/alehop_game_cola.asm",
+    "src/alehop_game_datos.asm",
+    "src/alehop_game_extra.asm",
+    "src/alehop_game_nucleo.asm",
+    "src/alehop_game_sonido.asm",
+    "src/alehop_portada.asm",
+    "src/alehop_slots.asm",
+    "src/alehop_topo.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "war",
+   "categoria": "desensamblado",
+   "grupo": "ports",
+   "titulo": "War in Middle Earth",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/WarinMiddleEarth-MSX-disassembly",
+   "web_url": "https://antxiko.github.io/WarinMiddleEarth-MSX-disassembly/",
+   "meta_en": "Melbourne House / Dro Soft · MSX · 62,261-byte cassette",
+   "meta_es": "Melbourne House / Dro Soft · MSX · cinta de 62.261 bytes",
+   "directorio": "WARINMIDDLEEARTH_DISAM",
+   "binario": {
+    "var": "TSX",
+    "valor": "war.tsx",
+    "fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+    "bytes": 62650,
+    "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
+   },
+   "cifras": {
+    "instrucciones": 6844,
+    "comentarios": 2031,
+    "densidad": 29.7,
+    "flojas": 0,
+    "bloques": 767
+   },
+   "listados": [
+    "src/war_alto.asm",
+    "src/war_bajo.asm",
+    "src/war_loader.asm",
+    "src/war_medio.asm",
+    "src/war_pantalla.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "descubrimiento",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "El Descubrimiento de América",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Descubrimiento-disassembly",
+   "web_url": "https://antxiko.github.io/Descubrimiento-disassembly/",
+   "meta_en": "Gema / OMK Software · MSX · 66,371-byte cassette",
+   "meta_es": "Gema / OMK Software · MSX · cinta de 66.371 bytes",
+   "directorio": "DESCUBRIMIENTO_DISAM",
+   "binario": {
+    "var": "CAS",
+    "valor": "descubrimiento.cas",
+    "fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+    "bytes": 66371,
+    "sha256": "ac7b780000c2b92f0cbbd89f9ee36e741beb88a41261920680235e84b1c53077"
+   },
+   "cifras": {
+    "instrucciones": 6665,
+    "comentarios": 1782,
+    "densidad": 26.7,
+    "flojas": 0,
+    "bloques": 733
+   },
+   "listados": [
+    "src/descubrimiento_carga.asm",
+    "src/descubrimiento_p1alto.asm",
+    "src/descubrimiento_p1bajo.asm",
+    "src/descubrimiento_p2alto.asm",
+    "src/descubrimiento_p2bajo.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 6665,
+    "comentarios": 1782,
+    "bloques": 733,
+    "flojas": 0,
+    "densidad": 26.7
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "mahjong-en",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "Konami’s Mahjong Dojo — English patch",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/KonamisMahjongDojo-ENPatch",
+   "web_url": "https://antxiko.github.io/KonamisMahjongDojo-ENPatch/",
+   "meta_en": "Konami · MSX · RC-707 · IPS patch, unofficial",
+   "meta_es": "Konami · MSX · RC-707 · parche IPS, extraoficial",
+   "directorio": "MAHJONGDOJO_ENPATCH",
+   "binario": {
+    "var": "ROM",
+    "valor": "mahjong.rom",
+    "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+    "bytes": 32768,
+    "sha256": "24cb5bda5f55dcd5ab1343fb61ebac67e8c292f9714ee7a492431e33188b9b40"
+   },
+   "cifras": {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "densidad": 30.7,
+    "flojas": 0,
+    "bloques": 1001
+   },
+   "listados": [
+    "src/mahjong.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7548,
+    "comentarios": 2320,
+    "flojas": 0,
+    "bloques": 1001,
+    "densidad": 30.7
+   },
+   "coteja": true,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  },
+  {
+   "clave": "warinmiddleearth-patch",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "War in Middle Earth — Araubi’s patch",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/WarinMiddleEarth-MSX-Patch",
+   "web_url": "https://antxiko.github.io/WarinMiddleEarth-MSX-Patch/",
+   "meta_en": "Melbourne House / Dro Soft · MSX · tape · IPS patch, unofficial",
+   "meta_es": "Melbourne House / Dro Soft · MSX · cinta · parche IPS, extraoficial",
+   "directorio": "WARINMIDDLEEARTH_PATCH",
+   "binario": {
+    "var": "TSX",
+    "valor": "war.tsx",
+    "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+    "bytes": 62650,
+    "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
+   },
+   "cifras": {
+    "instrucciones": 6844,
+    "comentarios": 2031,
+    "densidad": 29.7,
+    "flojas": 0,
+    "bloques": 767
+   },
+   "listados": [
+    "src/parche/ficha_valores.asm",
+    "src/parche/icono_enemigo.asm",
+    "src/war_alto.asm",
+    "src/war_bajo.asm",
+    "src/war_loader.asm",
+    "src/war_medio.asm",
+    "src/war_pantalla.asm"
+   ],
+   "cifras_del_repo": null,
+   "coteja": null,
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+   }
+  }
+ ],
+ "sin_ficha_en_la_portada": [
+  {
+   "directorio": "ANTXIKO_GITHUB_IO",
+   "remote": "github.com/antxiko/antxiko.github.io"
+  },
+  {
+   "directorio": "BBDD_DESASMs",
+   "remote": null
+  },
+  {
+   "directorio": "SERIE_DB",
+   "remote": null
+  }
+ ],
+ "avisos": [
+  "3dgolf: sin cifras (no publica listados en ensamblador)"
+ ]
+}

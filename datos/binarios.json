@@ -1,0 +1,804 @@
+[
+ {
+  "repo": "3DGOLF_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "3dgolf.rom",
+    "fichero": "3DGOLF_DISAM/3dgolf.rom",
+    "bytes": 16384,
+    "sha256": "95d4e9dd82e60c614a471520d4e22ede94a5440a48f62376df62a74f093a8514"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "ALEHOP_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "alehop.tsx",
+    "fichero": "ALEHOP_DISAM/alehop.tsx",
+    "bytes": 60680,
+    "sha256": "499d74c7a3612e8db402d041c909f3d1b5ae193f11194a85586a665edc73bb64"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "ANTARCTIC_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "antarctic-$(V).rom",
+    "fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+    "bytes": 16384,
+    "sha256": "a33f9298bf6f740ebe8d88bdc8ed75c855404d804e07679d6c2f2ad00dc3c452"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "ANTXIKO_GITHUB_IO",
+  "makefile": false,
+  "binarios": [],
+  "declaradas": []
+ },
+ {
+  "repo": "ATHLETIC_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "athletic.rom",
+    "fichero": "ATHLETIC_DISAM/athletic.rom",
+    "bytes": 16384,
+    "sha256": "7bd280ae4147a5bf5676b15fde310a8106887786c78873344d97a1cd81285485"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "BASEBALL_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "baseball.rom",
+    "fichero": "BASEBALL_DISAM/baseball.rom",
+    "bytes": 16384,
+    "sha256": "06504efb72d1cd3351dae8eb1f7b073f69d599fa7018663937f85535658ad3e7"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "BBDD_DESASMs",
+  "makefile": false,
+  "binarios": [],
+  "declaradas": []
+ },
+ {
+  "repo": "BILLIARDS_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "billiards.rom",
+    "fichero": "BILLIARDS_DISAM/billiards.rom",
+    "bytes": 16384,
+    "sha256": "38741612e0b20e39dfd834106a3d5ef5a24c06fb947a104c044f1cdd269c46d9"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "BOMBERMAN_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "bomberman.rom",
+    "fichero": "BOMBERMAN_DISAM/bomberman.rom",
+    "bytes": 8192,
+    "sha256": "eab39bab547089facf9df3021e729b65fba2b263c505325d034ed1b6e3df8eea"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "BOXING_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "boxing.rom",
+    "fichero": "BOXING_DISAM/boxing.rom",
+    "bytes": 32768,
+    "sha256": "43b23739d63b636922f0a98c33322bfdeafbefeccc01dd74fb0a45107581d0e6"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "CABBAGEPATCH_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "cabbagepatch.rom",
+    "fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+    "bytes": 16384,
+    "sha256": "114945c770531db3ae61eb330d7ed870a3c00d3a90db2a29a4c134135c2c0707"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "CASIOWORLDOPEN_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "casioworldopen.rom",
+    "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+    "bytes": 32768,
+    "sha256": "7b03fd41c11975131db7c2303aa0757b369c4f6e1e54586da8f2b70d68b8d19d"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "COLT36_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "colt36.tsx",
+    "fichero": "COLT36_DISAM/colt36.tsx",
+    "bytes": 34722,
+    "sha256": "4f3090407ff22826a0ce1281908c497396cda972fe10dd0af694330cd62ebe13"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "DEMONIA_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "CAS",
+    "valor": "demonia.cas",
+    "fichero": "DEMONIA_DISAM/demonia.cas",
+    "bytes": 58334,
+    "sha256": "69031ee25099df0703332ca74a64b52e6dd9909e4cfded4c3699be153adc5fc9"
+   }
+  ],
+  "declaradas": [
+   "CAS"
+  ]
+ },
+ {
+  "repo": "DESCUBRIMIENTO_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "CAS",
+    "valor": "descubrimiento.cas",
+    "fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+    "bytes": 66371,
+    "sha256": "ac7b780000c2b92f0cbbd89f9ee36e741beb88a41261920680235e84b1c53077"
+   }
+  ],
+  "declaradas": [
+   "CAS"
+  ]
+ },
+ {
+  "repo": "F1SPIRIT_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "f1spirit.rom",
+    "fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+    "bytes": 131072,
+    "sha256": "3b9afd12b29680abb655f05d24e0970954c38e48c5ccb24227d6c710474396a7"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "FROGGER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "frogger.rom",
+    "fichero": "FROGGER_DISAM/frogger.rom",
+    "bytes": 8192,
+    "sha256": "0d60ff78e1ab466bce6e888193ca62d6df71fa07344c8ea31f7a8b486323c5f5"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "GAMEMASTER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "gamemaster.rom",
+    "fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+    "bytes": 16384,
+    "sha256": "3160911ae025207c80c40630f8ce94f857e7e820c97a437152124def25b0f7ee"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "GOLF_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "golf.rom",
+    "fichero": "GOLF_DISAM/golf.rom",
+    "bytes": 16384,
+    "sha256": "6c539f0a4b46b3f723ded723a3bac036550e58385a6a9be73afb8ceb8c7ecae3"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "GOONIES_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "goonies.rom",
+    "fichero": "GOONIES_DISAM/goonies.rom",
+    "bytes": 32768,
+    "sha256": "2ba602b1a17e4797da1588afe6e65640331c15746bf5959f4778b404be929dde"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HOLEINONE_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "holeinone.rom",
+    "fichero": "HOLEINONE_DISAM/holeinone.rom",
+    "bytes": 16384,
+    "sha256": "14311cc241c53b6ebbf3b0d18101405a5584a259ab0fa265391abe2b791b9eab"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPEROLYMPIC1_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hyperolympic1.rom",
+    "fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+    "bytes": 16384,
+    "sha256": "0cd8a7928e10a8551d7f6fd68943a6d4a008e04a254d258413c120dda18b792e"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPEROLYMPIC2_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hyperolympic2.rom",
+    "fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+    "bytes": 16384,
+    "sha256": "f254764f4bd1634f50abcdabe5813d133d719197216071772845983ffabad22d"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPERRALLY_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hyperrally.rom",
+    "fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+    "bytes": 16384,
+    "sha256": "eca2c0d6057b3829210b5fccd0d0005ea6ada7560f5446d9bbc2db2d06d96aae"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPERSPORTS1_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hypersports1.rom",
+    "fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+    "bytes": 16384,
+    "sha256": "440dae57676a98b5a3dd29f3e97b9c83a8cbe58a3d3f2172c6072d07e6f00754"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPERSPORTS2_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hypersports2.rom",
+    "fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+    "bytes": 16384,
+    "sha256": "f4273f5290edb8b55a319bdfc40d99c0f7863a4cbd93b75519508cb129d288f6"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "HYPERSPORTS3_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "hypersports3.rom",
+    "fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+    "bytes": 32768,
+    "sha256": "247a14766d3c64c88707ee0bfd1a0255182acab98006d2c2646085e00db29936"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "KINGSVALLEY_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "kingsvalley.rom",
+    "fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+    "bytes": 16384,
+    "sha256": "a8f807a0be90db6a01c43a948215a8761d1d7b92358279d6f2ce2dcfefab5d73"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "KNIGHTMARE_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "knightmare.rom",
+    "fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+    "bytes": 32768,
+    "sha256": "6e7a8a2d2fadc078ec9043deee804cfa5efcf2eb64f2fb6291a5161776220cf6"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "MAHJONGDOJO_ENPATCH",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "mahjong.rom",
+    "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+    "bytes": 32768,
+    "sha256": "24cb5bda5f55dcd5ab1343fb61ebac67e8c292f9714ee7a492431e33188b9b40"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "MAHJONG_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "mahjong.rom",
+    "fichero": "MAHJONG_DISAM/mahjong.rom",
+    "bytes": 32768,
+    "sha256": "24cb5bda5f55dcd5ab1343fb61ebac67e8c292f9714ee7a492431e33188b9b40"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "MONKEY_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "monkey.rom",
+    "fichero": "MONKEY_DISAM/monkey.rom",
+    "bytes": 16384,
+    "sha256": "fdf62cfa6db239fcaa3614b56263dd58e8797b206663e491588c062220b16b01"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "MOPIRANGER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "mopiranger.rom",
+    "fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+    "bytes": 16384,
+    "sha256": "89ae5bdd1541c38c2593a91d36bdacf36634c0c8b85977ff2fff046bae4dadbf"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "NEMESIS_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "nemesis.rom",
+    "fichero": "NEMESIS_DISAM/nemesis.rom",
+    "bytes": 131072,
+    "sha256": "3210f8a0f2309dd4b9a89fc2b24d0f178ce4393a0a1f2854fbce545c361261bc"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "PINGPONG_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "pingpong.rom",
+    "fichero": "PINGPONG_DISAM/pingpong.rom",
+    "bytes": 16384,
+    "sha256": "8e0f57b2c52e85505505c1d4bb4643eb7311213676f0ecfe21dd06571fc0bbd5"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "PIPPOLS_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "pippols.rom",
+    "fichero": "PIPPOLS_DISAM/pippols.rom",
+    "bytes": 16384,
+    "sha256": "ad011203f1295bf75fc30423cead68e12f96169ffeb9f13474303d9a553e41f7"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "PITFALL_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "pitfall.rom",
+    "fichero": "PITFALL_DISAM/pitfall.rom",
+    "bytes": 16384,
+    "sha256": "4d899d6258a8b06dfae8c91a8c57230fa23ff364136d6a243fafeaf282c8be58"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "ROADFIGHTER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "roadfighter.rom",
+    "fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+    "bytes": 16384,
+    "sha256": "6d36c9e9b6a6b93f642722dcd314834d01e519ab3a98d7e4ca257468bcaf29e1"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "SERIE_DB",
+  "makefile": false,
+  "binarios": [],
+  "declaradas": []
+ },
+ {
+  "repo": "SKYJAGUAR_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "skyjaguar.rom",
+    "fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+    "bytes": 16384,
+    "sha256": "58abc5aec19dbca6f6aaf278b233a85219afde9622a9c3b34544b94a350d2a3b"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "SOCCER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "soccer.rom",
+    "fichero": "SOCCER_DISAM/soccer.rom",
+    "bytes": 32768,
+    "sha256": "b9536809a1784afb2e49a43d80ba9c6c8c15cd31ecbd6c284e9bf62c6927dcd4"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "STARDUST_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "stardust.tsx",
+    "fichero": "STARDUST_DISAM/stardust.tsx",
+    "bytes": 94228,
+    "sha256": "8f4fb3840e5ad043d8d694faeaa86a6e4a5cd2cabe5dd99fec08e5cf0a7dbb13"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "SUPERCOBRA_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "supercobra.rom",
+    "fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+    "bytes": 8192,
+    "sha256": "062aeefd04e6ac28f565c15bd1010fc2a007bfbe8d3898ff8586778462091470"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "TEMPTATIONS_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+    "fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+    "bytes": 58440,
+    "sha256": "8337f9077026128efafa52d2672c9ffa81ea26835553a8aab172b1de117cfd12"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "TENNIS_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "tennis.rom",
+    "fichero": "TENNIS_DISAM/tennis.rom",
+    "bytes": 16384,
+    "sha256": "68bec8172d816025a21dd47482e9413fd8bd726b2cafb49236ca58a65c73e07f"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "TIMEPILOT_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "timepilot.rom",
+    "fichero": "TIMEPILOT_DISAM/timepilot.rom",
+    "bytes": 16384,
+    "sha256": "183e80262301b18d41762d64a2fc326f4a4bef17832109225637e184d54a70d9"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "TRAILBLAZER_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "CAS",
+    "valor": "trailblazer.cas",
+    "fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+    "bytes": 38458,
+    "sha256": "779b662747fdd04b641fbf898124611562d9913e570f5050b5d73580ce63cf50"
+   }
+  ],
+  "declaradas": [
+   "CAS"
+  ]
+ },
+ {
+  "repo": "TWINBEE_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "twinbee.rom",
+    "fichero": "TWINBEE_DISAM/twinbee.rom",
+    "bytes": 32768,
+    "sha256": "02bdce8ceafe6af05a45b61a689e78807551df663afd152090f7cd9cac827dd4"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "WARINMIDDLEEARTH_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "war.tsx",
+    "fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+    "bytes": 62650,
+    "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "WARINMIDDLEEARTH_PATCH",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "TSX",
+    "valor": "war.tsx",
+    "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+    "bytes": 62650,
+    "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
+   }
+  ],
+  "declaradas": [
+   "TSX"
+  ]
+ },
+ {
+  "repo": "YIEARKUNGFU2_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "yiear2.rom",
+    "fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+    "bytes": 32768,
+    "sha256": "bcb41b35ec0dddfd81ee9bd46998c0ea9c9435d6292e973d46c1324cc36e6150"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "YIEARKUNGFU_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "yiear.rom",
+    "fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+    "bytes": 16384,
+    "sha256": "644c78c7d20bb30802888b513b384cf0ce4f9d8b6fd490f30e6211ac92274848"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ }
+]

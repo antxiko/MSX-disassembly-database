@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""Une las tres recogidas en el registro unico de la serie.
+
+Cada recolector mira una cosa y solo una:
+
+    recoge_portada.py   quien es cada proyecto (lo que declara la portada)
+    recoge_binarios.py  que binario desensambla de verdad (leido del Makefile)
+    recoge_cifras.py    cuanto esta comentado (medido sobre los listados)
+
+Aqui se cruzan por el directorio local y sale `datos/serie.json`. Cada dato
+lleva de donde sale, porque en esta serie el numero que se publica y el numero
+que mide la herramienta no siempre han coincidido: la memoria de Twin Bee decia
+24,6 % cuando su listado ya iba por el 41,4 %.
+
+Un proyecto al que le falte una de las tres piezas sale igual, con esa pieza a
+nulo y un aviso. No se rellena a ojo ni se descarta.
+
+Uso: monta_base.py > datos/serie.json
+"""
+import datetime
+import json
+import os
+import sys
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+DATOS = os.path.join(os.path.dirname(AQUI), "datos")
+
+
+def carga(nombre):
+    with open(os.path.join(DATOS, nombre), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def main():
+    sys.stdout.reconfigure(encoding="utf-8", newline="\n")
+    portada = carga("proyectos.json")
+    binarios = {x["repo"]: x for x in carga("binarios.json")}
+    cifras = {x["repo"]: x for x in carga("cifras.json")}
+
+    salida, avisos = [], []
+    for p in portada["proyectos"]:
+        d = p["directorio"]
+        reg = dict(p)
+        del reg["aviso"]
+
+        b = binarios.get(d) or {}
+        hallados = b.get("binarios") or []
+        if len(hallados) == 1:
+            reg["binario"] = hallados[0]
+        elif hallados:
+            # Antarctic desensambla tres volcados; el Makefile los elige con
+            # una variable. Se guardan todos y no se escoge uno.
+            reg["binario"] = None
+            reg["binarios"] = hallados
+        else:
+            reg["binario"] = None
+            avisos.append("%s: sin binario localizado en su Makefile" % p["clave"])
+
+        c = cifras.get(d) or {}
+        reg["cifras"] = c.get("medido")
+        reg["listados"] = c.get("listados", [])
+        reg["cifras_del_repo"] = c.get("declarado")
+        reg["coteja"] = c.get("coteja")
+        if reg["cifras"] is None:
+            avisos.append("%s: sin cifras (no publica listados en ensamblador)"
+                          % p["clave"])
+        if reg["coteja"] is False:
+            avisos.append("%s: la cifra medida NO coincide con la del repo"
+                          % p["clave"])
+
+        reg["fuentes"] = {
+            "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+            "binario": "el Makefile del repositorio",
+            "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+            "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+        }
+        salida.append(reg)
+
+    json.dump({"generado": datetime.date.today().isoformat(),
+               "proyectos": salida,
+               "sin_ficha_en_la_portada": portada["sin_ficha_en_la_portada"],
+               "avisos": avisos},
+              sys.stdout, indent=1, ensure_ascii=False)
+    print("proyectos: %d | avisos: %d" % (len(salida), len(avisos)),
+          file=sys.stderr)
+    for a in avisos:
+        print("  " + a, file=sys.stderr)
+
+
+if __name__ == "__main__":
+    main()
