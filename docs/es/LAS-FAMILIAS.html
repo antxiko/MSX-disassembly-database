@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cómo se mide</title>
+<title>Las familias de cartuchos</title>
 <style>
 :root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
   --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
@@ -115,36 +115,55 @@ code{font-size:12px;color:var(--suave)}
 <div class="w">
 <header class="top">
   <h1>la serie<span>/</span></h1>
-  <p class="claim">Cómo se mide</p>
+  <p class="claim">Las familias de cartuchos</p>
 </header>
-<nav><a href="index.html">Inicio</a><a href="LOS-JUEGOS.html">Los juegos</a><a href="LA-MARCA.html">La marca</a><a href="LOS-CREDITOS.html">Los créditos</a><a href="LO-COMPARTIDO.html">Lo compartido</a><a href="LAS-FAMILIAS.html">Las familias</a><a href="COMO-SE-MIDE.html" style="color:var(--oro)">Cómo se mide</a><a href="../HOW-IT-IS-MEASURED.html"
+<nav><a href="index.html">Inicio</a><a href="LOS-JUEGOS.html">Los juegos</a><a href="LA-MARCA.html">La marca</a><a href="LOS-CREDITOS.html">Los créditos</a><a href="LO-COMPARTIDO.html">Lo compartido</a><a href="LAS-FAMILIAS.html" style="color:var(--oro)">Las familias</a><a href="COMO-SE-MIDE.html">Cómo se mide</a><a href="../THE-FAMILIES.html"
   style="margin-left:auto;color:var(--oro)">English</a></nav>
 
-<p>Nada se empareja por parecido del nombre y nada se rellena a ojo. Un proyecto
-al que le falte una pieza sale con esa pieza a nulo y un aviso, no con una cifra
-inventada.</p>
-<div class='tabla'><table><tr><th>dato</th><th>de dónde sale</th><th>herramienta</th></tr><tr><td>quién es cada proyecto</td><td>la ficha de la portada de la serie</td><td><code>recoge_portada.py</code></td></tr><tr><td>en qué directorio vive</td><td>el <code>remote</code> de git, casado con la URL de la ficha</td><td><code>recoge_portada.py</code></td></tr><tr><td>qué binario desensambla</td><td>la variable del Makefile del repositorio</td><td><code>recoge_binarios.py</code></td></tr><tr><td>tamaño y sha256</td><td>el fichero, releído</td><td><code>recoge_binarios.py</code></td></tr><tr><td>instrucciones y comentarios</td><td>los <code>.asm</code> que el repositorio publica</td><td><code>recoge_cifras.py</code></td></tr><tr><td>lo que el repositorio declara</td><td>su propio <code>make densidad</code></td><td><code>recoge_cifras.py</code></td></tr><tr><td>la marca oculta</td><td>el binario, rastreado entero</td><td><code>recoge_marca.py</code></td></tr><tr><td>quién firma el juego</td><td>las tiras legibles del binario</td><td><code>recoge_creditos.py</code></td></tr></table></div>
+<p>La página anterior compara <b>bytes</b>, y por eso sólo ve una rutina
+compartida si además la ensamblaron en la misma dirección. Aquí cada instrucción
+se <b>normaliza</b> poniendo a cero sus operandos de dieciséis bits —los que
+llevan direcciones— y se comparan secuencias de instrucciones. Un tramo largo de
+instrucciones iguales salvo las direcciones es la misma rutina reensamblada en
+otro sitio.</p>
 
-<h3>La vara es la misma para los cuarenta y siete</h3>
-<p>Cada repositorio trae su copia de <code>densidad.py</code>, escritas a lo largo
-de meses, y comparar entre juegos exige saber que cuentan igual. Hay cuatro
-variantes y las cuatro usan <b>el mismo criterio</b>: se diferencian en el fin de
-línea, en un caso especial de Nemesis (un banco sin código) y en que la de
-Trailblazer suma varias piezas de cinta.</p>
-<p>Así que aquí se mide con una copia canónica y, además, se corre el
-<code>make densidad</code> del propio repositorio para contrastar:
-<b>treinta y cuatro cotejan exacto y ninguno discrepa</b>. Eso es lo que hace
-válida la cifra de los catorce que no traen ese objetivo, y es una comprobación
-automática.</p>
+<p>La diferencia no es teórica. <b>Super Cobra y Yie Ar Kung-Fu comparten 203
+instrucciones</b>, y la comparación por bytes sólo les encontraba 39. Golf y
+Tennis: 632 instrucciones frente a 256 bytes.</p>
 
-<h3>Lo que esta base no puede afirmar</h3>
-<ul>
-<li>Que un juego «no tiene créditos». Sólo puede decir que no aparecen en ASCII.</li>
-<li>Que dos cartuchos no comparten una rutina: si la ensamblaron en direcciones
-distintas, la comparación por bytes no la ve.</li>
-<li>De dónde sale el número de «etiquetas» que publican seis fichas de la
-portada. No es el de rutinas, ni el de etiquetas con nombre del README, ni el de
-etiquetas del listado. Queda anotado como pregunta abierta.</li>
-</ul>
+<div class="aviso"><h4>De dónde sale que eso es código</h4>
+<p>No se traza nada. El listado de cada desensamblado lleva cada instrucción con
+su dirección delante, así que las direcciones ordenadas <b>son</b> el código, y
+lo que mide una instrucción es la distancia hasta la siguiente. Cuando esa
+distancia pasa de cuatro bytes —el máximo del Z80— es que en medio hay datos, y
+ahí se corta. Se miden 37 cartuchos; los otros 12 se
+quedan fuera y dicen por qué: las cintas y las MegaROM no declaran un origen
+único.</p></div>
+
+<h3>Y entonces sí aparecen familias</h3>
+<div class='tabla'><table><tr><th>cartuchos</th><th>años</th><th>la pareja más estrecha</th><th>quiénes</th></tr><tr><td class='n'><b>20</b></td><td class='n'>1983–1986</td><td>athletic / cabbagepatch &middot; 44,5 % y 40,8 %</td><td><code>athletic, billiards, boxing, cabbagepatch, goonies, hyperrally, hypersports1, hypersports2, hypersports3, kingsvalley, knightmare, monkey, mopiranger, pingpong, pippols, roadfighter, skyjaguar, supercobra, yiearkungfu, yiearkungfu2</code></td></tr><tr><td class='n'><b>5</b></td><td class='n'>1984–1985</td><td>hyperolympic1 / hyperolympic2 &middot; 67,3 % y 63,4 %</td><td><code>baseball, golf, hyperolympic1, hyperolympic2, tennis</code></td></tr><tr><td class='n'><b>2</b></td><td class='n'>1983–1983</td><td>timepilot / frogger &middot; 7,4 % y 14,9 %</td><td><code>frogger, timepilot</code></td></tr></table></div>
+
+<p><b>El reparto no va por año.</b> La familia grande abarca de 1983 a 1986 y la
+de los cinco deportivos va de 1984 a 1985: se solapan. Tampoco va por número de
+catálogo.</p>
+
+<p>Sueltos, sin llegar al umbral con nadie: <code>antarctic, gamemaster, mahjong, soccer, twinbee</code>.</p>
+
+<h3>Por qué el 5 %, y no otro número</h3>
+<p>Se une una pareja cuando el código común es al menos ese porcentaje de
+<b>ambos</b> —el menor de los dos, no la media: que Road Fighter comparta el
+10&nbsp;% de lo suyo con Soccer no dice nada si para Soccer es el 4&nbsp;%—.
+Barriendo el umbral se ve que el reparto no es un capricho:</p>
+<div class='tabla'><table><tr><th>umbral</th><th>parejas</th><th>tamaños de los grupos</th></tr><tr><td class='n'>2 %</td><td class='n'>202</td><td><code>28 + 2 + 1 + 1</code></td></tr><tr><td class='n'>3 %</td><td class='n'>144</td><td><code>28 + 2 + 1 + 1</code></td></tr><tr><td class='n'>4 %</td><td class='n'>99</td><td><code>22 + 5 + 2 + 1 + 1 + 1</code></td></tr><tr><td class='n'>5 %</td><td class='n'>60</td><td><code>20 + 5 + 2 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>6 %</td><td class='n'>33</td><td><code>16 + 5 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>8 %</td><td class='n'>14</td><td><code>5 + 3 + 2 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>10 %</td><td class='n'>8</td><td><code>5 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr></table></div>
+<p>El grupo de cinco y el de dos <b>son los mismos del 4 al 8&nbsp;%</b>,
+mientras la familia grande se va deshaciendo poco a poco. Eso es lo que
+distingue una familia de un artefacto del umbral.</p>
+
+<div class="aviso"><h4>Cómo hay que leer esto</h4>
+<p>Agrupa por <b>código compartido medido</b>, y nada más. Que dos cartuchos
+caigan en la misma familia no dice que los escribiera el mismo equipo ni que uno
+saliera del otro: dice que hoy tienen rutinas en común. Y la familia de veinte,
+unida por un 5&nbsp;%, es más un vecindario que una familia: dentro hay parejas
+al 44&nbsp;% y parejas que apenas se rozan.</p></div>
 <footer>Los binarios no se distribuyen. Este repositorio contiene medidas y análisis, no los juegos. Cada juego pertenece a sus autores.</footer>
 </div>

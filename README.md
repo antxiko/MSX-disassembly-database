@@ -176,22 +176,66 @@ dejaron sin nombre** (`L_4716`, `L_4766`, `L_4867`…): sólo Ping Pong la bauti
 como `PINTA_TIRA_BUCLE`. Bautizarla en los otros diez es trabajo para sus
 repositorios, no para éste.
 
-### Lo que este método no ve
+### Lo que este método no ve, y por eso hizo falta el siguiente
 
 Compara **bytes**, así que sólo encuentra una rutina compartida si además la
 ensamblaron en la misma dirección: en cuanto cambia el mapa de memoria, la misma
-rutina da bytes distintos porque sus direcciones lo son. Por eso **no sale de
-aquí una separación limpia en dos armazones** —a umbral bajo todos los Konami
-quedan conectados y a umbral alto se deshacen en fragmentos—, y lo que se ve es
-un continuo. La herramienta que sí lo vería es `comun_normalizado.py`, que pone
-a cero los operandos de dieciséis bits y compara instrucciones; usarla exige
-trazar cada ROM desde su INIT y no está hecho todavía.
+rutina da bytes distintos porque sus direcciones lo son. De aquí **no sale** una
+separación en familias —a umbral bajo todos los Konami quedan conectados y a
+umbral alto se deshacen en fragmentos—, sino un continuo. Eso lo resuelve la
+comparación normalizada, abajo.
 
 Un aviso concreto de esto: la lectura de mandos de 65 bytes que Athletic Land
 comparte con Antarctic **está en la Antarctic europea y en la japonesa 1ª, y no
 en la 2ª** — que es justo la que el Makefile de ese repositorio elige por
 defecto y la que mide esta base. Un hallazgo puede depender de qué volcado se
 mire.
+
+## Las familias: qué armazón comparte cada cartucho
+
+Aquí cada instrucción se **normaliza** poniendo a cero sus operandos de dieciséis
+bits —los que llevan direcciones— y se comparan secuencias de instrucciones. Un
+tramo largo de instrucciones iguales salvo las direcciones es la misma rutina
+reensamblada en otro sitio.
+
+La diferencia con la comparación por bytes no es teórica: **Super Cobra y Yie Ar
+Kung-Fu comparten 203 instrucciones**, y la de bytes sólo les encontraba 39.
+Golf y Tennis, 632 instrucciones frente a 256 bytes.
+
+Y entonces sí aparecen familias. De los 37 cartuchos que se pueden medir así (las
+cintas y las MegaROM no declaran un origen único, y se quedan fuera diciéndolo):
+
+| cartuchos | años | la pareja más estrecha | quiénes |
+|---:|---|---|---|
+| 20 | 1983–1986 | athletic / cabbagepatch, 44,5 % y 40,8 % | athletic, billiards, boxing, cabbagepatch, goonies, hyperrally, hypersports 1/2/3, kingsvalley, knightmare, monkey, mopiranger, pingpong, pippols, roadfighter, skyjaguar, supercobra, yiearkungfu 1/2 |
+| 5 | 1984–1985 | hyperolympic1 / hyperolympic2, **67,3 %** y 63,4 % | baseball, golf, hyperolympic1, hyperolympic2, tennis |
+| 2 | 1983 | timepilot / frogger, 7,4 % y 14,9 % | frogger, timepilot |
+
+Sueltos, sin llegar al umbral con nadie: antarctic, gamemaster, mahjong, soccer,
+twinbee.
+
+**El reparto no va por año**: la familia grande abarca 1983-1986 y la de los cinco
+deportivos 1984-1985, solapadas. Tampoco por número de catálogo.
+
+### Por qué el 5 %, y no otro número
+
+Se une una pareja cuando el código común es al menos ese porcentaje de **ambos**
+—el menor de los dos, no la media—. Barriendo el umbral:
+
+    2 %   4 grupos: 28 + 2 + 1 + 1      todo pegado, no separa
+    4 %   6 grupos: 22 + 5 + 2 + ...
+    5 %   8 grupos: 20 + 5 + 2 + ...
+    6 %  12 grupos: 16 + 5 + 2 + ...
+    8 %  24 grupos:  5 + 3 + 2 + 2 ...  la familia grande ya se deshace
+
+El grupo de cinco y el de dos **son los mismos del 4 al 8 %**, mientras la familia
+grande se va deshaciendo. Eso distingue una familia de un artefacto del umbral, y
+es un test.
+
+Cómo hay que leerlo: agrupa por **código compartido medido**, y nada más. Que dos
+cartuchos caigan en la misma familia no dice que los escribiera el mismo equipo ni
+que uno saliera del otro. Y la familia de veinte es más un vecindario que una
+familia: dentro hay parejas al 44 % y parejas que apenas se rozan.
 
 ## Cómo se usa
 
@@ -206,9 +250,12 @@ mire.
 
     python3 tools/recoge_comun.py    ../ > datos/comun.json          # tarda
     python3 tools/nombra_comunes.py  ../ > datos/rutinas_comunes.json
+    python3 tools/recoge_normalizado.py ../ > datos/normalizado.json  # tarda
+    python3 tools/familias.py              > datos/familias.json
 
     python3 tools/coteja_portada.py  ..    # lo publicado contra lo medido
-    python3 -m unittest discover -s tests  # 23 comprobaciones
+    python3 tools/make_web.py              # las 7 paginas por idioma
+    python3 -m unittest discover -s tests  # 34 comprobaciones
 
 `monta_base.py` va dos veces a propósito: los dos últimos recolectores necesitan
 saber qué binario mirar, y eso lo dice `serie.json`. La segunda pasada da el
@@ -217,7 +264,6 @@ los otros seis son las recogidas de las que sale.
 
 ## Lo que todavía no está
 
-Tres de cuatro capas. Falta **la web** bilingüe y publicar el repositorio como
-el resto de la serie. Y queda apuntada, con su razón, la comparación
-**normalizada**: la que vería las rutinas compartidas aunque estén en otra
-dirección.
+Los cartuchos que no se pueden comparar normalizados: las **cintas** y las
+**MegaROM** (Nemesis, F-1 Spirit), porque no declaran un origen único. Medirlas
+exige tratar cada banco o cada pieza de cinta por separado, con su propio origen.

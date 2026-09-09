@@ -14,13 +14,15 @@ la web cambia con ella sola. En las webs de los juegos las cifras son constantes
 en el generador y hay que acordarse de tocarlas; ese olvido es justo lo que esta
 base encontro en cuatro fichas de la portada.
 
-Las paginas son seis por idioma, y cada una responde a una pregunta:
+Las paginas son siete por idioma, y cada una responde a una pregunta:
 
     index                 que es esto y cuanto hay
     LOS-JUEGOS            los 49, uno por fila, con sus cifras
     LA-MARCA              quien lleva la marca oculta de Konami
     LOS-CREDITOS          quien firma cada juego, citado del binario
-    LO-COMPARTIDO         que codigo comparten, y con cuantos nombres
+    LO-COMPARTIDO         que bytes comparten, y con cuantos nombres
+    LAS-FAMILIAS          que ARMAZON comparten, ya sin que las direcciones
+                          estorben, y como se agrupan
     COMO-SE-MIDE          de donde sale cada dato y que no se puede afirmar
 """
 import html
@@ -59,13 +61,14 @@ code{font-size:12px;color:var(--suave)}
 PAGINAS = [("index", "index"), ("LOS-JUEGOS", "THE-GAMES"),
            ("LA-MARCA", "THE-MARK"), ("LOS-CREDITOS", "THE-CREDITS"),
            ("LO-COMPARTIDO", "WHAT-THEY-SHARE"),
+           ("LAS-FAMILIAS", "THE-FAMILIES"),
            ("COMO-SE-MIDE", "HOW-IT-IS-MEASURED")]
 
 MENU = {
     "es": ["Los juegos", "La marca", "Los créditos", "Lo compartido",
-           "Cómo se mide"],
+           "Las familias", "Cómo se mide"],
     "en": ["The games", "The mark", "The credits", "What they share",
-           "How it is measured"],
+           "The families", "How it is measured"],
 }
 
 
@@ -140,6 +143,10 @@ diecisiete dan el mismo número de catálogo que publica su ficha.
 <a href="LA-MARCA.html">La marca</a>.</li>
 <li><b>Demonia la firma Claude Sablatou</b>, y Trailblazer trae dentro la lista
 entera de sus autores. <a href="LOS-CREDITOS.html">Los créditos</a>.</li>
+<li><b>Los cartuchos de Konami se reparten en familias</b>, y no por año ni por
+número de catálogo: Hyper Olympic 1 y 2 comparten el 67&nbsp;% de su código, y
+Athletic Land y Cabbage Patch el 44&nbsp;%.
+<a href="LAS-FAMILIAS.html">Las familias</a>.</li>
 <li><b>Ninguno de los cuarenta y siete tiene una sola rutina por debajo del
 10&nbsp;% de comentario.</b> Eso es el listón de la serie, y aquí está
 comprobado de una vez sobre los listados de hoy.</li>
@@ -172,6 +179,9 @@ give the same catalogue number their card publishes.
 <a href="THE-MARK.html">The mark</a>.</li>
 <li><b>Demonia is signed by Claude Sablatou</b>, and Trailblazer carries the full
 list of its authors inside. <a href="THE-CREDITS.html">The credits</a>.</li>
+<li><b>Konami's cartridges fall into families</b>, and not by year or catalogue
+number: Hyper Olympic 1 and 2 share 67&nbsp;% of their code, and Athletic Land
+and Cabbage Patch 44&nbsp;%. <a href="THE-FAMILIES.html">The families</a>.</li>
 <li><b>Not one of the forty-seven has a single routine below 10&nbsp;% commented.</b>
 That is the bar for the series, checked here in one go over today's listings.</li>
 </ul>"""
@@ -356,6 +366,135 @@ the file. <b>That offset is not a memory address</b>: a page-1 cartridge appears
 at 0x4000 and a page-2 one at 0x8000, and a tape appears nowhere until it
 loads.</p>"""
     return cabecera + "".join(bloques)
+
+
+def tabla_familias(fam, idioma):
+    cab = (["cartuchos", "años", "la pareja más estrecha", "quiénes"]
+           if idioma == "es" else
+           ["cartridges", "years", "closest pair", "which ones"])
+    filas = []
+    for f in fam["familias"]:
+        p = f["la_pareja_mas_estrecha"]
+        par = ("%s / %s &middot; %s y %s" % (p["a"], p["b"],
+               pct(p["porcentaje_de_a"], idioma), pct(p["porcentaje_de_b"], idioma))
+               if idioma == "es" else
+               "%s / %s &middot; %s and %s" % (p["a"], p["b"],
+               pct(p["porcentaje_de_a"], idioma), pct(p["porcentaje_de_b"], idioma)))
+        filas.append("<tr><td class='n'><b>%d</b></td><td class='n'>%s</td>"
+                     "<td>%s</td><td><code>%s</code></td></tr>"
+                     % (f["cuantos"],
+                        "%d–%d" % (min(f["anios"]), max(f["anios"]))
+                        if f["anios"] else "—",
+                        par, e(", ".join(f["cartuchos"]))))
+    return ("<div class='tabla'><table><tr>%s</tr>%s</table></div>"
+            % ("".join("<th>%s</th>" % e(x) for x in cab), "".join(filas)))
+
+
+def pag_familias(fam, norm, idioma):
+    tabla = tabla_familias(fam, idioma)
+    barrido = "".join(
+        "<tr><td class='n'>%d %%</td><td class='n'>%d</td><td><code>%s</code></td></tr>"
+        % (x["umbral"], x["aristas"], " + ".join(str(t) for t in x["tamanos"]))
+        for x in fam["barrido_que_justifica_el_umbral"])
+    cabb = (["umbral", "parejas", "tamaños de los grupos"] if idioma == "es"
+            else ["threshold", "pairs", "group sizes"])
+    tbarrido = ("<div class='tabla'><table><tr>%s</tr>%s</table></div>"
+                % ("".join("<th>%s</th>" % e(x) for x in cabb), barrido))
+    sueltos = ", ".join(fam["sueltos"])
+    fuera = len(norm["fuera"])
+
+    if idioma == "es":
+        return f"""
+<p>La página anterior compara <b>bytes</b>, y por eso sólo ve una rutina
+compartida si además la ensamblaron en la misma dirección. Aquí cada instrucción
+se <b>normaliza</b> poniendo a cero sus operandos de dieciséis bits —los que
+llevan direcciones— y se comparan secuencias de instrucciones. Un tramo largo de
+instrucciones iguales salvo las direcciones es la misma rutina reensamblada en
+otro sitio.</p>
+
+<p>La diferencia no es teórica. <b>Super Cobra y Yie Ar Kung-Fu comparten 203
+instrucciones</b>, y la comparación por bytes sólo les encontraba 39. Golf y
+Tennis: 632 instrucciones frente a 256 bytes.</p>
+
+<div class="aviso"><h4>De dónde sale que eso es código</h4>
+<p>No se traza nada. El listado de cada desensamblado lleva cada instrucción con
+su dirección delante, así que las direcciones ordenadas <b>son</b> el código, y
+lo que mide una instrucción es la distancia hasta la siguiente. Cuando esa
+distancia pasa de cuatro bytes —el máximo del Z80— es que en medio hay datos, y
+ahí se corta. Se miden {len(norm['cartuchos'])} cartuchos; los otros {fuera} se
+quedan fuera y dicen por qué: las cintas y las MegaROM no declaran un origen
+único.</p></div>
+
+<h3>Y entonces sí aparecen familias</h3>
+{tabla}
+
+<p><b>El reparto no va por año.</b> La familia grande abarca de 1983 a 1986 y la
+de los cinco deportivos va de 1984 a 1985: se solapan. Tampoco va por número de
+catálogo.</p>
+
+<p>Sueltos, sin llegar al umbral con nadie: <code>{sueltos}</code>.</p>
+
+<h3>Por qué el 5 %, y no otro número</h3>
+<p>Se une una pareja cuando el código común es al menos ese porcentaje de
+<b>ambos</b> —el menor de los dos, no la media: que Road Fighter comparta el
+10&nbsp;% de lo suyo con Soccer no dice nada si para Soccer es el 4&nbsp;%—.
+Barriendo el umbral se ve que el reparto no es un capricho:</p>
+{tbarrido}
+<p>El grupo de cinco y el de dos <b>son los mismos del 4 al 8&nbsp;%</b>,
+mientras la familia grande se va deshaciendo poco a poco. Eso es lo que
+distingue una familia de un artefacto del umbral.</p>
+
+<div class="aviso"><h4>Cómo hay que leer esto</h4>
+<p>Agrupa por <b>código compartido medido</b>, y nada más. Que dos cartuchos
+caigan en la misma familia no dice que los escribiera el mismo equipo ni que uno
+saliera del otro: dice que hoy tienen rutinas en común. Y la familia de veinte,
+unida por un 5&nbsp;%, es más un vecindario que una familia: dentro hay parejas
+al 44&nbsp;% y parejas que apenas se rozan.</p></div>"""
+    return f"""
+<p>The previous page compares <b>bytes</b>, and so it only sees a shared routine
+if it was also assembled at the same address. Here each instruction is
+<b>normalised</b> by zeroing its sixteen-bit operands — the ones carrying
+addresses — and sequences of instructions are compared. A long run of
+instructions identical but for the addresses is the same routine reassembled
+somewhere else.</p>
+
+<p>The difference is not theoretical. <b>Super Cobra and Yie Ar Kung-Fu share 203
+instructions</b>, and the byte comparison found them only 39. Golf and Tennis:
+632 instructions against 256 bytes.</p>
+
+<div class="aviso"><h4>Where the knowledge that it is code comes from</h4>
+<p>Nothing is traced. Each disassembly's listing carries every instruction with
+its address in front, so the sorted addresses <b>are</b> the code, and an
+instruction's length is the distance to the next one. When that distance exceeds
+four bytes — the Z80 maximum — there is data in between, and the run is cut
+there. {len(norm['cartuchos'])} cartridges are measured; the other {fuera} stay
+out and say why: tapes and MegaROMs declare no single origin.</p></div>
+
+<h3>And then families do appear</h3>
+{tabla}
+
+<p><b>The split does not follow the year.</b> The large family spans 1983 to 1986
+and the five sports titles run from 1984 to 1985: they overlap. Nor does it
+follow the catalogue number.</p>
+
+<p>On their own, reaching the threshold with nobody: <code>{sueltos}</code>.</p>
+
+<h3>Why 5 %, and not some other number</h3>
+<p>A pair is joined when the shared code is at least that share of <b>both</b> —
+the lower of the two, not the average: Road Fighter sharing 10&nbsp;% of its own
+code with Soccer means nothing if for Soccer it is 4&nbsp;%. Sweeping the
+threshold shows the split is not a whim:</p>
+{tbarrido}
+<p>The group of five and the group of two <b>are the same from 4 to 8&nbsp;%</b>,
+while the large family gradually falls apart. That is what tells a family from an
+artefact of the threshold.</p>
+
+<div class="aviso"><h4>How to read this</h4>
+<p>It groups by <b>measured shared code</b>, and nothing else. Two cartridges
+landing in the same family does not say the same team wrote them or that one came
+from the other: it says they have routines in common today. And the family of
+twenty, joined by a 5&nbsp;% threshold, is more a neighbourhood than a family:
+inside it there are pairs at 44&nbsp;% and pairs that barely touch.</p></div>"""
 
 
 def pag_comun(d, comun, trozos, idioma):
@@ -580,9 +719,10 @@ def pagina(idioma, cual, cuerpo, titulo):
 TITULOS = {
     "es": ["La base de datos de la serie", "Los juegos",
            "La marca oculta de Konami", "Los créditos",
-           "Lo que comparten", "Cómo se mide"],
+           "Lo que comparten", "Las familias de cartuchos", "Cómo se mide"],
     "en": ["The series database", "The games", "Konami's hidden mark",
-           "The credits", "What they share", "How it is measured"],
+           "The credits", "What they share", "The cartridge families",
+           "How it is measured"],
 }
 
 
@@ -590,6 +730,8 @@ def main():
     d = carga("serie.json")
     comun = carga("comun.json")
     trozos = carga("rutinas_comunes.json")["trozos"]
+    fam = carga("familias.json")
+    norm = carga("normalizado.json")
 
     for idioma in ("en", "es"):
         carpeta = os.path.join(RAIZ, "docs") if idioma == "en" else \
@@ -597,7 +739,8 @@ def main():
         os.makedirs(carpeta, exist_ok=True)
         cuerpos = [pag_index(d, idioma), pag_juegos(d, idioma),
                    pag_marca(d, idioma), pag_creditos(d, idioma),
-                   pag_comun(d, comun, trozos, idioma), pag_metodo(d, idioma)]
+                   pag_comun(d, comun, trozos, idioma),
+                   pag_familias(fam, norm, idioma), pag_metodo(d, idioma)]
         for (nes, nen), cuerpo, titulo in zip(PAGINAS, cuerpos, TITULOS[idioma]):
             nombre = nes if idioma == "es" else nen
             html_ = pagina(idioma, nombre, cuerpo, titulo)

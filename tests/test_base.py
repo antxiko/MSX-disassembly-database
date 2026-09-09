@@ -230,6 +230,78 @@ class LoQueComparten(unittest.TestCase):
             self.assertNotIn(fuente, patron)
 
 
+class LasFamilias(unittest.TestCase):
+    """La comparacion normalizada: la que ve una rutina compartida aunque este
+    en otra direccion, y el agrupamiento que sale de ella."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.norm = carga("normalizado.json")
+        cls.fam = carga("familias.json")
+        cls.crudo = carga("comun.json")
+
+    def test_la_normalizada_ve_lo_que_la_de_bytes_no_ve(self):
+        """La razon de ser de esta capa, comprobada en un caso concreto: Super
+        Cobra y Yie Ar Kung-Fu comparten mas de doscientas instrucciones y la
+        matriz de bytes solo les encontraba treinta y nueve, porque la misma
+        rutina esta ensamblada en otra direccion."""
+        par = {(x["a"], x["b"]): x for x in self.norm["parejas"]}
+        x = par.get(("supercobra", "yiearkungfu")) or par.get(("yiearkungfu", "supercobra"))
+        self.assertIsNotNone(x)
+        self.assertGreater(x["instrucciones_comunes"], 150)
+        crudo = [c for c in self.crudo["parejas"]
+                 if {c["a"], c["b"]} == {"supercobra", "yiearkungfu"}]
+        self.assertTrue(crudo)
+        self.assertLess(crudo[0]["bytes_comunes"], 100)
+
+    def test_las_familias_pequenas_aguantan_todo_el_barrido(self):
+        """Lo que separa una familia de un artefacto del umbral: el grupo de
+        cinco y el de dos son los mismos del 4 % al 8 %, mientras la familia
+        grande se va deshaciendo."""
+        b = {x["umbral"]: x["tamanos"] for x in
+             self.fam["barrido_que_justifica_el_umbral"]}
+        for n in (4, 5, 6):
+            self.assertIn(5, b[n], "al %d %% no hay grupo de cinco" % n)
+            self.assertIn(2, b[n], "al %d %% no hay grupo de dos" % n)
+        # y la grande si se deshace: al 8 % ya no queda ningun grupo de 15+
+        self.assertTrue(all(t < 15 for t in b[8]))
+
+    def test_el_reparto_no_va_por_ano(self):
+        """La serie lo tenia apuntado; aqui se comprueba. Si fuera por ano, las
+        familias no se solaparian en el tiempo, y se solapan."""
+        rangos = [(min(f["anios"]), max(f["anios"])) for f in self.fam["familias"]
+                  if f["anios"]]
+        self.assertGreaterEqual(len(rangos), 2)
+        solapan = any(a1 <= b2 and a2 >= b1
+                      for i, (a1, a2) in enumerate(rangos)
+                      for (b1, b2) in rangos[i + 1:])
+        self.assertTrue(solapan)
+
+    def test_los_dos_cartuchos_mas_parecidos_son_los_hyper_olympic(self):
+        mayor = max(self.norm["parejas"],
+                    key=lambda x: min(x["porcentaje_de_a"], x["porcentaje_de_b"]))
+        self.assertEqual({mayor["a"], mayor["b"]},
+                         {"hyperolympic1", "hyperolympic2"})
+        self.assertGreater(min(mayor["porcentaje_de_a"],
+                               mayor["porcentaje_de_b"]), 50)
+
+    def test_los_que_se_quedan_fuera_dicen_por_que(self):
+        """Doce no se pueden medir asi -las cintas y las MegaROM no declaran un
+        ORG unico-. Eso se declara, no se disimula."""
+        self.assertTrue(self.norm["fuera"])
+        for x in self.norm["fuera"]:
+            self.assertTrue(x["por"])
+        claves = {x["clave"] for x in self.norm["fuera"]}
+        for esperado in ("nemesis", "f1spirit", "stardust"):
+            self.assertIn(esperado, claves)
+
+    def test_cada_familia_sale_de_parejas_que_existen(self):
+        medidos = {c["clave"] for c in self.norm["cartuchos"]}
+        for f in self.fam["familias"]:
+            for k in f["cartuchos"]:
+                self.assertIn(k, medidos)
+
+
 class LaWeb(unittest.TestCase):
     """La web se genera de los datos, y estas comprobaciones lo atan.
 

@@ -1,0 +1,218 @@
+{
+ "umbral": 5.0,
+ "cartuchos_konami": 32,
+ "barrido_que_justifica_el_umbral": [
+  {
+   "umbral": 2,
+   "aristas": 202,
+   "tamanos": [
+    28,
+    2,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 3,
+   "aristas": 144,
+   "tamanos": [
+    28,
+    2,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 4,
+   "aristas": 99,
+   "tamanos": [
+    22,
+    5,
+    2,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 5,
+   "aristas": 60,
+   "tamanos": [
+    20,
+    5,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 6,
+   "aristas": 33,
+   "tamanos": [
+    16,
+    5,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 8,
+   "aristas": 14,
+   "tamanos": [
+    5,
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "umbral": 10,
+   "aristas": 8,
+   "tamanos": [
+    5,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  }
+ ],
+ "familias": [
+  {
+   "cartuchos": [
+    "athletic",
+    "billiards",
+    "boxing",
+    "cabbagepatch",
+    "goonies",
+    "hyperrally",
+    "hypersports1",
+    "hypersports2",
+    "hypersports3",
+    "kingsvalley",
+    "knightmare",
+    "monkey",
+    "mopiranger",
+    "pingpong",
+    "pippols",
+    "roadfighter",
+    "skyjaguar",
+    "supercobra",
+    "yiearkungfu",
+    "yiearkungfu2"
+   ],
+   "cuantos": 20,
+   "anios": [
+    1983,
+    1984,
+    1985,
+    1986
+   ],
+   "la_pareja_mas_estrecha": {
+    "a": "athletic",
+    "b": "cabbagepatch",
+    "porcentaje_de_a": 44.5,
+    "porcentaje_de_b": 40.8
+   },
+   "parejas_por_encima_del_umbral": 49
+  },
+  {
+   "cartuchos": [
+    "baseball",
+    "golf",
+    "hyperolympic1",
+    "hyperolympic2",
+    "tennis"
+   ],
+   "cuantos": 5,
+   "anios": [
+    1984,
+    1985
+   ],
+   "la_pareja_mas_estrecha": {
+    "a": "hyperolympic1",
+    "b": "hyperolympic2",
+    "porcentaje_de_a": 67.3,
+    "porcentaje_de_b": 63.4
+   },
+   "parejas_por_encima_del_umbral": 10
+  },
+  {
+   "cartuchos": [
+    "frogger",
+    "timepilot"
+   ],
+   "cuantos": 2,
+   "anios": [
+    1983
+   ],
+   "la_pareja_mas_estrecha": {
+    "a": "timepilot",
+    "b": "frogger",
+    "porcentaje_de_a": 7.4,
+    "porcentaje_de_b": 14.9
+   },
+   "parejas_por_encima_del_umbral": 1
+  }
+ ],
+ "sueltos": [
+  "antarctic",
+  "gamemaster",
+  "mahjong",
+  "soccer",
+  "twinbee"
+ ]
+}
