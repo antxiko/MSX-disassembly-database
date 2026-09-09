@@ -1,0 +1,416 @@
+{
+ "credito": "El hallazgo de la marca es de Manuel Pazos (@ManuelPazosMSX), septiembre de 2021.",
+ "binarios": [
+  {
+   "clave": "3dgolf",
+   "titulo": "3D Golf Simulation",
+   "grupo": "msx-exclusive",
+   "fichero": "3DGOLF_DISAM/3dgolf.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "bomberman",
+   "titulo": "Bomber Man",
+   "grupo": "msx-exclusive",
+   "fichero": "BOMBERMAN_DISAM/bomberman.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "timepilot",
+   "titulo": "Time Pilot",
+   "grupo": "konami",
+   "fichero": "TIMEPILOT_DISAM/timepilot.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "frogger",
+   "titulo": "Frogger",
+   "grupo": "konami",
+   "fichero": "FROGGER_DISAM/frogger.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "supercobra",
+   "titulo": "Super Cobra",
+   "grupo": "konami",
+   "fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "athletic",
+   "titulo": "Athletic Land",
+   "grupo": "konami",
+   "fichero": "ATHLETIC_DISAM/athletic.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "antarctic",
+   "titulo": "Antarctic Adventure",
+   "grupo": "konami",
+   "fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+   "lleva_marca": true,
+   "rc": "RC-701",
+   "bytes_titulo": 20,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "KE tsu KI yo KU   NA N KI yo KU   TA \" I HO \" U KE N"
+  },
+  {
+   "clave": "monkey",
+   "titulo": "Monkey Academy",
+   "grupo": "konami",
+   "fichero": "MONKEY_DISAM/monkey.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "billiards",
+   "titulo": "Konami’s Billiards",
+   "grupo": "konami",
+   "fichero": "BILLIARDS_DISAM/billiards.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "mahjong",
+   "titulo": "Konami’s Mahjong Dojo",
+   "grupo": "konami",
+   "fichero": "MAHJONG_DISAM/mahjong.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hyperolympic1",
+   "titulo": "Hyper Olympic 1",
+   "grupo": "konami",
+   "fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hyperolympic2",
+   "titulo": "Hyper Olympic 2",
+   "grupo": "konami",
+   "fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "holeinone",
+   "titulo": "Hole in One",
+   "grupo": "msx-exclusive",
+   "fichero": "HOLEINONE_DISAM/holeinone.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "casioworldopen",
+   "titulo": "Casio World Open",
+   "grupo": "msx-exclusive",
+   "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hyperrally",
+   "titulo": "Hyper Rally",
+   "grupo": "konami",
+   "fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+   "lleva_marca": true,
+   "rc": "RC-718",
+   "bytes_titulo": 8,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "HA I HA o - RA RI -"
+  },
+  {
+   "clave": "skyjaguar",
+   "titulo": "Sky Jaguar",
+   "grupo": "konami",
+   "fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "golf",
+   "titulo": "Konami's Golf",
+   "grupo": "konami",
+   "fichero": "GOLF_DISAM/golf.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "mopiranger",
+   "titulo": "Mopi Ranger",
+   "grupo": "konami",
+   "fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+   "lleva_marca": true,
+   "rc": "RC-728",
+   "bytes_titulo": 9,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "MO HI o RE N SI \" ya -"
+  },
+  {
+   "clave": "roadfighter",
+   "titulo": "Road Fighter",
+   "grupo": "konami",
+   "fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+   "lleva_marca": true,
+   "rc": "RC-730",
+   "bytes_titulo": 10,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "RO - TO \"   HU a I TA -"
+  },
+  {
+   "clave": "pingpong",
+   "titulo": "Konami's Ping Pong",
+   "grupo": "konami",
+   "fichero": "PINGPONG_DISAM/pingpong.rom",
+   "lleva_marca": true,
+   "rc": "RC-731",
+   "bytes_titulo": 12,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "KO NA MI   NO   HI o N HO o N"
+  },
+  {
+   "clave": "soccer",
+   "titulo": "Konami’s Soccer",
+   "grupo": "konami",
+   "fichero": "SOCCER_DISAM/soccer.rom",
+   "lleva_marca": true,
+   "rc": "RC-732",
+   "bytes_titulo": 10,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "KO NA MI   NO   SA tsu KA -"
+  },
+  {
+   "clave": "kingsvalley",
+   "titulo": "King's Valley",
+   "grupo": "konami",
+   "fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+   "lleva_marca": true,
+   "rc": "RC-727",
+   "bytes_titulo": 6,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "O U KE NO TA NI"
+  },
+  {
+   "clave": "baseball",
+   "titulo": "Konami's Baseball",
+   "grupo": "konami",
+   "fichero": "BASEBALL_DISAM/baseball.rom",
+   "lleva_marca": true,
+   "rc": "RC-724",
+   "bytes_titulo": 4,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "YA KI yu U"
+  },
+  {
+   "clave": "knightmare",
+   "titulo": "Knightmare",
+   "grupo": "konami",
+   "fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+   "lleva_marca": true,
+   "rc": "RC-739",
+   "bytes_titulo": 10,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "MA SI \" yo U TE \" N SE TU"
+  },
+  {
+   "clave": "twinbee",
+   "titulo": "Twin Bee",
+   "grupo": "konami",
+   "fichero": "TWINBEE_DISAM/twinbee.rom",
+   "lleva_marca": true,
+   "rc": "RC-740",
+   "bytes_titulo": 6,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "TU I N HI \" -"
+  },
+  {
+   "clave": "boxing",
+   "titulo": "Konami's Boxing",
+   "grupo": "konami",
+   "fichero": "BOXING_DISAM/boxing.rom",
+   "lleva_marca": true,
+   "rc": "RC-736",
+   "bytes_titulo": 13,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "KO NA MI   NO   HO \" KU SI N KU \""
+  },
+  {
+   "clave": "yiearkungfu2",
+   "titulo": "Yie Ar Kung-Fu II",
+   "grupo": "konami",
+   "fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+   "lleva_marca": true,
+   "rc": "RC-737",
+   "bytes_titulo": 12,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "I - . A RU . KA N HU -   2"
+  },
+  {
+   "clave": "yiearkungfu",
+   "titulo": "Yie Ar Kung-Fu",
+   "grupo": "konami",
+   "fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "tennis",
+   "titulo": "Konami's Tennis",
+   "grupo": "konami",
+   "fichero": "TENNIS_DISAM/tennis.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hypersports1",
+   "titulo": "Hyper Sports 1",
+   "grupo": "konami",
+   "fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hypersports2",
+   "titulo": "Hyper Sports 2",
+   "grupo": "konami",
+   "fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "hypersports3",
+   "titulo": "Hyper Sports 3",
+   "grupo": "konami",
+   "fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+   "lleva_marca": true,
+   "rc": "RC-733",
+   "bytes_titulo": 13,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "HA I HA o -   SU HO o - TU   3"
+  },
+  {
+   "clave": "gamemaster",
+   "titulo": "Konami’s Game Master",
+   "grupo": "konami",
+   "fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+   "lleva_marca": true,
+   "rc": "RC-735",
+   "bytes_titulo": 19,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "1 0   HA \" I   TA NO SI MU   KA - TO RI tsu SI \""
+  },
+  {
+   "clave": "goonies",
+   "titulo": "The Goonies",
+   "grupo": "konami",
+   "fichero": "GOONIES_DISAM/goonies.rom",
+   "lleva_marca": true,
+   "rc": "RC-734",
+   "bytes_titulo": 7,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "KU \" - NI - SU \""
+  },
+  {
+   "clave": "cabbagepatch",
+   "titulo": "Cabbage Patch Kids",
+   "grupo": "konami",
+   "fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "pitfall",
+   "titulo": "Pitfall!",
+   "grupo": "ports",
+   "fichero": "PITFALL_DISAM/pitfall.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "pippols",
+   "titulo": "Pippols",
+   "grupo": "konami",
+   "fichero": "PIPPOLS_DISAM/pippols.rom",
+   "lleva_marca": true,
+   "rc": "RC-729",
+   "bytes_titulo": 6,
+   "cierra_en": "0x7FFF",
+   "titulo_en_kana": "HI o HO o RU SU"
+  },
+  {
+   "clave": "demonia",
+   "titulo": "Demonia",
+   "grupo": "msx-exclusive",
+   "fichero": "DEMONIA_DISAM/demonia.cas",
+   "lleva_marca": false
+  },
+  {
+   "clave": "nemesis",
+   "titulo": "Nemesis / Gradius",
+   "grupo": "konami",
+   "fichero": "NEMESIS_DISAM/nemesis.rom",
+   "lleva_marca": true,
+   "rc": "RC-742",
+   "bytes_titulo": 8,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "KU \" RA TE \" i U SU"
+  },
+  {
+   "clave": "f1spirit",
+   "titulo": "F-1 Spirit — The Way to Formula 1",
+   "grupo": "konami",
+   "fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "colt36",
+   "titulo": "Colt 36",
+   "grupo": "msx-exclusive",
+   "fichero": "COLT36_DISAM/colt36.tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "trailblazer",
+   "titulo": "Trailblazer",
+   "grupo": "ports",
+   "fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+   "lleva_marca": false
+  },
+  {
+   "clave": "stardust",
+   "titulo": "Stardust",
+   "grupo": "ports",
+   "fichero": "STARDUST_DISAM/stardust.tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "temptations",
+   "titulo": "Temptations",
+   "grupo": "msx-exclusive",
+   "fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "alehop",
+   "titulo": "Ale Hop!",
+   "grupo": "msx-exclusive",
+   "fichero": "ALEHOP_DISAM/alehop.tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "war",
+   "titulo": "War in Middle Earth",
+   "grupo": "ports",
+   "fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "descubrimiento",
+   "titulo": "El Descubrimiento de América",
+   "grupo": "msx-exclusive",
+   "fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+   "lleva_marca": false
+  },
+  {
+   "clave": "mahjong-en",
+   "titulo": "Konami’s Mahjong Dojo — English patch",
+   "grupo": null,
+   "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "warinmiddleearth-patch",
+   "titulo": "War in Middle Earth — Araubi’s patch",
+   "grupo": null,
+   "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+   "lleva_marca": false
+  }
+ ]
+}

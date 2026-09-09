@@ -1,0 +1,938 @@
+[
+ {
+  "clave": "3dgolf",
+  "titulo": "3D Golf Simulation",
+  "fichero": "3DGOLF_DISAM/3dgolf.rom",
+  "tiras_legibles": 274,
+  "creditos": [
+   {
+    "offset": "0x006B",
+    "texto": "\"Copyright 1983 By T&E SOFT\":",
+    "por": [
+     "COPYRIGHT",
+     "T&E"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "bomberman",
+  "titulo": "Bomber Man",
+  "fichero": "BOMBERMAN_DISAM/bomberman.rom",
+  "tiras_legibles": 78,
+  "creditos": [
+   {
+    "offset": "0x032A",
+    "texto": "HUDSON",
+    "por": [
+     "HUDSON"
+    ]
+   },
+   {
+    "offset": "0x03C9",
+    "texto": "DOWN  PROGRAMMER!Y",
+    "por": [
+     "PROGRAM",
+     "PROGRAMM"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "timepilot",
+  "titulo": "Time Pilot",
+  "fichero": "TIMEPILOT_DISAM/timepilot.rom",
+  "tiras_legibles": 108,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "frogger",
+  "titulo": "Frogger",
+  "fichero": "FROGGER_DISAM/frogger.rom",
+  "tiras_legibles": 51,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "supercobra",
+  "titulo": "Super Cobra",
+  "fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+  "tiras_legibles": 62,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "athletic",
+  "titulo": "Athletic Land",
+  "fichero": "ATHLETIC_DISAM/athletic.rom",
+  "tiras_legibles": 147,
+  "creditos": [
+   {
+    "offset": "0x0490",
+    "texto": "@@PROGRAM@@@@A",
+    "por": [
+     "PROGRAM"
+    ]
+   },
+   {
+    "offset": "0x04A3",
+    "texto": "ISOUND",
+    "por": [
+     "SOUND"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "antarctic",
+  "titulo": "Antarctic Adventure",
+  "fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+  "tiras_legibles": 143,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "monkey",
+  "titulo": "Monkey Academy",
+  "fichero": "MONKEY_DISAM/monkey.rom",
+  "tiras_legibles": 149,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "billiards",
+  "titulo": "Konami’s Billiards",
+  "fichero": "BILLIARDS_DISAM/billiards.rom",
+  "tiras_legibles": 78,
+  "creditos": [
+   {
+    "offset": "0x02D2",
+    "texto": "9:KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   },
+   {
+    "offset": "0x0323",
+    "texto": "SOFTWARE",
+    "por": [
+     "SOFTWARE"
+    ]
+   },
+   {
+    "offset": "0x032C",
+    "texto": "l8KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "mahjong",
+  "titulo": "Konami’s Mahjong Dojo",
+  "fichero": "MAHJONG_DISAM/mahjong.rom",
+  "tiras_legibles": 141,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "hyperolympic1",
+  "titulo": "Hyper Olympic 1",
+  "fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+  "tiras_legibles": 113,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "hyperolympic2",
+  "titulo": "Hyper Olympic 2",
+  "fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+  "tiras_legibles": 106,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "holeinone",
+  "titulo": "Hole in One",
+  "fichero": "HOLEINONE_DISAM/holeinone.rom",
+  "tiras_legibles": 277,
+  "creditos": [
+   {
+    "offset": "0x0954",
+    "texto": "@HAL 1984PRODUCED BY  F>NAKAMURA =AVERAGE=  1 PLAYER    2 PLAYERS  =EXPERT=  =PRO=  :",
+    "por": [
+     "PRODUCED",
+     "HAL "
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "casioworldopen",
+  "titulo": "Casio World Open",
+  "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+  "tiras_legibles": 298,
+  "creditos": [
+   {
+    "offset": "0x047A",
+    "texto": "MSX GOLF GAMEPLAYER SELECTPLAY PUSH TRIGGER1TO START GAMECOPYRIGHT 1985 @ CASIO1 2A BA  B",
+    "por": [
+     "COPYRIGHT",
+     "CASIO"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "hyperrally",
+  "titulo": "Hyper Rally",
+  "fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+  "tiras_legibles": 176,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "skyjaguar",
+  "titulo": "Sky Jaguar",
+  "fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+  "tiras_legibles": 157,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "golf",
+  "titulo": "Konami's Golf",
+  "fichero": "GOLF_DISAM/golf.rom",
+  "tiras_legibles": 166,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "mopiranger",
+  "titulo": "Mopi Ranger",
+  "fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+  "tiras_legibles": 154,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "roadfighter",
+  "titulo": "Road Fighter",
+  "fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+  "tiras_legibles": 98,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "pingpong",
+  "titulo": "Konami's Ping Pong",
+  "fichero": "PINGPONG_DISAM/pingpong.rom",
+  "tiras_legibles": 112,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "soccer",
+  "titulo": "Konami’s Soccer",
+  "fichero": "SOCCER_DISAM/soccer.rom",
+  "tiras_legibles": 166,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "kingsvalley",
+  "titulo": "King's Valley",
+  "fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+  "tiras_legibles": 137,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "baseball",
+  "titulo": "Konami's Baseball",
+  "fichero": "BASEBALL_DISAM/baseball.rom",
+  "tiras_legibles": 147,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "knightmare",
+  "titulo": "Knightmare",
+  "fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+  "tiras_legibles": 169,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "twinbee",
+  "titulo": "Twin Bee",
+  "fichero": "TWINBEE_DISAM/twinbee.rom",
+  "tiras_legibles": 434,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "boxing",
+  "titulo": "Konami's Boxing",
+  "fichero": "BOXING_DISAM/boxing.rom",
+  "tiras_legibles": 187,
+  "creditos": [
+   {
+    "offset": "0x1BA0",
+    "texto": "*9:KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   },
+   {
+    "offset": "0x1BCB",
+    "texto": "l9SOFTWARE",
+    "por": [
+     "SOFTWARE"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "yiearkungfu2",
+  "titulo": "Yie Ar Kung-Fu II",
+  "fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+  "tiras_legibles": 180,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "yiearkungfu",
+  "titulo": "Yie Ar Kung-Fu",
+  "fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+  "tiras_legibles": 118,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "tennis",
+  "titulo": "Konami's Tennis",
+  "fichero": "TENNIS_DISAM/tennis.rom",
+  "tiras_legibles": 130,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "hypersports1",
+  "titulo": "Hyper Sports 1",
+  "fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+  "tiras_legibles": 105,
+  "creditos": [
+   {
+    "offset": "0x060D",
+    "texto": "KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "hypersports2",
+  "titulo": "Hyper Sports 2",
+  "fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+  "tiras_legibles": 173,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "hypersports3",
+  "titulo": "Hyper Sports 3",
+  "fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+  "tiras_legibles": 238,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "gamemaster",
+  "titulo": "Konami’s Game Master",
+  "fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+  "tiras_legibles": 230,
+  "creditos": [
+   {
+    "offset": "0x0A33",
+    "texto": "5KKONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   },
+   {
+    "offset": "0x0BF8",
+    "texto": "KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   },
+   {
+    "offset": "0x396B",
+    "texto": "KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "goonies",
+  "titulo": "The Goonies",
+  "fichero": "GOONIES_DISAM/goonies.rom",
+  "tiras_legibles": 166,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "cabbagepatch",
+  "titulo": "Cabbage Patch Kids",
+  "fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+  "tiras_legibles": 174,
+  "creditos": [
+   {
+    "offset": "0x0BFA",
+    "texto": "::KONAMI",
+    "por": [
+     "KONAMI"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "pitfall",
+  "titulo": "Pitfall!",
+  "fichero": "PITFALL_DISAM/pitfall.rom",
+  "tiras_legibles": 28,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "pippols",
+  "titulo": "Pippols",
+  "fichero": "PIPPOLS_DISAM/pippols.rom",
+  "tiras_legibles": 124,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "demonia",
+  "titulo": "Demonia",
+  "fichero": "DEMONIA_DISAM/demonia.cas",
+  "tiras_legibles": 275,
+  "creditos": [
+   {
+    "offset": "0x0AB0",
+    "texto": "////////////////////////////////                                     AUTEUR:CLAUDE SABLATOU                                                                         COPYRIGHT 1986  MICROIDS",
+    "por": [
+     "COPYRIGHT",
+     "MICROIDS"
+    ]
+   },
+   {
+    "offset": "0xDD4A",
+    "texto": "Copyright (C) 1984 LORICIELS",
+    "por": [
+     "COPYRIGHT",
+     "(C)"
+    ]
+   },
+   {
+    "offset": "0xDE62",
+    "texto": "ASCII",
+    "por": [
+     "ASCII"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "nemesis",
+  "titulo": "Nemesis / Gradius",
+  "fichero": "NEMESIS_DISAM/nemesis.rom",
+  "tiras_legibles": 663,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "f1spirit",
+  "titulo": "F-1 Spirit — The Way to Formula 1",
+  "fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+  "tiras_legibles": 1098,
+  "creditos": [
+   {
+    "offset": "0x448A",
+    "texto": "N8STAFF",
+    "por": [
+     "STAFF"
+    ]
+   },
+   {
+    "offset": "0x4493",
+    "texto": "8PROGRAM>",
+    "por": [
+     "PROGRAM"
+    ]
+   },
+   {
+    "offset": "0x44BF",
+    "texto": "d9GRAPHIC>",
+    "por": [
+     "GRAPHIC"
+    ]
+   },
+   {
+    "offset": "0x44F1",
+    "texto": "D:SOUND>",
+    "por": [
+     "SOUND"
+    ]
+   },
+   {
+    "offset": "0x1293E",
+    "texto": "_SUB _@@@_F1 GRAMPLIX_STOCK_ENDURANCE_RALLY_F3_F3000_QUALIFY_LUCK_CHANCE _BOY _GOD _RACE _SPEED _FIGHT_HAVE _MIND _MY _YOU_THE _OH _TRY _GOT _BUT _MAY _HARD_GO _DRIV_ARE _NEVER _WIN _NEXT _AGAIN _TO _GREAT_BEST _NICE _GAME _COMMAND_MUSIC _MODE _PLAY_BATTLE_F1_CAR_SELECT_PERSONAL_DESIGN_ORIGINAL_ENGINE_BODY_BRAKE_SUSPENSION_MISSION_ POINT_OK_NO_CONGRATULATIONS_",
+    "por": [
+     "MUSIC",
+     "DESIGN"
+    ]
+   },
+   {
+    "offset": "0x12B49",
+    "texto": "_KONAMI_",
+    "por": [
+     "KONAMI"
+    ]
+   },
+   {
+    "offset": "0x12C22",
+    "texto": "1 MUSIC MODE",
+    "por": [
+     "MUSIC"
+    ]
+   },
+   {
+    "offset": "0x12F55",
+    "texto": "STAFF",
+    "por": [
+     "STAFF"
+    ]
+   },
+   {
+    "offset": "0x12F88",
+    "texto": "GRAPHIC",
+    "por": [
+     "GRAPHIC"
+    ]
+   },
+   {
+    "offset": "0x12F9F",
+    "texto": "SOUND",
+    "por": [
+     "SOUND"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "colt36",
+  "titulo": "Colt 36",
+  "fichero": "COLT36_DISAM/colt36.tsx",
+  "tiras_legibles": 340,
+  "creditos": [
+   {
+    "offset": "0x00A0",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x00AB",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x021D",
+    "texto": "topo  K",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x7DF2",
+    "texto": "\"TOPO0SOFTWARE\":",
+    "por": [
+     "SOFTWARE",
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x7E12",
+    "texto": "\"00MUSICA^GOMINOLAS\":",
+    "por": [
+     "MUSIC"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x005F",
+    "texto": "Colt 36 (1987)(Topo Soft)(ES)[!][RUN'CAS-'][v0.6b]2<",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "trailblazer",
+  "titulo": "Trailblazer",
+  "fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+  "tiras_legibles": 272,
+  "creditos": [
+   {
+    "offset": "0x5E82",
+    "texto": "M : Music On/Of",
+    "por": [
+     "MUSIC"
+    ]
+   },
+   {
+    "offset": "0x6303",
+    "texto": "1986 Gremlin Graphics Ltd",
+    "por": [
+     "GRAPHIC",
+     "GREMLIN"
+    ]
+   },
+   {
+    "offset": "0x64C5",
+    "texto": "Welcome to Trailblazer..........(c) Mr Chip 1986........This amazing version written by SHAUN HOLLINGWORTH, COLIN DOOLEY, PETER HARRAP, CHRIS KERRY and GREG HOLMES (too pey?)of Gremlin Graphics Software Limited........Originally created by Shaun Southern on the Commodore.....Game play and some graphic bits by Terry LLoyd (yaki da!) and P.Harrap.......Oh!,and if you think the levels are too hard then tough!, you can't have expected it to be easy can you? ........It's no use complaining,we were forced at gunpoint to play ALL the levels completely so we don't see why you shouldn't be able to do them!.....Nearly forgot - the keys are.......on your computer - oops! I meant the keys are Q-Left,W-right,P-Up,L-Down and Space to jump..........There may be a Cheat mode but I doubt it........  P.S don't forget to read the P.S OK or you'll be sorry!.... I suppose you'll want to play the game now...you have been warned......................One last point,..........wait for it..........it's nearly here..........Hello Mum!..................",
+    "por": [
+     "GRAPHIC",
+     "(C)",
+     "CREATED",
+     "SOFTWARE",
+     "GREMLIN",
+     "WRITTEN",
+     "VERSION"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
+  "clave": "stardust",
+  "titulo": "Stardust",
+  "fichero": "STARDUST_DISAM/stardust.tsx",
+  "tiras_legibles": 501,
+  "creditos": [
+   {
+    "offset": "0x0080",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x008B",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x01FE",
+    "texto": "TOPO  K",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0xDAC5",
+    "texto": "TOPO   030000",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0xEF5B",
+    "texto": "CONVERSION POR",
+    "por": [
+     "CONVER",
+     "VERSION"
+    ]
+   },
+   {
+    "offset": "0xEFD4",
+    "texto": "MUSICA COMPUESTA POR",
+    "por": [
+     "MUSIC"
+    ]
+   },
+   {
+    "offset": "0xF007",
+    "texto": "UNA IDEA  ORIGINAL",
+    "por": [
+     "IDEA"
+    ]
+   },
+   {
+    "offset": "0xF037",
+    "texto": "TOPO SOFT",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x152B2",
+    "texto": "TOPO   030000",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x003D",
+    "texto": "Stardust (1987)(Topo Soft)(es)[!][RUN'CAS-'][v0.6b]2>",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "temptations",
+  "titulo": "Temptations",
+  "fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+  "tiras_legibles": 248,
+  "creditos": [
+   {
+    "offset": "0x00A8",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x00B3",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x0226",
+    "texto": "TOPO  K",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x005F",
+    "texto": "Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b]2A",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "alehop",
+  "titulo": "Ale Hop!",
+  "fichero": "ALEHOP_DISAM/alehop.tsx",
+  "tiras_legibles": 549,
+  "creditos": [
+   {
+    "offset": "0x00A2",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x00AD",
+    "texto": "Topo Soft",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0x021D",
+    "texto": "TOPO  K",
+    "por": [
+     "TOPO"
+    ]
+   },
+   {
+    "offset": "0xE03C",
+    "texto": "ENHORABUENA\\\\\\     HAS CONSEGUIDO SUPERAR LOS OBSTACULOS QUE TE SEPARABAN DE LA VICTORIA[[[      TOPO SOFT TE FELICITA[    PERO[[[  PODRAS CON   TEMPTATION]]",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x005F",
+    "texto": "Ale Hop! (1988)(Topo Soft)(es)[!][RUN'CAS-'][v0.8b]2;",
+    "por": [
+     "TOPO"
+    ]
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "war",
+  "titulo": "War in Middle Earth",
+  "fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+  "tiras_legibles": 463,
+  "creditos": [
+   {
+    "offset": "0x00D5",
+    "texto": "Melbourne House",
+    "por": [
+     "MELBOURNE"
+    ]
+   },
+   {
+    "offset": "0x77A4",
+    "texto": "Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then",
+    "por": [
+     "PROGRAM",
+     "PROGRAMA",
+     "CONVER",
+     "VERSION"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x0061",
+    "texto": "War In The Middle Earth (1989)(Melbourne House, Dro)(ES)[!][RUN'CAS-'][v0.8.5b]2L",
+    "por": [
+     "MELBOURNE"
+    ]
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "descubrimiento",
+  "titulo": "El Descubrimiento de América",
+  "fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+  "tiras_legibles": 668,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "mahjong-en",
+  "titulo": "Konami’s Mahjong Dojo — English patch",
+  "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+  "tiras_legibles": 141,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "warinmiddleearth-patch",
+  "titulo": "War in Middle Earth — Araubi’s patch",
+  "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+  "tiras_legibles": 463,
+  "creditos": [
+   {
+    "offset": "0x00D5",
+    "texto": "Melbourne House",
+    "por": [
+     "MELBOURNE"
+    ]
+   },
+   {
+    "offset": "0x77A4",
+    "texto": "Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then",
+    "por": [
+     "PROGRAM",
+     "PROGRAMA",
+     "CONVER",
+     "VERSION"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [
+   {
+    "offset": "0x0061",
+    "texto": "War In The Middle Earth (1989)(Melbourne House, Dro)(ES)[!][RUN'CAS-'][v0.8.5b]2L",
+    "por": [
+     "MELBOURNE"
+    ]
+   }
+  ],
+  "nota": null
+ }
+]

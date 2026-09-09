@@ -95,6 +95,83 @@ class LaBase(unittest.TestCase):
         self.assertEqual(sin, ["3dgolf"])
 
 
+class LaMarcaDeKonami(unittest.TestCase):
+    """La marca oculta: el numero de catalogo y el titulo en katakana que
+    Konami escondio en muchos de sus cartuchos. El hallazgo es de Manuel Pazos
+    (@ManuelPazosMSX), septiembre de 2021."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.proyectos = carga("serie.json")["proyectos"]
+        cls.con = [p for p in cls.proyectos if p.get("marca_konami")]
+
+    def test_el_rc_de_la_marca_es_el_que_publica_la_ficha(self):
+        """El numero que Konami escondio en el binario contra el que la serie
+        publica. Son dos caminos independientes hasta el mismo dato."""
+        import re
+        mal = []
+        for p in self.con:
+            ficha = re.search(r"RC-\d+", p.get("meta_es") or "")
+            if not ficha or ficha.group(0) != p["marca_konami"]["rc"]:
+                mal.append((p["clave"], p["marca_konami"]["rc"],
+                            ficha.group(0) if ficha else None))
+        self.assertEqual(mal, [])
+        self.assertGreaterEqual(len(self.con), 17)
+
+    def test_solo_los_konami_llevan_marca(self):
+        """El control del rastreador: si le encontrara marca a un juego que no
+        es de Konami, es que se traga coincidencias."""
+        intrusos = [p["clave"] for p in self.con if p.get("grupo") != "konami"]
+        self.assertEqual(intrusos, [])
+
+    def test_hay_konami_sin_marca_y_eso_no_es_un_fallo(self):
+        """No la llevan todos: Time Pilot, Frogger o Athletic Land no la tienen,
+        y esa ausencia es un dato de la serie, no un error de medida."""
+        sin = [p["clave"] for p in self.proyectos
+               if p.get("grupo") == "konami" and p.get("marca_konami") is False]
+        self.assertIn("timepilot", sin)
+        self.assertIn("athletic", sin)
+
+
+class LosCreditos(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.proyectos = carga("serie.json")["proyectos"]
+
+    def test_ningun_credito_es_el_nombre_del_volcado(self):
+        """"Colt 36 (1987)(Topo Soft)(ES)[!]" lo escribio quien preservo la
+        cinta, no el juego. No puede colarse entre los creditos."""
+        import recoge_creditos
+        colados = []
+        for p in self.proyectos:
+            for c in (p.get("creditos") or []):
+                if recoge_creditos.VOLCADO.search(c["texto"]):
+                    colados.append((p["clave"], c["texto"][:50]))
+        self.assertEqual(colados, [])
+
+    def test_las_cintas_de_topo_tienen_su_volcado_apartado(self):
+        """Y que el apartado no se pierda: los cuatro Topo y los dos War."""
+        con = [p["clave"] for p in self.proyectos if p.get("metadatos_del_volcado")]
+        for clave in ("colt36", "stardust", "temptations", "alehop", "war"):
+            self.assertIn(clave, con)
+
+    def test_las_citas_salen_del_binario_tal_cual(self):
+        """Cada cita tiene que estar, byte a byte, en el fichero que dice y en
+        el desplazamiento que dice. Es lo que separa una cita de un recuerdo."""
+        mirados = 0
+        for p in self.proyectos:
+            for c in (p.get("creditos") or []) + (p.get("metadatos_del_volcado") or []):
+                ruta = os.path.join(DES_ASM, p["binario"]["fichero"])
+                with open(ruta, "rb") as f:
+                    datos = f.read()
+                off = int(c["offset"], 16)
+                trozo = datos[off:off + len(c["texto"]) + 2]
+                self.assertIn(c["texto"].encode("ascii"), trozo,
+                              "%s %s" % (p["clave"], c["offset"]))
+                mirados += 1
+        self.assertGreater(mirados, 30)
+
+
 class LosLectoresDeTexto(unittest.TestCase):
     """Que no adivinen: sobre textos de formato conocido, cifra exacta o nada."""
 

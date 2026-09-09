@@ -23,11 +23,24 @@
    "listados": [],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x006B",
+     "texto": "\"Copyright 1983 By T&E SOFT\":",
+     "por": [
+      "COPYRIGHT",
+      "T&E"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -66,11 +79,31 @@
     "densidad": 50.2
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x032A",
+     "texto": "HUDSON",
+     "por": [
+      "HUDSON"
+     ]
+    },
+    {
+     "offset": "0x03C9",
+     "texto": "DOWN  PROGRAMMER!Y",
+     "por": [
+      "PROGRAM",
+      "PROGRAMM"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -103,11 +136,15 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -140,11 +177,15 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -183,11 +224,15 @@
     "densidad": 24.2
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -220,11 +265,30 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x0490",
+     "texto": "@@PROGRAM@@@@A",
+     "por": [
+      "PROGRAM"
+     ]
+    },
+    {
+     "offset": "0x04A3",
+     "texto": "ISOUND",
+     "por": [
+      "SOUND"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -259,11 +323,20 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": {
+    "rc": "RC-701",
+    "bytes": 20,
+    "cierra_en": "0x7FFF",
+    "titulo": "KE tsu KI yo KU   NA N KI yo KU   TA \" I HO \" U KE N"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -296,11 +369,15 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -339,11 +416,37 @@
     "densidad": 39.3
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x02D2",
+     "texto": "9:KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    },
+    {
+     "offset": "0x0323",
+     "texto": "SOFTWARE",
+     "por": [
+      "SOFTWARE"
+     ]
+    },
+    {
+     "offset": "0x032C",
+     "texto": "l8KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -382,11 +485,15 @@
     "densidad": 30.7
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -425,11 +532,15 @@
     "densidad": 33.4
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -468,11 +579,15 @@
     "densidad": 29.9
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -511,11 +626,24 @@
     "densidad": 41.9
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x0954",
+     "texto": "@HAL 1984PRODUCED BY  F>NAKAMURA =AVERAGE=  1 PLAYER    2 PLAYERS  =EXPERT=  =PRO=  :",
+     "por": [
+      "PRODUCED",
+      "HAL "
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -554,11 +682,24 @@
     "densidad": 37.0
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x047A",
+     "texto": "MSX GOLF GAMEPLAYER SELECTPLAY PUSH TRIGGER1TO START GAMECOPYRIGHT 1985 @ CASIO1 2A BA  B",
+     "por": [
+      "COPYRIGHT",
+      "CASIO"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -597,11 +738,20 @@
     "densidad": 22.6
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-718",
+    "bytes": 8,
+    "cierra_en": "0x7FFF",
+    "titulo": "HA I HA o - RA RI -"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -640,11 +790,15 @@
     "densidad": 32.1
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -683,11 +837,15 @@
     "densidad": 35.4
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -726,11 +884,20 @@
     "densidad": 52.9
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-728",
+    "bytes": 9,
+    "cierra_en": "0x7FFF",
+    "titulo": "MO HI o RE N SI \" ya -"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -769,11 +936,20 @@
     "densidad": 55.1
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-730",
+    "bytes": 10,
+    "cierra_en": "0x7FFF",
+    "titulo": "RO - TO \"   HU a I TA -"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -812,11 +988,20 @@
     "densidad": 64.3
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-731",
+    "bytes": 12,
+    "cierra_en": "0x7FFF",
+    "titulo": "KO NA MI   NO   HI o N HO o N"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -855,11 +1040,20 @@
     "densidad": 36.5
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-732",
+    "bytes": 10,
+    "cierra_en": "0xBFFF",
+    "titulo": "KO NA MI   NO   SA tsu KA -"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -898,11 +1092,20 @@
     "densidad": 45.5
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-727",
+    "bytes": 6,
+    "cierra_en": "0x7FFF",
+    "titulo": "O U KE NO TA NI"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -941,11 +1144,20 @@
     "densidad": 44.5
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-724",
+    "bytes": 4,
+    "cierra_en": "0x7FFF",
+    "titulo": "YA KI yu U"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -984,11 +1196,20 @@
     "densidad": 22.4
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-739",
+    "bytes": 10,
+    "cierra_en": "0xBFFF",
+    "titulo": "MA SI \" yo U TE \" N SE TU"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1027,11 +1248,20 @@
     "densidad": 41.4
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-740",
+    "bytes": 6,
+    "cierra_en": "0xBFFF",
+    "titulo": "TU I N HI \" -"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1070,11 +1300,35 @@
     "densidad": 52.6
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-736",
+    "bytes": 13,
+    "cierra_en": "0xBFFF",
+    "titulo": "KO NA MI   NO   HO \" KU SI N KU \""
+   },
+   "creditos": [
+    {
+     "offset": "0x1BA0",
+     "texto": "*9:KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    },
+    {
+     "offset": "0x1BCB",
+     "texto": "l9SOFTWARE",
+     "por": [
+      "SOFTWARE"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1113,11 +1367,20 @@
     "densidad": 40.9
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-737",
+    "bytes": 12,
+    "cierra_en": "0xBFFF",
+    "titulo": "I - . A RU . KA N HU -   2"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1156,11 +1419,15 @@
     "densidad": 44.0
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1199,11 +1466,15 @@
     "densidad": 32.4
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1242,11 +1513,23 @@
     "densidad": 24.8
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x060D",
+     "texto": "KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1285,11 +1568,15 @@
     "densidad": 22.7
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1328,11 +1615,20 @@
     "densidad": 34.5
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-733",
+    "bytes": 13,
+    "cierra_en": "0xBFFF",
+    "titulo": "HA I HA o -   SU HO o - TU   3"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1371,11 +1667,42 @@
     "densidad": 22.1
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-735",
+    "bytes": 19,
+    "cierra_en": "0x7FFF",
+    "titulo": "1 0   HA \" I   TA NO SI MU   KA - TO RI tsu SI \""
+   },
+   "creditos": [
+    {
+     "offset": "0x0A33",
+     "texto": "5KKONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    },
+    {
+     "offset": "0x0BF8",
+     "texto": "KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    },
+    {
+     "offset": "0x396B",
+     "texto": "KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1414,11 +1741,20 @@
     "densidad": 36.9
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-734",
+    "bytes": 7,
+    "cierra_en": "0xBFFF",
+    "titulo": "KU \" - NI - SU \""
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1457,11 +1793,23 @@
     "densidad": 24.5
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x0BFA",
+     "texto": "::KONAMI",
+     "por": [
+      "KONAMI"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1494,11 +1842,15 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1531,11 +1883,20 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": {
+    "rc": "RC-729",
+    "bytes": 6,
+    "cierra_en": "0x7FFF",
+    "titulo": "HI o HO o RU SU"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1589,11 +1950,39 @@
     "densidad": 33.0
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x0AB0",
+     "texto": "////////////////////////////////                                     AUTEUR:CLAUDE SABLATOU                                                                         COPYRIGHT 1986  MICROIDS",
+     "por": [
+      "COPYRIGHT",
+      "MICROIDS"
+     ]
+    },
+    {
+     "offset": "0xDD4A",
+     "texto": "Copyright (C) 1984 LORICIELS",
+     "por": [
+      "COPYRIGHT",
+      "(C)"
+     ]
+    },
+    {
+     "offset": "0xDE62",
+     "texto": "ASCII",
+     "por": [
+      "ASCII"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1647,11 +2036,20 @@
     "densidad": 23.4
    },
    "coteja": true,
+   "marca_konami": {
+    "rc": "RC-742",
+    "bytes": 8,
+    "cierra_en": "0xBFFF",
+    "titulo": "KU \" RA TE \" i U SU"
+   },
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1699,11 +2097,87 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x448A",
+     "texto": "N8STAFF",
+     "por": [
+      "STAFF"
+     ]
+    },
+    {
+     "offset": "0x4493",
+     "texto": "8PROGRAM>",
+     "por": [
+      "PROGRAM"
+     ]
+    },
+    {
+     "offset": "0x44BF",
+     "texto": "d9GRAPHIC>",
+     "por": [
+      "GRAPHIC"
+     ]
+    },
+    {
+     "offset": "0x44F1",
+     "texto": "D:SOUND>",
+     "por": [
+      "SOUND"
+     ]
+    },
+    {
+     "offset": "0x1293E",
+     "texto": "_SUB _@@@_F1 GRAMPLIX_STOCK_ENDURANCE_RALLY_F3_F3000_QUALIFY_LUCK_CHANCE _BOY _GOD _RACE _SPEED _FIGHT_HAVE _MIND _MY _YOU_THE _OH _TRY _GOT _BUT _MAY _HARD_GO _DRIV_ARE _NEVER _WIN _NEXT _AGAIN _TO _GREAT_BEST _NICE _GAME _COMMAND_MUSIC _MODE _PLAY_BATTLE_F1_CAR_SELECT_PERSONAL_DESIGN_ORIGINAL_ENGINE_BODY_BRAKE_SUSPENSION_MISSION_ POINT_OK_NO_CONGRATULATIONS_",
+     "por": [
+      "MUSIC",
+      "DESIGN"
+     ]
+    },
+    {
+     "offset": "0x12B49",
+     "texto": "_KONAMI_",
+     "por": [
+      "KONAMI"
+     ]
+    },
+    {
+     "offset": "0x12C22",
+     "texto": "1 MUSIC MODE",
+     "por": [
+      "MUSIC"
+     ]
+    },
+    {
+     "offset": "0x12F55",
+     "texto": "STAFF",
+     "por": [
+      "STAFF"
+     ]
+    },
+    {
+     "offset": "0x12F88",
+     "texto": "GRAPHIC",
+     "por": [
+      "GRAPHIC"
+     ]
+    },
+    {
+     "offset": "0x12F9F",
+     "texto": "SOUND",
+     "por": [
+      "SOUND"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1739,11 +2213,61 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x00A0",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x00AB",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x021D",
+     "texto": "topo  K",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x7DF2",
+     "texto": "\"TOPO0SOFTWARE\":",
+     "por": [
+      "SOFTWARE",
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x7E12",
+     "texto": "\"00MUSICA^GOMINOLAS\":",
+     "por": [
+      "MUSIC"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x005F",
+     "texto": "Colt 36 (1987)(Topo Soft)(ES)[!][RUN'CAS-'][v0.6b]2<",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1786,11 +2310,44 @@
     "densidad": 30.8
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x5E82",
+     "texto": "M : Music On/Of",
+     "por": [
+      "MUSIC"
+     ]
+    },
+    {
+     "offset": "0x6303",
+     "texto": "1986 Gremlin Graphics Ltd",
+     "por": [
+      "GRAPHIC",
+      "GREMLIN"
+     ]
+    },
+    {
+     "offset": "0x64C5",
+     "texto": "Welcome to Trailblazer..........(c) Mr Chip 1986........This amazing version written by SHAUN HOLLINGWORTH, COLIN DOOLEY, PETER HARRAP, CHRIS KERRY and GREG HOLMES (too pey?)of Gremlin Graphics Software Limited........Originally created by Shaun Southern on the Commodore.....Game play and some graphic bits by Terry LLoyd (yaki da!) and P.Harrap.......Oh!,and if you think the levels are too hard then tough!, you can't have expected it to be easy can you? ........It's no use complaining,we were forced at gunpoint to play ALL the levels completely so we don't see why you shouldn't be able to do them!.....Nearly forgot - the keys are.......on your computer - oops! I meant the keys are Q-Left,W-right,P-Up,L-Down and Space to jump..........There may be a Cheat mode but I doubt it........  P.S don't forget to read the P.S OK or you'll be sorry!.... I suppose you'll want to play the game now...you have been warned......................One last point,..........wait for it..........it's nearly here..........Hello Mum!..................",
+     "por": [
+      "GRAPHIC",
+      "(C)",
+      "CREATED",
+      "SOFTWARE",
+      "GREMLIN",
+      "WRITTEN",
+      "VERSION"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1827,11 +2384,89 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x0080",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x008B",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x01FE",
+     "texto": "TOPO  K",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0xDAC5",
+     "texto": "TOPO   030000",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0xEF5B",
+     "texto": "CONVERSION POR",
+     "por": [
+      "CONVER",
+      "VERSION"
+     ]
+    },
+    {
+     "offset": "0xEFD4",
+     "texto": "MUSICA COMPUESTA POR",
+     "por": [
+      "MUSIC"
+     ]
+    },
+    {
+     "offset": "0xF007",
+     "texto": "UNA IDEA  ORIGINAL",
+     "por": [
+      "IDEA"
+     ]
+    },
+    {
+     "offset": "0xF037",
+     "texto": "TOPO SOFT",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x152B2",
+     "texto": "TOPO   030000",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x003D",
+     "texto": "Stardust (1987)(Topo Soft)(es)[!][RUN'CAS-'][v0.6b]2>",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1867,11 +2502,46 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x00A8",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x00B3",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x0226",
+     "texto": "TOPO  K",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x005F",
+     "texto": "Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b]2A",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1911,11 +2581,53 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x00A2",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x00AD",
+     "texto": "Topo Soft",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0x021D",
+     "texto": "TOPO  K",
+     "por": [
+      "TOPO"
+     ]
+    },
+    {
+     "offset": "0xE03C",
+     "texto": "ENHORABUENA\\\\\\     HAS CONSEGUIDO SUPERAR LOS OBSTACULOS QUE TE SEPARABAN DE LA VICTORIA[[[      TOPO SOFT TE FELICITA[    PERO[[[  PODRAS CON   TEMPTATION]]",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x005F",
+     "texto": "Ale Hop! (1988)(Topo Soft)(es)[!][RUN'CAS-'][v0.8b]2;",
+     "por": [
+      "TOPO"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1952,11 +2664,42 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x00D5",
+     "texto": "Melbourne House",
+     "por": [
+      "MELBOURNE"
+     ]
+    },
+    {
+     "offset": "0x77A4",
+     "texto": "Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then",
+     "por": [
+      "PROGRAM",
+      "PROGRAMA",
+      "CONVER",
+      "VERSION"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x0061",
+     "texto": "War In The Middle Earth (1989)(Melbourne House, Dro)(ES)[!][RUN'CAS-'][v0.8.5b]2L",
+     "por": [
+      "MELBOURNE"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -1999,11 +2742,15 @@
     "densidad": 26.7
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -2042,11 +2789,15 @@
     "densidad": 30.7
    },
    "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   },
   {
@@ -2085,11 +2836,42 @@
    ],
    "cifras_del_repo": null,
    "coteja": null,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x00D5",
+     "texto": "Melbourne House",
+     "por": [
+      "MELBOURNE"
+     ]
+    },
+    {
+     "offset": "0x77A4",
+     "texto": "Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then",
+     "por": [
+      "PROGRAM",
+      "PROGRAMA",
+      "CONVER",
+      "VERSION"
+     ]
+    }
+   ],
+   "metadatos_del_volcado": [
+    {
+     "offset": "0x0061",
+     "texto": "War In The Middle Earth (1989)(Melbourne House, Dro)(ES)[!][RUN'CAS-'][v0.8.5b]2L",
+     "por": [
+      "MELBOURNE"
+     ]
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
-    "cifras_del_repo": "make densidad del repositorio, si tiene ese target"
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
    }
   }
  ],
