@@ -1,0 +1,159 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What they share</title>
+<style>
+:root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
+  --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+@media (prefers-color-scheme:light){:root{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;
+  --panel:#f7f6f2;--linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}}
+:root[data-theme="dark"]{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;
+  --linea:#23262e;--rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+:root[data-theme="light"]{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;--panel:#f7f6f2;
+  --linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);padding:0 1.25rem 6rem;
+  font:15px/1.7 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.w{max-width:1120px;margin:0 auto}
+.n{max-width:68ch}
+h1,h2,h3,h4{font-weight:400;text-wrap:balance}
+a{color:var(--cyan)}
+img{image-rendering:pixelated;max-width:100%;height:auto;display:block}
+header.top{display:flex;flex-direction:column;align-items:center;gap:1.5rem;
+  padding:4rem 0 2rem;text-align:center}
+header.top img{width:min(100%,642px)}
+.claim{max-width:60ch;color:var(--suave);font-size:1.05rem}
+.claim b{color:var(--tinta);font-weight:400}
+.ficha{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.5rem;width:100%;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);
+  border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:.85rem 0}
+.ficha b{color:var(--rojo);font-weight:400}
+nav{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;padding:1.25rem 0;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+nav a{color:var(--suave);text-decoration:none;border-bottom:1px solid transparent}
+nav a:hover,nav a:focus{color:var(--tinta);border-bottom-color:var(--rojo)}
+nav.docs{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);
+  margin-bottom:1rem}
+section{margin-top:4.5rem;scroll-margin-top:1rem}
+section>h2{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;
+  border-left:3px solid var(--rojo);padding-left:.9rem;margin:0 0 1.5rem}
+.cifras{display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.cifra{background:var(--panel);padding:1.1rem}
+.cifra b{display:block;font-size:1.7rem;color:var(--oro);font-weight:400;
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.cifra span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+.hall{border-top:1px solid var(--linea);padding-top:1.75rem;margin-top:2.5rem}
+.hall:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.hall h3{margin:0 0 .75rem;font-size:1.15rem;color:var(--rojo)}
+.hall h4{color:var(--oro);margin:1.5rem 0 .5rem;font-size:.95rem}
+.hall p{margin:0 0 1rem}
+pre.asm{background:var(--panel);border-left:2px solid var(--verde);margin:1.25rem 0;
+  padding:1rem 1.1rem;overflow-x:auto;font-size:13px;line-height:1.6;color:var(--tinta)}
+.par{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media(min-width:820px){.par{grid-template-columns:1fr 1fr}}
+.par figure{margin:0}
+table{border-collapse:collapse;width:100%;margin:1.25rem 0;font-size:13px;display:block;
+  overflow-x:auto}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--linea)}
+th{color:var(--suave);font-weight:400;font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+td.num{font-variant-numeric:tabular-nums;color:var(--oro)}
+.nivel{margin-top:2rem}
+.nivel h3{margin:0 0 .9rem;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+.nivel em{color:var(--cyan);font-style:normal}
+.sep{color:var(--suave);margin:0 .6rem}
+.rejilla{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.rejilla figure{margin:0;background:var(--panel);box-shadow:0 0 0 1px var(--linea)}
+.rejilla figcaption{display:flex;justify-content:space-between;padding:.45rem .65rem;
+  font-size:11px;color:var(--suave);border-top:1px solid var(--linea)}
+.dir{font-variant-numeric:tabular-nums;color:var(--verde)}
+footer{margin-top:5rem;padding-top:1.5rem;border-top:1px solid var(--linea);
+  color:var(--suave);font-size:12px}
+
+/* Aviso de trabajo en curso: tiene que verse antes que las cifras, porque un
+   100% mal leido hace mas dano que no ponerlo. */
+.aviso{background:#3a2a10;border-left:3px solid var(--oro);margin:1.5rem auto;
+  padding:1rem 1.2rem;max-width:900px;border-radius:4px}
+.aviso p{margin:0;color:var(--tinta);font-size:15px;line-height:1.65}
+/* Las ocho fases: en fila, a tamano real y con barra horizontal. En rejilla
+   una tira de 1952 px de alto sale como un churrete. */
+.fases{display:flex;gap:1.25rem;overflow-x:auto;padding-bottom:1rem;
+  margin:1.5rem 0;scroll-snap-type:x proximity}
+.fases figure{margin:0;flex:0 0 auto;width:256px;scroll-snap-align:start}
+.fases img{width:256px;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.fases figcaption{color:var(--suave);font-size:12.5px;margin-top:.5rem;
+  line-height:1.5}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin:1.5rem 0}
+.galeria figure{margin:0}
+.galeria img{width:100%;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.galeria figcaption{color:var(--suave);font-size:13px;margin-top:.5rem}
+audio{display:block;width:100%;max-width:640px;margin:.75rem 0 1.5rem}
+
+header.top h1{margin:0;font-size:2.1rem;letter-spacing:.04em}
+header.top h1 span{color:var(--rojo)}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:1.2rem 0}
+th,td{border-bottom:1px solid var(--linea);padding:.42rem .6rem;text-align:left;
+  vertical-align:top}
+th{color:var(--oro);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:400;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td b{color:var(--oro);font-weight:400}
+tr.destaca td{background:rgba(255,255,255,.02)}
+.tabla{overflow-x:auto}
+code{font-size:12px;color:var(--suave)}
+.cita{border-left:2px solid var(--linea);padding:.1rem 0 .1rem .9rem;margin:.7rem 0;
+  color:var(--tinta);font-size:13px}
+.cita b{color:var(--oro);font-weight:400}
+.aviso{border:1px solid var(--linea);padding:1rem 1.1rem;margin:1.4rem 0;
+  background:var(--panel);font-size:14px}
+.aviso h4{margin:0 0 .5rem;color:var(--rojo);font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;font-weight:400}
+</style>
+
+<div class="w">
+<header class="top">
+  <h1>la serie<span>/</span></h1>
+  <p class="claim">What they share</p>
+</header>
+<nav><a href="index.html">Home</a><a href="THE-GAMES.html">The games</a><a href="THE-MARK.html">The mark</a><a href="THE-CREDITS.html">The credits</a><a href="WHAT-THEY-SHARE.html" style="color:var(--oro)">What they share</a><a href="HOW-IT-IS-MEASURED.html">How it is measured</a><a href="es/LO-COMPARTIDO.html"
+  style="margin-left:auto;color:var(--oro)">En castellano</a></nav>
+
+<p>Every binary against every other, looking for identical byte runs of
+32 or more: <b>573 of the 1,176
+possible pairs</b> share something, and <b>304</b> of those share code.</p>
+
+<h3>First the code had to be told apart from the drawings</h3>
+<p>The first thing that comes up when you sort by how many cartridges share a run
+is forty-six bytes present in twenty-six Konami cartridges… and it is not a
+routine: it is the <b>typeface</b>. <code>3E 63 03 0E 03 63 3E</code> draws a
+<code>3</code> and <code>7C 66 63 63 63 66 7C</code> a <code>D</code>. Konami
+reused its drawings as much as its code, and a matrix of bytes cannot tell.</p>
+<p>Here it can, without guessing: each game's listing already knows which bytes
+are code, because it carries them as instructions with the address in front. If
+the run's address shows up that way, it is code; if not, it is data.</p>
+
+<h3>The pieces of the framework, and what each repository called them</h3>
+<div class='tabla'><table><tr><th>bytes</th><th>cartridges</th><th>distinct names</th><th>what they call it</th></tr><tr><td class='n'><b>36</b></td><td class='n'>18</td><td class='n'>12</td><td><code>LEE_EL_TECLADO, LEE_MANDOS, LEE_TECLADO, L_45E8, lee_el_mando, lee_el_mando_1, lee_el_teclado, lee_las_filas_7_y_8_del_teclado, lee_los_mandos, lee_mando_y_teclado, lee_teclado_1, teclado_del_jugador_1</code></td></tr><tr><td class='n'><b>161</b></td><td class='n'>12</td><td class='n'>11</td><td><code>L_464F, L_4716, L_4766, L_4867, L_4902, L_4A02, L_4A54, L_4B2F, L_4C0C, L_4C45, PINTA_TIRA_BUCLE</code></td></tr><tr><td class='n'><b>170</b></td><td class='n'>11</td><td class='n'>6</td><td><code>SUBE_LOGOTIPO, baja_un_paso, barre_la_pantalla, sube_el_logotipo_una_fila, sube_el_rotulo, tarea_0_desplaza_logo</code></td></tr><tr><td class='n'><b>53</b></td><td class='n'>11</td><td class='n'>9</td><td><code>ACTUALIZA_CANAL_7D6A, L_52B9, MUSICA_EVENTO_LARGO, NOTA_DE_UN_BYTE, corre_el_canal_nota_larga, lee_una_nota_de_musica, lee_una_nota_larga, manda_de_la_melodia, mandatos_largos</code></td></tr><tr><td class='n'><b>50</b></td><td class='n'>9</td><td class='n'>7</td><td><code>L_7BA6, L_9F80, MIRA_LA_OCTAVA, corre_el_canal_barrido, melodia_octava, mira_el_prefijo_de_octava, mira_si_hay_octava_si_no</code></td></tr><tr><td class='n'><b>174</b></td><td class='n'>9</td><td class='n'>5</td><td><code>SUBE_LOGOTIPO, baja_un_paso, barre_la_pantalla, sube_el_logotipo_una_fila, sube_el_rotulo</code></td></tr></table></div>
+<p>The same controls read —<code>ld a,7</code> and the BIOS call at 0x0141, which
+reads one keyboard row— sits byte for byte in eighteen cartridges and goes by
+twelve different names, because the repositories were written over months with no
+single place to look. This is that place.</p>
+<p>And there is a <b>161-byte piece across twelve cartridges that ten of them left
+unnamed</b> (<code>L_4716</code>, <code>L_4766</code>, <code>L_4867</code>…): only
+Ping Pong named it, as <code>PINTA_TIRA_BUCLE</code>.</p>
+
+<div class="aviso"><h4>What this method cannot see</h4>
+<p>It compares <b>bytes</b>, so it only finds a shared routine if it was also
+assembled at the same address: as soon as the memory map changes, the same
+routine yields different bytes because its addresses differ. That is why a clean
+split into two frameworks <b>does not</b> fall out of this —at a low threshold
+every Konami stays connected and at a high one they break into fragments— but a
+continuum.</p>
+<p>One concrete warning: the 65-byte controls read that Athletic Land shares with
+Antarctic Adventure is in the European and Japanese 1st Antarctic, and not in the
+2nd — which is the one its Makefile picks by default and the one this database
+measures. A finding can depend on which dump you look at.</p></div>
+<footer>The binaries are not distributed. This repository holds measurements and analysis, not the games. Each game belongs to its authors.</footer>
+</div>

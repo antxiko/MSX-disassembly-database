@@ -1,0 +1,140 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The credits</title>
+<style>
+:root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
+  --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+@media (prefers-color-scheme:light){:root{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;
+  --panel:#f7f6f2;--linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}}
+:root[data-theme="dark"]{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;
+  --linea:#23262e;--rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+:root[data-theme="light"]{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;--panel:#f7f6f2;
+  --linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);padding:0 1.25rem 6rem;
+  font:15px/1.7 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.w{max-width:1120px;margin:0 auto}
+.n{max-width:68ch}
+h1,h2,h3,h4{font-weight:400;text-wrap:balance}
+a{color:var(--cyan)}
+img{image-rendering:pixelated;max-width:100%;height:auto;display:block}
+header.top{display:flex;flex-direction:column;align-items:center;gap:1.5rem;
+  padding:4rem 0 2rem;text-align:center}
+header.top img{width:min(100%,642px)}
+.claim{max-width:60ch;color:var(--suave);font-size:1.05rem}
+.claim b{color:var(--tinta);font-weight:400}
+.ficha{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.5rem;width:100%;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);
+  border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:.85rem 0}
+.ficha b{color:var(--rojo);font-weight:400}
+nav{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;padding:1.25rem 0;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+nav a{color:var(--suave);text-decoration:none;border-bottom:1px solid transparent}
+nav a:hover,nav a:focus{color:var(--tinta);border-bottom-color:var(--rojo)}
+nav.docs{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);
+  margin-bottom:1rem}
+section{margin-top:4.5rem;scroll-margin-top:1rem}
+section>h2{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;
+  border-left:3px solid var(--rojo);padding-left:.9rem;margin:0 0 1.5rem}
+.cifras{display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.cifra{background:var(--panel);padding:1.1rem}
+.cifra b{display:block;font-size:1.7rem;color:var(--oro);font-weight:400;
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.cifra span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+.hall{border-top:1px solid var(--linea);padding-top:1.75rem;margin-top:2.5rem}
+.hall:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.hall h3{margin:0 0 .75rem;font-size:1.15rem;color:var(--rojo)}
+.hall h4{color:var(--oro);margin:1.5rem 0 .5rem;font-size:.95rem}
+.hall p{margin:0 0 1rem}
+pre.asm{background:var(--panel);border-left:2px solid var(--verde);margin:1.25rem 0;
+  padding:1rem 1.1rem;overflow-x:auto;font-size:13px;line-height:1.6;color:var(--tinta)}
+.par{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media(min-width:820px){.par{grid-template-columns:1fr 1fr}}
+.par figure{margin:0}
+table{border-collapse:collapse;width:100%;margin:1.25rem 0;font-size:13px;display:block;
+  overflow-x:auto}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--linea)}
+th{color:var(--suave);font-weight:400;font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+td.num{font-variant-numeric:tabular-nums;color:var(--oro)}
+.nivel{margin-top:2rem}
+.nivel h3{margin:0 0 .9rem;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+.nivel em{color:var(--cyan);font-style:normal}
+.sep{color:var(--suave);margin:0 .6rem}
+.rejilla{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.rejilla figure{margin:0;background:var(--panel);box-shadow:0 0 0 1px var(--linea)}
+.rejilla figcaption{display:flex;justify-content:space-between;padding:.45rem .65rem;
+  font-size:11px;color:var(--suave);border-top:1px solid var(--linea)}
+.dir{font-variant-numeric:tabular-nums;color:var(--verde)}
+footer{margin-top:5rem;padding-top:1.5rem;border-top:1px solid var(--linea);
+  color:var(--suave);font-size:12px}
+
+/* Aviso de trabajo en curso: tiene que verse antes que las cifras, porque un
+   100% mal leido hace mas dano que no ponerlo. */
+.aviso{background:#3a2a10;border-left:3px solid var(--oro);margin:1.5rem auto;
+  padding:1rem 1.2rem;max-width:900px;border-radius:4px}
+.aviso p{margin:0;color:var(--tinta);font-size:15px;line-height:1.65}
+/* Las ocho fases: en fila, a tamano real y con barra horizontal. En rejilla
+   una tira de 1952 px de alto sale como un churrete. */
+.fases{display:flex;gap:1.25rem;overflow-x:auto;padding-bottom:1rem;
+  margin:1.5rem 0;scroll-snap-type:x proximity}
+.fases figure{margin:0;flex:0 0 auto;width:256px;scroll-snap-align:start}
+.fases img{width:256px;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.fases figcaption{color:var(--suave);font-size:12.5px;margin-top:.5rem;
+  line-height:1.5}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin:1.5rem 0}
+.galeria figure{margin:0}
+.galeria img{width:100%;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.galeria figcaption{color:var(--suave);font-size:13px;margin-top:.5rem}
+audio{display:block;width:100%;max-width:640px;margin:.75rem 0 1.5rem}
+
+header.top h1{margin:0;font-size:2.1rem;letter-spacing:.04em}
+header.top h1 span{color:var(--rojo)}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:1.2rem 0}
+th,td{border-bottom:1px solid var(--linea);padding:.42rem .6rem;text-align:left;
+  vertical-align:top}
+th{color:var(--oro);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:400;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td b{color:var(--oro);font-weight:400}
+tr.destaca td{background:rgba(255,255,255,.02)}
+.tabla{overflow-x:auto}
+code{font-size:12px;color:var(--suave)}
+.cita{border-left:2px solid var(--linea);padding:.1rem 0 .1rem .9rem;margin:.7rem 0;
+  color:var(--tinta);font-size:13px}
+.cita b{color:var(--oro);font-weight:400}
+.aviso{border:1px solid var(--linea);padding:1rem 1.1rem;margin:1.4rem 0;
+  background:var(--panel);font-size:14px}
+.aviso h4{margin:0 0 .5rem;color:var(--rojo);font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;font-weight:400}
+</style>
+
+<div class="w">
+<header class="top">
+  <h1>la serie<span>/</span></h1>
+  <p class="claim">The credits</p>
+</header>
+<nav><a href="index.html">Home</a><a href="THE-GAMES.html">The games</a><a href="THE-MARK.html">The mark</a><a href="THE-CREDITS.html" style="color:var(--oro)">The credits</a><a href="WHAT-THEY-SHARE.html">What they share</a><a href="HOW-IT-IS-MEASURED.html">How it is measured</a><a href="es/LOS-CREDITOS.html"
+  style="margin-left:auto;color:var(--oro)">En castellano</a></nav>
+
+<p>Of the forty-nine binaries, <b>19</b> carry some credit in readable
+text. The rest do not, and that does not mean they have no credits: most of them
+write with their own tiles rather than the BIOS font, so their credits screen is
+not in ASCII anywhere. There are 30 of those, recorded as <i>does not
+appear in ASCII</i>, never as <i>has no credits</i>.</p>
+
+<div class="aviso"><h4>Not everything that says "Topo Soft" was written by Topo Soft</h4>
+<p>Tape files carry the dump's name at the start, in the preservation archives'
+convention: <code>Colt 36 (1987)(Topo Soft)(ES)[!][RUN'CAS-'][v0.6b]</code>. That
+was written by whoever preserved the tape in the 2000s, not by the game in 1987.
+They are recognised by that shape and set aside, out of the credits.</p></div>
+
+<p>The quotations are exactly as they sit in the binary, with their offset inside
+the file. <b>That offset is not a memory address</b>: a page-1 cartridge appears
+at 0x4000 and a page-2 one at 0x8000, and a tape appears nowhere until it
+loads.</p><h3>3D Golf Simulation</h3><p class='cita'><b>0x006B</b> · "Copyright 1983 By T&amp;E SOFT":</p><h3>Bomber Man</h3><p class='cita'><b>0x032A</b> · HUDSON</p><p class='cita'><b>0x03C9</b> · DOWN  PROGRAMMER!Y</p><h3>Athletic Land</h3><p class='cita'><b>0x0490</b> · @@PROGRAM@@@@A</p><p class='cita'><b>0x04A3</b> · ISOUND</p><h3>Konami’s Billiards</h3><p class='cita'><b>0x02D2</b> · 9:KONAMI</p><p class='cita'><b>0x0323</b> · SOFTWARE</p><p class='cita'><b>0x032C</b> · l8KONAMI</p><h3>Hole in One</h3><p class='cita'><b>0x0954</b> · @HAL 1984PRODUCED BY  F&gt;NAKAMURA =AVERAGE=  1 PLAYER    2 PLAYERS  =EXPERT=  =PRO=  :</p><h3>Casio World Open</h3><p class='cita'><b>0x047A</b> · MSX GOLF GAMEPLAYER SELECTPLAY PUSH TRIGGER1TO START GAMECOPYRIGHT 1985 @ CASIO1 2A BA  B</p><h3>Konami's Boxing</h3><p class='cita'><b>0x1BA0</b> · *9:KONAMI</p><p class='cita'><b>0x1BCB</b> · l9SOFTWARE</p><h3>Hyper Sports 1</h3><p class='cita'><b>0x060D</b> · KONAMI</p><h3>Konami’s Game Master</h3><p class='cita'><b>0x0A33</b> · 5KKONAMI</p><p class='cita'><b>0x0BF8</b> · KONAMI</p><p class='cita'><b>0x396B</b> · KONAMI</p><h3>Cabbage Patch Kids</h3><p class='cita'><b>0x0BFA</b> · ::KONAMI</p><h3>Demonia</h3><p class='cita'><b>0x0AB0</b> · ////////////////////////////////                                     AUTEUR:CLAUDE SABLATOU                                                                         COPYRIGHT 1986  MICROIDS</p><p class='cita'><b>0xDD4A</b> · Copyright (C) 1984 LORICIELS</p><p class='cita'><b>0xDE62</b> · ASCII</p><h3>F-1 Spirit — The Way to Formula 1</h3><p class='cita'><b>0x448A</b> · N8STAFF</p><p class='cita'><b>0x4493</b> · 8PROGRAM&gt;</p><p class='cita'><b>0x44BF</b> · d9GRAPHIC&gt;</p><p class='cita'><b>0x44F1</b> · D:SOUND&gt;</p><h3>Colt 36</h3><p class='cita'><b>0x00A0</b> · Topo Soft</p><p class='cita'><b>0x00AB</b> · Topo Soft</p><p class='cita'><b>0x021D</b> · topo  K</p><p class='cita'><b>0x7DF2</b> · "TOPO0SOFTWARE":</p><h3>Trailblazer</h3><p class='cita'><b>0x5E82</b> · M : Music On/Of</p><p class='cita'><b>0x6303</b> · 1986 Gremlin Graphics Ltd</p><p class='cita'><b>0x64C5</b> · Welcome to Trailblazer..........(c) Mr Chip 1986........This amazing version written by SHAUN HOLLINGWORTH, COLIN DOOLEY, PETER HARRAP, CHRIS KERRY and GREG HOLMES (too pey?)of Gremlin Graphics Software Limited........Originally created by Shaun Southern on the Commodore.....Game play and some graphic bits by Terry LLoyd (yaki da!) and P.Harrap.......Oh!,and if you think the levels are too hard th</p><h3>Stardust</h3><p class='cita'><b>0x0080</b> · Topo Soft</p><p class='cita'><b>0x008B</b> · Topo Soft</p><p class='cita'><b>0x01FE</b> · TOPO  K</p><p class='cita'><b>0xDAC5</b> · TOPO   030000</p><h3>Temptations</h3><p class='cita'><b>0x00A8</b> · Topo Soft</p><p class='cita'><b>0x00B3</b> · Topo Soft</p><p class='cita'><b>0x0226</b> · TOPO  K</p><h3>Ale Hop!</h3><p class='cita'><b>0x00A2</b> · Topo Soft</p><p class='cita'><b>0x00AD</b> · Topo Soft</p><p class='cita'><b>0x021D</b> · TOPO  K</p><p class='cita'><b>0xE03C</b> · ENHORABUENA\\\     HAS CONSEGUIDO SUPERAR LOS OBSTACULOS QUE TE SEPARABAN DE LA VICTORIA[[[      TOPO SOFT TE FELICITA[    PERO[[[  PODRAS CON   TEMPTATION]]</p><h3>War in Middle Earth</h3><p class='cita'><b>0x00D5</b> · Melbourne House</p><p class='cita'><b>0x77A4</b> · Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then</p><h3>War in Middle Earth — Araubi’s patch</h3><p class='cita'><b>0x00D5</b> · Melbourne House</p><p class='cita'><b>0x77A4</b> · Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then</p>
+<footer>The binaries are not distributed. This repository holds measurements and analysis, not the games. Each game belongs to its authors.</footer>
+</div>

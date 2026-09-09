@@ -1,0 +1,153 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The series database</title>
+<style>
+:root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
+  --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+@media (prefers-color-scheme:light){:root{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;
+  --panel:#f7f6f2;--linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}}
+:root[data-theme="dark"]{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;
+  --linea:#23262e;--rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
+:root[data-theme="light"]{--tinta:#191a1e;--suave:#5a5d66;--fondo:#e9e7e1;--panel:#f7f6f2;
+  --linea:#d0cdc5;--rojo:#b23f34;--cyan:#1c6b7c;--verde:#2b7734;--oro:#8a7420}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);padding:0 1.25rem 6rem;
+  font:15px/1.7 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.w{max-width:1120px;margin:0 auto}
+.n{max-width:68ch}
+h1,h2,h3,h4{font-weight:400;text-wrap:balance}
+a{color:var(--cyan)}
+img{image-rendering:pixelated;max-width:100%;height:auto;display:block}
+header.top{display:flex;flex-direction:column;align-items:center;gap:1.5rem;
+  padding:4rem 0 2rem;text-align:center}
+header.top img{width:min(100%,642px)}
+.claim{max-width:60ch;color:var(--suave);font-size:1.05rem}
+.claim b{color:var(--tinta);font-weight:400}
+.ficha{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.5rem;width:100%;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);
+  border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:.85rem 0}
+.ficha b{color:var(--rojo);font-weight:400}
+nav{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;padding:1.25rem 0;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+nav a{color:var(--suave);text-decoration:none;border-bottom:1px solid transparent}
+nav a:hover,nav a:focus{color:var(--tinta);border-bottom-color:var(--rojo)}
+nav.docs{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);
+  margin-bottom:1rem}
+section{margin-top:4.5rem;scroll-margin-top:1rem}
+section>h2{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;
+  border-left:3px solid var(--rojo);padding-left:.9rem;margin:0 0 1.5rem}
+.cifras{display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.cifra{background:var(--panel);padding:1.1rem}
+.cifra b{display:block;font-size:1.7rem;color:var(--oro);font-weight:400;
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.cifra span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+.hall{border-top:1px solid var(--linea);padding-top:1.75rem;margin-top:2.5rem}
+.hall:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.hall h3{margin:0 0 .75rem;font-size:1.15rem;color:var(--rojo)}
+.hall h4{color:var(--oro);margin:1.5rem 0 .5rem;font-size:.95rem}
+.hall p{margin:0 0 1rem}
+pre.asm{background:var(--panel);border-left:2px solid var(--verde);margin:1.25rem 0;
+  padding:1rem 1.1rem;overflow-x:auto;font-size:13px;line-height:1.6;color:var(--tinta)}
+.par{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media(min-width:820px){.par{grid-template-columns:1fr 1fr}}
+.par figure{margin:0}
+table{border-collapse:collapse;width:100%;margin:1.25rem 0;font-size:13px;display:block;
+  overflow-x:auto}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--linea)}
+th{color:var(--suave);font-weight:400;font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+td.num{font-variant-numeric:tabular-nums;color:var(--oro)}
+.nivel{margin-top:2rem}
+.nivel h3{margin:0 0 .9rem;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+.nivel em{color:var(--cyan);font-style:normal}
+.sep{color:var(--suave);margin:0 .6rem}
+.rejilla{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.rejilla figure{margin:0;background:var(--panel);box-shadow:0 0 0 1px var(--linea)}
+.rejilla figcaption{display:flex;justify-content:space-between;padding:.45rem .65rem;
+  font-size:11px;color:var(--suave);border-top:1px solid var(--linea)}
+.dir{font-variant-numeric:tabular-nums;color:var(--verde)}
+footer{margin-top:5rem;padding-top:1.5rem;border-top:1px solid var(--linea);
+  color:var(--suave);font-size:12px}
+
+/* Aviso de trabajo en curso: tiene que verse antes que las cifras, porque un
+   100% mal leido hace mas dano que no ponerlo. */
+.aviso{background:#3a2a10;border-left:3px solid var(--oro);margin:1.5rem auto;
+  padding:1rem 1.2rem;max-width:900px;border-radius:4px}
+.aviso p{margin:0;color:var(--tinta);font-size:15px;line-height:1.65}
+/* Las ocho fases: en fila, a tamano real y con barra horizontal. En rejilla
+   una tira de 1952 px de alto sale como un churrete. */
+.fases{display:flex;gap:1.25rem;overflow-x:auto;padding-bottom:1rem;
+  margin:1.5rem 0;scroll-snap-type:x proximity}
+.fases figure{margin:0;flex:0 0 auto;width:256px;scroll-snap-align:start}
+.fases img{width:256px;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.fases figcaption{color:var(--suave);font-size:12.5px;margin-top:.5rem;
+  line-height:1.5}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin:1.5rem 0}
+.galeria figure{margin:0}
+.galeria img{width:100%;height:auto;image-rendering:pixelated;
+  border:1px solid var(--linea);border-radius:3px}
+.galeria figcaption{color:var(--suave);font-size:13px;margin-top:.5rem}
+audio{display:block;width:100%;max-width:640px;margin:.75rem 0 1.5rem}
+
+header.top h1{margin:0;font-size:2.1rem;letter-spacing:.04em}
+header.top h1 span{color:var(--rojo)}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:1.2rem 0}
+th,td{border-bottom:1px solid var(--linea);padding:.42rem .6rem;text-align:left;
+  vertical-align:top}
+th{color:var(--oro);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:400;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td b{color:var(--oro);font-weight:400}
+tr.destaca td{background:rgba(255,255,255,.02)}
+.tabla{overflow-x:auto}
+code{font-size:12px;color:var(--suave)}
+.cita{border-left:2px solid var(--linea);padding:.1rem 0 .1rem .9rem;margin:.7rem 0;
+  color:var(--tinta);font-size:13px}
+.cita b{color:var(--oro);font-weight:400}
+.aviso{border:1px solid var(--linea);padding:1rem 1.1rem;margin:1.4rem 0;
+  background:var(--panel);font-size:14px}
+.aviso h4{margin:0 0 .5rem;color:var(--rojo);font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;font-weight:400}
+</style>
+
+<div class="w">
+<header class="top">
+  <h1>la serie<span>/</span></h1>
+  <p class="claim">The series database</p>
+</header>
+<nav><a href="index.html">Home</a><a href="THE-GAMES.html">The games</a><a href="THE-MARK.html">The mark</a><a href="THE-CREDITS.html">The credits</a><a href="WHAT-THEY-SHARE.html">What they share</a><a href="HOW-IT-IS-MEASURED.html">How it is measured</a><a href="es/index.html"
+  style="margin-left:auto;color:var(--oro)">En castellano</a></nav>
+
+<p>The forty-seven MSX disassemblies in the series and the two patches, gathered
+into a single record that <b>copies no figure: it measures them</b>. Every number
+on this site comes from <code>datos/serie.json</code>, and that file comes from
+running the tools over the repositories and the binaries.</p>
+
+<div class="tabla"><table><tr><td>projects</td><td class='n'><b>49</b></td></tr><tr><td>disassemblies</td><td class='n'><b>47</b></td></tr><tr><td>instructions</td><td class='n'><b>249,851</b></td></tr><tr><td>line comments</td><td class='n'><b>81,234</b></td></tr><tr><td>density across the series</td><td class='n'><b>32.5 %</b></td></tr><tr><td>routines</td><td class='n'><b>31,011</b></td></tr><tr><td>routines below 10 %</td><td class='n'><b>0</b></td></tr><tr><td>bytes of binary</td><td class='n'><b>1,465,115</b></td></tr><tr><td>carrying Konami's hidden mark</td><td class='n'><b>17</b></td></tr></table></div>
+
+<h3>Why measure again, when each repository already says so</h3>
+<p>Because published figures age. Each game's card was written the day it was
+published; if someone later goes back to the listing and comments another pass,
+the site keeps quoting the old one. Building this turned up <b>four</b>:
+Trailblazer publishes 30.7&nbsp;% and its listing gives 30.8&nbsp;% today, and
+the same holds for Hyper Rally, Hyper Sports&nbsp;2 and Nemesis. In Trailblazer
+the history shows why: the listing was touched in a commit later than the
+README's.</p>
+
+<h3>What came out of looking at all of them together</h3>
+<ul>
+<li><b>The same routine goes by twelve names.</b> The joystick-and-keyboard read
+is thirty-six identical bytes across eighteen cartridges, and every repository
+named it its own way. <a href="WHAT-THEY-SHARE.html">What they share</a>.</li>
+<li><b>Seventeen cartridges carry Konami's hidden mark</b>, and all seventeen
+give the same catalogue number their card publishes.
+<a href="THE-MARK.html">The mark</a>.</li>
+<li><b>Demonia is signed by Claude Sablatou</b>, and Trailblazer carries the full
+list of its authors inside. <a href="THE-CREDITS.html">The credits</a>.</li>
+<li><b>Not one of the forty-seven has a single routine below 10&nbsp;% commented.</b>
+That is the bar for the series, checked here in one go over today's listings.</li>
+</ul>
+<footer>The binaries are not distributed. This repository holds measurements and analysis, not the games. Each game belongs to its authors.</footer>
+</div>

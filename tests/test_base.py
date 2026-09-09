@@ -230,6 +230,64 @@ class LoQueComparten(unittest.TestCase):
             self.assertNotIn(fuente, patron)
 
 
+class LaWeb(unittest.TestCase):
+    """La web se genera de los datos, y estas comprobaciones lo atan.
+
+    El defecto que esta base encontro en cuatro fichas de la portada es
+    exactamente este: una cifra escrita a mano el dia de publicar, que se queda
+    vieja cuando el listado sigue creciendo. Aqui no puede pasar, y se comprueba.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.docs = os.path.join(RAIZ, "docs")
+        cls.base = carga("serie.json")
+
+    def lee(self, rel):
+        with open(os.path.join(self.docs, rel), encoding="utf-8") as f:
+            return f.read()
+
+    def test_estan_las_doce_paginas(self):
+        import make_web
+        for nes, nen in make_web.PAGINAS:
+            self.assertTrue(os.path.isfile(os.path.join(self.docs, nen + ".html")),
+                            nen)
+            self.assertTrue(os.path.isfile(os.path.join(self.docs, "es",
+                                                        nes + ".html")), nes)
+
+    def test_la_portada_publica_los_totales_que_hoy_se_miden(self):
+        # Solo los desensamblados: los dos parches desensamblan el mismo
+        # binario que su juego base, asi que sumarlos contaria dos veces las
+        # 9.755 instrucciones de Soccer o las 6.844 de War in Middle Earth.
+        con = [p for p in self.base["proyectos"]
+               if p.get("cifras") and p["categoria"] == "desensamblado"]
+        i = sum(p["cifras"]["instrucciones"] for p in con)
+        c = sum(p["cifras"]["comentarios"] for p in con)
+        es = self.lee(os.path.join("es", "index.html"))
+        self.assertIn("{:,}".format(i).replace(",", "."), es)
+        self.assertIn("{:,}".format(c).replace(",", "."), es)
+        en = self.lee("index.html")
+        self.assertIn("{:,}".format(i), en)
+
+    def test_la_tabla_lleva_los_47_desensamblados(self):
+        es = self.lee(os.path.join("es", "LOS-JUEGOS.html"))
+        des = [p for p in self.base["proyectos"]
+               if p["categoria"] == "desensamblado"]
+        self.assertEqual(len(des), 47)
+        for p in des:
+            self.assertIn(p["titulo"].split(" — ")[0][:14], es, p["clave"])
+
+    def test_se_cita_a_manuel_pazos_en_los_dos_idiomas(self):
+        """La marca oculta es hallazgo suyo y hay que decirlo siempre."""
+        self.assertIn("Manuel Pazos", self.lee("THE-MARK.html"))
+        self.assertIn("Manuel Pazos", self.lee(os.path.join("es", "LA-MARCA.html")))
+
+    def test_las_dos_lenguas_tienen_las_mismas_paginas(self):
+        import make_web
+        self.assertEqual(len(make_web.PAGINAS), len(make_web.TITULOS["es"]))
+        self.assertEqual(len(make_web.TITULOS["es"]), len(make_web.TITULOS["en"]))
+
+
 class LosLectoresDeTexto(unittest.TestCase):
     """Que no adivinen: sobre textos de formato conocido, cifra exacta o nada."""
 
