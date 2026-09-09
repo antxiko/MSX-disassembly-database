@@ -136,6 +136,63 @@ convención de los archivos de preservación: `Colt 36 (1987)(Topo Soft)(ES)[!]
 el juego en 1987. Se reconocen por esa forma y quedan apartados en
 `metadatos_del_volcado`, fuera de los créditos. Son seis.
 
+## Qué comparten entre sí: 573 parejas, y la misma rutina con doce nombres
+
+Todos contra todos, buscando tiras de bytes idénticas de 32 o más: **573 de las
+1.176 parejas posibles comparten algo**, y en 304 de ellas hay código.
+
+### Primero hubo que separar el código de los dibujos
+
+Lo primero que sale al ordenar por cuántos cartuchos comparten un trozo son 46
+bytes que están en **26 cartuchos de Konami**… y no son una rutina: son la
+**tipografía**. `3E 63 03 0E 03 63 3E` dibuja un `3`, y `7C 66 63 63 63 66 7C`
+una `D`. Konami reutilizaba sus dibujos tanto como su código, y una matriz de
+bytes no distingue.
+
+Aquí se distingue sin adivinar: el listado de cada juego ya sabe qué bytes son
+código, porque los lleva como instrucciones con su dirección delante. Si la
+dirección de la tira aparece así, es código; si no, son datos. Hay un test que
+lo vigila, porque sin esa separación la matriz diría que estos cartuchos
+comparten rutinas cuando lo que comparten son letras.
+
+### Las piezas del armazón, y cómo las bautizó cada repositorio
+
+| bytes | cartuchos | qué es | nombres distintos |
+|---:|---:|---|---:|
+| 36 | **18** | la lectura de mandos (`ld a,7` + `call 0x0141`, SNSMAT) | **12** |
+| 161 | 12 | una rutina de pintado | 11, y **10 sin bautizar** |
+| 170 | 11 | el logotipo que sube por la pantalla | 6 |
+| 53 | 11 | el reproductor de música, nota larga | 9 |
+| 50 | 9 | el reproductor de música, la octava | 7 |
+
+La misma lectura de mandos, byte a byte en dieciocho cartuchos, se llama
+`LEE_MANDOS` en uno, `lee_los_mandos` en otro, `lee_el_mando_por_el_psg`,
+`lee_las_filas_7_y_8_del_teclado`, `teclado_del_jugador_1`… **doce nombres para
+una sola rutina**, porque los repositorios se escribieron a lo largo de meses sin
+un sitio donde mirar. Éste es ese sitio.
+
+Y hay una pieza de **161 bytes repartida por doce cartuchos que diez de ellos
+dejaron sin nombre** (`L_4716`, `L_4766`, `L_4867`…): sólo Ping Pong la bautizó,
+como `PINTA_TIRA_BUCLE`. Bautizarla en los otros diez es trabajo para sus
+repositorios, no para éste.
+
+### Lo que este método no ve
+
+Compara **bytes**, así que sólo encuentra una rutina compartida si además la
+ensamblaron en la misma dirección: en cuanto cambia el mapa de memoria, la misma
+rutina da bytes distintos porque sus direcciones lo son. Por eso **no sale de
+aquí una separación limpia en dos armazones** —a umbral bajo todos los Konami
+quedan conectados y a umbral alto se deshacen en fragmentos—, y lo que se ve es
+un continuo. La herramienta que sí lo vería es `comun_normalizado.py`, que pone
+a cero los operandos de dieciséis bits y compara instrucciones; usarla exige
+trazar cada ROM desde su INIT y no está hecho todavía.
+
+Un aviso concreto de esto: la lectura de mandos de 65 bytes que Athletic Land
+comparte con Antarctic **está en la Antarctic europea y en la japonesa 1ª, y no
+en la 2ª** — que es justo la que el Makefile de ese repositorio elige por
+defecto y la que mide esta base. Un hallazgo puede depender de qué volcado se
+mire.
+
 ## Cómo se usa
 
     python3 tools/recoge_portada.py  ../ > datos/proyectos.json
@@ -147,8 +204,11 @@ el juego en 1987. Se reconocen por esa forma y quedan apartados en
     python3 tools/recoge_creditos.py ../ > datos/creditos.json
     python3 tools/monta_base.py            > datos/serie.json
 
+    python3 tools/recoge_comun.py    ../ > datos/comun.json          # tarda
+    python3 tools/nombra_comunes.py  ../ > datos/rutinas_comunes.json
+
     python3 tools/coteja_portada.py  ..    # lo publicado contra lo medido
-    python3 -m unittest discover -s tests  # 18 comprobaciones
+    python3 -m unittest discover -s tests  # 23 comprobaciones
 
 `monta_base.py` va dos veces a propósito: los dos últimos recolectores necesitan
 saber qué binario mirar, y eso lo dice `serie.json`. La segunda pasada da el
@@ -157,7 +217,7 @@ los otros seis son las recogidas de las que sale.
 
 ## Lo que todavía no está
 
-Esto son dos de cuatro capas. Faltan **lo compartido** (la matriz de tiras de
-bytes idénticas entre los cuarenta y siete binarios, generalizando
-`comun_konami.py`, para ver qué armazón comparte cada juego con cuál) y **la
-web** bilingüe de la serie.
+Tres de cuatro capas. Falta **la web** bilingüe y publicar el repositorio como
+el resto de la serie. Y queda apuntada, con su razón, la comparación
+**normalizada**: la que vería las rutinas compartidas aunque estén en otra
+dirección.

@@ -172,6 +172,64 @@ class LosCreditos(unittest.TestCase):
         self.assertGreater(mirados, 30)
 
 
+class LoQueComparten(unittest.TestCase):
+    """La matriz de bytes identicos entre binarios, y las rutinas que salen."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.comun = carga("comun.json")
+        cls.trozos = carga("rutinas_comunes.json")["trozos"]
+        cls.base = {p["clave"]: p for p in carga("serie.json")["proyectos"]}
+
+    def test_los_trozos_estan_de_verdad_donde_dicen(self):
+        """Cada aparicion se relee del binario: mismos bytes, mismo sitio."""
+        mirados = 0
+        for t in self.trozos:
+            patron = bytes(int(x, 16) for x in t["primeros_bytes"].split())
+            for a in t["apariciones"]:
+                ruta = os.path.join(DES_ASM,
+                                    self.base[a["juego"]]["binario"]["fichero"])
+                with open(ruta, "rb") as f:
+                    f.seek(int(a["offset"], 16))
+                    self.assertEqual(f.read(len(patron)), patron,
+                                     "%s %s" % (a["juego"], a["offset"]))
+                mirados += 1
+        self.assertGreater(mirados, 50)
+
+    def test_la_lectura_de_mandos_esta_en_muchos_y_es_la_del_bios(self):
+        """El trozo mas repartido son 36 bytes en tres docenas largas de
+        cartuchos, y empieza con la llamada 0x0141 del BIOS (SNSMAT), que es
+        leer una fila del teclado. Si eso cambia, es que ya no es esa rutina."""
+        t = max(self.trozos, key=lambda x: x["cartuchos"])
+        self.assertGreaterEqual(t["cartuchos"], 16)
+        b = t["primeros_bytes"].split()
+        self.assertEqual(b[:5], ["3E", "07", "CD", "41", "01"])  # ld a,7; call 0141h
+
+    def test_una_misma_rutina_lleva_nombres_distintos_por_la_serie(self):
+        """El hallazgo que justifica esta capa: la serie lleva meses bautizando
+        la misma rutina de maneras distintas en cada repositorio."""
+        t = max(self.trozos, key=lambda x: x["cartuchos"])
+        self.assertGreater(len(t["como_lo_llaman"]), 5)
+
+    def test_las_parejas_del_mismo_binario_estan_marcadas(self):
+        """Un parche que desensambla el cartucho original comparte el fichero
+        entero con el. Eso no es reuso de codigo y no puede contar como tal."""
+        for x in self.comun["parejas"]:
+            a, b = self.base[x["a"]]["binario"], self.base[x["b"]]["binario"]
+            self.assertEqual(x["mismo_binario"], a["sha256"] == b["sha256"],
+                             "%s / %s" % (x["a"], x["b"]))
+
+    def test_la_tipografia_no_cuenta_como_codigo(self):
+        """Los 46 bytes que estan en mas cartuchos que ningun otro trozo son la
+        fuente -3E 63 03 0E 03 63 3E dibuja un '3'-, y ningun listado los tiene
+        como instruccion. Si salieran como codigo, la matriz estaria mintiendo
+        sobre que comparten estos cartuchos."""
+        fuente = bytes([0x3E, 0x63, 0x03, 0x0E, 0x03, 0x63, 0x3E])
+        for t in self.trozos:
+            patron = bytes(int(x, 16) for x in t["primeros_bytes"].split())
+            self.assertNotIn(fuente, patron)
+
+
 class LosLectoresDeTexto(unittest.TestCase):
     """Que no adivinen: sobre textos de formato conocido, cifra exacta o nada."""
 

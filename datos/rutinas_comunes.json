@@ -1,0 +1,853 @@
+{
+ "trozos": [
+  {
+   "bytes": 36,
+   "hallado_en": "mahjong",
+   "offset": "0x0A2E",
+   "cartuchos": 18,
+   "como_lo_llaman": [
+    "LEE_EL_TECLADO",
+    "LEE_MANDOS",
+    "LEE_TECLADO",
+    "L_45E8",
+    "lee_el_mando",
+    "lee_el_mando_1",
+    "lee_el_teclado",
+    "lee_las_filas_7_y_8_del_teclado",
+    "lee_los_mandos",
+    "lee_mando_y_teclado",
+    "lee_teclado_1",
+    "teclado_del_jugador_1"
+   ],
+   "primeros_bytes": "3E 07 CD 41 01 2F 0F E6 20 5F 3E 08 CD 41 01 2F",
+   "apariciones": [
+    {
+     "juego": "antarctic",
+     "titulo": "Antarctic Adventure",
+     "offset": "0x00DD",
+     "direccion": "0x40DD",
+     "se_llama": "LEE_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mahjong",
+     "titulo": "Konami’s Mahjong Dojo",
+     "offset": "0x0A2E",
+     "direccion": "0x4A2E",
+     "se_llama": "lee_los_mandos",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperrally",
+     "titulo": "Hyper Rally",
+     "offset": "0x067D",
+     "direccion": "0x467D",
+     "se_llama": "LEE_MANDOS",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "skyjaguar",
+     "titulo": "Sky Jaguar",
+     "offset": "0x0479",
+     "direccion": "0x4479",
+     "se_llama": "LEE_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mopiranger",
+     "titulo": "Mopi Ranger",
+     "offset": "0x066A",
+     "direccion": "0x466A",
+     "se_llama": "lee_el_teclado",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x06D5",
+     "direccion": "0x46D5",
+     "se_llama": "lee_el_mando",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x0812",
+     "direccion": "0x4812",
+     "se_llama": "lee_teclado_1",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "soccer",
+     "titulo": "Konami’s Soccer",
+     "offset": "0x08CB",
+     "direccion": "0x48CB",
+     "se_llama": "lee_el_mando_1",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "kingsvalley",
+     "titulo": "King's Valley",
+     "offset": "0x05FA",
+     "direccion": "0x45FA",
+     "se_llama": "L_45E8",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "knightmare",
+     "titulo": "Knightmare",
+     "offset": "0x04F1",
+     "direccion": "0x44F1",
+     "se_llama": "lee_mando_y_teclado",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0997",
+     "direccion": "0x4997",
+     "se_llama": "lee_las_filas_7_y_8_del_teclado",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu",
+     "titulo": "Yie Ar Kung-Fu",
+     "offset": "0x053F",
+     "direccion": "0x453F",
+     "se_llama": "lee_el_teclado",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports1",
+     "titulo": "Hyper Sports 1",
+     "offset": "0x04A4",
+     "direccion": "0x44A4",
+     "se_llama": "LEE_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports2",
+     "titulo": "Hyper Sports 2",
+     "offset": "0x04C1",
+     "direccion": "0x44C1",
+     "se_llama": "LEE_EL_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x04D4",
+     "direccion": "0x44D4",
+     "se_llama": "teclado_del_jugador_1",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "goonies",
+     "titulo": "The Goonies",
+     "offset": "0x0754",
+     "direccion": "0x4754",
+     "se_llama": "lee_mando_y_teclado",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "cabbagepatch",
+     "titulo": "Cabbage Patch Kids",
+     "offset": "0x009C",
+     "direccion": "0x409C",
+     "se_llama": "LEE_EL_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mahjong-en",
+     "titulo": "Konami’s Mahjong Dojo — English patch",
+     "offset": "0x0A2E",
+     "direccion": "0x4A2E",
+     "se_llama": "lee_los_mandos",
+     "es_codigo_ahi": true
+    }
+   ]
+  },
+  {
+   "bytes": 161,
+   "hallado_en": "boxing",
+   "offset": "0x0652",
+   "cartuchos": 12,
+   "como_lo_llaman": [
+    "L_464F",
+    "L_4716",
+    "L_4766",
+    "L_4867",
+    "L_4902",
+    "L_4A02",
+    "L_4A54",
+    "L_4B2F",
+    "L_4C0C",
+    "L_4C45",
+    "PINTA_TIRA_BUCLE"
+   ],
+   "primeros_bytes": "23 3C 10 F9 D1 21 20 00 19 C9 0F 00 01 01 06 00",
+   "apariciones": [
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x0905",
+     "direccion": "0x4905",
+     "se_llama": "L_4902",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x0A57",
+     "direccion": "0x4A57",
+     "se_llama": "L_4A54",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "soccer",
+     "titulo": "Konami’s Soccer",
+     "offset": "0x0C0F",
+     "direccion": "0x4C0F",
+     "se_llama": "L_4C0C",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "kingsvalley",
+     "titulo": "King's Valley",
+     "offset": "0x086A",
+     "direccion": "0x486A",
+     "se_llama": "L_4867",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "knightmare",
+     "titulo": "Knightmare",
+     "offset": "0x0719",
+     "direccion": "0x4719",
+     "se_llama": "L_4716",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "twinbee",
+     "titulo": "Twin Bee",
+     "offset": "0x0B32",
+     "direccion": "0x4B32",
+     "se_llama": "L_4B2F",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "boxing",
+     "titulo": "Konami's Boxing",
+     "offset": "0x0652",
+     "direccion": "0x4652",
+     "se_llama": "L_464F",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0C48",
+     "direccion": "0x4C48",
+     "se_llama": "L_4C45",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x0769",
+     "direccion": "0x4769",
+     "se_llama": "L_4766",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "goonies",
+     "titulo": "The Goonies",
+     "offset": "0x0A05",
+     "direccion": "0x4A05",
+     "se_llama": "L_4A02",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pippols",
+     "titulo": "Pippols",
+     "offset": "0x0727",
+     "direccion": "0x4727",
+     "se_llama": "PINTA_TIRA_BUCLE",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "nemesis",
+     "titulo": "Nemesis / Gradius",
+     "offset": "0x1A90",
+     "direccion": null,
+     "se_llama": null,
+     "es_codigo_ahi": false
+    }
+   ]
+  },
+  {
+   "bytes": 170,
+   "hallado_en": "kingsvalley",
+   "offset": "0x0861",
+   "cartuchos": 11,
+   "como_lo_llaman": [
+    "SUBE_LOGOTIPO",
+    "baja_un_paso",
+    "barre_la_pantalla",
+    "sube_el_logotipo_una_fila",
+    "sube_el_rotulo",
+    "tarea_0_desplaza_logo"
+   ],
+   "primeros_bytes": "21 0A E0 35 C9 E5 CD 4D 00 23 3C 10 F9 D1 21 20",
+   "apariciones": [
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x08FC",
+     "direccion": "0x48FC",
+     "se_llama": "barre_la_pantalla",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x0A4E",
+     "direccion": "0x4A4E",
+     "se_llama": "sube_el_rotulo",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "soccer",
+     "titulo": "Konami’s Soccer",
+     "offset": "0x0C06",
+     "direccion": "0x4C06",
+     "se_llama": "sube_el_logotipo_una_fila",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "kingsvalley",
+     "titulo": "King's Valley",
+     "offset": "0x0861",
+     "direccion": "0x4861",
+     "se_llama": "tarea_0_desplaza_logo",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "knightmare",
+     "titulo": "Knightmare",
+     "offset": "0x0710",
+     "direccion": "0x4710",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "twinbee",
+     "titulo": "Twin Bee",
+     "offset": "0x0B29",
+     "direccion": "0x4B29",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0C3F",
+     "direccion": "0x4C3F",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x0760",
+     "direccion": "0x4760",
+     "se_llama": "sube_el_logotipo_una_fila",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "goonies",
+     "titulo": "The Goonies",
+     "offset": "0x09FC",
+     "direccion": "0x49FC",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pippols",
+     "titulo": "Pippols",
+     "offset": "0x071E",
+     "direccion": "0x471E",
+     "se_llama": "SUBE_LOGOTIPO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "nemesis",
+     "titulo": "Nemesis / Gradius",
+     "offset": "0x1A87",
+     "direccion": null,
+     "se_llama": null,
+     "es_codigo_ahi": false
+    }
+   ]
+  },
+  {
+   "bytes": 53,
+   "hallado_en": "pingpong",
+   "offset": "0x12BA",
+   "cartuchos": 11,
+   "como_lo_llaman": [
+    "ACTUALIZA_CANAL_7D6A",
+    "L_52B9",
+    "MUSICA_EVENTO_LARGO",
+    "NOTA_DE_UN_BYTE",
+    "corre_el_canal_nota_larga",
+    "lee_una_nota_de_musica",
+    "lee_una_nota_larga",
+    "manda_de_la_melodia",
+    "mandatos_largos"
+   ],
+   "primeros_bytes": "E6 F0 FE D0 7E 20 07 E6 0F DD 77 0A 23 7E FE F0",
+   "apariciones": [
+    {
+     "juego": "mahjong",
+     "titulo": "Konami’s Mahjong Dojo",
+     "offset": "0x5F67",
+     "direccion": "0x9F67",
+     "se_llama": "lee_una_nota_de_musica",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic1",
+     "titulo": "Hyper Olympic 1",
+     "offset": "0x2CAA",
+     "direccion": "0x6CAA",
+     "se_llama": "NOTA_DE_UN_BYTE",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic2",
+     "titulo": "Hyper Olympic 2",
+     "offset": "0x2DE6",
+     "direccion": "0x6DE6",
+     "se_llama": "NOTA_DE_UN_BYTE",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "golf",
+     "titulo": "Konami's Golf",
+     "offset": "0x3449",
+     "direccion": "0x7449",
+     "se_llama": "corre_el_canal_nota_larga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x0D60",
+     "direccion": "0x4D60",
+     "se_llama": "mandatos_largos",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x12BA",
+     "direccion": "0x52BA",
+     "se_llama": "L_52B9",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "baseball",
+     "titulo": "Konami's Baseball",
+     "offset": "0x2D9F",
+     "direccion": "0x6D9F",
+     "se_llama": "lee_una_nota_larga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "tennis",
+     "titulo": "Konami's Tennis",
+     "offset": "0x3BE8",
+     "direccion": "0x7BE8",
+     "se_llama": "manda_de_la_melodia",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports1",
+     "titulo": "Hyper Sports 1",
+     "offset": "0x3D6A",
+     "direccion": "0x7D6A",
+     "se_llama": "ACTUALIZA_CANAL_7D6A",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "cabbagepatch",
+     "titulo": "Cabbage Patch Kids",
+     "offset": "0x3B8D",
+     "direccion": "0x7B8D",
+     "se_llama": "MUSICA_EVENTO_LARGO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mahjong-en",
+     "titulo": "Konami’s Mahjong Dojo — English patch",
+     "offset": "0x5F67",
+     "direccion": "0x9F67",
+     "se_llama": "lee_una_nota_de_musica",
+     "es_codigo_ahi": true
+    }
+   ]
+  },
+  {
+   "bytes": 50,
+   "hallado_en": "yiearkungfu",
+   "offset": "0x3D52",
+   "cartuchos": 9,
+   "como_lo_llaman": [
+    "L_7BA6",
+    "L_9F80",
+    "MIRA_LA_OCTAVA",
+    "corre_el_canal_barrido",
+    "melodia_octava",
+    "mira_el_prefijo_de_octava",
+    "mira_si_hay_octava_si_no"
+   ],
+   "primeros_bytes": "DD 77 05 23 7E E6 0F 47 DD 7E 0A 28 05 DD 86 0A",
+   "apariciones": [
+    {
+     "juego": "mahjong",
+     "titulo": "Konami’s Mahjong Dojo",
+     "offset": "0x5F86",
+     "direccion": "0x9F86",
+     "se_llama": "L_9F80",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic1",
+     "titulo": "Hyper Olympic 1",
+     "offset": "0x2CC9",
+     "direccion": "0x6CC9",
+     "se_llama": "MIRA_LA_OCTAVA",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic2",
+     "titulo": "Hyper Olympic 2",
+     "offset": "0x2E05",
+     "direccion": "0x6E05",
+     "se_llama": "MIRA_LA_OCTAVA",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "golf",
+     "titulo": "Konami's Golf",
+     "offset": "0x3468",
+     "direccion": "0x7468",
+     "se_llama": "corre_el_canal_barrido",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "baseball",
+     "titulo": "Konami's Baseball",
+     "offset": "0x2DBE",
+     "direccion": "0x6DBE",
+     "se_llama": "mira_el_prefijo_de_octava",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu",
+     "titulo": "Yie Ar Kung-Fu",
+     "offset": "0x3D52",
+     "direccion": "0x7D52",
+     "se_llama": "mira_si_hay_octava_si_no",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "tennis",
+     "titulo": "Konami's Tennis",
+     "offset": "0x3C07",
+     "direccion": "0x7C07",
+     "se_llama": "melodia_octava",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "cabbagepatch",
+     "titulo": "Cabbage Patch Kids",
+     "offset": "0x3BAC",
+     "direccion": "0x7BAC",
+     "se_llama": "L_7BA6",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mahjong-en",
+     "titulo": "Konami’s Mahjong Dojo — English patch",
+     "offset": "0x5F86",
+     "direccion": "0x9F86",
+     "se_llama": "L_9F80",
+     "es_codigo_ahi": true
+    }
+   ]
+  },
+  {
+   "bytes": 174,
+   "hallado_en": "pingpong",
+   "offset": "0x0A4A",
+   "cartuchos": 9,
+   "como_lo_llaman": [
+    "SUBE_LOGOTIPO",
+    "baja_un_paso",
+    "barre_la_pantalla",
+    "sube_el_logotipo_una_fila",
+    "sube_el_rotulo"
+   ],
+   "primeros_bytes": "AF CD 56 00 21 0A E0 35 C9 E5 CD 4D 00 23 3C 10",
+   "apariciones": [
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x08F8",
+     "direccion": "0x48F8",
+     "se_llama": "barre_la_pantalla",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x0A4A",
+     "direccion": "0x4A4A",
+     "se_llama": "sube_el_rotulo",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "knightmare",
+     "titulo": "Knightmare",
+     "offset": "0x070C",
+     "direccion": "0x470C",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "twinbee",
+     "titulo": "Twin Bee",
+     "offset": "0x0B25",
+     "direccion": "0x4B25",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0C3B",
+     "direccion": "0x4C3B",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x075C",
+     "direccion": "0x475C",
+     "se_llama": "sube_el_logotipo_una_fila",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "goonies",
+     "titulo": "The Goonies",
+     "offset": "0x09F8",
+     "direccion": "0x49F8",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pippols",
+     "titulo": "Pippols",
+     "offset": "0x071A",
+     "direccion": "0x471A",
+     "se_llama": "SUBE_LOGOTIPO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "nemesis",
+     "titulo": "Nemesis / Gradius",
+     "offset": "0x1A83",
+     "direccion": null,
+     "se_llama": null,
+     "es_codigo_ahi": false
+    }
+   ]
+  },
+  {
+   "bytes": 81,
+   "hallado_en": "cabbagepatch",
+   "offset": "0x3B8D",
+   "cartuchos": 8,
+   "como_lo_llaman": [
+    "MUSICA_EVENTO_LARGO",
+    "NOTA_DE_UN_BYTE",
+    "corre_el_canal_nota_larga",
+    "lee_una_nota_de_musica",
+    "lee_una_nota_larga",
+    "manda_de_la_melodia"
+   ],
+   "primeros_bytes": "E6 F0 FE D0 7E 20 07 E6 0F DD 77 0A 23 7E FE F0",
+   "apariciones": [
+    {
+     "juego": "mahjong",
+     "titulo": "Konami’s Mahjong Dojo",
+     "offset": "0x5F67",
+     "direccion": "0x9F67",
+     "se_llama": "lee_una_nota_de_musica",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic1",
+     "titulo": "Hyper Olympic 1",
+     "offset": "0x2CAA",
+     "direccion": "0x6CAA",
+     "se_llama": "NOTA_DE_UN_BYTE",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hyperolympic2",
+     "titulo": "Hyper Olympic 2",
+     "offset": "0x2DE6",
+     "direccion": "0x6DE6",
+     "se_llama": "NOTA_DE_UN_BYTE",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "golf",
+     "titulo": "Konami's Golf",
+     "offset": "0x3449",
+     "direccion": "0x7449",
+     "se_llama": "corre_el_canal_nota_larga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "baseball",
+     "titulo": "Konami's Baseball",
+     "offset": "0x2D9F",
+     "direccion": "0x6D9F",
+     "se_llama": "lee_una_nota_larga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "tennis",
+     "titulo": "Konami's Tennis",
+     "offset": "0x3BE8",
+     "direccion": "0x7BE8",
+     "se_llama": "manda_de_la_melodia",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "cabbagepatch",
+     "titulo": "Cabbage Patch Kids",
+     "offset": "0x3B8D",
+     "direccion": "0x7B8D",
+     "se_llama": "MUSICA_EVENTO_LARGO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "mahjong-en",
+     "titulo": "Konami’s Mahjong Dojo — English patch",
+     "offset": "0x5F67",
+     "direccion": "0x9F67",
+     "se_llama": "lee_una_nota_de_musica",
+     "es_codigo_ahi": true
+    }
+   ]
+  },
+  {
+   "bytes": 37,
+   "hallado_en": "antarctic",
+   "offset": "0x00DC",
+   "cartuchos": 9,
+   "como_lo_llaman": [
+    "GUARDA_MANDOS",
+    "LEE_MANDOS",
+    "LEE_MANDOS_FLANCO",
+    "LEE_TECLADO",
+    "LO_RECIEN_PULSADO",
+    "L_4802",
+    "lee_el_mando_por_el_psg",
+    "lee_los_mandos_de_la_partida",
+    "lee_un_mando_del_psg"
+   ],
+   "primeros_bytes": "C9 3E 07 CD 41 01 2F 0F E6 20 5F 3E 08 CD 41 01",
+   "apariciones": [
+    {
+     "juego": "antarctic",
+     "titulo": "Antarctic Adventure",
+     "offset": "0x00DC",
+     "direccion": "0x40DC",
+     "se_llama": "LEE_TECLADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "skyjaguar",
+     "titulo": "Sky Jaguar",
+     "offset": "0x0478",
+     "direccion": "0x4478",
+     "se_llama": "LEE_MANDOS",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x0811",
+     "direccion": "0x4811",
+     "se_llama": "L_4802",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0996",
+     "direccion": "0x4996",
+     "se_llama": "lee_un_mando_del_psg",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu",
+     "titulo": "Yie Ar Kung-Fu",
+     "offset": "0x053E",
+     "direccion": "0x453E",
+     "se_llama": "lee_los_mandos_de_la_partida",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports1",
+     "titulo": "Hyper Sports 1",
+     "offset": "0x04A3",
+     "direccion": "0x44A3",
+     "se_llama": "LEE_MANDOS_FLANCO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports2",
+     "titulo": "Hyper Sports 2",
+     "offset": "0x04C0",
+     "direccion": "0x44C0",
+     "se_llama": "LO_RECIEN_PULSADO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x04D3",
+     "direccion": "0x44D3",
+     "se_llama": "lee_el_mando_por_el_psg",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "cabbagepatch",
+     "titulo": "Cabbage Patch Kids",
+     "offset": "0x009B",
+     "direccion": "0x409B",
+     "se_llama": "GUARDA_MANDOS",
+     "es_codigo_ahi": true
+    }
+   ]
+  }
+ ]
+}
