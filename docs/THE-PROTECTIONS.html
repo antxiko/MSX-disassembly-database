@@ -145,11 +145,10 @@ rules out stray writes.</p>
 
 <h3>The ones aimed at the BIOS ROM</h3>
 <p>Page 0 of an MSX is ROM too, so a write there does not land either. But going
-to the BIOS does not make a write a protection: <b>2</b> turn up, and
-each is either explained or marked as unexplained.</p>
+to the BIOS does not make a write a protection: <b>one</b> turns up, and it is explained.</p>
 
-<div class='tabla'><table><tr><th>game</th><th>where</th><th>what it does</th><th>where it lands</th><th>what is there</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>BIOS ROM</td></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x68C1</code></td><td><code>ld (02f2fh),a</code></td><td class='n'><code>0x2F2F</code></td><td>BIOS ROM</td></tr></table></div>
-<p><b>Antarctic Adventure.</b> It is the start-up guard: it copies <code>jp 0000h</code> over the BIOS entry point. A <b>fourth build</b> of the game proves it is a protection: identical save for two bytes, exactly the ones that send that same copy to <code>DESPACHA</code>, inside the cartridge itself.</p><p><b>Hyper Rally.</b> <b>Unexplained.</b> It lands in eighteen bytes that, read raw, look like two nine-byte rows of data (<code>2F 30 34 32 2F 2F 2B 2C 0F</code>), reached through a pushed return address. Whether it is real code or data traced as code needs the emulator; until then it is not counted as a protection.</p>
+<div class='tabla'><table><tr><th>game</th><th>where</th><th>what it does</th><th>where it lands</th><th>what is there</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>BIOS ROM</td></tr></table></div>
+<p><b>Antarctic Adventure.</b> It is the start-up guard: it copies <code>jp 0000h</code> over the BIOS entry point. A <b>fourth build</b> of the game proves it is a protection: identical save for two bytes, exactly the ones that send that same copy to <code>DESPACHA</code>, inside the cartridge itself.</p>
 
 <h3>The ones checked that carry none</h3>
 <p>Of Konami's, <b>20</b> cartridges write neither to their own

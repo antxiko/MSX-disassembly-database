@@ -935,27 +935,27 @@
    "src/hyperrally.asm"
   ],
   "medido": {
-   "instrucciones": 3356,
-   "comentarios": 762,
-   "densidad": 22.7,
+   "instrucciones": 3344,
+   "comentarios": 763,
+   "densidad": 22.8,
    "flojas": 0,
-   "bloques": 430
+   "bloques": 428
   },
   "por_listado": [
    {
-    "instrucciones": 3356,
-    "comentarios": 762,
+    "instrucciones": 3344,
+    "comentarios": 763,
     "flojas": 0,
-    "bloques": 430,
+    "bloques": 428,
     "asm": "src/hyperrally.asm"
    }
   ],
   "declarado": {
-   "instrucciones": 3356,
-   "comentarios": 762,
+   "instrucciones": 3344,
+   "comentarios": 763,
    "flojas": 0,
-   "bloques": 430,
-   "densidad": 22.7
+   "bloques": 428,
+   "densidad": 22.8
   },
   "coteja": true
  },

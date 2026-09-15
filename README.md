@@ -4,9 +4,9 @@ Los cuarenta y ocho desensamblados y los dos parches de la serie, reunidos en
 un registro único que **no copia ninguna cifra**: las mide.
 
     proyectos                 50   (48 desensamblados y 2 parches)
-    instrucciones            257.009
-    comentarios de línea      84.434        32,9 % del total
-    rutinas                   31.918
+    instrucciones            256.997
+    comentarios de línea      84.435        32,9 % del total
+    rutinas                   31.916
     rutinas por debajo del 10 %    0        en toda la serie
     bytes de binario       1.497.883
 
@@ -151,15 +151,17 @@ arranque:
 Que el destino sea **siempre** un `djnz` o el operando de un salto, y nunca un
 hueco de datos, es lo que descarta que sean escrituras sueltas.
 
-**Dos más escriben en la ROM de la BIOS**, que tampoco admite escritura, y van
+**Uno más escribe en la ROM de la BIOS**, que tampoco admite escritura, y va
 aparte porque ir a la BIOS no convierte una escritura en protección:
+**Antarctic Adventure** copia `jp 0000h` encima de la entrada de la BIOS. Es un
+guardián, y lo demuestra una cuarta compilación del juego idéntica salvo en dos
+bytes: los que mandan esa misma copia a `DESPACHA`, dentro del cartucho.
 
-- **Antarctic Adventure** copia `jp 0000h` encima de la entrada de la BIOS. Es
-  un guardián, y lo demuestra una cuarta compilación del juego idéntica salvo en
-  dos bytes: los que mandan esa misma copia a `DESPACHA`, dentro del cartucho.
-- **Hyper Rally**, en 0x68C1, está **sin explicar**: cae en dieciocho bytes que
-  en crudo parecen dos filas de datos y a los que se llega por una dirección de
-  retorno empujada. Si es código o datos trazados como código pide el emulador.
+Hubo un segundo, en Hyper Rally, y **no era una escritura**: dieciocho bytes de
+datos -dos tablas de nueve a las que se llega por un puntero empujado a la pila,
+no por un retorno- que el trazado había leído como código, y uno de ellos salía
+como `ld (02f2fh),a`. Corregido en su listado, que sigue reensamblando byte a
+byte. Es justo lo que esta sección no deja pasar sin explicar.
 
 **Y lo que no la lleva también es un dato.** De Konami, veinte cartuchos no
 escriben ni en su espacio ni en la BIOS. Ninguno de los seis que no son de

@@ -706,17 +706,6 @@ def pag_protecciones(d, idioma):
             "BIOS entry point. A <b>fourth build</b> of the game proves it is a "
             "protection: identical save for two bytes, exactly the ones that send "
             "that same copy to <code>DESPACHA</code>, inside the cartridge itself."),
-        "hyperrally": (
-            "<b>Sin explicar.</b> Cae en dieciocho bytes que, leídos en crudo, "
-            "parecen dos filas de datos de nueve (<code>2F 30 34 32 2F 2F 2B 2C "
-            "0F</code>), y a los que se llega por una dirección de retorno empujada. "
-            "Si es código de verdad o datos trazados como código hay que verlo en "
-            "el emulador; hasta entonces no se cuenta como protección.",
-            "<b>Unexplained.</b> It lands in eighteen bytes that, read raw, look "
-            "like two nine-byte rows of data (<code>2F 30 34 32 2F 2F 2B 2C "
-            "0F</code>), reached through a pushed return address. Whether it is "
-            "real code or data traced as code needs the emulator; until then it is "
-            "not counted as a protection."),
     }
     notas = "".join(
         "<p><b>%s.</b> %s</p>" % (e(p["titulo"]),
@@ -724,6 +713,15 @@ def pag_protecciones(d, idioma):
         for p in bios)
 
     nombres = lambda l: ", ".join(e(p["titulo"]) for p in l)
+    # la frase tiene que concordar con la cuenta: con una sola, "cada una" no vale
+    if len(bios) == 1:
+        frase_bios_es = "aparece <b>una</b>, y está explicada."
+        frase_bios_en = "<b>one</b> turns up, and it is explained."
+    else:
+        frase_bios_es = ("aparecen <b>%d</b>, y cada una se explica o se dice que está "
+                         "sin explicar." % len(bios))
+        frase_bios_en = ("<b>%d</b> turn up, and each is either explained or marked as "
+                         "unexplained." % len(bios))
     megas = ", ".join("%s (%s)" % (e(p["titulo"]), p["protecciones_mapper"].upper())
                       for p in megarom)
 
@@ -754,8 +752,7 @@ hueco de datos, es lo que descarta que sean escrituras sueltas.</p>
 
 <h3>Las que van a la ROM de la BIOS</h3>
 <p>La página 0 de un MSX también es ROM, así que una escritura ahí tampoco llega.
-Pero ir a la BIOS no convierte una escritura en protección: aparecen
-<b>{len(bios)}</b>, y cada una se explica o se dice que está sin explicar.</p>
+Pero ir a la BIOS no convierte una escritura en protección: {frase_bios_es}</p>
 
 {tabla(bios, "bios")}
 {notas}
@@ -806,8 +803,7 @@ rules out stray writes.</p>
 
 <h3>The ones aimed at the BIOS ROM</h3>
 <p>Page 0 of an MSX is ROM too, so a write there does not land either. But going
-to the BIOS does not make a write a protection: <b>{len(bios)}</b> turn up, and
-each is either explained or marked as unexplained.</p>
+to the BIOS does not make a write a protection: {frase_bios_en}</p>
 
 {tabla(bios, "bios")}
 {notas}

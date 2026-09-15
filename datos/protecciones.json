@@ -153,17 +153,6 @@
   "es_cartucho": true,
   "escrituras": [
    {
-    "donde": "0x68C1",
-    "instruccion": "ld (02f2fh),a",
-    "carga": "jr nc,DIBUJA_BORDES_1",
-    "destino": "0x2F2F",
-    "zona": "bios",
-    "cae_en": null,
-    "instruccion_del_destino": null,
-    "es_el_primer_byte": false,
-    "listado": "src/hyperrally.asm"
-   },
-   {
     "donde": "0x79C8",
     "instruccion": "ld (06957h),a",
     "carga": "ld a,0c9h",

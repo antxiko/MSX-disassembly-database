@@ -145,11 +145,10 @@ hueco de datos, es lo que descarta que sean escrituras sueltas.</p>
 
 <h3>Las que van a la ROM de la BIOS</h3>
 <p>La página 0 de un MSX también es ROM, así que una escritura ahí tampoco llega.
-Pero ir a la BIOS no convierte una escritura en protección: aparecen
-<b>2</b>, y cada una se explica o se dice que está sin explicar.</p>
+Pero ir a la BIOS no convierte una escritura en protección: aparece <b>una</b>, y está explicada.</p>
 
-<div class='tabla'><table><tr><th>juego</th><th>dónde</th><th>qué hace</th><th>a dónde va</th><th>qué hay ahí</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>ROM de la BIOS</td></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x68C1</code></td><td><code>ld (02f2fh),a</code></td><td class='n'><code>0x2F2F</code></td><td>ROM de la BIOS</td></tr></table></div>
-<p><b>Antarctic Adventure.</b> Es el guardián del arranque: copia <code>jp 0000h</code> encima de la entrada de la BIOS. Que es una protección lo demuestra una <b>cuarta compilación</b> del juego, idéntica salvo en dos bytes: justo los que mandan esa misma copia a <code>DESPACHA</code>, dentro del propio cartucho.</p><p><b>Hyper Rally.</b> <b>Sin explicar.</b> Cae en dieciocho bytes que, leídos en crudo, parecen dos filas de datos de nueve (<code>2F 30 34 32 2F 2F 2B 2C 0F</code>), y a los que se llega por una dirección de retorno empujada. Si es código de verdad o datos trazados como código hay que verlo en el emulador; hasta entonces no se cuenta como protección.</p>
+<div class='tabla'><table><tr><th>juego</th><th>dónde</th><th>qué hace</th><th>a dónde va</th><th>qué hay ahí</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>ROM de la BIOS</td></tr></table></div>
+<p><b>Antarctic Adventure.</b> Es el guardián del arranque: copia <code>jp 0000h</code> encima de la entrada de la BIOS. Que es una protección lo demuestra una <b>cuarta compilación</b> del juego, idéntica salvo en dos bytes: justo los que mandan esa misma copia a <code>DESPACHA</code>, dentro del propio cartucho.</p>
 
 <h3>Los que se miraron y no llevan ninguna</h3>
 <p>De Konami, <b>20</b> cartuchos no escriben ni en su espacio ni
