@@ -8,6 +8,7 @@ Cada recolector mira una cosa y solo una:
     recoge_cifras.py    cuanto esta comentado (medido sobre los listados)
     recoge_marca.py     si lleva la marca oculta de Konami
     recoge_creditos.py  quien firma, en texto legible dentro del binario
+    recoge_protecciones.py  las escrituras del cartucho a su propio espacio
 
 Aqui se cruzan por el directorio local y sale `datos/serie.json`. Cada dato
 lleva de donde sale, porque en esta serie el numero que se publica y el numero
@@ -51,6 +52,7 @@ def main():
     marcas = {x["clave"]: x
               for x in carga("marcas.json", {"binarios": []})["binarios"]}
     creditos = {x["clave"]: x for x in carga("creditos.json", [])}
+    protec = {x["clave"]: x for x in carga("protecciones.json", [])}
 
     salida, avisos = [], []
     for p in portada["proyectos"]:
@@ -95,6 +97,18 @@ def main():
         reg["creditos"] = cr["creditos"] if cr else None
         if cr and cr["metadatos_del_volcado"]:
             reg["metadatos_del_volcado"] = cr["metadatos_del_volcado"]
+        # De QUE fichero salen esas citas. No siempre es `binario`: un proyecto
+        # con varios -un parche, por ejemplo- no tiene binario unico, y sin
+        # esto la cita se queda sin poder releerse, que es justo lo que la
+        # separa de un recuerdo.
+        if cr and cr.get("fichero"):
+            reg["creditos_del_fichero"] = cr["fichero"]
+
+        pr = protec.get(p["clave"])
+        if pr is not None:
+            reg["protecciones"] = (pr["escrituras"] if pr["es_cartucho"] else None)
+            if not pr["es_cartucho"]:
+                reg["protecciones_nota"] = pr["nota"]
 
         reg["fuentes"] = {
             "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
@@ -104,6 +118,9 @@ def main():
             "marca_konami": "tools/marca_konami_canonica.py sobre el binario "
                             "(hallazgo de Manuel Pazos, 2021)",
             "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+            "creditos_del_fichero": "el binario concreto del que se leyeron",
+            "protecciones": "tools/recoge_protecciones.py sobre el listado "
+                            "(el patron lo identifico Manuel Pazos, RC-727)",
         }
         salida.append(reg)
 

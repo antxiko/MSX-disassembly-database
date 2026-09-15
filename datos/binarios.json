@@ -300,6 +300,22 @@
   ]
  },
  {
+  "repo": "HOLEINONEPRO_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "holeinonepro.rom",
+    "fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+    "bytes": 32768,
+    "sha256": "99900247abc5cff8f12fed900e4ebf783c7a7ecf8d689b4a5cccd85a8416451e"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
   "repo": "HOLEINONE_DISAM",
   "makefile": true,
   "binarios": [
@@ -517,6 +533,22 @@
     "fichero": "NEMESIS_DISAM/nemesis.rom",
     "bytes": 131072,
     "sha256": "3210f8a0f2309dd4b9a89fc2b24d0f178ce4393a0a1f2854fbce545c361261bc"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "PENGUINADVENTURE_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "penguinadventure.rom",
+    "fichero": "PENGUINADVENTURE_DISAM/penguinadventure.rom",
+    "bytes": 131072,
+    "sha256": "525608aa990e1a19285edc98dec3f0aa11339d8a17641c89df3966845d10cc6a"
    }
   ],
   "declaradas": [
@@ -758,6 +790,13 @@
   "makefile": true,
   "binarios": [
    {
+    "var": "ROM",
+    "valor": "war_unificada.rom",
+    "fichero": "WARINMIDDLEEARTH_PATCH/war_unificada.rom",
+    "bytes": 65536,
+    "sha256": "6b625efa9a256370b54d69cdf46d64e559d3f0701e1c5113d229f2318a55e14d"
+   },
+   {
     "var": "TSX",
     "valor": "war.tsx",
     "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
@@ -766,6 +805,7 @@
    }
   ],
   "declaradas": [
+   "ROM",
    "TSX"
   ]
  },

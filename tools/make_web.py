@@ -19,6 +19,7 @@ Las paginas son siete por idioma, y cada una responde a una pregunta:
     index                 que es esto y cuanto hay
     LOS-JUEGOS            los 49, uno por fila, con sus cifras
     LA-MARCA              quien lleva la marca oculta de Konami
+    LAS-PROTECCIONES      quien escribe dentro de su propio espacio
     LOS-CREDITOS          quien firma cada juego, citado del binario
     LO-COMPARTIDO         que bytes comparten, y con cuantos nombres
     LAS-FAMILIAS          que ARMAZON comparten, ya sin que las direcciones
@@ -62,14 +63,50 @@ PAGINAS = [("index", "index"), ("LOS-JUEGOS", "THE-GAMES"),
            ("LA-MARCA", "THE-MARK"), ("LOS-CREDITOS", "THE-CREDITS"),
            ("LO-COMPARTIDO", "WHAT-THEY-SHARE"),
            ("LAS-FAMILIAS", "THE-FAMILIES"),
+           ("LAS-PROTECCIONES", "THE-PROTECTIONS"),
            ("COMO-SE-MIDE", "HOW-IT-IS-MEASURED")]
 
 MENU = {
     "es": ["Los juegos", "La marca", "Los créditos", "Lo compartido",
-           "Las familias", "Cómo se mide"],
+           "Las familias", "Las protecciones", "Cómo se mide"],
     "en": ["The games", "The mark", "The credits", "What they share",
-           "The families", "How it is measured"],
+           "The families", "The protections", "How it is measured"],
 }
+
+
+# Los numeros de la serie NO se escriben a mano en el texto: se cuentan de
+# `serie.json` y se ponen en letra aqui. Estaban clavados y envejecieron en
+# cuanto entro el proyecto numero cincuenta.
+DECENAS = {2: "veinte", 3: "treinta", 4: "cuarenta", 5: "cincuenta",
+           6: "sesenta", 7: "setenta", 8: "ochenta", 9: "noventa"}
+UNIDADES = ["", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete",
+            "ocho", "nueve"]
+DECENAS_EN = {2: "twenty", 3: "thirty", 4: "forty", 5: "fifty", 6: "sixty",
+              7: "seventy", 8: "eighty", 9: "ninety"}
+UNIDADES_EN = ["", "one", "two", "three", "four", "five", "six", "seven",
+               "eight", "nine"]
+
+
+VEINTI = ["veinte", "veintiun", "veintidos", "veintitres", "veinticuatro",
+          "veinticinco", "veintiseis", "veintisiete", "veintiocho", "veintinueve"]
+
+
+def enletra(n, idioma):
+    """20..99 en letra. Fuera de ese rango, el numero tal cual.
+
+    En castellano el uno se apocopa delante del sustantivo -"cincuenta y un
+    binarios", no "cincuenta y uno binarios"- y los veintitantos van en una
+    sola palabra. Aqui siempre acompana a un sustantivo masculino, asi que se
+    devuelve la forma apocopada.
+    """
+    if not 20 <= n <= 99:
+        return str(n)
+    d, u = divmod(n, 10)
+    if idioma == "es":
+        if d == 2:
+            return VEINTI[u]
+        return DECENAS[d] + (" y " + ("un" if u == 1 else UNIDADES[u]) if u else "")
+    return DECENAS_EN[d] + ("-" + UNIDADES_EN[u] if u else "")
 
 
 def carga(nombre):
@@ -118,7 +155,7 @@ def pag_index(d, idioma):
 
     if idioma == "es":
         cuerpo = f"""
-<p>Los cuarenta y siete desensamblados de MSX de la serie y los dos parches,
+<p>Los {enletra(len(des), "es")} desensamblados de MSX de la serie y los {enletra(len(d["proyectos"]) - len(des), "es") if len(d["proyectos"]) - len(des) > 19 else ("dos" if len(d["proyectos"]) - len(des) == 2 else len(d["proyectos"]) - len(des))} parches,
 reunidos en un registro único que <b>no copia ninguna cifra: las mide</b>. Cada
 número de esta web sale de <code>datos/serie.json</code>, y ese fichero sale de
 pasar las herramientas por los repositorios y por los binarios.</p>
@@ -141,19 +178,22 @@ manera. <a href="LO-COMPARTIDO.html">Lo compartido</a>.</li>
 <li><b>Diecisiete cartuchos llevan la marca oculta de Konami</b>, y los
 diecisiete dan el mismo número de catálogo que publica su ficha.
 <a href="LA-MARCA.html">La marca</a>.</li>
+<li><b>Trece cartuchos se defienden solos.</b> Escriben dentro de su propio
+espacio: desde ROM no llega y parece codigo muerto, pero en una copia cargada en
+RAM rompe el juego. <a href="LAS-PROTECCIONES.html">Las protecciones</a>.</li>
 <li><b>Demonia la firma Claude Sablatou</b>, y Trailblazer trae dentro la lista
 entera de sus autores. <a href="LOS-CREDITOS.html">Los créditos</a>.</li>
 <li><b>Los cartuchos de Konami se reparten en familias</b>, y no por año ni por
 número de catálogo: Hyper Olympic 1 y 2 comparten el 67&nbsp;% de su código, y
 Athletic Land y Cabbage Patch el 44&nbsp;%.
 <a href="LAS-FAMILIAS.html">Las familias</a>.</li>
-<li><b>Ninguno de los cuarenta y siete tiene una sola rutina por debajo del
+<li><b>Ninguno de los {enletra(len(des), "es")} tiene una sola rutina por debajo del
 10&nbsp;% de comentario.</b> Eso es el listón de la serie, y aquí está
 comprobado de una vez sobre los listados de hoy.</li>
 </ul>"""
     else:
         cuerpo = f"""
-<p>The forty-seven MSX disassemblies in the series and the two patches, gathered
+<p>The {enletra(len(des), "en")} MSX disassemblies in the series and the two patches, gathered
 into a single record that <b>copies no figure: it measures them</b>. Every number
 on this site comes from <code>datos/serie.json</code>, and that file comes from
 running the tools over the repositories and the binaries.</p>
@@ -177,12 +217,16 @@ named it its own way. <a href="WHAT-THEY-SHARE.html">What they share</a>.</li>
 <li><b>Seventeen cartridges carry Konami's hidden mark</b>, and all seventeen
 give the same catalogue number their card publishes.
 <a href="THE-MARK.html">The mark</a>.</li>
+<li><b>Thirteen cartridges defend themselves.</b> They write inside their own
+space: from ROM it never lands and looks like dead code, but in a copy loaded
+into RAM it breaks the game.
+<a href="THE-PROTECTIONS.html">The protections</a>.</li>
 <li><b>Demonia is signed by Claude Sablatou</b>, and Trailblazer carries the full
 list of its authors inside. <a href="THE-CREDITS.html">The credits</a>.</li>
 <li><b>Konami's cartridges fall into families</b>, and not by year or catalogue
 number: Hyper Olympic 1 and 2 share 67&nbsp;% of their code, and Athletic Land
 and Cabbage Patch 44&nbsp;%. <a href="THE-FAMILIES.html">The families</a>.</li>
-<li><b>Not one of the forty-seven has a single routine below 10&nbsp;% commented.</b>
+<li><b>Not one of the {enletra(len(des), "en")} has a single routine below 10&nbsp;% commented.</b>
 That is the bar for the series, checked here in one go over today's listings.</li>
 </ul>"""
     return cuerpo
@@ -218,7 +262,7 @@ def pag_juegos(d, idioma):
 
     if idioma == "es":
         intro = """
-<p>Los cuarenta y siete, ordenados por densidad de comentario. Las cifras están
+<p>Los {enletra(len(des), "es")}, ordenados por densidad de comentario. Las cifras están
 medidas sobre los listados que cada repositorio publica hoy, no copiadas de su
 README.</p>
 <div class="aviso"><h4>Una advertencia sobre la columna de bytes</h4>
@@ -228,7 +272,7 @@ del programa: por eso un juego de cinta parece mucho mayor de lo que ocupa en
 memoria.</p></div>"""
     else:
         intro = """
-<p>All forty-seven, ordered by comment density. The figures are measured against
+<p>All {enletra(len(des), "en")}, ordered by comment density. The figures are measured against
 the listings each repository publishes today, not copied from its README.</p>
 <div class="aviso"><h4>A warning about the bytes column</h4>
 <p>For cartridges it is the ROM size. For tapes it is the size of the
@@ -239,6 +283,10 @@ occupies in memory.</p></div>"""
 
 
 def pag_marca(d, idioma):
+    # BINARIOS, no proyectos: un proyecto puede declarar mas de uno -el parche
+    # trae la cinta y la ROM- y contando proyectos la cifra se queda corta.
+    nbin = sum(1 if p.get("binario") else len(p.get("binarios") or [])
+               for p in d["proyectos"])
     con = [p for p in d["proyectos"] if p.get("marca_konami")]
     con.sort(key=lambda p: p["marca_konami"]["rc"])
     sin_kon = [p for p in d["proyectos"]
@@ -267,7 +315,7 @@ título en katakana. Leyendo hacia adelante, el bloque es así:</p>
 <p class="cita">[el título, <b>N</b> bytes, en orden inverso] · [<b>N</b>] ·
 [las dos cifras del RC en BCD] · [<b>0xAA</b>]</p>
 
-<p>El rastreo se hace sobre los cuarenta y nueve binarios, también sobre los que
+<p>El rastreo se hace sobre los {enletra(nbin, "es")} binarios, también sobre los que
 no son de Konami. Eso último es el control: si el rastreador le encontrara la
 marca a un juego que no es de Konami, es que se traga coincidencias.
 <b>No le encuentra ninguna.</b></p>
@@ -297,7 +345,7 @@ cartridges. Read forwards, the block goes:</p>
 <p class="cita">[the title, <b>N</b> bytes, in reverse order] · [<b>N</b>] ·
 [the two RC digits in BCD] · [<b>0xAA</b>]</p>
 
-<p>The sweep runs over all forty-nine binaries, including the ones that are not
+<p>The sweep runs over all {enletra(nbin, "en")} binaries, including the ones that are not
 Konami's. That is the control: if the tracer found the mark on a game that is not
 Konami's, it would be swallowing coincidences. <b>It finds none.</b></p>
 
@@ -318,6 +366,10 @@ about the series, not a measurement failure.</p>"""
 
 
 def pag_creditos(d, idioma):
+    # BINARIOS, no proyectos: un proyecto puede declarar mas de uno -el parche
+    # trae la cinta y la ROM- y contando proyectos la cifra se queda corta.
+    nbin = sum(1 if p.get("binario") else len(p.get("binarios") or [])
+               for p in d["proyectos"])
     con = [p for p in d["proyectos"] if p.get("creditos")]
     bloques = []
     for p in con:
@@ -330,7 +382,7 @@ def pag_creditos(d, idioma):
 
     if idioma == "es":
         cabecera = f"""
-<p>De los cuarenta y nueve binarios, <b>{len(con)}</b> llevan algún crédito en
+<p>De los {enletra(nbin, "es")} binarios, <b>{len(con)}</b> llevan algún crédito en
 texto legible. Los demás no, y eso no significa que no tengan créditos: casi
 todos escriben con sus propios dibujos y no con la fuente del BIOS, así que su
 pantalla de créditos no está en ASCII en ninguna parte. Son {len(sin)}, y se
@@ -349,7 +401,7 @@ la página 1 se ve en 0x4000 y uno de la página 2 en 0x8000, y una cinta no se 
 en ningún sitio hasta que carga.</p>"""
     else:
         cabecera = f"""
-<p>Of the forty-nine binaries, <b>{len(con)}</b> carry some credit in readable
+<p>Of the {enletra(nbin, "en")} binaries, <b>{len(con)}</b> carry some credit in readable
 text. The rest do not, and that does not mean they have no credits: most of them
 write with their own tiles rather than the BIOS font, so their credits screen is
 not in ASCII anywhere. There are {len(sin)} of those, recorded as <i>does not
@@ -588,6 +640,110 @@ Antarctic Adventure is in the European and Japanese 1st Antarctic, and not in th
 measures. A finding can depend on which dump you look at.</p></div>"""
 
 
+def pag_protecciones(d, idioma):
+    """Las escrituras que cada cartucho hace a su PROPIO espacio.
+
+    El dato sale de `recoge_protecciones.py`, que las busca sobre el listado y
+    no sobre el binario: hace falta saber que es codigo y que son datos.
+    """
+    con = [p for p in d["proyectos"] if p.get("protecciones")]
+    con.sort(key=lambda p: p["titulo"])
+    n_cart = len([p for p in d["proyectos"] if p.get("protecciones") is not None])
+
+    cab = (["juego", "dónde", "qué hace", "a dónde va", "qué hay ahí"]
+           if idioma == "es" else
+           ["game", "where", "what it does", "where it lands", "what is there"])
+    filas = []
+    for p in con:
+        # OJO: la variable del bucle no se puede llamar `e`, que es la funcion
+        # que escapa el HTML de este mismo modulo.
+        for k, esc in enumerate(p["protecciones"]):
+            dest = esc["instruccion_del_destino"] or "?"
+            if not esc["es_el_primer_byte"]:
+                dest += (" — el operando" if idioma == "es" else " — its operand")
+            filas.append(
+                "<tr%s><td>%s</td><td class='n'><code>%s</code></td>"
+                "<td><code>%s</code></td><td class='n'><code>%s</code></td>"
+                "<td><code>%s</code></td></tr>"
+                % (" class='destaca'" if k == 0 else "",
+                   e(p["titulo"]), esc["donde"], e(esc["instruccion"]),
+                   esc["destino"], e(dest)))
+    tabla = ("<div class='tabla'><table><tr>%s</tr>%s</table></div>"
+             % ("".join("<th>%s</th>" % x for x in cab), "".join(filas)))
+
+    if idioma == "es":
+        return f"""
+<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no esta haciendo
+nada: la ROM no admite escritura, asi que esa instruccion parece codigo muerto.
+No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahi la
+escritura si cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
+
+<div class="aviso"><h4>De quien es el hallazgo</h4>
+<p>El patron lo identifico <b>Manuel Pazos</b>
+(<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) en su desensamblado de
+King&#x27;s Valley (RC-727), donde llamo a las dos rutinas <code>ReadKeys_AC</code>
+y <code>VRAM_writeAC</code>. Lo que hay aqui es ese mismo patron, buscado en los
+{n_cart} cartuchos de la serie.</p></div>
+
+<p><b>{len(con)} de los {n_cart}</b> llevan al menos una. Y la familia repite
+siempre las mismas dos, en las mismas dos rutinas del arranque: una deja un
+<code>pop hl</code> y un <code>ret</code> encima de un <b><code>djnz</code></b> de
+la cadena de presentacion, y la otra deja un cero en el <b>operando de un
+<code>jp</code></b>, que en memoria lo convierte en <code>jp 00000h</code> —un
+reinicio en seco—.</p>
+
+<p>Que el destino sea <b>siempre</b> un <code>djnz</code> o el operando de un
+salto, y nunca un hueco de datos, es lo que descarta que sean escrituras
+sueltas.</p>
+
+{tabla}
+
+<h3>Lo que esto NO dice</h3>
+<p>Que pasa de verdad al correr una copia en RAM <b>no esta medido</b>: eso
+pediria cargar una copia y jugarla, y aqui no se distribuye ningun binario. Lo
+que se afirma es lo que se lee del listado: donde esta la escritura, a donde
+apunta y que instruccion hay en el destino.</p>
+
+<p>Tampoco estan todas: el rastreador ve las escrituras a una direccion fija y
+las que pasan por <code>HL</code> o <code>DE</code> cargados justo antes. Una
+que calculase el destino sobre la marcha se le escaparia.</p>
+"""
+    return f"""
+<p>A cartridge writing <b>inside its own space</b> is doing nothing at all: ROM
+takes no writes, so that instruction looks like dead code. It is not. A pirated
+cartridge is a copy loaded into <b>RAM</b>, and there the write does land and
+leaves the game broken somewhere it never returns from.</p>
+
+<div class="aviso"><h4>Whose finding this is</h4>
+<p>The pattern was identified by <b>Manuel Pazos</b>
+(<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) in his disassembly of
+King&#x27;s Valley (RC-727), where he named the two routines
+<code>ReadKeys_AC</code> and <code>VRAM_writeAC</code>. What is here is that same
+pattern, looked for across the {n_cart} cartridges in the series.</p></div>
+
+<p><b>{len(con)} of the {n_cart}</b> carry at least one. And the family repeats
+the same two, in the same two start-up routines: one puts a <code>pop hl</code>
+and a <code>ret</code> over a <b><code>djnz</code></b> in the presentation chain,
+the other leaves a zero in the <b>operand of a <code>jp</code></b>, which in
+memory turns it into <code>jp 00000h</code> —a dead reset—.</p>
+
+<p>That the target is <b>always</b> a <code>djnz</code> or the operand of a jump,
+and never a gap in the data, is what rules out stray writes.</p>
+
+{tabla}
+
+<h3>What this does NOT say</h3>
+<p>What actually happens when a copy runs in RAM is <b>not measured</b>: that
+would mean loading a copy and playing it, and no binary is distributed here.
+What is claimed is what the listing says: where the write is, where it points
+and what instruction sits at the target.</p>
+
+<p>Nor are these all of them: the sweep sees writes to a fixed address, and
+those going through <code>HL</code> or <code>DE</code> loaded just before. One
+computing its target on the fly would slip past.</p>
+"""
+
+
 def pag_metodo(d, idioma):
     fuentes = [
         ("quién es cada proyecto", "who each project is",
@@ -630,7 +786,7 @@ al que le falte una pieza sale con esa pieza a nulo y un aviso, no con una cifra
 inventada.</p>
 {tabla}
 
-<h3>La vara es la misma para los cuarenta y siete</h3>
+<h3>La vara es la misma para los {enletra(len([p for p in d["proyectos"] if p["categoria"] == "desensamblado"]), "es")}</h3>
 <p>Cada repositorio trae su copia de <code>densidad.py</code>, escritas a lo largo
 de meses, y comparar entre juegos exige saber que cuentan igual. Hay cuatro
 variantes y las cuatro usan <b>el mismo criterio</b>: se diferencian en el fin de
@@ -657,7 +813,7 @@ project missing a piece comes out with that piece null and a warning, not with a
 invented figure.</p>
 {tabla}
 
-<h3>The same yardstick for all forty-seven</h3>
+<h3>The same yardstick for all {enletra(len([p for p in d["proyectos"] if p["categoria"] == "desensamblado"]), "en")}</h3>
 <p>Every repository carries its own copy of <code>densidad.py</code>, written over
 months, and comparing between games requires knowing they count alike. There are
 four variants and all four use <b>the same criterion</b>: they differ in line
@@ -719,10 +875,11 @@ def pagina(idioma, cual, cuerpo, titulo):
 TITULOS = {
     "es": ["La base de datos de la serie", "Los juegos",
            "La marca oculta de Konami", "Los créditos",
-           "Lo que comparten", "Las familias de cartuchos", "Cómo se mide"],
+           "Lo que comparten", "Las familias de cartuchos",
+           "Las protecciones anticopia", "Cómo se mide"],
     "en": ["The series database", "The games", "Konami's hidden mark",
            "The credits", "What they share", "The cartridge families",
-           "How it is measured"],
+           "The copy protections", "How it is measured"],
 }
 
 
@@ -740,7 +897,8 @@ def main():
         cuerpos = [pag_index(d, idioma), pag_juegos(d, idioma),
                    pag_marca(d, idioma), pag_creditos(d, idioma),
                    pag_comun(d, comun, trozos, idioma),
-                   pag_familias(fam, norm, idioma), pag_metodo(d, idioma)]
+                   pag_familias(fam, norm, idioma),
+                   pag_protecciones(d, idioma), pag_metodo(d, idioma)]
         for (nes, nen), cuerpo, titulo in zip(PAGINAS, cuerpos, TITULOS[idioma]):
             nombre = nes if idioma == "es" else nen
             html_ = pagina(idioma, nombre, cuerpo, titulo)

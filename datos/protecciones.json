@@ -1,0 +1,645 @@
+[
+ {
+  "clave": "3dgolf",
+  "titulo": "3D Golf Simulation",
+  "directorio": "3DGOLF_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "bomberman",
+  "titulo": "Bomber Man",
+  "directorio": "BOMBERMAN_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "timepilot",
+  "titulo": "Time Pilot",
+  "directorio": "TIMEPILOT_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "frogger",
+  "titulo": "Frogger",
+  "directorio": "FROGGER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "supercobra",
+  "titulo": "Super Cobra",
+  "directorio": "SUPERCOBRA_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "athletic",
+  "titulo": "Athletic Land",
+  "directorio": "ATHLETIC_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "antarctic",
+  "titulo": "Antarctic Adventure",
+  "directorio": "ANTARCTIC_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "monkey",
+  "titulo": "Monkey Academy",
+  "directorio": "MONKEY_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "billiards",
+  "titulo": "Konami’s Billiards",
+  "directorio": "BILLIARDS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "mahjong",
+  "titulo": "Konami’s Mahjong Dojo",
+  "directorio": "MAHJONG_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "hyperolympic1",
+  "titulo": "Hyper Olympic 1",
+  "directorio": "HYPEROLYMPIC1_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "hyperolympic2",
+  "titulo": "Hyper Olympic 2",
+  "directorio": "HYPEROLYMPIC2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "holeinone",
+  "titulo": "Hole in One",
+  "directorio": "HOLEINONE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "holeinonepro",
+  "titulo": "Hole in One Professional",
+  "directorio": "HOLEINONEPRO_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "casioworldopen",
+  "titulo": "Casio World Open",
+  "directorio": "CASIOWORLDOPEN_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "hyperrally",
+  "titulo": "Hyper Rally",
+  "directorio": "HYPERRALLY_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x79C8",
+    "instruccion": "ld (06957h),a",
+    "carga": "ld a,0c9h",
+    "destino": "0x6957",
+    "cae_en": "0x6957",
+    "instruccion_del_destino": "ld a,(0e00ah)",
+    "es_el_primer_byte": true,
+    "listado": "src/hyperrally.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "skyjaguar",
+  "titulo": "Sky Jaguar",
+  "directorio": "SKYJAGUAR_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "golf",
+  "titulo": "Konami's Golf",
+  "directorio": "GOLF_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "mopiranger",
+  "titulo": "Mopi Ranger",
+  "directorio": "MOPIRANGER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x406A",
+    "instruccion": "ld (04146h),a",
+    "carga": "ld a,(despacha_por_indice)",
+    "destino": "0x4146",
+    "cae_en": "0x4146",
+    "instruccion_del_destino": "djnz comprueba_el_arranque",
+    "es_el_primer_byte": true,
+    "listado": "src/mopiranger.asm"
+   },
+   {
+    "donde": "0x406F",
+    "instruccion": "ld (04147h),a",
+    "carga": "ld a,0c9h",
+    "destino": "0x4147",
+    "cae_en": "0x4146",
+    "instruccion_del_destino": "djnz comprueba_el_arranque",
+    "es_el_primer_byte": false,
+    "listado": "src/mopiranger.asm"
+   },
+   {
+    "donde": "0x40A5",
+    "instruccion": "ld (044dfh),de",
+    "carga": "",
+    "destino": "0x44DF",
+    "cae_en": "0x44DE",
+    "instruccion_del_destino": "jp L_45FF",
+    "es_el_primer_byte": false,
+    "listado": "src/mopiranger.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "roadfighter",
+  "titulo": "Road Fighter",
+  "directorio": "ROADFIGHTER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "pingpong",
+  "titulo": "Konami's Ping Pong",
+  "directorio": "PINGPONG_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4013",
+    "instruccion": "ld (040eeh),a",
+    "carga": "ld a,(l404eh)",
+    "destino": "0x40EE",
+    "cae_en": "0x40EE",
+    "instruccion_del_destino": "djnz L_40FA",
+    "es_el_primer_byte": true,
+    "listado": "src/pingpong.asm"
+   },
+   {
+    "donde": "0x4052",
+    "instruccion": "ld (040f8h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x40F8",
+    "cae_en": "0x40F7",
+    "instruccion_del_destino": "jp L_4318",
+    "es_el_primer_byte": false,
+    "listado": "src/pingpong.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "soccer",
+  "titulo": "Konami’s Soccer",
+  "directorio": "SOCCER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4028",
+    "instruccion": "ld (0410ah),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x410A",
+    "cae_en": "0x410A",
+    "instruccion_del_destino": "djnz escena_presentacion_3",
+    "es_el_primer_byte": true,
+    "listado": "src/soccer.asm"
+   },
+   {
+    "donde": "0x4056",
+    "instruccion": "ld (04116h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x4116",
+    "cae_en": "0x4115",
+    "instruccion_del_destino": "jp espera_n_y_avanza_escena",
+    "es_el_primer_byte": false,
+    "listado": "src/soccer.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "kingsvalley",
+  "titulo": "King's Valley",
+  "directorio": "KINGSVALLEY_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4044",
+    "instruccion": "ld (hl),a",
+    "carga": "ld hl,040e4h  (en 0x403E)",
+    "destino": "0x40E4",
+    "cae_en": "0x40E4",
+    "instruccion_del_destino": "djnz tarea_0_dibuja_o_avanza",
+    "es_el_primer_byte": true,
+    "listado": "src/kingsvalley.asm"
+   },
+   {
+    "donde": "0x409C",
+    "instruccion": "ld (043c0h),de",
+    "carga": "jr bucle_muerto",
+    "destino": "0x43C0",
+    "cae_en": "0x43BF",
+    "instruccion_del_destino": "jp nc,cierra_aviso_titulo",
+    "es_el_primer_byte": false,
+    "listado": "src/kingsvalley.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "baseball",
+  "titulo": "Konami's Baseball",
+  "directorio": "BASEBALL_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "knightmare",
+  "titulo": "Knightmare",
+  "directorio": "KNIGHTMARE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4028",
+    "instruccion": "ld (04112h),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x4112",
+    "cae_en": "0x4112",
+    "instruccion_del_destino": "djnz L_4120",
+    "es_el_primer_byte": true,
+    "listado": "src/knightmare.asm"
+   },
+   {
+    "donde": "0x4055",
+    "instruccion": "ld (0411eh),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x411E",
+    "cae_en": "0x411D",
+    "instruccion_del_destino": "jp L_4187",
+    "es_el_primer_byte": false,
+    "listado": "src/knightmare.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "twinbee",
+  "titulo": "Twin Bee",
+  "directorio": "TWINBEE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4028",
+    "instruccion": "ld (04195h),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x4195",
+    "cae_en": "0x4195",
+    "instruccion_del_destino": "djnz L_41A3",
+    "es_el_primer_byte": true,
+    "listado": "src/twinbee.asm"
+   },
+   {
+    "donde": "0x4055",
+    "instruccion": "ld (041a1h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x41A1",
+    "cae_en": "0x41A0",
+    "instruccion_del_destino": "jp empieza_la_escena_siguiente",
+    "es_el_primer_byte": false,
+    "listado": "src/twinbee.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "boxing",
+  "titulo": "Konami's Boxing",
+  "directorio": "BOXING_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x470E",
+    "instruccion": "ld (04f84h),a",
+    "carga": "xor a",
+    "destino": "0x4F84",
+    "cae_en": "0x4F84",
+    "instruccion_del_destino": "pop af",
+    "es_el_primer_byte": true,
+    "listado": "src/boxing.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "yiearkungfu2",
+  "titulo": "Yie Ar Kung-Fu II",
+  "directorio": "YIEARKUNGFU2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4028",
+    "instruccion": "ld (0410dh),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x410D",
+    "cae_en": "0x410D",
+    "instruccion_del_destino": "djnz L_411B",
+    "es_el_primer_byte": true,
+    "listado": "src/yiear2.asm"
+   },
+   {
+    "donde": "0x4056",
+    "instruccion": "ld (04119h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x4119",
+    "cae_en": "0x4118",
+    "instruccion_del_destino": "jp L_41FB",
+    "es_el_primer_byte": false,
+    "listado": "src/yiear2.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "yiearkungfu",
+  "titulo": "Yie Ar Kung-Fu",
+  "directorio": "YIEARKUNGFU_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "tennis",
+  "titulo": "Konami's Tennis",
+  "directorio": "TENNIS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x7A31",
+    "instruccion": "ld (0409ah),a",
+    "carga": "xor a",
+    "destino": "0x409A",
+    "cae_en": "0x409A",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": true,
+    "listado": "src/tennis.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "hypersports1",
+  "titulo": "Hyper Sports 1",
+  "directorio": "HYPERSPORTS1_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "hypersports2",
+  "titulo": "Hyper Sports 2",
+  "directorio": "HYPERSPORTS2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "hypersports3",
+  "titulo": "Hyper Sports 3",
+  "directorio": "HYPERSPORTS3_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4013",
+    "instruccion": "ld (0412fh),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x412F",
+    "cae_en": "0x412F",
+    "instruccion_del_destino": "djnz L_413D",
+    "es_el_primer_byte": true,
+    "listado": "src/hypersports3.asm"
+   },
+   {
+    "donde": "0x4040",
+    "instruccion": "ld (0413bh),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x413B",
+    "cae_en": "0x413A",
+    "instruccion_del_destino": "jp espera_y_pasa",
+    "es_el_primer_byte": false,
+    "listado": "src/hypersports3.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "gamemaster",
+  "titulo": "Konami’s Game Master",
+  "directorio": "GAMEMASTER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "goonies",
+  "titulo": "The Goonies",
+  "directorio": "GOONIES_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4022",
+    "instruccion": "ld (0411ch),hl",
+    "carga": "ld hl,0c9e1h",
+    "destino": "0x411C",
+    "cae_en": "0x411C",
+    "instruccion_del_destino": "djnz presentacion_anima",
+    "es_el_primer_byte": true,
+    "listado": "src/goonies.asm"
+   },
+   {
+    "donde": "0x4050",
+    "instruccion": "ld (04129h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x4129",
+    "cae_en": "0x4128",
+    "instruccion_del_destino": "jp L_41C8",
+    "es_el_primer_byte": false,
+    "listado": "src/goonies.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "cabbagepatch",
+  "titulo": "Cabbage Patch Kids",
+  "directorio": "CABBAGEPATCH_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "pitfall",
+  "titulo": "Pitfall!",
+  "directorio": "PITFALL_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null
+ },
+ {
+  "clave": "pippols",
+  "titulo": "Pippols",
+  "directorio": "PIPPOLS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4033",
+    "instruccion": "ld (040c5h),hl",
+    "carga": "ld hl,00000h",
+    "destino": "0x40C5",
+    "cae_en": "0x40C4",
+    "instruccion_del_destino": "jp SIGUIENTE_ESTADO",
+    "es_el_primer_byte": false,
+    "listado": "src/pippols.asm"
+   }
+  ],
+  "nota": null
+ },
+ {
+  "clave": "demonia",
+  "titulo": "Demonia",
+  "directorio": "DEMONIA_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "nemesis",
+  "titulo": "Nemesis / Gradius",
+  "directorio": "NEMESIS_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "f1spirit",
+  "titulo": "F-1 Spirit — The Way to Formula 1",
+  "directorio": "F1SPIRIT_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "colt36",
+  "titulo": "Colt 36",
+  "directorio": "COLT36_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "trailblazer",
+  "titulo": "Trailblazer",
+  "directorio": "TRAILBLAZER_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "stardust",
+  "titulo": "Stardust",
+  "directorio": "STARDUST_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "temptations",
+  "titulo": "Temptations",
+  "directorio": "TEMPTATIONS_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "alehop",
+  "titulo": "Ale Hop!",
+  "directorio": "ALEHOP_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "war",
+  "titulo": "War in Middle Earth",
+  "directorio": "WARINMIDDLEEARTH_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "descubrimiento",
+  "titulo": "El Descubrimiento de América",
+  "directorio": "DESCUBRIMIENTO_DISAM",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "mahjong-en",
+  "titulo": "Konami’s Mahjong Dojo — English patch",
+  "directorio": "MAHJONGDOJO_ENPATCH",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "warinmiddleearth-patch",
+  "titulo": "War in Middle Earth — Araubi’s patch",
+  "directorio": "WARINMIDDLEEARTH_PATCH",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ }
+]

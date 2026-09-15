@@ -4,25 +4,6 @@
  "juegos": 49,
  "parejas": [
   {
-   "a": "war",
-   "b": "warinmiddleearth-patch",
-   "tiras": 1,
-   "bytes_comunes": 62650,
-   "la_mas_larga": 62650,
-   "mismo_binario": true,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 62650,
-     "en_a": "0x0000",
-     "en_b": "0x0000",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
    "a": "mahjong",
    "b": "mahjong-en",
    "tiras": 1,
@@ -353,6 +334,53 @@
      "en_b": "0x000A",
      "es_en_a": "desconocido",
      "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "holeinone",
+   "b": "holeinonepro",
+   "tiras": 24,
+   "bytes_comunes": 3801,
+   "la_mas_larga": 1009,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 244,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 1009,
+     "en_a": "0x39BA",
+     "en_b": "0x661D",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    },
+    {
+     "bytes": 801,
+     "en_a": "0x354C",
+     "en_b": "0x61B3",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    },
+    {
+     "bytes": 310,
+     "en_a": "0x3870",
+     "en_b": "0x64E5",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    },
+    {
+     "bytes": 244,
+     "en_a": "0x1601",
+     "en_b": "0x288D",
+     "es_en_a": "codigo",
+     "es_en_b": "codigo"
+    },
+    {
+     "bytes": 198,
+     "en_a": "0x3324",
+     "en_b": "0x5F85",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
     }
    ]
   },
@@ -1156,53 +1184,6 @@
    ]
   },
   {
-   "a": "temptations",
-   "b": "warinmiddleearth-patch",
-   "tiras": 7,
-   "bytes_comunes": 542,
-   "la_mas_larga": 212,
-   "mismo_binario": false,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 212,
-     "en_a": "0x0137",
-     "en_b": "0x014A",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 104,
-     "en_a": "0x15D8",
-     "en_b": "0x0515",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 53,
-     "en_a": "0x1366",
-     "en_b": "0x03A2",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 49,
-     "en_a": "0x1410",
-     "en_b": "0x0406",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 48,
-     "en_a": "0x002B",
-     "en_b": "0x002D",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
    "a": "roadfighter",
    "b": "hypersports3",
    "tiras": 10,
@@ -1252,53 +1233,6 @@
   {
    "a": "alehop",
    "b": "war",
-   "tiras": 7,
-   "bytes_comunes": 541,
-   "la_mas_larga": 212,
-   "mismo_binario": false,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 212,
-     "en_a": "0x012E",
-     "en_b": "0x014A",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 103,
-     "en_a": "0x1604",
-     "en_b": "0x0515",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 53,
-     "en_a": "0x135D",
-     "en_b": "0x03A2",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 49,
-     "en_a": "0x1407",
-     "en_b": "0x0406",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 48,
-     "en_a": "0x002B",
-     "en_b": "0x002D",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
-   "a": "alehop",
-   "b": "warinmiddleearth-patch",
    "tiras": 7,
    "bytes_comunes": 541,
    "la_mas_larga": 212,
@@ -9484,25 +9418,6 @@
    ]
   },
   {
-   "a": "descubrimiento",
-   "b": "warinmiddleearth-patch",
-   "tiras": 1,
-   "bytes_comunes": 213,
-   "la_mas_larga": 213,
-   "mismo_binario": false,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 213,
-     "en_a": "0x004B",
-     "en_b": "0x0155",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
    "a": "monkey",
    "b": "skyjaguar",
    "tiras": 3,
@@ -10085,32 +10000,6 @@
   {
    "a": "colt36",
    "b": "war",
-   "tiras": 2,
-   "bytes_comunes": 204,
-   "la_mas_larga": 156,
-   "mismo_binario": false,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 156,
-     "en_a": "0x0166",
-     "en_b": "0x014A",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 48,
-     "en_a": "0x002B",
-     "en_b": "0x002D",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
-   "a": "colt36",
-   "b": "warinmiddleearth-patch",
    "tiras": 2,
    "bytes_comunes": 204,
    "la_mas_larga": 156,
@@ -12135,46 +12024,6 @@
   {
    "a": "stardust",
    "b": "war",
-   "tiras": 4,
-   "bytes_comunes": 171,
-   "la_mas_larga": 47,
-   "mismo_binario": false,
-   "bytes_de_codigo_en_las_guardadas": 0,
-   "mezcla_cinta_y_cartucho": false,
-   "detalle": [
-    {
-     "bytes": 47,
-     "en_a": "0x000A",
-     "en_b": "0x002E",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 46,
-     "en_a": "0xD990",
-     "en_b": "0x3930",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 44,
-     "en_a": "0x130F",
-     "en_b": "0x03AB",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    },
-    {
-     "bytes": 34,
-     "en_a": "0x13DF",
-     "en_b": "0x04A2",
-     "es_en_a": "desconocido",
-     "es_en_b": "desconocido"
-    }
-   ]
-  },
-  {
-   "a": "stardust",
-   "b": "warinmiddleearth-patch",
    "tiras": 4,
    "bytes_comunes": 171,
    "la_mas_larga": 47,
@@ -18594,6 +18443,25 @@
     {
      "bytes": 32,
      "en_a": "0x1472",
+     "en_b": "0x286F",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "holeinonepro",
+   "b": "nemesis",
+   "tiras": 1,
+   "bytes_comunes": 32,
+   "la_mas_larga": 32,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 32,
+     "en_a": "0x25DF",
      "en_b": "0x286F",
      "es_en_a": "datos",
      "es_en_b": "desconocido"

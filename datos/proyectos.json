@@ -170,6 +170,19 @@
    "aviso": null
   },
   {
+   "clave": "holeinonepro",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Hole in One Professional",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/HoleInOnePro-disassembly",
+   "web_url": "https://antxiko.github.io/HoleInOnePro-disassembly/",
+   "meta_en": "HAL Laboratory · MSX · 32 KB cartridge",
+   "meta_es": "HAL Laboratory · MSX · cartucho de 32 KB",
+   "directorio": "HOLEINONEPRO_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "casioworldopen",
    "categoria": "desensamblado",
    "grupo": "msx-exclusive",
@@ -648,8 +661,12 @@
    "remote": null
   },
   {
-   "directorio": "SERIE_DB",
+   "directorio": "PENGUINADVENTURE_DISAM",
    "remote": null
+  },
+  {
+   "directorio": "SERIE_DB",
+   "remote": "github.com/antxiko/msx-disassembly-database"
   }
  ]
 }

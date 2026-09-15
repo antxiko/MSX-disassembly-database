@@ -97,6 +97,13 @@
    "lleva_marca": false
   },
   {
+   "clave": "holeinonepro",
+   "titulo": "Hole in One Professional",
+   "grupo": "msx-exclusive",
+   "fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "casioworldopen",
    "titulo": "Casio World Open",
    "grupo": "msx-exclusive",
@@ -403,6 +410,13 @@
    "titulo": "Konami’s Mahjong Dojo — English patch",
    "grupo": null,
    "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "warinmiddleearth-patch",
+   "titulo": "War in Middle Earth — Araubi’s patch",
+   "grupo": null,
+   "fichero": "WARINMIDDLEEARTH_PATCH/war_unificada.rom",
    "lleva_marca": false
   },
   {

@@ -257,7 +257,7 @@
   ],
   "medido": {
    "instrucciones": 3740,
-   "comentarios": 1966,
+   "comentarios": 1967,
    "densidad": 52.6,
    "flojas": 0,
    "bloques": 475
@@ -265,7 +265,7 @@
   "por_listado": [
    {
     "instrucciones": 3740,
-    "comentarios": 1966,
+    "comentarios": 1967,
     "flojas": 0,
     "bloques": 475,
     "asm": "src/boxing.asm"
@@ -273,7 +273,7 @@
   ],
   "declarado": {
    "instrucciones": 3740,
-   "comentarios": 1966,
+   "comentarios": 1967,
    "flojas": 0,
    "bloques": 475,
    "densidad": 52.6
@@ -810,21 +810,51 @@
   "coteja": true
  },
  {
+  "repo": "HOLEINONEPRO_DISAM",
+  "listados": [
+   "src/holeinonepro.asm"
+  ],
+  "medido": {
+   "instrucciones": 7133,
+   "comentarios": 3169,
+   "densidad": 44.4,
+   "flojas": 0,
+   "bloques": 903
+  },
+  "por_listado": [
+   {
+    "instrucciones": 7133,
+    "comentarios": 3169,
+    "flojas": 0,
+    "bloques": 903,
+    "asm": "src/holeinonepro.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 7133,
+   "comentarios": 3169,
+   "flojas": 0,
+   "bloques": 903,
+   "densidad": 44.4
+  },
+  "coteja": true
+ },
+ {
   "repo": "HOLEINONE_DISAM",
   "listados": [
    "src/holeinone.asm"
   ],
   "medido": {
    "instrucciones": 3076,
-   "comentarios": 1290,
-   "densidad": 41.9,
+   "comentarios": 1291,
+   "densidad": 42.0,
    "flojas": 0,
    "bloques": 358
   },
   "por_listado": [
    {
     "instrucciones": 3076,
-    "comentarios": 1290,
+    "comentarios": 1291,
     "flojas": 0,
     "bloques": 358,
     "asm": "src/holeinone.asm"
@@ -832,10 +862,10 @@
   ],
   "declarado": {
    "instrucciones": 3076,
-   "comentarios": 1290,
+   "comentarios": 1291,
    "flojas": 0,
    "bloques": 358,
-   "densidad": 41.9
+   "densidad": 42.0
   },
   "coteja": true
  },
@@ -906,15 +936,15 @@
   ],
   "medido": {
    "instrucciones": 3356,
-   "comentarios": 758,
-   "densidad": 22.6,
+   "comentarios": 762,
+   "densidad": 22.7,
    "flojas": 0,
    "bloques": 430
   },
   "por_listado": [
    {
     "instrucciones": 3356,
-    "comentarios": 758,
+    "comentarios": 762,
     "flojas": 0,
     "bloques": 430,
     "asm": "src/hyperrally.asm"
@@ -922,10 +952,10 @@
   ],
   "declarado": {
    "instrucciones": 3356,
-   "comentarios": 758,
+   "comentarios": 762,
    "flojas": 0,
    "bloques": 430,
-   "densidad": 22.6
+   "densidad": 22.7
   },
   "coteja": true
  },
@@ -996,7 +1026,7 @@
   ],
   "medido": {
    "instrucciones": 7328,
-   "comentarios": 2528,
+   "comentarios": 2529,
    "densidad": 34.5,
    "flojas": 0,
    "bloques": 931
@@ -1004,7 +1034,7 @@
   "por_listado": [
    {
     "instrucciones": 7328,
-    "comentarios": 2528,
+    "comentarios": 2529,
     "flojas": 0,
     "bloques": 931,
     "asm": "src/hypersports3.asm"
@@ -1012,7 +1042,7 @@
   ],
   "declarado": {
    "instrucciones": 7328,
-   "comentarios": 2528,
+   "comentarios": 2529,
    "flojas": 0,
    "bloques": 931,
    "densidad": 34.5
@@ -1170,15 +1200,15 @@
   ],
   "medido": {
    "instrucciones": 3802,
-   "comentarios": 2012,
-   "densidad": 52.9,
+   "comentarios": 2016,
+   "densidad": 53.0,
    "flojas": 0,
    "bloques": 512
   },
   "por_listado": [
    {
     "instrucciones": 3802,
-    "comentarios": 2012,
+    "comentarios": 2016,
     "flojas": 0,
     "bloques": 512,
     "asm": "src/mopiranger.asm"
@@ -1186,10 +1216,10 @@
   ],
   "declarado": {
    "instrucciones": 3802,
-   "comentarios": 2012,
+   "comentarios": 2016,
    "flojas": 0,
    "bloques": 512,
-   "densidad": 52.9
+   "densidad": 53.0
   },
   "coteja": true
  },
@@ -1316,6 +1346,128 @@
   "coteja": true
  },
  {
+  "repo": "PENGUINADVENTURE_DISAM",
+  "listados": [
+   "src/penguinadventure_p00.asm",
+   "src/penguinadventure_p01.asm",
+   "src/penguinadventure_p02.asm",
+   "src/penguinadventure_p03.asm",
+   "src/penguinadventure_p04.asm",
+   "src/penguinadventure_p05.asm",
+   "src/penguinadventure_p06.asm",
+   "src/penguinadventure_p07.asm",
+   "src/penguinadventure_p08.asm",
+   "src/penguinadventure_p09.asm",
+   "src/penguinadventure_p10.asm",
+   "src/penguinadventure_p11.asm",
+   "src/penguinadventure_p12.asm",
+   "src/penguinadventure_p13.asm",
+   "src/penguinadventure_p14.asm",
+   "src/penguinadventure_p15.asm"
+  ],
+  "medido": {
+   "instrucciones": 16227,
+   "comentarios": 5472,
+   "densidad": 33.7,
+   "flojas": 243,
+   "bloques": 1525
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3929,
+    "comentarios": 2240,
+    "flojas": 6,
+    "bloques": 218,
+    "asm": "src/penguinadventure_p00.asm"
+   },
+   {
+    "instrucciones": 3923,
+    "comentarios": 1047,
+    "flojas": 80,
+    "bloques": 344,
+    "asm": "src/penguinadventure_p01.asm"
+   },
+   {
+    "instrucciones": 3089,
+    "comentarios": 847,
+    "flojas": 48,
+    "bloques": 361,
+    "asm": "src/penguinadventure_p02.asm"
+   },
+   {
+    "instrucciones": 3189,
+    "comentarios": 657,
+    "flojas": 81,
+    "bloques": 333,
+    "asm": "src/penguinadventure_p03.asm"
+   },
+   {
+    "instrucciones": 1554,
+    "comentarios": 450,
+    "flojas": 28,
+    "bloques": 195,
+    "asm": "src/penguinadventure_p09.asm"
+   },
+   {
+    "instrucciones": 543,
+    "comentarios": 231,
+    "flojas": 0,
+    "bloques": 74,
+    "asm": "src/penguinadventure_p14.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 16227,
+   "comentarios": 5472,
+   "flojas": 243,
+   "bloques": 1525,
+   "densidad": 33.7
+  },
+  "fallos": [
+   {
+    "asm": "src/penguinadventure_p04.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p05.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p06.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p07.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p08.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p10.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p11.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p12.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p13.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/penguinadventure_p15.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": true
+ },
+ {
   "repo": "PINGPONG_DISAM",
   "listados": [
    "src/pingpong.asm"
@@ -1352,7 +1504,7 @@
   ],
   "medido": {
    "instrucciones": 4861,
-   "comentarios": 1122,
+   "comentarios": 1123,
    "densidad": 23.1,
    "flojas": 0,
    "bloques": 675
@@ -1360,7 +1512,7 @@
   "por_listado": [
    {
     "instrucciones": 4861,
-    "comentarios": 1122,
+    "comentarios": 1123,
     "flojas": 0,
     "bloques": 675,
     "asm": "src/pippols.asm"
@@ -1467,7 +1619,7 @@
   ],
   "medido": {
    "instrucciones": 9755,
-   "comentarios": 3561,
+   "comentarios": 3564,
    "densidad": 36.5,
    "flojas": 0,
    "bloques": 1213
@@ -1475,7 +1627,7 @@
   "por_listado": [
    {
     "instrucciones": 9755,
-    "comentarios": 3561,
+    "comentarios": 3564,
     "flojas": 0,
     "bloques": 1213,
     "asm": "src/soccer.asm"
@@ -1483,7 +1635,7 @@
   ],
   "declarado": {
    "instrucciones": 9755,
-   "comentarios": 3561,
+   "comentarios": 3564,
    "flojas": 0,
    "bloques": 1213,
    "densidad": 36.5
@@ -1747,7 +1899,7 @@
   ],
   "medido": {
    "instrucciones": 7405,
-   "comentarios": 3062,
+   "comentarios": 3063,
    "densidad": 41.4,
    "flojas": 0,
    "bloques": 1000
@@ -1755,7 +1907,7 @@
   "por_listado": [
    {
     "instrucciones": 7405,
-    "comentarios": 3062,
+    "comentarios": 3063,
     "flojas": 0,
     "bloques": 1000,
     "asm": "src/twinbee.asm"
@@ -1763,7 +1915,7 @@
   ],
   "declarado": {
    "instrucciones": 7405,
-   "comentarios": 3062,
+   "comentarios": 3063,
    "flojas": 0,
    "bloques": 1000,
    "densidad": 41.4
@@ -1780,20 +1932,13 @@
    "src/war_pantalla.asm"
   ],
   "medido": {
-   "instrucciones": 6844,
-   "comentarios": 2031,
+   "instrucciones": 6842,
+   "comentarios": 2032,
    "densidad": 29.7,
    "flojas": 0,
-   "bloques": 767
+   "bloques": 766
   },
   "por_listado": [
-   {
-    "instrucciones": 2,
-    "comentarios": 0,
-    "flojas": 0,
-    "bloques": 1,
-    "asm": "src/war_alto.asm"
-   },
    {
     "instrucciones": 785,
     "comentarios": 226,
@@ -1810,7 +1955,7 @@
    },
    {
     "instrucciones": 5664,
-    "comentarios": 1645,
+    "comentarios": 1646,
     "flojas": 0,
     "bloques": 621,
     "asm": "src/war_medio.asm"
@@ -1823,14 +1968,34 @@
     "asm": "src/war_pantalla.asm"
    }
   ],
-  "declarado": null,
-  "coteja": null
+  "declarado": {
+   "instrucciones": 6842,
+   "comentarios": 2032,
+   "flojas": 0,
+   "bloques": 766,
+   "densidad": 29.7
+  },
+  "fallos": [
+   {
+    "asm": "src/war_alto.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   }
+  ],
+  "coteja": true
  },
  {
   "repo": "WARINMIDDLEEARTH_PATCH",
   "listados": [
+   "src/cartucho/cargador_ram.asm",
+   "src/cartucho/cargador_rom.asm",
+   "src/cartucho/dzx0.asm",
+   "src/cartucho/finales.asm",
+   "src/cartucho/musica.asm",
+   "src/cartucho/nombres.asm",
+   "src/cartucho/puente.asm",
    "src/parche/ficha_valores.asm",
    "src/parche/icono_enemigo.asm",
+   "src/parche/mapa_comprimido.asm",
    "src/war_alto.asm",
    "src/war_bajo.asm",
    "src/war_loader.asm",
@@ -1884,11 +2049,43 @@
   "declarado": null,
   "fallos": [
    {
+    "asm": "src/cartucho/cargador_ram.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/cargador_rom.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/dzx0.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/finales.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/musica.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/nombres.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/cartucho/puente.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
     "asm": "src/parche/ficha_valores.asm",
     "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
    },
    {
     "asm": "src/parche/icono_enemigo.asm",
+    "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
+   },
+   {
+    "asm": "src/parche/mapa_comprimido.asm",
     "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZeroDivisionEr"
    }
   ],
@@ -1901,7 +2098,7 @@
   ],
   "medido": {
    "instrucciones": 7142,
-   "comentarios": 2919,
+   "comentarios": 2923,
    "densidad": 40.9,
    "flojas": 0,
    "bloques": 1027
@@ -1909,7 +2106,7 @@
   "por_listado": [
    {
     "instrucciones": 7142,
-    "comentarios": 2919,
+    "comentarios": 2923,
     "flojas": 0,
     "bloques": 1027,
     "asm": "src/yiear2.asm"
@@ -1917,7 +2114,7 @@
   ],
   "declarado": {
    "instrucciones": 7142,
-   "comentarios": 2919,
+   "comentarios": 2923,
    "flojas": 0,
    "bloques": 1027,
    "densidad": 40.9

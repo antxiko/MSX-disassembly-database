@@ -1,16 +1,16 @@
 # La base de datos de la serie de desensamblados MSX
 
-Los cuarenta y siete desensamblados y los dos parches de la serie, reunidos en
+Los cuarenta y ocho desensamblados y los dos parches de la serie, reunidos en
 un registro único que **no copia ninguna cifra**: las mide.
 
-    proyectos                 49   (47 desensamblados y 2 parches)
-    instrucciones            249.851
-    comentarios de línea      81.234        32,5 % del total
-    rutinas                   31.011
+    proyectos                 50   (48 desensamblados y 2 parches)
+    instrucciones            256.982
+    comentarios de línea      84.424        32,9 % del total
+    rutinas                   31.913
     rutinas por debajo del 10 %    0        en toda la serie
-    bytes de binario       1.465.115
+    bytes de binario       1.497.883
 
-Medido el 2026-09-09 sobre los listados que cada repositorio publica.
+Medido el 2026-09-15 sobre los listados que cada repositorio publica.
 
 ## Por qué se vuelve a medir todo
 
@@ -39,11 +39,12 @@ encontró a la primera:
 | lo que el README dice | el README en castellano | `recoge_readme.py` |
 | la marca oculta de Konami | el binario, rastreado entero | `recoge_marca.py` |
 | quién firma el juego | las tiras legibles del binario | `recoge_creditos.py` |
+| si el cartucho se defiende | las escrituras a su propio espacio, en el listado | `recoge_protecciones.py` |
 
 Nada se empareja por parecido del nombre y nada se rellena a ojo: un proyecto al
 que le falte una pieza sale con esa pieza a nulo y un aviso.
 
-### La vara es la misma para los cuarenta y siete
+### La vara es la misma para los cuarenta y ocho
 
 Cada repositorio trae su copia de `densidad.py`, escritas a lo largo de meses, y
 comparar entre juegos exige saber que cuentan igual. Hay cuatro variantes, y las
@@ -55,30 +56,43 @@ el `make densidad` del propio repositorio para contrastar:
 **34 repositorios cotejan exacto y ninguno discrepa.** Eso es lo que hace válida
 la cifra de los 14 que no traen ese target, y es un test (`test_base.py`).
 
-## Un hallazgo: "etiquetas" no significa lo mismo en todas las fichas
+## Un hallazgo, ya corregido: "etiquetas" no significaba lo mismo
 
-La portada publica un número de "etiquetas" por juego, y son tres magnitudes
+La portada publicaba un número de "etiquetas" por juego, y eran tres magnitudes
 distintas según el juego:
 
 - las **rutinas** que cuenta `densidad.py` — Twin Bee, 1.000;
-- las **"etiquetas con nombre"** del README — Hyper Sports 2, 314, que tiene 500
-  rutinas;
-- las **etiquetas del listado** — War in Middle Earth, 819.
+- las **directivas `L` del `.notes`**, que son las rutinas bautizadas a mano —
+  Hyper Sports 2, 314, que tiene 500 rutinas;
+- las **etiquetas del listado** — Mahjong, 1.091, que tiene 1.001 rutinas.
 
-Y en seis juegos (Billiards, Yie Ar Kung-Fu II, Demonia, F-1 Spirit, Stardust,
-Temptations) la cifra publicada no es ninguna de las tres, y hoy no se sabe de
-dónde sale. Quien compare "1.000 etiquetas" de Twin Bee con "314" de Hyper
-Sports 2 está comparando cosas distintas.
+Y en siete fichas (Billiards, Yie Ar Kung-Fu II, Demonia, F-1 Spirit, Stardust,
+Temptations y War in Middle Earth) la cifra no era ninguna de las tres: se
+escribió el día de publicar y el listado la dejó atrás. Las más desviadas eran
+Temptations, que publicaba 137 de sus 548 rutinas, y Stardust, 335 de 1.148.
 
-Está sin corregir a propósito: tocar diecisiete fichas de la portada es otra
-tarea, y se decide aparte.
+**Corregido el 2026-09-15**: las cuarenta y cuatro fichas que dan esa cifra
+publican ahora las **rutinas** que cuenta `densidad.py`, y la palabra en la
+ficha es "rutinas", no "etiquetas". Es la magnitud que se mide igual en todos
+los proyectos y la que sostiene el *"ninguna por debajo del 10 %"* que la propia
+ficha publica al lado. Diecisiete fichas cambiaron de cifra.
+
+Una de ellas se contradecía con su propio repositorio: la ficha de **Nemesis**
+daba 916 rutinas —las directivas `L`— mientras el README del repositorio decía
+*"ni una de las 1.540 rutinas está por debajo del 10 %"*.
+
+Para que no vuelva a pasar, la portada tiene ahora dos comprobaciones
+(`ANTXIKO_GITHUB_IO/tests/test_web.py`, clase `LasCifrasSonLasMedidas`) que
+miden los `.asm` de cada repositorio y exigen que la ficha publique **esa**
+cifra de rutinas y **ese** porcentaje de comentario. Si los repositorios no
+están al lado, se saltan solas.
 
 ## La firma de la casa: la marca oculta de Konami
 
 El hallazgo **no es nuestro**: lo destapó **Manuel Pazos** (@ManuelPazosMSX) en
 septiembre de 2021. Konami escondió en muchos de sus cartuchos el número de
 catálogo y el título en katakana, del revés y con el código de la casa. Aquí se
-rastrea en los cuarenta y nueve binarios, también en los que no son de Konami:
+rastrea en los cincuenta y un binarios, también en los que no son de Konami:
 **la llevan 17, y ninguno de los que no son de Konami da un falso positivo.**
 
     RC-701  Antarctic Adventure   KE tsu KI yo KU  NA N KI yo KU  TA " I HO " U KE N
@@ -104,9 +118,37 @@ Academy, Billiards, Mahjong, los dos Hyper Olympic, Sky Jaguar, Golf, Yie Ar
 Kung-Fu, Tennis, Hyper Sports 1 y 2, Cabbage Patch y F-1 Spirit no la tienen. Esa
 ausencia es un dato de la serie, no un fallo de medida.
 
+## Los cartuchos que se defienden solos
+
+Un cartucho que escribe **dentro de su propio espacio** no está haciendo nada:
+la ROM no admite escritura, así que esa instrucción parece código muerto. No lo
+es. Un cartucho pirateado es una copia cargada en **RAM**, y ahí la escritura sí
+cuela y deja el juego roto en un sitio del que no se vuelve.
+
+El patrón lo identificó **Manuel Pazos** en su desensamblado de King's Valley
+(RC-727), donde llamó a las dos rutinas `ReadKeys_AC` y `VRAM_writeAC`. Aquí se
+busca ese mismo patrón en los treinta y ocho cartuchos: **lo llevan trece**.
+
+Y la familia repite siempre las mismas dos, en las mismas dos rutinas del
+arranque:
+
+- una deja un `pop hl` y un `ret` encima de un **`djnz`** de la cadena de
+  presentación;
+- la otra deja un cero en el **operando de un `jp`**, que en memoria lo
+  convierte en `jp 00000h` —un reinicio en seco—.
+
+Que el destino sea **siempre** un `djnz` o el operando de un salto, y nunca un
+hueco de datos, es lo que descarta que sean escrituras sueltas.
+
+Lo que esto **no** dice: qué pasa de verdad al correr una copia en RAM no está
+medido —pediría cargar una copia y jugarla, y aquí no se distribuye ningún
+binario—. Y no están todas: el rastreador ve las escrituras a dirección fija y
+las que pasan por `HL` o `DE` cargados justo antes; una que calculase el destino
+sobre la marcha se le escaparía.
+
 ## La firma de las personas: quién hizo cada juego
 
-De los cuarenta y nueve binarios, **19 llevan algún crédito en texto legible**.
+De los cincuenta y un binarios, **21 llevan algún crédito en texto legible**.
 Los demás no: casi todos escriben con sus propios dibujos y no con la fuente del
 BIOS, así que su pantalla de créditos no está en ASCII en ninguna parte. Eso se
 registra como *no aparece en ASCII*, que es un dato, y nunca como *no tiene
@@ -246,6 +288,7 @@ familia: dentro hay parejas al 44 % y parejas que apenas se rozan.
     python3 tools/monta_base.py            > datos/serie.json
     python3 tools/recoge_marca.py    ../ > datos/marcas.json
     python3 tools/recoge_creditos.py ../ > datos/creditos.json
+    python3 tools/recoge_protecciones.py ../ > datos/protecciones.json
     python3 tools/monta_base.py            > datos/serie.json
 
     python3 tools/recoge_comun.py    ../ > datos/comun.json          # tarda

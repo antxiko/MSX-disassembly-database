@@ -188,6 +188,45 @@
   "nota": null
  },
  {
+  "clave": "holeinonepro",
+  "titulo": "Hole in One Professional",
+  "fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+  "tiras_legibles": 627,
+  "creditos": [
+   {
+    "offset": "0x11E5",
+    "texto": "@ HAL LABORATORY 1985",
+    "por": [
+     "HAL "
+    ]
+   },
+   {
+    "offset": "0x11FC",
+    "texto": "PRODUCER   F>NAKAMURAPROGRAMMER S>IWATA",
+    "por": [
+     "PROGRAM",
+     "PROGRAMM"
+    ]
+   },
+   {
+    "offset": "0x6D07",
+    "texto": "HAL COUNTRY CLUB",
+    "por": [
+     "HAL "
+    ]
+   },
+   {
+    "offset": "0x6E50",
+    "texto": "HAL COUNTRY CLUB",
+    "por": [
+     "HAL "
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
   "clave": "casioworldopen",
   "titulo": "Casio World Open",
   "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
@@ -899,6 +938,26 @@
   "creditos": [],
   "metadatos_del_volcado": [],
   "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "warinmiddleearth-patch",
+  "titulo": "War in Middle Earth — Araubi’s patch",
+  "fichero": "WARINMIDDLEEARTH_PATCH/war_unificada.rom",
+  "tiras_legibles": 365,
+  "creditos": [
+   {
+    "offset": "0x4552",
+    "texto": "Programado por C.J.Pink.                Conversion por ANIMAGIC                 Your only as good as the last great thing you did, where have you been since then",
+    "por": [
+     "PROGRAM",
+     "PROGRAMA",
+     "CONVER",
+     "VERSION"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
  },
  {
   "clave": "warinmiddleearth-patch",

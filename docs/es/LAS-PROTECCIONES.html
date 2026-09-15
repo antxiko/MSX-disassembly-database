@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>La marca oculta de Konami</title>
+<title>Las protecciones anticopia</title>
 <style>
 :root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
   --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
@@ -115,38 +115,45 @@ code{font-size:12px;color:var(--suave)}
 <div class="w">
 <header class="top">
   <h1>la serie<span>/</span></h1>
-  <p class="claim">La marca oculta de Konami</p>
+  <p class="claim">Las protecciones anticopia</p>
 </header>
-<nav><a href="index.html">Inicio</a><a href="LOS-JUEGOS.html">Los juegos</a><a href="LA-MARCA.html" style="color:var(--oro)">La marca</a><a href="LOS-CREDITOS.html">Los créditos</a><a href="LO-COMPARTIDO.html">Lo compartido</a><a href="LAS-FAMILIAS.html">Las familias</a><a href="LAS-PROTECCIONES.html">Las protecciones</a><a href="COMO-SE-MIDE.html">Cómo se mide</a><a href="../THE-MARK.html"
+<nav><a href="index.html">Inicio</a><a href="LOS-JUEGOS.html">Los juegos</a><a href="LA-MARCA.html">La marca</a><a href="LOS-CREDITOS.html">Los créditos</a><a href="LO-COMPARTIDO.html">Lo compartido</a><a href="LAS-FAMILIAS.html">Las familias</a><a href="LAS-PROTECCIONES.html" style="color:var(--oro)">Las protecciones</a><a href="COMO-SE-MIDE.html">Cómo se mide</a><a href="../THE-PROTECTIONS.html"
   style="margin-left:auto;color:var(--oro)">English</a></nav>
 
-<div class="aviso"><h4>El hallazgo no es nuestro</h4>
-<p>Lo destapó <b>Manuel Pazos</b> (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>)
-en septiembre de 2021. Gracias a él se sabe que hay que mirar ahí.</p></div>
+<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no esta haciendo
+nada: la ROM no admite escritura, asi que esa instruccion parece codigo muerto.
+No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahi la
+escritura si cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
 
-<p>Konami escondió en muchos de sus cartuchos de MSX el número de catálogo y el
-título en katakana. Leyendo hacia adelante, el bloque es así:</p>
-<p class="cita">[el título, <b>N</b> bytes, en orden inverso] · [<b>N</b>] ·
-[las dos cifras del RC en BCD] · [<b>0xAA</b>]</p>
+<div class="aviso"><h4>De quien es el hallazgo</h4>
+<p>El patron lo identifico <b>Manuel Pazos</b>
+(<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) en su desensamblado de
+King&#x27;s Valley (RC-727), donde llamo a las dos rutinas <code>ReadKeys_AC</code>
+y <code>VRAM_writeAC</code>. Lo que hay aqui es ese mismo patron, buscado en los
+38 cartuchos de la serie.</p></div>
 
-<p>El rastreo se hace sobre los cincuenta y un binarios, también sobre los que
-no son de Konami. Eso último es el control: si el rastreador le encontrara la
-marca a un juego que no es de Konami, es que se traga coincidencias.
-<b>No le encuentra ninguna.</b></p>
+<p><b>13 de los 38</b> llevan al menos una. Y la familia repite
+siempre las mismas dos, en las mismas dos rutinas del arranque: una deja un
+<code>pop hl</code> y un <code>ret</code> encima de un <b><code>djnz</code></b> de
+la cadena de presentacion, y la otra deja un cero en el <b>operando de un
+<code>jp</code></b>, que en memoria lo convierte en <code>jp 00000h</code> —un
+reinicio en seco—.</p>
 
-<div class='tabla'><table><tr><th>catálogo</th><th>juego</th><th>bytes</th><th>cierra en</th><th>el título, sílaba a sílaba</th></tr><tr><td><b>RC-701</b></td><td>Antarctic Adventure</td><td class='n'>20</td><td class='n'>0x7FFF</td><td><code>KE tsu KI yo KU   NA N KI yo KU   TA " I HO " U KE N</code></td></tr><tr><td><b>RC-718</b></td><td>Hyper Rally</td><td class='n'>8</td><td class='n'>0x7FFF</td><td><code>HA I HA o - RA RI -</code></td></tr><tr><td><b>RC-724</b></td><td>Konami's Baseball</td><td class='n'>4</td><td class='n'>0x7FFF</td><td><code>YA KI yu U</code></td></tr><tr><td><b>RC-727</b></td><td>King's Valley</td><td class='n'>6</td><td class='n'>0x7FFF</td><td><code>O U KE NO TA NI</code></td></tr><tr><td><b>RC-728</b></td><td>Mopi Ranger</td><td class='n'>9</td><td class='n'>0x7FFF</td><td><code>MO HI o RE N SI " ya -</code></td></tr><tr><td><b>RC-729</b></td><td>Pippols</td><td class='n'>6</td><td class='n'>0x7FFF</td><td><code>HI o HO o RU SU</code></td></tr><tr><td><b>RC-730</b></td><td>Road Fighter</td><td class='n'>10</td><td class='n'>0x7FFF</td><td><code>RO - TO "   HU a I TA -</code></td></tr><tr><td><b>RC-731</b></td><td>Konami's Ping Pong</td><td class='n'>12</td><td class='n'>0x7FFF</td><td><code>KO NA MI   NO   HI o N HO o N</code></td></tr><tr><td><b>RC-732</b></td><td>Konami’s Soccer</td><td class='n'>10</td><td class='n'>0xBFFF</td><td><code>KO NA MI   NO   SA tsu KA -</code></td></tr><tr><td><b>RC-733</b></td><td>Hyper Sports 3</td><td class='n'>13</td><td class='n'>0xBFFF</td><td><code>HA I HA o -   SU HO o - TU   3</code></td></tr><tr><td><b>RC-734</b></td><td>The Goonies</td><td class='n'>7</td><td class='n'>0xBFFF</td><td><code>KU " - NI - SU "</code></td></tr><tr><td><b>RC-735</b></td><td>Konami’s Game Master</td><td class='n'>19</td><td class='n'>0x7FFF</td><td><code>1 0   HA " I   TA NO SI MU   KA - TO RI tsu SI "</code></td></tr><tr><td><b>RC-736</b></td><td>Konami's Boxing</td><td class='n'>13</td><td class='n'>0xBFFF</td><td><code>KO NA MI   NO   HO " KU SI N KU "</code></td></tr><tr><td><b>RC-737</b></td><td>Yie Ar Kung-Fu II</td><td class='n'>12</td><td class='n'>0xBFFF</td><td><code>I - . A RU . KA N HU -   2</code></td></tr><tr><td><b>RC-739</b></td><td>Knightmare</td><td class='n'>10</td><td class='n'>0xBFFF</td><td><code>MA SI " yo U TE " N SE TU</code></td></tr><tr><td><b>RC-740</b></td><td>Twin Bee</td><td class='n'>6</td><td class='n'>0xBFFF</td><td><code>TU I N HI " -</code></td></tr><tr><td><b>RC-742</b></td><td>Nemesis / Gradius</td><td class='n'>8</td><td class='n'>0xBFFF</td><td><code>KU " RA TE " i U SU</code></td></tr></table></div>
+<p>Que el destino sea <b>siempre</b> un <code>djnz</code> o el operando de un
+salto, y nunca un hueco de datos, es lo que descarta que sean escrituras
+sueltas.</p>
 
-<p>Las sílabas son los códigos de la casa, uno por byte, con el <code>"</code> y
-la <code>o</code> de los diacríticos aparte. Así es como lo da el rastreador y
-como se guarda; la lectura en kana la pone quien lee, no el binario.</p>
+<div class='tabla'><table><tr><th>juego</th><th>dónde</th><th>qué hace</th><th>a dónde va</th><th>qué hay ahí</th></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x79C8</code></td><td><code>ld (06957h),a</code></td><td class='n'><code>0x6957</code></td><td><code>ld a,(0e00ah)</code></td></tr><tr class='destaca'><td>Hyper Sports 3</td><td class='n'><code>0x4013</code></td><td><code>ld (0412fh),hl</code></td><td class='n'><code>0x412F</code></td><td><code>djnz L_413D</code></td></tr><tr><td>Hyper Sports 3</td><td class='n'><code>0x4040</code></td><td><code>ld (0413bh),hl</code></td><td class='n'><code>0x413B</code></td><td><code>jp espera_y_pasa — el operando</code></td></tr><tr class='destaca'><td>King's Valley</td><td class='n'><code>0x4044</code></td><td><code>ld (hl),a</code></td><td class='n'><code>0x40E4</code></td><td><code>djnz tarea_0_dibuja_o_avanza</code></td></tr><tr><td>King's Valley</td><td class='n'><code>0x409C</code></td><td><code>ld (043c0h),de</code></td><td class='n'><code>0x43C0</code></td><td><code>jp nc,cierra_aviso_titulo — el operando</code></td></tr><tr class='destaca'><td>Knightmare</td><td class='n'><code>0x4028</code></td><td><code>ld (04112h),hl</code></td><td class='n'><code>0x4112</code></td><td><code>djnz L_4120</code></td></tr><tr><td>Knightmare</td><td class='n'><code>0x4055</code></td><td><code>ld (0411eh),hl</code></td><td class='n'><code>0x411E</code></td><td><code>jp L_4187 — el operando</code></td></tr><tr class='destaca'><td>Konami's Boxing</td><td class='n'><code>0x470E</code></td><td><code>ld (04f84h),a</code></td><td class='n'><code>0x4F84</code></td><td><code>pop af</code></td></tr><tr class='destaca'><td>Konami's Ping Pong</td><td class='n'><code>0x4013</code></td><td><code>ld (040eeh),a</code></td><td class='n'><code>0x40EE</code></td><td><code>djnz L_40FA</code></td></tr><tr><td>Konami's Ping Pong</td><td class='n'><code>0x4052</code></td><td><code>ld (040f8h),hl</code></td><td class='n'><code>0x40F8</code></td><td><code>jp L_4318 — el operando</code></td></tr><tr class='destaca'><td>Konami's Tennis</td><td class='n'><code>0x7A31</code></td><td><code>ld (0409ah),a</code></td><td class='n'><code>0x409A</code></td><td><code>ret</code></td></tr><tr class='destaca'><td>Konami’s Soccer</td><td class='n'><code>0x4028</code></td><td><code>ld (0410ah),hl</code></td><td class='n'><code>0x410A</code></td><td><code>djnz escena_presentacion_3</code></td></tr><tr><td>Konami’s Soccer</td><td class='n'><code>0x4056</code></td><td><code>ld (04116h),hl</code></td><td class='n'><code>0x4116</code></td><td><code>jp espera_n_y_avanza_escena — el operando</code></td></tr><tr class='destaca'><td>Mopi Ranger</td><td class='n'><code>0x406A</code></td><td><code>ld (04146h),a</code></td><td class='n'><code>0x4146</code></td><td><code>djnz comprueba_el_arranque</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x406F</code></td><td><code>ld (04147h),a</code></td><td class='n'><code>0x4147</code></td><td><code>djnz comprueba_el_arranque — el operando</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x40A5</code></td><td><code>ld (044dfh),de</code></td><td class='n'><code>0x44DF</code></td><td><code>jp L_45FF — el operando</code></td></tr><tr class='destaca'><td>Pippols</td><td class='n'><code>0x4033</code></td><td><code>ld (040c5h),hl</code></td><td class='n'><code>0x40C5</code></td><td><code>jp SIGUIENTE_ESTADO — el operando</code></td></tr><tr class='destaca'><td>The Goonies</td><td class='n'><code>0x4022</code></td><td><code>ld (0411ch),hl</code></td><td class='n'><code>0x411C</code></td><td><code>djnz presentacion_anima</code></td></tr><tr><td>The Goonies</td><td class='n'><code>0x4050</code></td><td><code>ld (04129h),hl</code></td><td class='n'><code>0x4129</code></td><td><code>jp L_41C8 — el operando</code></td></tr><tr class='destaca'><td>Twin Bee</td><td class='n'><code>0x4028</code></td><td><code>ld (04195h),hl</code></td><td class='n'><code>0x4195</code></td><td><code>djnz L_41A3</code></td></tr><tr><td>Twin Bee</td><td class='n'><code>0x4055</code></td><td><code>ld (041a1h),hl</code></td><td class='n'><code>0x41A1</code></td><td><code>jp empieza_la_escena_siguiente — el operando</code></td></tr><tr class='destaca'><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4028</code></td><td><code>ld (0410dh),hl</code></td><td class='n'><code>0x410D</code></td><td><code>djnz L_411B</code></td></tr><tr><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4056</code></td><td><code>ld (04119h),hl</code></td><td class='n'><code>0x4119</code></td><td><code>jp L_41FB — el operando</code></td></tr></table></div>
 
-<h3>Los diecisiete dan el número que publica su ficha</h3>
-<p>Son dos caminos independientes hasta el mismo dato: lo que Konami dejó dentro
-del cartucho y lo que la serie publica fuera. Coinciden en los diecisiete, y hay
-una comprobación automática que lo vigila.</p>
+<h3>Lo que esto NO dice</h3>
+<p>Que pasa de verdad al correr una copia en RAM <b>no esta medido</b>: eso
+pediria cargar una copia y jugarla, y aqui no se distribuye ningun binario. Lo
+que se afirma es lo que se lee del listado: donde esta la escritura, a donde
+apunta y que instruccion hay en el destino.</p>
 
-<h3>Y no la llevan todos</h3>
-<p>Estos cartuchos son de Konami y <b>no</b> la tienen: Time Pilot, Frogger, Super Cobra, Athletic Land, Monkey Academy, Konami’s Billiards, Konami’s Mahjong Dojo, Hyper Olympic 1, Hyper Olympic 2, Sky Jaguar, Konami's Golf, Yie Ar Kung-Fu, Konami's Tennis, Hyper Sports 1, Hyper Sports 2, Cabbage Patch Kids, F-1 Spirit — The Way to Formula 1. Esa ausencia es
-un dato de la serie, no un fallo de medida.</p>
+<p>Tampoco estan todas: el rastreador ve las escrituras a una direccion fija y
+las que pasan por <code>HL</code> o <code>DE</code> cargados justo antes. Una
+que calculase el destino sobre la marcha se le escaparia.</p>
+
 <footer>Los binarios no se distribuyen. Este repositorio contiene medidas y análisis, no los juegos. Cada juego pertenece a sus autores.</footer>
 </div>

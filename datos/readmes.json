@@ -213,10 +213,21 @@
   "tests": 50.0
  },
  {
+  "repo": "HOLEINONEPRO_DISAM",
+  "readme": "README.es.md",
+  "densidad": 44.4,
+  "comentarios": null,
+  "instrucciones": null,
+  "rutinas": null,
+  "flojas": null,
+  "etiquetas_con_nombre": null,
+  "tests": 26
+ },
+ {
   "repo": "HOLEINONE_DISAM",
   "readme": "README.es.md",
-  "densidad": 41.9,
-  "comentarios": 1290,
+  "densidad": 42.0,
+  "comentarios": 1291,
   "instrucciones": null,
   "rutinas": 358,
   "flojas": 0,
@@ -248,8 +259,8 @@
  {
   "repo": "HYPERRALLY_DISAM",
   "readme": "README.es.md",
-  "densidad": 22.6,
-  "comentarios": 723,
+  "densidad": 22.7,
+  "comentarios": 762,
   "instrucciones": null,
   "rutinas": 430,
   "flojas": 0,
@@ -270,8 +281,8 @@
  {
   "repo": "HYPERSPORTS2_DISAM",
   "readme": "README.es.md",
-  "densidad": 22.5,
-  "comentarios": 828,
+  "densidad": 22.7,
+  "comentarios": 837,
   "instrucciones": null,
   "rutinas": 500,
   "flojas": 0,
@@ -282,7 +293,7 @@
   "repo": "HYPERSPORTS3_DISAM",
   "readme": "README.es.md",
   "densidad": 34.5,
-  "comentarios": 2528,
+  "comentarios": 2529,
   "instrucciones": 7328,
   "rutinas": null,
   "flojas": null,
@@ -347,8 +358,8 @@
  {
   "repo": "MOPIRANGER_DISAM",
   "readme": "README.es.md",
-  "densidad": 52.9,
-  "comentarios": 2012,
+  "densidad": 53.0,
+  "comentarios": 2016,
   "instrucciones": 3802,
   "rutinas": null,
   "flojas": null,
@@ -364,6 +375,17 @@
   "rutinas": null,
   "flojas": null,
   "etiquetas_con_nombre": 916,
+  "tests": null
+ },
+ {
+  "repo": "PENGUINADVENTURE_DISAM",
+  "readme": "README.es.md",
+  "densidad": null,
+  "comentarios": null,
+  "instrucciones": null,
+  "rutinas": null,
+  "flojas": null,
+  "etiquetas_con_nombre": 450,
   "tests": null
  },
  {
@@ -412,7 +434,14 @@
  },
  {
   "repo": "SERIE_DB",
-  "readme": null
+  "readme": "README.md",
+  "densidad": null,
+  "comentarios": null,
+  "instrucciones": null,
+  "rutinas": null,
+  "flojas": null,
+  "etiquetas_con_nombre": null,
+  "tests": null
  },
  {
   "repo": "SKYJAGUAR_DISAM",
@@ -494,13 +523,13 @@
  {
   "repo": "TRAILBLAZER_DISAM",
   "readme": "README.es.md",
-  "densidad": 30.7,
-  "comentarios": 1118,
+  "densidad": 30.8,
+  "comentarios": 1119,
   "instrucciones": 3637,
   "rutinas": 355,
   "flojas": 0,
   "etiquetas_con_nombre": null,
-  "tests": 40.0
+  "tests": 43.0
  },
  {
   "repo": "TWINBEE_DISAM",
@@ -539,7 +568,7 @@
   "repo": "YIEARKUNGFU2_DISAM",
   "readme": "README.es.md",
   "densidad": 40.9,
-  "comentarios": 2919,
+  "comentarios": 2923,
   "instrucciones": 7142,
   "rutinas": 1027,
   "flojas": 0,

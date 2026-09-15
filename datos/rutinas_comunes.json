@@ -848,6 +848,176 @@
      "es_codigo_ahi": true
     }
    ]
+  },
+  {
+   "bytes": 32,
+   "hallado_en": "monkey",
+   "offset": "0x39EA",
+   "cartuchos": 10,
+   "como_lo_llaman": [
+    "L_4D35",
+    "L_528F",
+    "MUSICA_PASO",
+    "corre_el_canal_apaga",
+    "decae_el_volumen",
+    "envolvente",
+    "gasta_la_nota",
+    "lleva_una_nota_larga"
+   ],
+   "primeros_bytes": "DD 35 08 DD 7E 08 DD BE 00 20 05 FE 03 38 04 C9",
+   "apariciones": [
+    {
+     "juego": "supercobra",
+     "titulo": "Super Cobra",
+     "offset": "0x1DCE",
+     "direccion": "0x5DCE",
+     "se_llama": "MUSICA_PASO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "athletic",
+     "titulo": "Athletic Land",
+     "offset": "0x38DC",
+     "direccion": "0x78DC",
+     "se_llama": "MUSICA_PASO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "monkey",
+     "titulo": "Monkey Academy",
+     "offset": "0x39EA",
+     "direccion": "0x79EA",
+     "se_llama": "MUSICA_PASO",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "billiards",
+     "titulo": "Konami’s Billiards",
+     "offset": "0x1C87",
+     "direccion": "0x5C87",
+     "se_llama": "decae_el_volumen",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "golf",
+     "titulo": "Konami's Golf",
+     "offset": "0x3425",
+     "direccion": "0x7425",
+     "se_llama": "corre_el_canal_apaga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x0D3B",
+     "direccion": "0x4D3B",
+     "se_llama": "L_4D35",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pingpong",
+     "titulo": "Konami's Ping Pong",
+     "offset": "0x1295",
+     "direccion": "0x5295",
+     "se_llama": "L_528F",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "baseball",
+     "titulo": "Konami's Baseball",
+     "offset": "0x2D7B",
+     "direccion": "0x6D7B",
+     "se_llama": "lleva_una_nota_larga",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "boxing",
+     "titulo": "Konami's Boxing",
+     "offset": "0x2B09",
+     "direccion": "0x6B09",
+     "se_llama": "envolvente",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "tennis",
+     "titulo": "Konami's Tennis",
+     "offset": "0x3BC4",
+     "direccion": "0x7BC4",
+     "se_llama": "gasta_la_nota",
+     "es_codigo_ahi": true
+    }
+   ]
+  },
+  {
+   "bytes": 175,
+   "hallado_en": "twinbee",
+   "offset": "0x0B25",
+   "cartuchos": 7,
+   "como_lo_llaman": [
+    "SUBE_LOGOTIPO",
+    "baja_un_paso",
+    "barre_la_pantalla",
+    "sube_el_logotipo_una_fila"
+   ],
+   "primeros_bytes": "AF CD 56 00 21 0A E0 35 C9 E5 CD 4D 00 23 3C 10",
+   "apariciones": [
+    {
+     "juego": "roadfighter",
+     "titulo": "Road Fighter",
+     "offset": "0x08F8",
+     "direccion": "0x48F8",
+     "se_llama": "barre_la_pantalla",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "knightmare",
+     "titulo": "Knightmare",
+     "offset": "0x070C",
+     "direccion": "0x470C",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "twinbee",
+     "titulo": "Twin Bee",
+     "offset": "0x0B25",
+     "direccion": "0x4B25",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "yiearkungfu2",
+     "titulo": "Yie Ar Kung-Fu II",
+     "offset": "0x0C3B",
+     "direccion": "0x4C3B",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "hypersports3",
+     "titulo": "Hyper Sports 3",
+     "offset": "0x075C",
+     "direccion": "0x475C",
+     "se_llama": "sube_el_logotipo_una_fila",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "goonies",
+     "titulo": "The Goonies",
+     "offset": "0x09F8",
+     "direccion": "0x49F8",
+     "se_llama": "baja_un_paso",
+     "es_codigo_ahi": true
+    },
+    {
+     "juego": "pippols",
+     "titulo": "Pippols",
+     "offset": "0x071A",
+     "direccion": "0x471A",
+     "se_llama": "SUBE_LOGOTIPO",
+     "es_codigo_ahi": true
+    }
+   ]
   }
  ]
 }

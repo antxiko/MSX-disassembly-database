@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How it is measured</title>
+<title>The copy protections</title>
 <style>
 :root{--tinta:#cfd0d4;--suave:#83868f;--fondo:#000;--panel:#0c0e13;--linea:#23262e;
   --rojo:#ff897d;--cyan:#65dbef;--verde:#3eb849;--oro:#ded087}
@@ -115,35 +115,43 @@ code{font-size:12px;color:var(--suave)}
 <div class="w">
 <header class="top">
   <h1>la serie<span>/</span></h1>
-  <p class="claim">How it is measured</p>
+  <p class="claim">The copy protections</p>
 </header>
-<nav><a href="index.html">Home</a><a href="THE-GAMES.html">The games</a><a href="THE-MARK.html">The mark</a><a href="THE-CREDITS.html">The credits</a><a href="WHAT-THEY-SHARE.html">What they share</a><a href="THE-FAMILIES.html">The families</a><a href="THE-PROTECTIONS.html">The protections</a><a href="HOW-IT-IS-MEASURED.html" style="color:var(--oro)">How it is measured</a><a href="es/COMO-SE-MIDE.html"
+<nav><a href="index.html">Home</a><a href="THE-GAMES.html">The games</a><a href="THE-MARK.html">The mark</a><a href="THE-CREDITS.html">The credits</a><a href="WHAT-THEY-SHARE.html">What they share</a><a href="THE-FAMILIES.html">The families</a><a href="THE-PROTECTIONS.html" style="color:var(--oro)">The protections</a><a href="HOW-IT-IS-MEASURED.html">How it is measured</a><a href="es/LAS-PROTECCIONES.html"
   style="margin-left:auto;color:var(--oro)">En castellano</a></nav>
 
-<p>Nothing is matched by name resemblance and nothing is filled in by eye. A
-project missing a piece comes out with that piece null and a warning, not with an
-invented figure.</p>
-<div class='tabla'><table><tr><th>fact</th><th>where it comes from</th><th>tool</th></tr><tr><td>who each project is</td><td>the series' front-page card</td><td><code>recoge_portada.py</code></td></tr><tr><td>which directory it lives in</td><td>git's <code>remote</code>, matched against the card's URL</td><td><code>recoge_portada.py</code></td></tr><tr><td>which binary it disassembles</td><td>the variable in the repository's Makefile</td><td><code>recoge_binarios.py</code></td></tr><tr><td>size and sha256</td><td>the file, read again</td><td><code>recoge_binarios.py</code></td></tr><tr><td>instructions and comments</td><td>the <code>.asm</code> files the repository publishes</td><td><code>recoge_cifras.py</code></td></tr><tr><td>what the repository declares</td><td>its own <code>make densidad</code></td><td><code>recoge_cifras.py</code></td></tr><tr><td>the hidden mark</td><td>the binary, swept end to end</td><td><code>recoge_marca.py</code></td></tr><tr><td>who signs the game</td><td>the readable runs in the binary</td><td><code>recoge_creditos.py</code></td></tr></table></div>
+<p>A cartridge writing <b>inside its own space</b> is doing nothing at all: ROM
+takes no writes, so that instruction looks like dead code. It is not. A pirated
+cartridge is a copy loaded into <b>RAM</b>, and there the write does land and
+leaves the game broken somewhere it never returns from.</p>
 
-<h3>The same yardstick for all forty-eight</h3>
-<p>Every repository carries its own copy of <code>densidad.py</code>, written over
-months, and comparing between games requires knowing they count alike. There are
-four variants and all four use <b>the same criterion</b>: they differ in line
-endings, in a special case for Nemesis (a bank with no code), and in Trailblazer's
-adding up several tape pieces.</p>
-<p>So here everything is measured with one canonical copy and, on top of that,
-each repository's own <code>make densidad</code> is run to check:
-<b>thirty-four agree exactly and none disagree</b>. That is what makes the figures
-valid for the fourteen that do not carry that target, and a test watches it.</p>
+<div class="aviso"><h4>Whose finding this is</h4>
+<p>The pattern was identified by <b>Manuel Pazos</b>
+(<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) in his disassembly of
+King&#x27;s Valley (RC-727), where he named the two routines
+<code>ReadKeys_AC</code> and <code>VRAM_writeAC</code>. What is here is that same
+pattern, looked for across the 38 cartridges in the series.</p></div>
 
-<h3>What this database cannot claim</h3>
-<ul>
-<li>That a game "has no credits". Only that none appear in ASCII.</li>
-<li>That two cartridges share no routine: if it was assembled at different
-addresses, a byte comparison cannot see it.</li>
-<li>Where the "labels" figure published by six front-page cards comes from. It is
-neither the routine count, nor the README's named-labels count, nor the listing's
-label count. It is recorded as an open question.</li>
-</ul>
+<p><b>13 of the 38</b> carry at least one. And the family repeats
+the same two, in the same two start-up routines: one puts a <code>pop hl</code>
+and a <code>ret</code> over a <b><code>djnz</code></b> in the presentation chain,
+the other leaves a zero in the <b>operand of a <code>jp</code></b>, which in
+memory turns it into <code>jp 00000h</code> —a dead reset—.</p>
+
+<p>That the target is <b>always</b> a <code>djnz</code> or the operand of a jump,
+and never a gap in the data, is what rules out stray writes.</p>
+
+<div class='tabla'><table><tr><th>game</th><th>where</th><th>what it does</th><th>where it lands</th><th>what is there</th></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x79C8</code></td><td><code>ld (06957h),a</code></td><td class='n'><code>0x6957</code></td><td><code>ld a,(0e00ah)</code></td></tr><tr class='destaca'><td>Hyper Sports 3</td><td class='n'><code>0x4013</code></td><td><code>ld (0412fh),hl</code></td><td class='n'><code>0x412F</code></td><td><code>djnz L_413D</code></td></tr><tr><td>Hyper Sports 3</td><td class='n'><code>0x4040</code></td><td><code>ld (0413bh),hl</code></td><td class='n'><code>0x413B</code></td><td><code>jp espera_y_pasa — its operand</code></td></tr><tr class='destaca'><td>King's Valley</td><td class='n'><code>0x4044</code></td><td><code>ld (hl),a</code></td><td class='n'><code>0x40E4</code></td><td><code>djnz tarea_0_dibuja_o_avanza</code></td></tr><tr><td>King's Valley</td><td class='n'><code>0x409C</code></td><td><code>ld (043c0h),de</code></td><td class='n'><code>0x43C0</code></td><td><code>jp nc,cierra_aviso_titulo — its operand</code></td></tr><tr class='destaca'><td>Knightmare</td><td class='n'><code>0x4028</code></td><td><code>ld (04112h),hl</code></td><td class='n'><code>0x4112</code></td><td><code>djnz L_4120</code></td></tr><tr><td>Knightmare</td><td class='n'><code>0x4055</code></td><td><code>ld (0411eh),hl</code></td><td class='n'><code>0x411E</code></td><td><code>jp L_4187 — its operand</code></td></tr><tr class='destaca'><td>Konami's Boxing</td><td class='n'><code>0x470E</code></td><td><code>ld (04f84h),a</code></td><td class='n'><code>0x4F84</code></td><td><code>pop af</code></td></tr><tr class='destaca'><td>Konami's Ping Pong</td><td class='n'><code>0x4013</code></td><td><code>ld (040eeh),a</code></td><td class='n'><code>0x40EE</code></td><td><code>djnz L_40FA</code></td></tr><tr><td>Konami's Ping Pong</td><td class='n'><code>0x4052</code></td><td><code>ld (040f8h),hl</code></td><td class='n'><code>0x40F8</code></td><td><code>jp L_4318 — its operand</code></td></tr><tr class='destaca'><td>Konami's Tennis</td><td class='n'><code>0x7A31</code></td><td><code>ld (0409ah),a</code></td><td class='n'><code>0x409A</code></td><td><code>ret</code></td></tr><tr class='destaca'><td>Konami’s Soccer</td><td class='n'><code>0x4028</code></td><td><code>ld (0410ah),hl</code></td><td class='n'><code>0x410A</code></td><td><code>djnz escena_presentacion_3</code></td></tr><tr><td>Konami’s Soccer</td><td class='n'><code>0x4056</code></td><td><code>ld (04116h),hl</code></td><td class='n'><code>0x4116</code></td><td><code>jp espera_n_y_avanza_escena — its operand</code></td></tr><tr class='destaca'><td>Mopi Ranger</td><td class='n'><code>0x406A</code></td><td><code>ld (04146h),a</code></td><td class='n'><code>0x4146</code></td><td><code>djnz comprueba_el_arranque</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x406F</code></td><td><code>ld (04147h),a</code></td><td class='n'><code>0x4147</code></td><td><code>djnz comprueba_el_arranque — its operand</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x40A5</code></td><td><code>ld (044dfh),de</code></td><td class='n'><code>0x44DF</code></td><td><code>jp L_45FF — its operand</code></td></tr><tr class='destaca'><td>Pippols</td><td class='n'><code>0x4033</code></td><td><code>ld (040c5h),hl</code></td><td class='n'><code>0x40C5</code></td><td><code>jp SIGUIENTE_ESTADO — its operand</code></td></tr><tr class='destaca'><td>The Goonies</td><td class='n'><code>0x4022</code></td><td><code>ld (0411ch),hl</code></td><td class='n'><code>0x411C</code></td><td><code>djnz presentacion_anima</code></td></tr><tr><td>The Goonies</td><td class='n'><code>0x4050</code></td><td><code>ld (04129h),hl</code></td><td class='n'><code>0x4129</code></td><td><code>jp L_41C8 — its operand</code></td></tr><tr class='destaca'><td>Twin Bee</td><td class='n'><code>0x4028</code></td><td><code>ld (04195h),hl</code></td><td class='n'><code>0x4195</code></td><td><code>djnz L_41A3</code></td></tr><tr><td>Twin Bee</td><td class='n'><code>0x4055</code></td><td><code>ld (041a1h),hl</code></td><td class='n'><code>0x41A1</code></td><td><code>jp empieza_la_escena_siguiente — its operand</code></td></tr><tr class='destaca'><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4028</code></td><td><code>ld (0410dh),hl</code></td><td class='n'><code>0x410D</code></td><td><code>djnz L_411B</code></td></tr><tr><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4056</code></td><td><code>ld (04119h),hl</code></td><td class='n'><code>0x4119</code></td><td><code>jp L_41FB — its operand</code></td></tr></table></div>
+
+<h3>What this does NOT say</h3>
+<p>What actually happens when a copy runs in RAM is <b>not measured</b>: that
+would mean loading a copy and playing it, and no binary is distributed here.
+What is claimed is what the listing says: where the write is, where it points
+and what instruction sits at the target.</p>
+
+<p>Nor are these all of them: the sweep sees writes to a fixed address, and
+those going through <code>HL</code> or <code>DE</code> loaded just before. One
+computing its target on the fly would slip past.</p>
+
 <footer>The binaries are not distributed. This repository holds measurements and analysis, not the games. Each game belongs to its authors.</footer>
 </div>

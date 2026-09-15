@@ -160,8 +160,14 @@ class LosCreditos(unittest.TestCase):
         el desplazamiento que dice. Es lo que separa una cita de un recuerdo."""
         mirados = 0
         for p in self.proyectos:
+            # De que fichero salieron: lo dice la propia base. No vale
+            # suponer que es `binario`, porque un proyecto con varios no tiene
+            # binario unico y ahi la cita se quedaba sin poder releerse.
+            origen = p.get("creditos_del_fichero") or (
+                p["binario"]["fichero"] if p.get("binario") else None)
             for c in (p.get("creditos") or []) + (p.get("metadatos_del_volcado") or []):
-                ruta = os.path.join(DES_ASM, p["binario"]["fichero"])
+                self.assertIsNotNone(origen, "%s cita sin decir de donde" % p["clave"])
+                ruta = os.path.join(DES_ASM, origen)
                 with open(ruta, "rb") as f:
                     datos = f.read()
                 off = int(c["offset"], 16)
@@ -341,11 +347,19 @@ class LaWeb(unittest.TestCase):
         en = self.lee("index.html")
         self.assertIn("{:,}".format(i), en)
 
-    def test_la_tabla_lleva_los_47_desensamblados(self):
+    def test_la_tabla_lleva_todos_los_desensamblados(self):
+        """Todos los que haya en la base, no un numero clavado.
+
+        Antes aqui habia un `assertEqual(len(des), 47)`, y lo unico que hizo
+        fue ponerse en rojo el dia que entro el desensamblado numero cuarenta
+        y ocho. Lo que importa no es cuantos son sino que no falte ninguno, y
+        eso lo comprueba el bucle de abajo. La cota es solo para que la prueba
+        no pase en verde con la base vacia.
+        """
         es = self.lee(os.path.join("es", "LOS-JUEGOS.html"))
         des = [p for p in self.base["proyectos"]
                if p["categoria"] == "desensamblado"]
-        self.assertEqual(len(des), 47)
+        self.assertGreaterEqual(len(des), 40)
         for p in des:
             self.assertIn(p["titulo"].split(" — ")[0][:14], es, p["clave"])
 
@@ -398,3 +412,56 @@ class LosLectoresDeTexto(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LasProtecciones(unittest.TestCase):
+    """Las escrituras que un cartucho hace a su PROPIO espacio.
+
+    El patron lo identifico Manuel Pazos en el RC-727. Aqui no se comprueba
+    que "funcionen" -eso pediria correr una copia en RAM, y no se distribuye
+    ningun binario-, sino que cada escritura registrada este de verdad en el
+    listado que dice, en la direccion que dice.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.base = carga("serie.json")["proyectos"]
+
+    def test_cada_escritura_esta_en_su_listado(self):
+        import re
+        mirados = 0
+        for p in self.base:
+            for e in p.get("protecciones") or []:
+                ruta = os.path.join(DES_ASM, p["directorio"], e["listado"])
+                if not os.path.exists(ruta):
+                    continue
+                dire = e["donde"][2:].lower()
+                with open(ruta, encoding="utf-8", errors="replace") as f:
+                    texto = f.read()
+                self.assertRegex(
+                    texto, r"(?m)^\t%s\s*;%s\b" % (re.escape(e["instruccion"]), dire),
+                    "%s: %s no esta en %s" % (p["clave"], e["donde"], e["listado"]))
+                mirados += 1
+        if not mirados:
+            self.skipTest("no hay listados al lado")
+        self.assertGreater(mirados, 15)
+
+    def test_el_destino_cae_dentro_del_propio_listado(self):
+        """Si el destino no estuviera en el cartucho no seria una trampa."""
+        for p in self.base:
+            for e in p.get("protecciones") or []:
+                self.assertIsNotNone(e["cae_en"], "%s %s" % (p["clave"], e["donde"]))
+                self.assertLessEqual(int(e["cae_en"], 16), int(e["destino"], 16))
+
+    def test_las_cintas_quedan_fuera(self):
+        """En una cinta escribir en su propio espacio es lo normal, no una trampa."""
+        cintas = [p for p in self.base if p.get("protecciones_nota")]
+        self.assertGreater(len(cintas), 3)
+        for p in cintas:
+            self.assertIsNone(p.get("protecciones"), p["clave"])
+
+    def test_la_pagina_cita_a_manuel_pazos(self):
+        for f in ("THE-PROTECTIONS.html", os.path.join("es", "LAS-PROTECCIONES.html")):
+            ruta = os.path.join(RAIZ, "docs", f)
+            with open(ruta, encoding="utf-8") as fh:
+                self.assertIn("Manuel Pazos", fh.read(), f)

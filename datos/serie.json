@@ -1,5 +1,5 @@
 {
- "generado": "2026-09-09",
+ "generado": "2026-09-15",
  "proyectos": [
   {
    "clave": "3dgolf",
@@ -34,13 +34,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "3DGOLF_DISAM/3dgolf.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -97,13 +101,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "BOMBERMAN_DISAM/bomberman.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -138,13 +146,17 @@
    "coteja": null,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "TIMEPILOT_DISAM/timepilot.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -179,13 +191,17 @@
    "coteja": null,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "FROGGER_DISAM/frogger.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -226,13 +242,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -282,13 +302,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "ATHLETIC_DISAM/athletic.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -330,13 +354,17 @@
     "titulo": "KE tsu KI yo KU   NA N KI yo KU   TA \" I HO \" U KE N"
    },
    "creditos": [],
+   "creditos_del_fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -371,13 +399,17 @@
    "coteja": null,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "MONKEY_DISAM/monkey.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -440,13 +472,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "BILLIARDS_DISAM/billiards.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -487,13 +523,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "MAHJONG_DISAM/mahjong.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -534,13 +574,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -581,13 +625,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -610,8 +658,8 @@
    },
    "cifras": {
     "instrucciones": 3076,
-    "comentarios": 1290,
-    "densidad": 41.9,
+    "comentarios": 1291,
+    "densidad": 42.0,
     "flojas": 0,
     "bloques": 358
    },
@@ -620,10 +668,10 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 3076,
-    "comentarios": 1290,
+    "comentarios": 1291,
     "flojas": 0,
     "bloques": 358,
-    "densidad": 41.9
+    "densidad": 42.0
    },
    "coteja": true,
    "marca_konami": false,
@@ -637,13 +685,98 @@
      ]
     }
    ],
+   "creditos_del_fichero": "HOLEINONE_DISAM/holeinone.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
+   }
+  },
+  {
+   "clave": "holeinonepro",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Hole in One Professional",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/HoleInOnePro-disassembly",
+   "web_url": "https://antxiko.github.io/HoleInOnePro-disassembly/",
+   "meta_en": "HAL Laboratory · MSX · 32 KB cartridge",
+   "meta_es": "HAL Laboratory · MSX · cartucho de 32 KB",
+   "directorio": "HOLEINONEPRO_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "holeinonepro.rom",
+    "fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+    "bytes": 32768,
+    "sha256": "99900247abc5cff8f12fed900e4ebf783c7a7ecf8d689b4a5cccd85a8416451e"
+   },
+   "cifras": {
+    "instrucciones": 7133,
+    "comentarios": 3169,
+    "densidad": 44.4,
+    "flojas": 0,
+    "bloques": 903
+   },
+   "listados": [
+    "src/holeinonepro.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 7133,
+    "comentarios": 3169,
+    "flojas": 0,
+    "bloques": 903,
+    "densidad": 44.4
+   },
+   "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x11E5",
+     "texto": "@ HAL LABORATORY 1985",
+     "por": [
+      "HAL "
+     ]
+    },
+    {
+     "offset": "0x11FC",
+     "texto": "PRODUCER   F>NAKAMURAPROGRAMMER S>IWATA",
+     "por": [
+      "PROGRAM",
+      "PROGRAMM"
+     ]
+    },
+    {
+     "offset": "0x6D07",
+     "texto": "HAL COUNTRY CLUB",
+     "por": [
+      "HAL "
+     ]
+    },
+    {
+     "offset": "0x6E50",
+     "texto": "HAL COUNTRY CLUB",
+     "por": [
+      "HAL "
+     ]
+    }
+   ],
+   "creditos_del_fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+   "protecciones": [],
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -693,13 +826,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -722,8 +859,8 @@
    },
    "cifras": {
     "instrucciones": 3356,
-    "comentarios": 758,
-    "densidad": 22.6,
+    "comentarios": 762,
+    "densidad": 22.7,
     "flojas": 0,
     "bloques": 430
    },
@@ -732,10 +869,10 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 3356,
-    "comentarios": 758,
+    "comentarios": 762,
     "flojas": 0,
     "bloques": 430,
-    "densidad": 22.6
+    "densidad": 22.7
    },
    "coteja": true,
    "marca_konami": {
@@ -745,13 +882,28 @@
     "titulo": "HA I HA o - RA RI -"
    },
    "creditos": [],
+   "creditos_del_fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+   "protecciones": [
+    {
+     "donde": "0x79C8",
+     "instruccion": "ld (06957h),a",
+     "carga": "ld a,0c9h",
+     "destino": "0x6957",
+     "cae_en": "0x6957",
+     "instruccion_del_destino": "ld a,(0e00ah)",
+     "es_el_primer_byte": true,
+     "listado": "src/hyperrally.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -792,13 +944,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -839,13 +995,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "GOLF_DISAM/golf.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -868,8 +1028,8 @@
    },
    "cifras": {
     "instrucciones": 3802,
-    "comentarios": 2012,
-    "densidad": 52.9,
+    "comentarios": 2016,
+    "densidad": 53.0,
     "flojas": 0,
     "bloques": 512
    },
@@ -878,10 +1038,10 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 3802,
-    "comentarios": 2012,
+    "comentarios": 2016,
     "flojas": 0,
     "bloques": 512,
-    "densidad": 52.9
+    "densidad": 53.0
    },
    "coteja": true,
    "marca_konami": {
@@ -891,13 +1051,48 @@
     "titulo": "MO HI o RE N SI \" ya -"
    },
    "creditos": [],
+   "creditos_del_fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+   "protecciones": [
+    {
+     "donde": "0x406A",
+     "instruccion": "ld (04146h),a",
+     "carga": "ld a,(despacha_por_indice)",
+     "destino": "0x4146",
+     "cae_en": "0x4146",
+     "instruccion_del_destino": "djnz comprueba_el_arranque",
+     "es_el_primer_byte": true,
+     "listado": "src/mopiranger.asm"
+    },
+    {
+     "donde": "0x406F",
+     "instruccion": "ld (04147h),a",
+     "carga": "ld a,0c9h",
+     "destino": "0x4147",
+     "cae_en": "0x4146",
+     "instruccion_del_destino": "djnz comprueba_el_arranque",
+     "es_el_primer_byte": false,
+     "listado": "src/mopiranger.asm"
+    },
+    {
+     "donde": "0x40A5",
+     "instruccion": "ld (044dfh),de",
+     "carga": "",
+     "destino": "0x44DF",
+     "cae_en": "0x44DE",
+     "instruccion_del_destino": "jp L_45FF",
+     "es_el_primer_byte": false,
+     "listado": "src/mopiranger.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -943,13 +1138,17 @@
     "titulo": "RO - TO \"   HU a I TA -"
    },
    "creditos": [],
+   "creditos_del_fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -995,13 +1194,38 @@
     "titulo": "KO NA MI   NO   HI o N HO o N"
    },
    "creditos": [],
+   "creditos_del_fichero": "PINGPONG_DISAM/pingpong.rom",
+   "protecciones": [
+    {
+     "donde": "0x4013",
+     "instruccion": "ld (040eeh),a",
+     "carga": "ld a,(l404eh)",
+     "destino": "0x40EE",
+     "cae_en": "0x40EE",
+     "instruccion_del_destino": "djnz L_40FA",
+     "es_el_primer_byte": true,
+     "listado": "src/pingpong.asm"
+    },
+    {
+     "donde": "0x4052",
+     "instruccion": "ld (040f8h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x40F8",
+     "cae_en": "0x40F7",
+     "instruccion_del_destino": "jp L_4318",
+     "es_el_primer_byte": false,
+     "listado": "src/pingpong.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1024,7 +1248,7 @@
    },
    "cifras": {
     "instrucciones": 9755,
-    "comentarios": 3561,
+    "comentarios": 3564,
     "densidad": 36.5,
     "flojas": 0,
     "bloques": 1213
@@ -1034,7 +1258,7 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 9755,
-    "comentarios": 3561,
+    "comentarios": 3564,
     "flojas": 0,
     "bloques": 1213,
     "densidad": 36.5
@@ -1047,13 +1271,38 @@
     "titulo": "KO NA MI   NO   SA tsu KA -"
    },
    "creditos": [],
+   "creditos_del_fichero": "SOCCER_DISAM/soccer.rom",
+   "protecciones": [
+    {
+     "donde": "0x4028",
+     "instruccion": "ld (0410ah),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x410A",
+     "cae_en": "0x410A",
+     "instruccion_del_destino": "djnz escena_presentacion_3",
+     "es_el_primer_byte": true,
+     "listado": "src/soccer.asm"
+    },
+    {
+     "donde": "0x4056",
+     "instruccion": "ld (04116h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x4116",
+     "cae_en": "0x4115",
+     "instruccion_del_destino": "jp espera_n_y_avanza_escena",
+     "es_el_primer_byte": false,
+     "listado": "src/soccer.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1099,13 +1348,38 @@
     "titulo": "O U KE NO TA NI"
    },
    "creditos": [],
+   "creditos_del_fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+   "protecciones": [
+    {
+     "donde": "0x4044",
+     "instruccion": "ld (hl),a",
+     "carga": "ld hl,040e4h  (en 0x403E)",
+     "destino": "0x40E4",
+     "cae_en": "0x40E4",
+     "instruccion_del_destino": "djnz tarea_0_dibuja_o_avanza",
+     "es_el_primer_byte": true,
+     "listado": "src/kingsvalley.asm"
+    },
+    {
+     "donde": "0x409C",
+     "instruccion": "ld (043c0h),de",
+     "carga": "jr bucle_muerto",
+     "destino": "0x43C0",
+     "cae_en": "0x43BF",
+     "instruccion_del_destino": "jp nc,cierra_aviso_titulo",
+     "es_el_primer_byte": false,
+     "listado": "src/kingsvalley.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1151,13 +1425,17 @@
     "titulo": "YA KI yu U"
    },
    "creditos": [],
+   "creditos_del_fichero": "BASEBALL_DISAM/baseball.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1203,13 +1481,38 @@
     "titulo": "MA SI \" yo U TE \" N SE TU"
    },
    "creditos": [],
+   "creditos_del_fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+   "protecciones": [
+    {
+     "donde": "0x4028",
+     "instruccion": "ld (04112h),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x4112",
+     "cae_en": "0x4112",
+     "instruccion_del_destino": "djnz L_4120",
+     "es_el_primer_byte": true,
+     "listado": "src/knightmare.asm"
+    },
+    {
+     "donde": "0x4055",
+     "instruccion": "ld (0411eh),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x411E",
+     "cae_en": "0x411D",
+     "instruccion_del_destino": "jp L_4187",
+     "es_el_primer_byte": false,
+     "listado": "src/knightmare.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1232,7 +1535,7 @@
    },
    "cifras": {
     "instrucciones": 7405,
-    "comentarios": 3062,
+    "comentarios": 3063,
     "densidad": 41.4,
     "flojas": 0,
     "bloques": 1000
@@ -1242,7 +1545,7 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 7405,
-    "comentarios": 3062,
+    "comentarios": 3063,
     "flojas": 0,
     "bloques": 1000,
     "densidad": 41.4
@@ -1255,13 +1558,38 @@
     "titulo": "TU I N HI \" -"
    },
    "creditos": [],
+   "creditos_del_fichero": "TWINBEE_DISAM/twinbee.rom",
+   "protecciones": [
+    {
+     "donde": "0x4028",
+     "instruccion": "ld (04195h),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x4195",
+     "cae_en": "0x4195",
+     "instruccion_del_destino": "djnz L_41A3",
+     "es_el_primer_byte": true,
+     "listado": "src/twinbee.asm"
+    },
+    {
+     "donde": "0x4055",
+     "instruccion": "ld (041a1h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x41A1",
+     "cae_en": "0x41A0",
+     "instruccion_del_destino": "jp empieza_la_escena_siguiente",
+     "es_el_primer_byte": false,
+     "listado": "src/twinbee.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1284,7 +1612,7 @@
    },
    "cifras": {
     "instrucciones": 3740,
-    "comentarios": 1966,
+    "comentarios": 1967,
     "densidad": 52.6,
     "flojas": 0,
     "bloques": 475
@@ -1294,7 +1622,7 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 3740,
-    "comentarios": 1966,
+    "comentarios": 1967,
     "flojas": 0,
     "bloques": 475,
     "densidad": 52.6
@@ -1322,13 +1650,28 @@
      ]
     }
    ],
+   "creditos_del_fichero": "BOXING_DISAM/boxing.rom",
+   "protecciones": [
+    {
+     "donde": "0x470E",
+     "instruccion": "ld (04f84h),a",
+     "carga": "xor a",
+     "destino": "0x4F84",
+     "cae_en": "0x4F84",
+     "instruccion_del_destino": "pop af",
+     "es_el_primer_byte": true,
+     "listado": "src/boxing.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1351,7 +1694,7 @@
    },
    "cifras": {
     "instrucciones": 7142,
-    "comentarios": 2919,
+    "comentarios": 2923,
     "densidad": 40.9,
     "flojas": 0,
     "bloques": 1027
@@ -1361,7 +1704,7 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 7142,
-    "comentarios": 2919,
+    "comentarios": 2923,
     "flojas": 0,
     "bloques": 1027,
     "densidad": 40.9
@@ -1374,13 +1717,38 @@
     "titulo": "I - . A RU . KA N HU -   2"
    },
    "creditos": [],
+   "creditos_del_fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+   "protecciones": [
+    {
+     "donde": "0x4028",
+     "instruccion": "ld (0410dh),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x410D",
+     "cae_en": "0x410D",
+     "instruccion_del_destino": "djnz L_411B",
+     "es_el_primer_byte": true,
+     "listado": "src/yiear2.asm"
+    },
+    {
+     "donde": "0x4056",
+     "instruccion": "ld (04119h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x4119",
+     "cae_en": "0x4118",
+     "instruccion_del_destino": "jp L_41FB",
+     "es_el_primer_byte": false,
+     "listado": "src/yiear2.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1421,13 +1789,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1468,13 +1840,28 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "TENNIS_DISAM/tennis.rom",
+   "protecciones": [
+    {
+     "donde": "0x7A31",
+     "instruccion": "ld (0409ah),a",
+     "carga": "xor a",
+     "destino": "0x409A",
+     "cae_en": "0x409A",
+     "instruccion_del_destino": "ret",
+     "es_el_primer_byte": true,
+     "listado": "src/tennis.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1523,13 +1910,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1570,13 +1961,17 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1599,7 +1994,7 @@
    },
    "cifras": {
     "instrucciones": 7328,
-    "comentarios": 2528,
+    "comentarios": 2529,
     "densidad": 34.5,
     "flojas": 0,
     "bloques": 931
@@ -1609,7 +2004,7 @@
    ],
    "cifras_del_repo": {
     "instrucciones": 7328,
-    "comentarios": 2528,
+    "comentarios": 2529,
     "flojas": 0,
     "bloques": 931,
     "densidad": 34.5
@@ -1622,13 +2017,38 @@
     "titulo": "HA I HA o -   SU HO o - TU   3"
    },
    "creditos": [],
+   "creditos_del_fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+   "protecciones": [
+    {
+     "donde": "0x4013",
+     "instruccion": "ld (0412fh),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x412F",
+     "cae_en": "0x412F",
+     "instruccion_del_destino": "djnz L_413D",
+     "es_el_primer_byte": true,
+     "listado": "src/hypersports3.asm"
+    },
+    {
+     "donde": "0x4040",
+     "instruccion": "ld (0413bh),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x413B",
+     "cae_en": "0x413A",
+     "instruccion_del_destino": "jp espera_y_pasa",
+     "es_el_primer_byte": false,
+     "listado": "src/hypersports3.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1696,13 +2116,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1748,13 +2172,38 @@
     "titulo": "KU \" - NI - SU \""
    },
    "creditos": [],
+   "creditos_del_fichero": "GOONIES_DISAM/goonies.rom",
+   "protecciones": [
+    {
+     "donde": "0x4022",
+     "instruccion": "ld (0411ch),hl",
+     "carga": "ld hl,0c9e1h",
+     "destino": "0x411C",
+     "cae_en": "0x411C",
+     "instruccion_del_destino": "djnz presentacion_anima",
+     "es_el_primer_byte": true,
+     "listado": "src/goonies.asm"
+    },
+    {
+     "donde": "0x4050",
+     "instruccion": "ld (04129h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x4129",
+     "cae_en": "0x4128",
+     "instruccion_del_destino": "jp L_41C8",
+     "es_el_primer_byte": false,
+     "listado": "src/goonies.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1803,13 +2252,17 @@
      ]
     }
    ],
+   "creditos_del_fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1844,13 +2297,17 @@
    "coteja": null,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "PITFALL_DISAM/pitfall.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1873,7 +2330,7 @@
    },
    "cifras": {
     "instrucciones": 4861,
-    "comentarios": 1122,
+    "comentarios": 1123,
     "densidad": 23.1,
     "flojas": 0,
     "bloques": 675
@@ -1890,13 +2347,28 @@
     "titulo": "HI o HO o RU SU"
    },
    "creditos": [],
+   "creditos_del_fichero": "PIPPOLS_DISAM/pippols.rom",
+   "protecciones": [
+    {
+     "donde": "0x4033",
+     "instruccion": "ld (040c5h),hl",
+     "carga": "ld hl,00000h",
+     "destino": "0x40C5",
+     "cae_en": "0x40C4",
+     "instruccion_del_destino": "jp SIGUIENTE_ESTADO",
+     "es_el_primer_byte": false,
+     "listado": "src/pippols.asm"
+    }
+   ],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -1976,13 +2448,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "DEMONIA_DISAM/demonia.cas",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2043,13 +2520,18 @@
     "titulo": "KU \" RA TE \" i U SU"
    },
    "creditos": [],
+   "creditos_del_fichero": "NEMESIS_DISAM/nemesis.rom",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2171,13 +2653,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2261,13 +2748,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "COLT36_DISAM/colt36.tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2341,13 +2833,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2460,13 +2957,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "STARDUST_DISAM/stardust.tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2535,13 +3037,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2621,13 +3128,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "ALEHOP_DISAM/alehop.tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2649,11 +3161,11 @@
     "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
    },
    "cifras": {
-    "instrucciones": 6844,
-    "comentarios": 2031,
+    "instrucciones": 6842,
+    "comentarios": 2032,
     "densidad": 29.7,
     "flojas": 0,
-    "bloques": 767
+    "bloques": 766
    },
    "listados": [
     "src/war_alto.asm",
@@ -2662,8 +3174,14 @@
     "src/war_medio.asm",
     "src/war_pantalla.asm"
    ],
-   "cifras_del_repo": null,
-   "coteja": null,
+   "cifras_del_repo": {
+    "instrucciones": 6842,
+    "comentarios": 2032,
+    "flojas": 0,
+    "bloques": 766,
+    "densidad": 29.7
+   },
+   "coteja": true,
    "marca_konami": false,
    "creditos": [
     {
@@ -2693,13 +3211,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2744,13 +3267,18 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2791,13 +3319,18 @@
    "coteja": true,
    "marca_konami": false,
    "creditos": [],
+   "creditos_del_fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   },
   {
@@ -2811,13 +3344,23 @@
    "meta_en": "Melbourne House / Dro Soft · MSX · tape · IPS patch, unofficial",
    "meta_es": "Melbourne House / Dro Soft · MSX · cinta · parche IPS, extraoficial",
    "directorio": "WARINMIDDLEEARTH_PATCH",
-   "binario": {
-    "var": "TSX",
-    "valor": "war.tsx",
-    "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
-    "bytes": 62650,
-    "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
-   },
+   "binario": null,
+   "binarios": [
+    {
+     "var": "ROM",
+     "valor": "war_unificada.rom",
+     "fichero": "WARINMIDDLEEARTH_PATCH/war_unificada.rom",
+     "bytes": 65536,
+     "sha256": "6b625efa9a256370b54d69cdf46d64e559d3f0701e1c5113d229f2318a55e14d"
+    },
+    {
+     "var": "TSX",
+     "valor": "war.tsx",
+     "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+     "bytes": 62650,
+     "sha256": "13c636328d1714d5e00419141ca1a7ac9c7a3a04d7ec2b26545212aab1d81208"
+    }
+   ],
    "cifras": {
     "instrucciones": 6844,
     "comentarios": 2031,
@@ -2826,8 +3369,16 @@
     "bloques": 767
    },
    "listados": [
+    "src/cartucho/cargador_ram.asm",
+    "src/cartucho/cargador_rom.asm",
+    "src/cartucho/dzx0.asm",
+    "src/cartucho/finales.asm",
+    "src/cartucho/musica.asm",
+    "src/cartucho/nombres.asm",
+    "src/cartucho/puente.asm",
     "src/parche/ficha_valores.asm",
     "src/parche/icono_enemigo.asm",
+    "src/parche/mapa_comprimido.asm",
     "src/war_alto.asm",
     "src/war_bajo.asm",
     "src/war_loader.asm",
@@ -2865,13 +3416,18 @@
      ]
     }
    ],
+   "creditos_del_fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",
     "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
     "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
     "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
-    "creditos": "tiras ASCII del binario, filtradas por palabra clave"
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
    }
   }
  ],
@@ -2885,8 +3441,12 @@
    "remote": null
   },
   {
-   "directorio": "SERIE_DB",
+   "directorio": "PENGUINADVENTURE_DISAM",
    "remote": null
+  },
+  {
+   "directorio": "SERIE_DB",
+   "remote": "github.com/antxiko/msx-disassembly-database"
   }
  ],
  "avisos": [
