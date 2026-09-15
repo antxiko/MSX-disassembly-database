@@ -4,9 +4,9 @@ Los cuarenta y ocho desensamblados y los dos parches de la serie, reunidos en
 un registro único que **no copia ninguna cifra**: las mide.
 
     proyectos                 50   (48 desensamblados y 2 parches)
-    instrucciones            256.982
-    comentarios de línea      84.424        32,9 % del total
-    rutinas                   31.913
+    instrucciones            257.009
+    comentarios de línea      84.434        32,9 % del total
+    rutinas                   31.918
     rutinas por debajo del 10 %    0        en toda la serie
     bytes de binario       1.497.883
 
@@ -16,15 +16,25 @@ Medido el 2026-09-15 sobre los listados que cada repositorio publica.
 
 Porque las cifras publicadas envejecen. La ficha de cada juego en la portada se
 escribió el día que se publicó; si después alguien vuelve al listado y comenta
-otra tanda, la web sigue diciendo la vieja. Pasa de verdad, y esta base lo
-encontró a la primera:
+otra tanda, la web sigue diciendo la vieja. Pasó de verdad, y esta base lo
+encontró a la primera. El 2026-09-15 había **cinco** fichas desfasadas:
 
-- **Trailblazer** publica 30,7 % y su listado da hoy 30,8 %: el `.asm` se tocó
-  en un commit posterior al del README.
-- **Hyper Rally** (22,1 → 22,6), **Hyper Sports 2** (22,5 → 22,7) y **Nemesis**
-  (23,3 → 23,4), lo mismo.
-- La memoria de trabajo de **Twin Bee** daba 24,6 % cuando el listado ya iba por
-  41,4 %: se había escrito a mitad de la tanda de comentarios.
+| juego | publicaba | medía |
+|---|---|---|
+| Hole in One | 41,9 % | 42,0 % |
+| Hyper Rally | 22,1 % | 22,7 % |
+| Hyper Sports 2 | 22,5 % | 22,7 % |
+| Nemesis | 23,3 % | 23,4 % |
+| Trailblazer | 30,7 % | 30,8 % |
+
+En Trailblazer se veía la causa en el historial: el `.asm` se tocó en un commit
+posterior al del README. Las cinco están **corregidas** en la ficha, en los
+README y en la web de cada repositorio, y la portada tiene desde entonces una
+comprobación que mide los listados y no deja publicar otra cifra.
+
+Y no solo pasa en las webs: la memoria de trabajo de **Twin Bee** daba 24,6 %
+cuando el listado ya iba por 41,4 %, porque se había escrito a mitad de la tanda
+de comentarios.
 
 ## De dónde sale cada dato
 
@@ -127,7 +137,8 @@ cuela y deja el juego roto en un sitio del que no se vuelve.
 
 El patrón lo identificó **Manuel Pazos** en su desensamblado de King's Valley
 (RC-727), donde llamó a las dos rutinas `ReadKeys_AC` y `VRAM_writeAC`. Aquí se
-busca ese mismo patrón en los treinta y ocho cartuchos: **lo llevan trece**.
+busca ese mismo patrón en los cuarenta cartuchos: **trece escriben en su propio
+espacio, y los trece son de Konami**.
 
 Y la familia repite siempre las mismas dos, en las mismas dos rutinas del
 arranque:
@@ -139,6 +150,29 @@ arranque:
 
 Que el destino sea **siempre** un `djnz` o el operando de un salto, y nunca un
 hueco de datos, es lo que descarta que sean escrituras sueltas.
+
+**Dos más escriben en la ROM de la BIOS**, que tampoco admite escritura, y van
+aparte porque ir a la BIOS no convierte una escritura en protección:
+
+- **Antarctic Adventure** copia `jp 0000h` encima de la entrada de la BIOS. Es
+  un guardián, y lo demuestra una cuarta compilación del juego idéntica salvo en
+  dos bytes: los que mandan esa misma copia a `DESPACHA`, dentro del cartucho.
+- **Hyper Rally**, en 0x68C1, está **sin explicar**: cae en dieciocho bytes que
+  en crudo parecen dos filas de datos y a los que se llega por una dirección de
+  retorno empujada. Si es código o datos trazados como código pide el emulador.
+
+**Y lo que no la lleva también es un dato.** De Konami, veinte cartuchos no
+escriben ni en su espacio ni en la BIOS. Ninguno de los seis que no son de
+Konami lleva nada de esto, y ese es el control: si el rastreador se tragara
+coincidencias, saldrían ahí.
+
+**Las dos MegaROM se quedaron fuera la primera vez**, y por dos motivos. Su
+ficha dice "MegaROM" y no "cartucho", así que se tomaron por cintas; y aun
+metiéndolas, cada escritura se comprobaba contra el rango de su propio fichero,
+que en un MegaROM es un solo banco. Ahora el espacio propio es la ventana entera,
+`0x4000`–`0xBFFF`, descontando los registros del mapper, que se deducen de sus
+propias escrituras. Nemesis escribe 78 veces en su mapper y F-1 Spirit 30 en el
+suyo y en el SCC, y ninguna fuera.
 
 Lo que esto **no** dice: qué pasa de verdad al correr una copia en RAM no está
 medido —pediría cargar una copia y jugarla, y aquí no se distribuye ningún

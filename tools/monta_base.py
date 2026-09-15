@@ -109,6 +109,8 @@ def main():
             reg["protecciones"] = (pr["escrituras"] if pr["es_cartucho"] else None)
             if not pr["es_cartucho"]:
                 reg["protecciones_nota"] = pr["nota"]
+            if pr.get("mapper"):
+                reg["protecciones_mapper"] = pr["mapper"]
 
         reg["fuentes"] = {
             "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",

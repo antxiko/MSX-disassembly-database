@@ -5,7 +5,8 @@
   "directorio": "3DGOLF_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "bomberman",
@@ -13,7 +14,8 @@
   "directorio": "BOMBERMAN_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "timepilot",
@@ -21,7 +23,8 @@
   "directorio": "TIMEPILOT_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "frogger",
@@ -29,7 +32,8 @@
   "directorio": "FROGGER_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "supercobra",
@@ -37,7 +41,8 @@
   "directorio": "SUPERCOBRA_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "athletic",
@@ -45,15 +50,29 @@
   "directorio": "ATHLETIC_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "antarctic",
   "titulo": "Antarctic Adventure",
   "directorio": "ANTARCTIC_DISAM",
   "es_cartucho": true,
-  "escrituras": [],
-  "nota": null
+  "escrituras": [
+   {
+    "donde": "0x4055",
+    "instruccion": "ldir",
+    "carga": "ld de,00000h  (en 0x404F)",
+    "destino": "0x0000",
+    "zona": "bios",
+    "cae_en": null,
+    "instruccion_del_destino": null,
+    "es_el_primer_byte": false,
+    "listado": "src/jap2/antarctic.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "monkey",
@@ -61,7 +80,8 @@
   "directorio": "MONKEY_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "billiards",
@@ -69,7 +89,8 @@
   "directorio": "BILLIARDS_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "mahjong",
@@ -77,7 +98,8 @@
   "directorio": "MAHJONG_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hyperolympic1",
@@ -85,7 +107,8 @@
   "directorio": "HYPEROLYMPIC1_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hyperolympic2",
@@ -93,7 +116,8 @@
   "directorio": "HYPEROLYMPIC2_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "holeinone",
@@ -101,7 +125,8 @@
   "directorio": "HOLEINONE_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "holeinonepro",
@@ -109,7 +134,8 @@
   "directorio": "HOLEINONEPRO_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "casioworldopen",
@@ -117,7 +143,8 @@
   "directorio": "CASIOWORLDOPEN_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hyperrally",
@@ -126,17 +153,30 @@
   "es_cartucho": true,
   "escrituras": [
    {
+    "donde": "0x68C1",
+    "instruccion": "ld (02f2fh),a",
+    "carga": "jr nc,DIBUJA_BORDES_1",
+    "destino": "0x2F2F",
+    "zona": "bios",
+    "cae_en": null,
+    "instruccion_del_destino": null,
+    "es_el_primer_byte": false,
+    "listado": "src/hyperrally.asm"
+   },
+   {
     "donde": "0x79C8",
     "instruccion": "ld (06957h),a",
     "carga": "ld a,0c9h",
     "destino": "0x6957",
+    "zona": "propio",
     "cae_en": "0x6957",
     "instruccion_del_destino": "ld a,(0e00ah)",
     "es_el_primer_byte": true,
     "listado": "src/hyperrally.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "skyjaguar",
@@ -144,7 +184,8 @@
   "directorio": "SKYJAGUAR_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "golf",
@@ -152,7 +193,8 @@
   "directorio": "GOLF_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "mopiranger",
@@ -165,6 +207,7 @@
     "instruccion": "ld (04146h),a",
     "carga": "ld a,(despacha_por_indice)",
     "destino": "0x4146",
+    "zona": "propio",
     "cae_en": "0x4146",
     "instruccion_del_destino": "djnz comprueba_el_arranque",
     "es_el_primer_byte": true,
@@ -175,6 +218,7 @@
     "instruccion": "ld (04147h),a",
     "carga": "ld a,0c9h",
     "destino": "0x4147",
+    "zona": "propio",
     "cae_en": "0x4146",
     "instruccion_del_destino": "djnz comprueba_el_arranque",
     "es_el_primer_byte": false,
@@ -185,13 +229,15 @@
     "instruccion": "ld (044dfh),de",
     "carga": "",
     "destino": "0x44DF",
+    "zona": "propio",
     "cae_en": "0x44DE",
     "instruccion_del_destino": "jp L_45FF",
     "es_el_primer_byte": false,
     "listado": "src/mopiranger.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "roadfighter",
@@ -199,7 +245,8 @@
   "directorio": "ROADFIGHTER_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "pingpong",
@@ -212,6 +259,7 @@
     "instruccion": "ld (040eeh),a",
     "carga": "ld a,(l404eh)",
     "destino": "0x40EE",
+    "zona": "propio",
     "cae_en": "0x40EE",
     "instruccion_del_destino": "djnz L_40FA",
     "es_el_primer_byte": true,
@@ -222,13 +270,15 @@
     "instruccion": "ld (040f8h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x40F8",
+    "zona": "propio",
     "cae_en": "0x40F7",
     "instruccion_del_destino": "jp L_4318",
     "es_el_primer_byte": false,
     "listado": "src/pingpong.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "soccer",
@@ -241,6 +291,7 @@
     "instruccion": "ld (0410ah),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x410A",
+    "zona": "propio",
     "cae_en": "0x410A",
     "instruccion_del_destino": "djnz escena_presentacion_3",
     "es_el_primer_byte": true,
@@ -251,13 +302,15 @@
     "instruccion": "ld (04116h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x4116",
+    "zona": "propio",
     "cae_en": "0x4115",
     "instruccion_del_destino": "jp espera_n_y_avanza_escena",
     "es_el_primer_byte": false,
     "listado": "src/soccer.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "kingsvalley",
@@ -270,6 +323,7 @@
     "instruccion": "ld (hl),a",
     "carga": "ld hl,040e4h  (en 0x403E)",
     "destino": "0x40E4",
+    "zona": "propio",
     "cae_en": "0x40E4",
     "instruccion_del_destino": "djnz tarea_0_dibuja_o_avanza",
     "es_el_primer_byte": true,
@@ -280,13 +334,15 @@
     "instruccion": "ld (043c0h),de",
     "carga": "jr bucle_muerto",
     "destino": "0x43C0",
+    "zona": "propio",
     "cae_en": "0x43BF",
     "instruccion_del_destino": "jp nc,cierra_aviso_titulo",
     "es_el_primer_byte": false,
     "listado": "src/kingsvalley.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "baseball",
@@ -294,7 +350,8 @@
   "directorio": "BASEBALL_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "knightmare",
@@ -307,6 +364,7 @@
     "instruccion": "ld (04112h),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x4112",
+    "zona": "propio",
     "cae_en": "0x4112",
     "instruccion_del_destino": "djnz L_4120",
     "es_el_primer_byte": true,
@@ -317,13 +375,15 @@
     "instruccion": "ld (0411eh),hl",
     "carga": "ld hl,00000h",
     "destino": "0x411E",
+    "zona": "propio",
     "cae_en": "0x411D",
     "instruccion_del_destino": "jp L_4187",
     "es_el_primer_byte": false,
     "listado": "src/knightmare.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "twinbee",
@@ -336,6 +396,7 @@
     "instruccion": "ld (04195h),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x4195",
+    "zona": "propio",
     "cae_en": "0x4195",
     "instruccion_del_destino": "djnz L_41A3",
     "es_el_primer_byte": true,
@@ -346,13 +407,15 @@
     "instruccion": "ld (041a1h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x41A1",
+    "zona": "propio",
     "cae_en": "0x41A0",
     "instruccion_del_destino": "jp empieza_la_escena_siguiente",
     "es_el_primer_byte": false,
     "listado": "src/twinbee.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "boxing",
@@ -365,13 +428,15 @@
     "instruccion": "ld (04f84h),a",
     "carga": "xor a",
     "destino": "0x4F84",
+    "zona": "propio",
     "cae_en": "0x4F84",
     "instruccion_del_destino": "pop af",
     "es_el_primer_byte": true,
     "listado": "src/boxing.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "yiearkungfu2",
@@ -384,6 +449,7 @@
     "instruccion": "ld (0410dh),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x410D",
+    "zona": "propio",
     "cae_en": "0x410D",
     "instruccion_del_destino": "djnz L_411B",
     "es_el_primer_byte": true,
@@ -394,13 +460,15 @@
     "instruccion": "ld (04119h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x4119",
+    "zona": "propio",
     "cae_en": "0x4118",
     "instruccion_del_destino": "jp L_41FB",
     "es_el_primer_byte": false,
     "listado": "src/yiear2.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "yiearkungfu",
@@ -408,7 +476,8 @@
   "directorio": "YIEARKUNGFU_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "tennis",
@@ -421,13 +490,15 @@
     "instruccion": "ld (0409ah),a",
     "carga": "xor a",
     "destino": "0x409A",
+    "zona": "propio",
     "cae_en": "0x409A",
     "instruccion_del_destino": "ret",
     "es_el_primer_byte": true,
     "listado": "src/tennis.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hypersports1",
@@ -435,7 +506,8 @@
   "directorio": "HYPERSPORTS1_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hypersports2",
@@ -443,7 +515,8 @@
   "directorio": "HYPERSPORTS2_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "hypersports3",
@@ -456,6 +529,7 @@
     "instruccion": "ld (0412fh),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x412F",
+    "zona": "propio",
     "cae_en": "0x412F",
     "instruccion_del_destino": "djnz L_413D",
     "es_el_primer_byte": true,
@@ -466,13 +540,15 @@
     "instruccion": "ld (0413bh),hl",
     "carga": "ld hl,00000h",
     "destino": "0x413B",
+    "zona": "propio",
     "cae_en": "0x413A",
     "instruccion_del_destino": "jp espera_y_pasa",
     "es_el_primer_byte": false,
     "listado": "src/hypersports3.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "gamemaster",
@@ -480,7 +556,8 @@
   "directorio": "GAMEMASTER_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "goonies",
@@ -493,6 +570,7 @@
     "instruccion": "ld (0411ch),hl",
     "carga": "ld hl,0c9e1h",
     "destino": "0x411C",
+    "zona": "propio",
     "cae_en": "0x411C",
     "instruccion_del_destino": "djnz presentacion_anima",
     "es_el_primer_byte": true,
@@ -503,13 +581,15 @@
     "instruccion": "ld (04129h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x4129",
+    "zona": "propio",
     "cae_en": "0x4128",
     "instruccion_del_destino": "jp L_41C8",
     "es_el_primer_byte": false,
     "listado": "src/goonies.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "cabbagepatch",
@@ -517,7 +597,8 @@
   "directorio": "CABBAGEPATCH_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "pitfall",
@@ -525,7 +606,8 @@
   "directorio": "PITFALL_DISAM",
   "es_cartucho": true,
   "escrituras": [],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "pippols",
@@ -538,13 +620,15 @@
     "instruccion": "ld (040c5h),hl",
     "carga": "ld hl,00000h",
     "destino": "0x40C5",
+    "zona": "propio",
     "cae_en": "0x40C4",
     "instruccion_del_destino": "jp SIGUIENTE_ESTADO",
     "es_el_primer_byte": false,
     "listado": "src/pippols.asm"
    }
   ],
-  "nota": null
+  "nota": null,
+  "mapper": null
  },
  {
   "clave": "demonia",
@@ -558,17 +642,19 @@
   "clave": "nemesis",
   "titulo": "Nemesis / Gradius",
   "directorio": "NEMESIS_DISAM",
-  "es_cartucho": false,
+  "es_cartucho": true,
   "escrituras": [],
-  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+  "nota": null,
+  "mapper": "konami"
  },
  {
   "clave": "f1spirit",
   "titulo": "F-1 Spirit — The Way to Formula 1",
   "directorio": "F1SPIRIT_DISAM",
-  "es_cartucho": false,
+  "es_cartucho": true,
   "escrituras": [],
-  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+  "nota": null,
+  "mapper": "scc"
  },
  {
   "clave": "colt36",

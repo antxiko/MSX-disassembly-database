@@ -132,6 +132,8 @@ def pct(x, idioma):
 
 def pag_index(d, idioma):
     des = [p for p in d["proyectos"] if p["categoria"] == "desensamblado"]
+    n_prot = len([p for p in d["proyectos"]
+                  if any(x["zona"] == "propio" for x in p.get("protecciones") or [])])
     con = [p for p in des if p["cifras"]]
     i = sum(p["cifras"]["instrucciones"] for p in con)
     c = sum(p["cifras"]["comentarios"] for p in con)
@@ -165,10 +167,12 @@ pasar las herramientas por los repositorios y por los binarios.</p>
 <h3>Por qué medirlo otra vez, si cada repositorio ya lo dice</h3>
 <p>Porque las cifras publicadas envejecen. La ficha de cada juego se escribió el
 día que se publicó; si después alguien vuelve al listado y comenta otra tanda, la
-web se queda diciendo la vieja. Al montar esto aparecieron <b>cuatro</b>:
-Trailblazer publica 30,7&nbsp;% y su listado da hoy 30,8&nbsp;%, y lo mismo pasa
-en Hyper Rally, Hyper Sports&nbsp;2 y Nemesis. En Trailblazer se ve la causa en
-el historial: el listado se tocó en un commit posterior al del README.</p>
+web se queda diciendo la vieja. Al montar esto aparecieron <b>cinco</b>:
+Trailblazer publicaba 30,7&nbsp;% cuando su listado daba 30,8&nbsp;%, y lo mismo
+pasaba en Hole in One, Hyper Rally, Hyper Sports&nbsp;2 y Nemesis. En Trailblazer
+se veía la causa en el historial: el listado se tocó en un commit posterior al
+del README. Las cinco están corregidas, y la portada ya no deja publicar una
+cifra que no sea la medida.</p>
 
 <h3>Lo que ha salido de mirarlos todos juntos</h3>
 <ul>
@@ -178,9 +182,10 @@ manera. <a href="LO-COMPARTIDO.html">Lo compartido</a>.</li>
 <li><b>Diecisiete cartuchos llevan la marca oculta de Konami</b>, y los
 diecisiete dan el mismo número de catálogo que publica su ficha.
 <a href="LA-MARCA.html">La marca</a>.</li>
-<li><b>Trece cartuchos se defienden solos.</b> Escriben dentro de su propio
-espacio: desde ROM no llega y parece codigo muerto, pero en una copia cargada en
-RAM rompe el juego. <a href="LAS-PROTECCIONES.html">Las protecciones</a>.</li>
+<li><b>{n_prot} cartuchos se defienden solos</b>, y los {n_prot} son de Konami.
+Escriben dentro de su propio espacio: desde ROM no llega y parece código muerto,
+pero en una copia cargada en RAM rompe el juego.
+<a href="LAS-PROTECCIONES.html">Las protecciones</a>.</li>
 <li><b>Demonia la firma Claude Sablatou</b>, y Trailblazer trae dentro la lista
 entera de sus autores. <a href="LOS-CREDITOS.html">Los créditos</a>.</li>
 <li><b>Los cartuchos de Konami se reparten en familias</b>, y no por año ni por
@@ -203,11 +208,12 @@ running the tools over the repositories and the binaries.</p>
 <h3>Why measure again, when each repository already says so</h3>
 <p>Because published figures age. Each game's card was written the day it was
 published; if someone later goes back to the listing and comments another pass,
-the site keeps quoting the old one. Building this turned up <b>four</b>:
-Trailblazer publishes 30.7&nbsp;% and its listing gives 30.8&nbsp;% today, and
-the same holds for Hyper Rally, Hyper Sports&nbsp;2 and Nemesis. In Trailblazer
-the history shows why: the listing was touched in a commit later than the
-README's.</p>
+the site keeps quoting the old one. Building this turned up <b>five</b>:
+Trailblazer published 30.7&nbsp;% when its listing gave 30.8&nbsp;%, and the same
+held for Hole in One, Hyper Rally, Hyper Sports&nbsp;2 and Nemesis. In Trailblazer
+the history showed why: the listing was touched in a commit later than the
+README's. All five are fixed, and the front page no longer lets a figure through
+that is not the measured one.</p>
 
 <h3>What came out of looking at all of them together</h3>
 <ul>
@@ -217,9 +223,9 @@ named it its own way. <a href="WHAT-THEY-SHARE.html">What they share</a>.</li>
 <li><b>Seventeen cartridges carry Konami's hidden mark</b>, and all seventeen
 give the same catalogue number their card publishes.
 <a href="THE-MARK.html">The mark</a>.</li>
-<li><b>Thirteen cartridges defend themselves.</b> They write inside their own
-space: from ROM it never lands and looks like dead code, but in a copy loaded
-into RAM it breaks the game.
+<li><b>{n_prot} cartridges defend themselves</b>, all {n_prot} of them Konami's.
+They write inside their own space: from ROM it never lands and looks like dead
+code, but in a copy loaded into RAM it breaks the game.
 <a href="THE-PROTECTIONS.html">The protections</a>.</li>
 <li><b>Demonia is signed by Claude Sablatou</b>, and Trailblazer carries the full
 list of its authors inside. <a href="THE-CREDITS.html">The credits</a>.</li>
@@ -641,72 +647,138 @@ measures. A finding can depend on which dump you look at.</p></div>"""
 
 
 def pag_protecciones(d, idioma):
-    """Las escrituras que cada cartucho hace a su PROPIO espacio.
+    """Las escrituras que cada cartucho hace donde la maquina no deja escribir.
 
     El dato sale de `recoge_protecciones.py`, que las busca sobre el listado y
-    no sobre el binario: hace falta saber que es codigo y que son datos.
+    no sobre el binario: hace falta saber que es codigo y que son datos. Tres
+    bloques: las del propio espacio (el patron de Konami), las que van a la ROM
+    de la BIOS (cada una explicada o marcada sin explicar), y los cartuchos que
+    se miraron y no llevan ninguna, que tambien es un dato.
     """
-    con = [p for p in d["proyectos"] if p.get("protecciones")]
-    con.sort(key=lambda p: p["titulo"])
-    n_cart = len([p for p in d["proyectos"] if p.get("protecciones") is not None])
+    es = idioma == "es"
+    mirados = [p for p in d["proyectos"] if p.get("protecciones") is not None]
+    n_cart = len(mirados)
 
-    cab = (["juego", "dónde", "qué hace", "a dónde va", "qué hay ahí"]
-           if idioma == "es" else
-           ["game", "where", "what it does", "where it lands", "what is there"])
-    filas = []
-    for p in con:
-        # OJO: la variable del bucle no se puede llamar `e`, que es la funcion
-        # que escapa el HTML de este mismo modulo.
-        for k, esc in enumerate(p["protecciones"]):
-            dest = esc["instruccion_del_destino"] or "?"
-            if not esc["es_el_primer_byte"]:
-                dest += (" — el operando" if idioma == "es" else " — its operand")
-            filas.append(
-                "<tr%s><td>%s</td><td class='n'><code>%s</code></td>"
-                "<td><code>%s</code></td><td class='n'><code>%s</code></td>"
-                "<td><code>%s</code></td></tr>"
-                % (" class='destaca'" if k == 0 else "",
-                   e(p["titulo"]), esc["donde"], e(esc["instruccion"]),
-                   esc["destino"], e(dest)))
-    tabla = ("<div class='tabla'><table><tr>%s</tr>%s</table></div>"
-             % ("".join("<th>%s</th>" % x for x in cab), "".join(filas)))
+    def de(p, zona):
+        return [x for x in p["protecciones"] if x["zona"] == zona]
 
-    if idioma == "es":
+    propios = sorted([p for p in mirados if de(p, "propio")], key=lambda p: p["titulo"])
+    bios = sorted([p for p in mirados if de(p, "bios")], key=lambda p: p["titulo"])
+    limpios = sorted([p for p in mirados if not p["protecciones"]], key=lambda p: p["titulo"])
+    kon_limpios = [p for p in limpios if p.get("grupo") == "konami"]
+    ajenos = [p for p in mirados if p.get("grupo") != "konami"]
+    megarom = [p for p in mirados if p.get("protecciones_mapper")]
+
+    def tabla(lista, zona):
+        cab = (["juego", "dónde", "qué hace", "a dónde va", "qué hay ahí"] if es else
+               ["game", "where", "what it does", "where it lands", "what is there"])
+        filas = []
+        for p in lista:
+            # OJO: la variable del bucle no se puede llamar `e`, que es la
+            # funcion que escapa el HTML de este mismo modulo.
+            for k, esc in enumerate(de(p, zona)):
+                if zona == "bios":
+                    dest = "ROM de la BIOS" if es else "BIOS ROM"
+                else:
+                    dest = esc["instruccion_del_destino"] or "?"
+                    if not esc["es_el_primer_byte"]:
+                        dest += (" — el operando" if es else " — its operand")
+                filas.append(
+                    "<tr%s><td>%s</td><td class='n'><code>%s</code></td>"
+                    "<td><code>%s</code></td><td class='n'><code>%s</code></td>"
+                    "<td>%s</td></tr>"
+                    % (" class='destaca'" if k == 0 else "", e(p["titulo"]),
+                       esc["donde"], e(esc["instruccion"]), esc["destino"],
+                       e(dest) if zona == "bios" else "<code>%s</code>" % e(dest)))
+        return ("<div class='tabla'><table><tr>%s</tr>%s</table></div>"
+                % ("".join("<th>%s</th>" % x for x in cab), "".join(filas)))
+
+    # Cada escritura a la BIOS se explica aqui o se dice que esta sin explicar.
+    # Nada de darla por proteccion por el hecho de ir a la BIOS.
+    POR_QUE = {
+        "antarctic": (
+            "Es el guardián del arranque: copia <code>jp 0000h</code> encima de la "
+            "entrada de la BIOS. Que es una protección lo demuestra una <b>cuarta "
+            "compilación</b> del juego, idéntica salvo en dos bytes: justo los que "
+            "mandan esa misma copia a <code>DESPACHA</code>, dentro del propio "
+            "cartucho.",
+            "It is the start-up guard: it copies <code>jp 0000h</code> over the "
+            "BIOS entry point. A <b>fourth build</b> of the game proves it is a "
+            "protection: identical save for two bytes, exactly the ones that send "
+            "that same copy to <code>DESPACHA</code>, inside the cartridge itself."),
+        "hyperrally": (
+            "<b>Sin explicar.</b> Cae en dieciocho bytes que, leídos en crudo, "
+            "parecen dos filas de datos de nueve (<code>2F 30 34 32 2F 2F 2B 2C "
+            "0F</code>), y a los que se llega por una dirección de retorno empujada. "
+            "Si es código de verdad o datos trazados como código hay que verlo en "
+            "el emulador; hasta entonces no se cuenta como protección.",
+            "<b>Unexplained.</b> It lands in eighteen bytes that, read raw, look "
+            "like two nine-byte rows of data (<code>2F 30 34 32 2F 2F 2B 2C "
+            "0F</code>), reached through a pushed return address. Whether it is "
+            "real code or data traced as code needs the emulator; until then it is "
+            "not counted as a protection."),
+    }
+    notas = "".join(
+        "<p><b>%s.</b> %s</p>" % (e(p["titulo"]),
+                                   POR_QUE.get(p["clave"], ("Sin explicar.", "Unexplained."))[0 if es else 1])
+        for p in bios)
+
+    nombres = lambda l: ", ".join(e(p["titulo"]) for p in l)
+    megas = ", ".join("%s (%s)" % (e(p["titulo"]), p["protecciones_mapper"].upper())
+                      for p in megarom)
+
+    if es:
         return f"""
-<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no esta haciendo
-nada: la ROM no admite escritura, asi que esa instruccion parece codigo muerto.
-No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahi la
-escritura si cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
+<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no está haciendo
+nada: la ROM no admite escritura, así que esa instrucción parece código muerto.
+No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahí la
+escritura sí cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
 
-<div class="aviso"><h4>De quien es el hallazgo</h4>
-<p>El patron lo identifico <b>Manuel Pazos</b>
+<div class="aviso"><h4>De quién es el hallazgo</h4>
+<p>El patrón lo identificó <b>Manuel Pazos</b>
 (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) en su desensamblado de
-King&#x27;s Valley (RC-727), donde llamo a las dos rutinas <code>ReadKeys_AC</code>
-y <code>VRAM_writeAC</code>. Lo que hay aqui es ese mismo patron, buscado en los
+King&#x27;s Valley (RC-727), donde llamó a las dos rutinas <code>ReadKeys_AC</code>
+y <code>VRAM_writeAC</code>. Lo que hay aquí es ese mismo patrón, buscado en los
 {n_cart} cartuchos de la serie.</p></div>
 
-<p><b>{len(con)} de los {n_cart}</b> llevan al menos una. Y la familia repite
-siempre las mismas dos, en las mismas dos rutinas del arranque: una deja un
-<code>pop hl</code> y un <code>ret</code> encima de un <b><code>djnz</code></b> de
-la cadena de presentacion, y la otra deja un cero en el <b>operando de un
-<code>jp</code></b>, que en memoria lo convierte en <code>jp 00000h</code> —un
-reinicio en seco—.</p>
+<p><b>{len(propios)} de los {n_cart}</b> escriben en su propio espacio, y los
+{len(propios)} son de Konami. La familia repite siempre las mismas dos, en las
+mismas dos rutinas del arranque: una deja un <code>pop hl</code> y un
+<code>ret</code> encima de un <b><code>djnz</code></b> de la cadena de
+presentación, y la otra deja un cero en el <b>operando de un <code>jp</code></b>,
+que en memoria lo convierte en <code>jp 00000h</code> —un reinicio en seco—. Que
+el destino sea siempre un <code>djnz</code> o el operando de un salto, y nunca un
+hueco de datos, es lo que descarta que sean escrituras sueltas.</p>
 
-<p>Que el destino sea <b>siempre</b> un <code>djnz</code> o el operando de un
-salto, y nunca un hueco de datos, es lo que descarta que sean escrituras
-sueltas.</p>
+{tabla(propios, "propio")}
 
-{tabla}
+<h3>Las que van a la ROM de la BIOS</h3>
+<p>La página 0 de un MSX también es ROM, así que una escritura ahí tampoco llega.
+Pero ir a la BIOS no convierte una escritura en protección: aparecen
+<b>{len(bios)}</b>, y cada una se explica o se dice que está sin explicar.</p>
+
+{tabla(bios, "bios")}
+{notas}
+
+<h3>Los que se miraron y no llevan ninguna</h3>
+<p>De Konami, <b>{len(kon_limpios)}</b> cartuchos no escriben ni en su espacio ni
+en la BIOS: {nombres(kon_limpios)}.</p>
+<p>Y ninguno de los <b>{len(ajenos)}</b> cartuchos que no son de Konami lleva
+nada de esto ({nombres(ajenos)}). Es el control: si el rastreador se tragara
+coincidencias, saldrían también ahí.</p>
+<p>Las dos MegaROM, {megas}, se miran distinto: su listado va por bancos, así
+que el espacio propio es la ventana entera, <code>0x4000</code>–<code>0xBFFF</code>,
+descontando los registros de su mapper, que se deducen de sus propias escrituras.
+Todo lo que escriben ahí es cambiar de banco.</p>
 
 <h3>Lo que esto NO dice</h3>
-<p>Que pasa de verdad al correr una copia en RAM <b>no esta medido</b>: eso
-pediria cargar una copia y jugarla, y aqui no se distribuye ningun binario. Lo
-que se afirma es lo que se lee del listado: donde esta la escritura, a donde
-apunta y que instruccion hay en el destino.</p>
-
-<p>Tampoco estan todas: el rastreador ve las escrituras a una direccion fija y
+<p>Qué pasa de verdad al correr una copia en RAM <b>no está medido</b>: eso
+pediría cargar una copia y jugarla, y aquí no se distribuye ningún binario. Lo
+que se afirma es lo que se lee del listado: dónde está la escritura, a dónde
+apunta y qué instrucción hay en el destino.</p>
+<p>Tampoco están todas: el rastreador ve las escrituras a una dirección fija y
 las que pasan por <code>HL</code> o <code>DE</code> cargados justo antes. Una
-que calculase el destino sobre la marcha se le escaparia.</p>
+que calculase el destino sobre la marcha se le escaparía.</p>
 """
     return f"""
 <p>A cartridge writing <b>inside its own space</b> is doing nothing at all: ROM
@@ -721,28 +793,45 @@ King&#x27;s Valley (RC-727), where he named the two routines
 <code>ReadKeys_AC</code> and <code>VRAM_writeAC</code>. What is here is that same
 pattern, looked for across the {n_cart} cartridges in the series.</p></div>
 
-<p><b>{len(con)} of the {n_cart}</b> carry at least one. And the family repeats
-the same two, in the same two start-up routines: one puts a <code>pop hl</code>
-and a <code>ret</code> over a <b><code>djnz</code></b> in the presentation chain,
-the other leaves a zero in the <b>operand of a <code>jp</code></b>, which in
-memory turns it into <code>jp 00000h</code> —a dead reset—.</p>
+<p><b>{len(propios)} of the {n_cart}</b> write inside their own space, and all
+{len(propios)} are Konami. The family always repeats the same two, in the same
+two start-up routines: one puts a <code>pop hl</code> and a <code>ret</code> over
+a <b><code>djnz</code></b> in the presentation chain, the other leaves a zero in
+the <b>operand of a <code>jp</code></b>, which in memory turns it into
+<code>jp 00000h</code> —a dead reset—. That the target is always a
+<code>djnz</code> or the operand of a jump, and never a gap in the data, is what
+rules out stray writes.</p>
 
-<p>That the target is <b>always</b> a <code>djnz</code> or the operand of a jump,
-and never a gap in the data, is what rules out stray writes.</p>
+{tabla(propios, "propio")}
 
-{tabla}
+<h3>The ones aimed at the BIOS ROM</h3>
+<p>Page 0 of an MSX is ROM too, so a write there does not land either. But going
+to the BIOS does not make a write a protection: <b>{len(bios)}</b> turn up, and
+each is either explained or marked as unexplained.</p>
+
+{tabla(bios, "bios")}
+{notas}
+
+<h3>The ones checked that carry none</h3>
+<p>Of Konami's, <b>{len(kon_limpios)}</b> cartridges write neither to their own
+space nor to the BIOS: {nombres(kon_limpios)}.</p>
+<p>And none of the <b>{len(ajenos)}</b> cartridges that are not Konami's carries
+any of this ({nombres(ajenos)}). That is the control: if the sweep swallowed
+coincidences, they would show up there too.</p>
+<p>The two MegaROMs, {megas}, are checked differently: their listing goes bank by
+bank, so their own space is the whole window, <code>0x4000</code>–<code>0xBFFF</code>,
+minus the registers of their mapper, worked out from their own writes. Everything
+they write there is a bank switch.</p>
 
 <h3>What this does NOT say</h3>
 <p>What actually happens when a copy runs in RAM is <b>not measured</b>: that
 would mean loading a copy and playing it, and no binary is distributed here.
 What is claimed is what the listing says: where the write is, where it points
 and what instruction sits at the target.</p>
-
 <p>Nor are these all of them: the sweep sees writes to a fixed address, and
 those going through <code>HL</code> or <code>DE</code> loaded just before. One
 computing its target on the fly would slip past.</p>
 """
-
 
 def pag_metodo(d, idioma):
     fuentes = [

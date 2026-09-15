@@ -130,25 +130,43 @@ leaves the game broken somewhere it never returns from.</p>
 (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) in his disassembly of
 King&#x27;s Valley (RC-727), where he named the two routines
 <code>ReadKeys_AC</code> and <code>VRAM_writeAC</code>. What is here is that same
-pattern, looked for across the 38 cartridges in the series.</p></div>
+pattern, looked for across the 40 cartridges in the series.</p></div>
 
-<p><b>13 of the 38</b> carry at least one. And the family repeats
-the same two, in the same two start-up routines: one puts a <code>pop hl</code>
-and a <code>ret</code> over a <b><code>djnz</code></b> in the presentation chain,
-the other leaves a zero in the <b>operand of a <code>jp</code></b>, which in
-memory turns it into <code>jp 00000h</code> —a dead reset—.</p>
-
-<p>That the target is <b>always</b> a <code>djnz</code> or the operand of a jump,
-and never a gap in the data, is what rules out stray writes.</p>
+<p><b>13 of the 40</b> write inside their own space, and all
+13 are Konami. The family always repeats the same two, in the same
+two start-up routines: one puts a <code>pop hl</code> and a <code>ret</code> over
+a <b><code>djnz</code></b> in the presentation chain, the other leaves a zero in
+the <b>operand of a <code>jp</code></b>, which in memory turns it into
+<code>jp 00000h</code> —a dead reset—. That the target is always a
+<code>djnz</code> or the operand of a jump, and never a gap in the data, is what
+rules out stray writes.</p>
 
 <div class='tabla'><table><tr><th>game</th><th>where</th><th>what it does</th><th>where it lands</th><th>what is there</th></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x79C8</code></td><td><code>ld (06957h),a</code></td><td class='n'><code>0x6957</code></td><td><code>ld a,(0e00ah)</code></td></tr><tr class='destaca'><td>Hyper Sports 3</td><td class='n'><code>0x4013</code></td><td><code>ld (0412fh),hl</code></td><td class='n'><code>0x412F</code></td><td><code>djnz L_413D</code></td></tr><tr><td>Hyper Sports 3</td><td class='n'><code>0x4040</code></td><td><code>ld (0413bh),hl</code></td><td class='n'><code>0x413B</code></td><td><code>jp espera_y_pasa — its operand</code></td></tr><tr class='destaca'><td>King's Valley</td><td class='n'><code>0x4044</code></td><td><code>ld (hl),a</code></td><td class='n'><code>0x40E4</code></td><td><code>djnz tarea_0_dibuja_o_avanza</code></td></tr><tr><td>King's Valley</td><td class='n'><code>0x409C</code></td><td><code>ld (043c0h),de</code></td><td class='n'><code>0x43C0</code></td><td><code>jp nc,cierra_aviso_titulo — its operand</code></td></tr><tr class='destaca'><td>Knightmare</td><td class='n'><code>0x4028</code></td><td><code>ld (04112h),hl</code></td><td class='n'><code>0x4112</code></td><td><code>djnz L_4120</code></td></tr><tr><td>Knightmare</td><td class='n'><code>0x4055</code></td><td><code>ld (0411eh),hl</code></td><td class='n'><code>0x411E</code></td><td><code>jp L_4187 — its operand</code></td></tr><tr class='destaca'><td>Konami's Boxing</td><td class='n'><code>0x470E</code></td><td><code>ld (04f84h),a</code></td><td class='n'><code>0x4F84</code></td><td><code>pop af</code></td></tr><tr class='destaca'><td>Konami's Ping Pong</td><td class='n'><code>0x4013</code></td><td><code>ld (040eeh),a</code></td><td class='n'><code>0x40EE</code></td><td><code>djnz L_40FA</code></td></tr><tr><td>Konami's Ping Pong</td><td class='n'><code>0x4052</code></td><td><code>ld (040f8h),hl</code></td><td class='n'><code>0x40F8</code></td><td><code>jp L_4318 — its operand</code></td></tr><tr class='destaca'><td>Konami's Tennis</td><td class='n'><code>0x7A31</code></td><td><code>ld (0409ah),a</code></td><td class='n'><code>0x409A</code></td><td><code>ret</code></td></tr><tr class='destaca'><td>Konami’s Soccer</td><td class='n'><code>0x4028</code></td><td><code>ld (0410ah),hl</code></td><td class='n'><code>0x410A</code></td><td><code>djnz escena_presentacion_3</code></td></tr><tr><td>Konami’s Soccer</td><td class='n'><code>0x4056</code></td><td><code>ld (04116h),hl</code></td><td class='n'><code>0x4116</code></td><td><code>jp espera_n_y_avanza_escena — its operand</code></td></tr><tr class='destaca'><td>Mopi Ranger</td><td class='n'><code>0x406A</code></td><td><code>ld (04146h),a</code></td><td class='n'><code>0x4146</code></td><td><code>djnz comprueba_el_arranque</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x406F</code></td><td><code>ld (04147h),a</code></td><td class='n'><code>0x4147</code></td><td><code>djnz comprueba_el_arranque — its operand</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x40A5</code></td><td><code>ld (044dfh),de</code></td><td class='n'><code>0x44DF</code></td><td><code>jp L_45FF — its operand</code></td></tr><tr class='destaca'><td>Pippols</td><td class='n'><code>0x4033</code></td><td><code>ld (040c5h),hl</code></td><td class='n'><code>0x40C5</code></td><td><code>jp SIGUIENTE_ESTADO — its operand</code></td></tr><tr class='destaca'><td>The Goonies</td><td class='n'><code>0x4022</code></td><td><code>ld (0411ch),hl</code></td><td class='n'><code>0x411C</code></td><td><code>djnz presentacion_anima</code></td></tr><tr><td>The Goonies</td><td class='n'><code>0x4050</code></td><td><code>ld (04129h),hl</code></td><td class='n'><code>0x4129</code></td><td><code>jp L_41C8 — its operand</code></td></tr><tr class='destaca'><td>Twin Bee</td><td class='n'><code>0x4028</code></td><td><code>ld (04195h),hl</code></td><td class='n'><code>0x4195</code></td><td><code>djnz L_41A3</code></td></tr><tr><td>Twin Bee</td><td class='n'><code>0x4055</code></td><td><code>ld (041a1h),hl</code></td><td class='n'><code>0x41A1</code></td><td><code>jp empieza_la_escena_siguiente — its operand</code></td></tr><tr class='destaca'><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4028</code></td><td><code>ld (0410dh),hl</code></td><td class='n'><code>0x410D</code></td><td><code>djnz L_411B</code></td></tr><tr><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4056</code></td><td><code>ld (04119h),hl</code></td><td class='n'><code>0x4119</code></td><td><code>jp L_41FB — its operand</code></td></tr></table></div>
+
+<h3>The ones aimed at the BIOS ROM</h3>
+<p>Page 0 of an MSX is ROM too, so a write there does not land either. But going
+to the BIOS does not make a write a protection: <b>2</b> turn up, and
+each is either explained or marked as unexplained.</p>
+
+<div class='tabla'><table><tr><th>game</th><th>where</th><th>what it does</th><th>where it lands</th><th>what is there</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>BIOS ROM</td></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x68C1</code></td><td><code>ld (02f2fh),a</code></td><td class='n'><code>0x2F2F</code></td><td>BIOS ROM</td></tr></table></div>
+<p><b>Antarctic Adventure.</b> It is the start-up guard: it copies <code>jp 0000h</code> over the BIOS entry point. A <b>fourth build</b> of the game proves it is a protection: identical save for two bytes, exactly the ones that send that same copy to <code>DESPACHA</code>, inside the cartridge itself.</p><p><b>Hyper Rally.</b> <b>Unexplained.</b> It lands in eighteen bytes that, read raw, look like two nine-byte rows of data (<code>2F 30 34 32 2F 2F 2B 2C 0F</code>), reached through a pushed return address. Whether it is real code or data traced as code needs the emulator; until then it is not counted as a protection.</p>
+
+<h3>The ones checked that carry none</h3>
+<p>Of Konami's, <b>20</b> cartridges write neither to their own
+space nor to the BIOS: Athletic Land, Cabbage Patch Kids, F-1 Spirit — The Way to Formula 1, Frogger, Hyper Olympic 1, Hyper Olympic 2, Hyper Sports 1, Hyper Sports 2, Konami's Baseball, Konami's Golf, Konami’s Billiards, Konami’s Game Master, Konami’s Mahjong Dojo, Monkey Academy, Nemesis / Gradius, Road Fighter, Sky Jaguar, Super Cobra, Time Pilot, Yie Ar Kung-Fu.</p>
+<p>And none of the <b>6</b> cartridges that are not Konami's carries
+any of this (3D Golf Simulation, Bomber Man, Hole in One, Hole in One Professional, Casio World Open, Pitfall!). That is the control: if the sweep swallowed
+coincidences, they would show up there too.</p>
+<p>The two MegaROMs, Nemesis / Gradius (KONAMI), F-1 Spirit — The Way to Formula 1 (SCC), are checked differently: their listing goes bank by
+bank, so their own space is the whole window, <code>0x4000</code>–<code>0xBFFF</code>,
+minus the registers of their mapper, worked out from their own writes. Everything
+they write there is a bank switch.</p>
 
 <h3>What this does NOT say</h3>
 <p>What actually happens when a copy runs in RAM is <b>not measured</b>: that
 would mean loading a copy and playing it, and no binary is distributed here.
 What is claimed is what the listing says: where the write is, where it points
 and what instruction sits at the target.</p>
-
 <p>Nor are these all of them: the sweep sees writes to a fixed address, and
 those going through <code>HL</code> or <code>DE</code> loaded just before. One
 computing its target on the fly would slip past.</p>

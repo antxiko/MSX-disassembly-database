@@ -3,9 +3,9 @@
 
 Para que sirve. Las cifras de la portada estan escritas a mano en la ficha de
 cada juego, el dia que se publico. Si despues alguien vuelve al listado y comenta
-otra tanda, la web se queda diciendo la cifra vieja. Pasa de verdad: Trailblazer
-publica 30,7 % y su listado, tocado en un commit POSTERIOR al README, va por
-30,8 %.
+otra tanda, la web se queda diciendo la cifra vieja. Paso de verdad: Trailblazer
+publicaba 30,7 % cuando su listado, tocado en un commit POSTERIOR al README, iba
+por 30,8 %, y otras cuatro fichas estaban igual. Se corrigieron el 2026-09-15.
 
 Tres numeros de la ficha se pueden cotejar, y cada uno tiene su trampa:
 

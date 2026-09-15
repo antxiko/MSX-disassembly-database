@@ -529,7 +529,7 @@
   ],
   "medido": {
    "instrucciones": 6665,
-   "comentarios": 1782,
+   "comentarios": 1781,
    "densidad": 26.7,
    "flojas": 0,
    "bloques": 733
@@ -551,7 +551,7 @@
    },
    {
     "instrucciones": 3126,
-    "comentarios": 821,
+    "comentarios": 820,
     "flojas": 0,
     "bloques": 353,
     "asm": "src/descubrimiento_p2bajo.asm"
@@ -559,7 +559,7 @@
   ],
   "declarado": {
    "instrucciones": 6665,
-   "comentarios": 1782,
+   "comentarios": 1781,
    "bloques": 733,
    "flojas": 0,
    "densidad": 26.7
@@ -1737,18 +1737,18 @@
    "src/temptations_topo.asm"
   ],
   "medido": {
-   "instrucciones": 2923,
-   "comentarios": 1045,
+   "instrucciones": 2950,
+   "comentarios": 1055,
    "densidad": 35.8,
    "flojas": 0,
-   "bloques": 548
+   "bloques": 553
   },
   "por_listado": [
    {
-    "instrucciones": 2403,
-    "comentarios": 798,
+    "instrucciones": 2430,
+    "comentarios": 808,
     "flojas": 0,
-    "bloques": 477,
+    "bloques": 482,
     "asm": "src/temptations_game.asm"
    },
    {
@@ -1841,7 +1841,7 @@
   ],
   "medido": {
    "instrucciones": 3637,
-   "comentarios": 1119,
+   "comentarios": 1120,
    "densidad": 30.8,
    "flojas": 0,
    "bloques": 355
@@ -1863,7 +1863,7 @@
    },
    {
     "instrucciones": 3318,
-    "comentarios": 955,
+    "comentarios": 956,
     "flojas": 0,
     "bloques": 330,
     "asm": "src/trailblazer_juego.asm"
@@ -1885,7 +1885,7 @@
   ],
   "declarado": {
    "instrucciones": 3637,
-   "comentarios": 1119,
+   "comentarios": 1120,
    "flojas": 0,
    "bloques": 355,
    "densidad": 30.8

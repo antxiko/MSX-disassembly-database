@@ -120,40 +120,56 @@ code{font-size:12px;color:var(--suave)}
 <nav><a href="index.html">Inicio</a><a href="LOS-JUEGOS.html">Los juegos</a><a href="LA-MARCA.html">La marca</a><a href="LOS-CREDITOS.html">Los créditos</a><a href="LO-COMPARTIDO.html">Lo compartido</a><a href="LAS-FAMILIAS.html">Las familias</a><a href="LAS-PROTECCIONES.html" style="color:var(--oro)">Las protecciones</a><a href="COMO-SE-MIDE.html">Cómo se mide</a><a href="../THE-PROTECTIONS.html"
   style="margin-left:auto;color:var(--oro)">English</a></nav>
 
-<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no esta haciendo
-nada: la ROM no admite escritura, asi que esa instruccion parece codigo muerto.
-No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahi la
-escritura si cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
+<p>Un cartucho que escribe <b>dentro de su propio espacio</b> no está haciendo
+nada: la ROM no admite escritura, así que esa instrucción parece código muerto.
+No lo es. Un cartucho pirateado es una copia cargada en <b>RAM</b>, y ahí la
+escritura sí cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
 
-<div class="aviso"><h4>De quien es el hallazgo</h4>
-<p>El patron lo identifico <b>Manuel Pazos</b>
+<div class="aviso"><h4>De quién es el hallazgo</h4>
+<p>El patrón lo identificó <b>Manuel Pazos</b>
 (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) en su desensamblado de
-King&#x27;s Valley (RC-727), donde llamo a las dos rutinas <code>ReadKeys_AC</code>
-y <code>VRAM_writeAC</code>. Lo que hay aqui es ese mismo patron, buscado en los
-38 cartuchos de la serie.</p></div>
+King&#x27;s Valley (RC-727), donde llamó a las dos rutinas <code>ReadKeys_AC</code>
+y <code>VRAM_writeAC</code>. Lo que hay aquí es ese mismo patrón, buscado en los
+40 cartuchos de la serie.</p></div>
 
-<p><b>13 de los 38</b> llevan al menos una. Y la familia repite
-siempre las mismas dos, en las mismas dos rutinas del arranque: una deja un
-<code>pop hl</code> y un <code>ret</code> encima de un <b><code>djnz</code></b> de
-la cadena de presentacion, y la otra deja un cero en el <b>operando de un
-<code>jp</code></b>, que en memoria lo convierte en <code>jp 00000h</code> —un
-reinicio en seco—.</p>
-
-<p>Que el destino sea <b>siempre</b> un <code>djnz</code> o el operando de un
-salto, y nunca un hueco de datos, es lo que descarta que sean escrituras
-sueltas.</p>
+<p><b>13 de los 40</b> escriben en su propio espacio, y los
+13 son de Konami. La familia repite siempre las mismas dos, en las
+mismas dos rutinas del arranque: una deja un <code>pop hl</code> y un
+<code>ret</code> encima de un <b><code>djnz</code></b> de la cadena de
+presentación, y la otra deja un cero en el <b>operando de un <code>jp</code></b>,
+que en memoria lo convierte en <code>jp 00000h</code> —un reinicio en seco—. Que
+el destino sea siempre un <code>djnz</code> o el operando de un salto, y nunca un
+hueco de datos, es lo que descarta que sean escrituras sueltas.</p>
 
 <div class='tabla'><table><tr><th>juego</th><th>dónde</th><th>qué hace</th><th>a dónde va</th><th>qué hay ahí</th></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x79C8</code></td><td><code>ld (06957h),a</code></td><td class='n'><code>0x6957</code></td><td><code>ld a,(0e00ah)</code></td></tr><tr class='destaca'><td>Hyper Sports 3</td><td class='n'><code>0x4013</code></td><td><code>ld (0412fh),hl</code></td><td class='n'><code>0x412F</code></td><td><code>djnz L_413D</code></td></tr><tr><td>Hyper Sports 3</td><td class='n'><code>0x4040</code></td><td><code>ld (0413bh),hl</code></td><td class='n'><code>0x413B</code></td><td><code>jp espera_y_pasa — el operando</code></td></tr><tr class='destaca'><td>King's Valley</td><td class='n'><code>0x4044</code></td><td><code>ld (hl),a</code></td><td class='n'><code>0x40E4</code></td><td><code>djnz tarea_0_dibuja_o_avanza</code></td></tr><tr><td>King's Valley</td><td class='n'><code>0x409C</code></td><td><code>ld (043c0h),de</code></td><td class='n'><code>0x43C0</code></td><td><code>jp nc,cierra_aviso_titulo — el operando</code></td></tr><tr class='destaca'><td>Knightmare</td><td class='n'><code>0x4028</code></td><td><code>ld (04112h),hl</code></td><td class='n'><code>0x4112</code></td><td><code>djnz L_4120</code></td></tr><tr><td>Knightmare</td><td class='n'><code>0x4055</code></td><td><code>ld (0411eh),hl</code></td><td class='n'><code>0x411E</code></td><td><code>jp L_4187 — el operando</code></td></tr><tr class='destaca'><td>Konami's Boxing</td><td class='n'><code>0x470E</code></td><td><code>ld (04f84h),a</code></td><td class='n'><code>0x4F84</code></td><td><code>pop af</code></td></tr><tr class='destaca'><td>Konami's Ping Pong</td><td class='n'><code>0x4013</code></td><td><code>ld (040eeh),a</code></td><td class='n'><code>0x40EE</code></td><td><code>djnz L_40FA</code></td></tr><tr><td>Konami's Ping Pong</td><td class='n'><code>0x4052</code></td><td><code>ld (040f8h),hl</code></td><td class='n'><code>0x40F8</code></td><td><code>jp L_4318 — el operando</code></td></tr><tr class='destaca'><td>Konami's Tennis</td><td class='n'><code>0x7A31</code></td><td><code>ld (0409ah),a</code></td><td class='n'><code>0x409A</code></td><td><code>ret</code></td></tr><tr class='destaca'><td>Konami’s Soccer</td><td class='n'><code>0x4028</code></td><td><code>ld (0410ah),hl</code></td><td class='n'><code>0x410A</code></td><td><code>djnz escena_presentacion_3</code></td></tr><tr><td>Konami’s Soccer</td><td class='n'><code>0x4056</code></td><td><code>ld (04116h),hl</code></td><td class='n'><code>0x4116</code></td><td><code>jp espera_n_y_avanza_escena — el operando</code></td></tr><tr class='destaca'><td>Mopi Ranger</td><td class='n'><code>0x406A</code></td><td><code>ld (04146h),a</code></td><td class='n'><code>0x4146</code></td><td><code>djnz comprueba_el_arranque</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x406F</code></td><td><code>ld (04147h),a</code></td><td class='n'><code>0x4147</code></td><td><code>djnz comprueba_el_arranque — el operando</code></td></tr><tr><td>Mopi Ranger</td><td class='n'><code>0x40A5</code></td><td><code>ld (044dfh),de</code></td><td class='n'><code>0x44DF</code></td><td><code>jp L_45FF — el operando</code></td></tr><tr class='destaca'><td>Pippols</td><td class='n'><code>0x4033</code></td><td><code>ld (040c5h),hl</code></td><td class='n'><code>0x40C5</code></td><td><code>jp SIGUIENTE_ESTADO — el operando</code></td></tr><tr class='destaca'><td>The Goonies</td><td class='n'><code>0x4022</code></td><td><code>ld (0411ch),hl</code></td><td class='n'><code>0x411C</code></td><td><code>djnz presentacion_anima</code></td></tr><tr><td>The Goonies</td><td class='n'><code>0x4050</code></td><td><code>ld (04129h),hl</code></td><td class='n'><code>0x4129</code></td><td><code>jp L_41C8 — el operando</code></td></tr><tr class='destaca'><td>Twin Bee</td><td class='n'><code>0x4028</code></td><td><code>ld (04195h),hl</code></td><td class='n'><code>0x4195</code></td><td><code>djnz L_41A3</code></td></tr><tr><td>Twin Bee</td><td class='n'><code>0x4055</code></td><td><code>ld (041a1h),hl</code></td><td class='n'><code>0x41A1</code></td><td><code>jp empieza_la_escena_siguiente — el operando</code></td></tr><tr class='destaca'><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4028</code></td><td><code>ld (0410dh),hl</code></td><td class='n'><code>0x410D</code></td><td><code>djnz L_411B</code></td></tr><tr><td>Yie Ar Kung-Fu II</td><td class='n'><code>0x4056</code></td><td><code>ld (04119h),hl</code></td><td class='n'><code>0x4119</code></td><td><code>jp L_41FB — el operando</code></td></tr></table></div>
 
-<h3>Lo que esto NO dice</h3>
-<p>Que pasa de verdad al correr una copia en RAM <b>no esta medido</b>: eso
-pediria cargar una copia y jugarla, y aqui no se distribuye ningun binario. Lo
-que se afirma es lo que se lee del listado: donde esta la escritura, a donde
-apunta y que instruccion hay en el destino.</p>
+<h3>Las que van a la ROM de la BIOS</h3>
+<p>La página 0 de un MSX también es ROM, así que una escritura ahí tampoco llega.
+Pero ir a la BIOS no convierte una escritura en protección: aparecen
+<b>2</b>, y cada una se explica o se dice que está sin explicar.</p>
 
-<p>Tampoco estan todas: el rastreador ve las escrituras a una direccion fija y
+<div class='tabla'><table><tr><th>juego</th><th>dónde</th><th>qué hace</th><th>a dónde va</th><th>qué hay ahí</th></tr><tr class='destaca'><td>Antarctic Adventure</td><td class='n'><code>0x4055</code></td><td><code>ldir</code></td><td class='n'><code>0x0000</code></td><td>ROM de la BIOS</td></tr><tr class='destaca'><td>Hyper Rally</td><td class='n'><code>0x68C1</code></td><td><code>ld (02f2fh),a</code></td><td class='n'><code>0x2F2F</code></td><td>ROM de la BIOS</td></tr></table></div>
+<p><b>Antarctic Adventure.</b> Es el guardián del arranque: copia <code>jp 0000h</code> encima de la entrada de la BIOS. Que es una protección lo demuestra una <b>cuarta compilación</b> del juego, idéntica salvo en dos bytes: justo los que mandan esa misma copia a <code>DESPACHA</code>, dentro del propio cartucho.</p><p><b>Hyper Rally.</b> <b>Sin explicar.</b> Cae en dieciocho bytes que, leídos en crudo, parecen dos filas de datos de nueve (<code>2F 30 34 32 2F 2F 2B 2C 0F</code>), y a los que se llega por una dirección de retorno empujada. Si es código de verdad o datos trazados como código hay que verlo en el emulador; hasta entonces no se cuenta como protección.</p>
+
+<h3>Los que se miraron y no llevan ninguna</h3>
+<p>De Konami, <b>20</b> cartuchos no escriben ni en su espacio ni
+en la BIOS: Athletic Land, Cabbage Patch Kids, F-1 Spirit — The Way to Formula 1, Frogger, Hyper Olympic 1, Hyper Olympic 2, Hyper Sports 1, Hyper Sports 2, Konami's Baseball, Konami's Golf, Konami’s Billiards, Konami’s Game Master, Konami’s Mahjong Dojo, Monkey Academy, Nemesis / Gradius, Road Fighter, Sky Jaguar, Super Cobra, Time Pilot, Yie Ar Kung-Fu.</p>
+<p>Y ninguno de los <b>6</b> cartuchos que no son de Konami lleva
+nada de esto (3D Golf Simulation, Bomber Man, Hole in One, Hole in One Professional, Casio World Open, Pitfall!). Es el control: si el rastreador se tragara
+coincidencias, saldrían también ahí.</p>
+<p>Las dos MegaROM, Nemesis / Gradius (KONAMI), F-1 Spirit — The Way to Formula 1 (SCC), se miran distinto: su listado va por bancos, así
+que el espacio propio es la ventana entera, <code>0x4000</code>–<code>0xBFFF</code>,
+descontando los registros de su mapper, que se deducen de sus propias escrituras.
+Todo lo que escriben ahí es cambiar de banco.</p>
+
+<h3>Lo que esto NO dice</h3>
+<p>Qué pasa de verdad al correr una copia en RAM <b>no está medido</b>: eso
+pediría cargar una copia y jugarla, y aquí no se distribuye ningún binario. Lo
+que se afirma es lo que se lee del listado: dónde está la escritura, a dónde
+apunta y qué instrucción hay en el destino.</p>
+<p>Tampoco están todas: el rastreador ve las escrituras a una dirección fija y
 las que pasan por <code>HL</code> o <code>DE</code> cargados justo antes. Una
-que calculase el destino sobre la marcha se le escaparia.</p>
+que calculase el destino sobre la marcha se le escaparía.</p>
 
 <footer>Los binarios no se distribuyen. Este repositorio contiene medidas y análisis, no los juegos. Cada juego pertenece a sus autores.</footer>
 </div>

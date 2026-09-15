@@ -62,6 +62,52 @@ def pisa(ins, reg):
     return bool(CORTA.match(ins) or TOCA[reg].match(ins))
 
 
+def zona(v, lo, hi, mapper=None):
+    """Donde cae un destino que no admite escritura en la maquina de verdad.
+
+    "propio"  dentro del listado del propio cartucho
+    "bios"    en la pagina 0, que en un MSX es la ROM de la BIOS
+
+    La segunda hace falta por el RC-701: su guardian copia `jp 0000h` encima de
+    0x0000, y una cuarta compilacion del mismo juego lleva ESA MISMA copia
+    apuntada a su propio espacio. Pero una escritura a la BIOS no es proteccion
+    por el hecho de serlo: se registra aparte y cada una se explica, o se dice
+    que esta sin explicar.
+    """
+    if mapper is not None:
+        # MegaROM: el cartucho es toda la ventana, menos sus registros
+        if 0x4000 <= v <= 0xBFFF and not any(a <= v <= b for a, b in mapper):
+            return "propio"
+    elif lo <= v <= hi:
+        return "propio"
+    if v < 0x4000:
+        return "bios"
+    return None
+
+
+# Los registros de los dos mappers de la casa. Escribir ahi NO es escribir en
+# la ROM: es cambiar de banco, y en un MegaROM pasa cientos de veces.
+MAPPER_KONAMI = [(0x6000, 0x6000), (0x8000, 0x8000), (0xA000, 0xA000)]
+MAPPER_SCC = [(0x5000, 0x57FF), (0x7000, 0x77FF), (0x9000, 0x97FF),
+              (0xB000, 0xB7FF), (0x9800, 0x9FFF)]   # el ultimo, el propio SCC
+
+
+def mapper_de(textos):
+    """Que mapper usa, deducido de a donde escribe. None si no es MegaROM.
+
+    Un MegaROM se lista por bancos, un fichero por banco, y cada banco solo
+    cubre su trozo de ventana: comprobando el destino contra el rango del
+    propio fichero, una escritura a otro banco no se veia nunca. Asi se habian
+    quedado Nemesis y F-1 Spirit con cero escrituras.
+    """
+    todo = "\n".join(textos)
+    konami = len(re.findall(r"(?m)^\tld \(0[68a]000h\),a", todo))
+    scc = len(re.findall(r"(?m)^\tld \(0[579b]000h\),a", todo))
+    if not konami and not scc:
+        return None
+    return MAPPER_SCC if scc > konami else MAPPER_KONAMI
+
+
 def listados(d):
     """Los .asm del juego que el repositorio publica."""
     try:
@@ -79,7 +125,7 @@ def listados(d):
     return out
 
 
-def mira(ruta):
+def mira(ruta, mapper=None):
     """(rango, [escritura...]) de un listado."""
     lineas = io.open(ruta, encoding="utf-8", errors="replace").read().split("\n")
     porDir, orden = {}, []
@@ -115,7 +161,7 @@ def mira(ruta):
         if not m:
             return None
         reg, v = m.group(1).lower(), num(m.group(2))
-        if not (lo <= v <= hi):
+        if zona(v, lo, hi, mapper) is None:
             return None
         for j in range(k + 1, min(k + 4, len(seq))):
             otra = seq[j][1].lower()
@@ -147,6 +193,7 @@ def mira(ruta):
             "instruccion": como,
             "carga": "%s  (en 0x%04X)" % (ins, a),
             "destino": "0x%04X" % v,
+            "zona": zona(v, lo, hi, mapper),
             "cae_en": "0x%04X" % cont if cont is not None else None,
             "instruccion_del_destino": porDir.get(cont) if cont is not None else None,
             "es_el_primer_byte": cont == v,
@@ -161,7 +208,7 @@ def mira(ruta):
         if not me:
             continue
         v = num(me.group(1))
-        if not (lo <= v <= hi):
+        if zona(v, lo, hi, mapper) is None:
             continue
         # la instruccion anterior: de ahi sale el valor que escribe
         antes = ""
@@ -182,6 +229,7 @@ def mira(ruta):
             "instruccion": ins,
             "carga": antes,
             "destino": "0x%04X" % v,
+            "zona": zona(v, lo, hi, mapper),
             "cae_en": "0x%04X" % cont if cont is not None else None,
             "instruccion_del_destino": porDir.get(cont) if cont is not None else None,
             "es_el_primer_byte": cont == v,
@@ -195,12 +243,12 @@ def main(raiz):
     with io.open(base, encoding="utf-8") as f:
         proyectos = json.load(f)["proyectos"]
 
-    filas, con = [], 0
+    filas, con, bios = [], 0, 0
     for p in proyectos:
         d = os.path.join(raiz, p["directorio"])
         # cartucho o cinta: lo dice la ficha, no el nombre del fichero
         meta = (p.get("meta_es") or "") + (p.get("meta_en") or "")
-        cartucho = "cartucho" in meta or "cartridge" in meta
+        cartucho = any(x in meta for x in ("cartucho", "cartridge", "MegaROM"))
         fila = {"clave": p["clave"], "titulo": p["titulo"],
                 "directorio": p["directorio"], "es_cartucho": cartucho,
                 "escrituras": [], "nota": None}
@@ -209,19 +257,27 @@ def main(raiz):
                             "propio espacio no es una trampa")
             filas.append(fila)
             continue
-        for rel, ruta in listados(d):
-            rango, fuera = mira(ruta)
+        ls = listados(d)
+        mapper = (mapper_de([io.open(r, encoding="utf-8", errors="replace").read()
+                             for _, r in ls])
+                  if "MegaROM" in meta else None)
+        fila["mapper"] = ("scc" if mapper is MAPPER_SCC else
+                          "konami" if mapper is MAPPER_KONAMI else None)
+        for rel, ruta in ls:
+            rango, fuera = mira(ruta, mapper)
             for e in fuera:
                 e["listado"] = rel
                 fila["escrituras"].append(e)
-        if fila["escrituras"]:
+        if any(e["zona"] == "propio" for e in fila["escrituras"]):
             con += 1
+        if any(e["zona"] == "bios" for e in fila["escrituras"]):
+            bios += 1
         filas.append(fila)
 
     json.dump(filas, sys.stdout, indent=1, ensure_ascii=False)
     print("", file=sys.stderr)
-    print("cartuchos mirados: %d | con escrituras a su propio espacio: %d"
-          % (sum(1 for f in filas if f["es_cartucho"]), con), file=sys.stderr)
+    print("cartuchos mirados: %d | a su propio espacio: %d | a la ROM de la BIOS: %d"
+          % (sum(1 for f in filas if f["es_cartucho"]), con, bios), file=sys.stderr)
 
 
 main(sys.argv[1] if len(sys.argv) > 1 else "..")

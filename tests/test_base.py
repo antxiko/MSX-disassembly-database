@@ -446,12 +446,34 @@ class LasProtecciones(unittest.TestCase):
             self.skipTest("no hay listados al lado")
         self.assertGreater(mirados, 15)
 
-    def test_el_destino_cae_dentro_del_propio_listado(self):
-        """Si el destino no estuviera en el cartucho no seria una trampa."""
+    def test_cada_destino_cae_donde_dice_su_zona(self):
+        """Propio: dentro del cartucho. BIOS: en la pagina 0. Nada mas."""
         for p in self.base:
             for e in p.get("protecciones") or []:
+                v = int(e["destino"], 16)
+                if e["zona"] == "bios":
+                    self.assertLess(v, 0x4000, "%s %s" % (p["clave"], e["donde"]))
+                    continue
+                self.assertEqual(e["zona"], "propio", p["clave"])
+                self.assertGreaterEqual(v, 0x4000, "%s %s" % (p["clave"], e["donde"]))
+                if p.get("protecciones_mapper"):
+                    continue    # en un MegaROM el destino puede estar en otro banco
                 self.assertIsNotNone(e["cae_en"], "%s %s" % (p["clave"], e["donde"]))
-                self.assertLessEqual(int(e["cae_en"], 16), int(e["destino"], 16))
+                self.assertLessEqual(int(e["cae_en"], 16), v)
+
+    def test_las_megarom_tambien_se_miran(self):
+        """Nemesis y F-1 Spirit se quedaron fuera la primera vez.
+
+        Su ficha dice "MegaROM" y no "cartucho", y el rastreador los tomo por
+        cintas. Y aun metiendolos, comprobaba cada escritura contra el rango de
+        su propio fichero, que en un MegaROM es un solo banco: no podia ver
+        nada. Ahora se miran con la ventana entera y su mapper.
+        """
+        megas = [p for p in self.base if "MegaROM" in (p.get("meta_es") or "")]
+        self.assertGreaterEqual(len(megas), 2)
+        for p in megas:
+            self.assertIsNotNone(p.get("protecciones"), p["clave"])
+            self.assertIn(p.get("protecciones_mapper"), ("konami", "scc"), p["clave"])
 
     def test_las_cintas_quedan_fuera(self):
         """En una cinta escribir en su propio espacio es lo normal, no una trampa."""
