@@ -21,6 +21,8 @@ import os
 import re
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 PORTADA = "ANTXIKO_GITHUB_IO"
 
@@ -67,7 +69,7 @@ def main():
     # La consola de Windows no es UTF-8: sin esto, un punto medio
     # del titulo de un juego sale roto en el JSON.
     sys.stdout.reconfigure(encoding="utf-8", newline="\n")
-    sys.path.insert(0, os.path.join(raiz, PORTADA, "tools"))
+    sys.path.insert(0, en_des_asm(raiz, PORTADA, "tools"))
     import make_index
 
     fichas = ([ficha(p, "desensamblado") for p in make_index.DESENSAMBLADOS]
@@ -75,8 +77,8 @@ def main():
 
     # Los directorios locales, por su remote.
     locales = {}
-    for d in sorted(os.listdir(raiz)):
-        ruta = os.path.join(raiz, d)
+    for d in sorted(repos_de(raiz)):
+        ruta = en_des_asm(raiz, d)
         if not os.path.isdir(os.path.join(ruta, ".git")):
             continue
         locales[d] = normaliza(remoto(ruta))

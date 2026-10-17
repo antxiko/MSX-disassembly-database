@@ -33,6 +33,8 @@ import os
 import re
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DATOS = os.path.join(os.path.dirname(AQUI), "datos")
@@ -63,7 +65,7 @@ def etiquetas_del_listado(raiz, directorio, listados):
     """Cuantas etiquetas tiene el listado publicado, contadas a mano."""
     n = 0
     for a in listados:
-        ruta = os.path.join(raiz, directorio, a)
+        ruta = en_des_asm(raiz, directorio, a)
         if not os.path.isfile(ruta):
             return None
         with open(ruta, encoding="utf-8", errors="replace") as f:
@@ -73,7 +75,7 @@ def etiquetas_del_listado(raiz, directorio, listados):
 
 def main():
     raiz = sys.argv[1]
-    sys.path.insert(0, os.path.join(raiz, "ANTXIKO_GITHUB_IO", "tools"))
+    sys.path.insert(0, en_des_asm(raiz, "ANTXIKO_GITHUB_IO", "tools"))
     import make_index
 
     with open(os.path.join(DATOS, "serie.json"), encoding="utf-8") as f:

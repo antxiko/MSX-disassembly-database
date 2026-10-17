@@ -25,6 +25,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 # Cada cifra, por su frase, y SIEMPRE dentro de UNA linea: buscar en el texto
 # entero hacia que Demonia -que no publica densidad- se llevara el "100%" de
@@ -91,12 +93,12 @@ def main():
     raiz = sys.argv[1]
     sys.stdout.reconfigure(encoding="utf-8", newline="\n")
     filas = []
-    for repo in sorted(os.listdir(raiz)):
-        if not os.path.isdir(os.path.join(raiz, repo, ".git")):
+    for repo in sorted(repos_de(raiz)):
+        if not os.path.isdir(en_des_asm(raiz, repo, ".git")):
             continue
         ruta = None
         for nombre in ("README.es.md", "README.md"):
-            cand = os.path.join(raiz, repo, nombre)
+            cand = en_des_asm(raiz, repo, nombre)
             if os.path.isfile(cand):
                 ruta = cand
                 break

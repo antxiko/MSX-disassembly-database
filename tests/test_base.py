@@ -21,6 +21,7 @@ RAIZ = os.path.dirname(AQUI)
 DATOS = os.path.join(RAIZ, "datos")
 DES_ASM = os.path.dirname(RAIZ)
 sys.path.insert(0, os.path.join(RAIZ, "tools"))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 
 def carga(nombre):
@@ -36,7 +37,7 @@ class LaBase(unittest.TestCase):
 
     def test_hay_un_registro_por_ficha_de_la_portada(self):
         """La base no puede tener mas ni menos proyectos que la portada."""
-        sys.path.insert(0, os.path.join(DES_ASM, "ANTXIKO_GITHUB_IO", "tools"))
+        sys.path.insert(0, en_des_asm(DES_ASM, "ANTXIKO_GITHUB_IO", "tools"))
         import make_index
         esperados = len(make_index.DESENSAMBLADOS) + len(make_index.PARCHES)
         self.assertEqual(len(self.proyectos), esperados)
@@ -55,7 +56,7 @@ class LaBase(unittest.TestCase):
         mirados = 0
         for p in self.proyectos:
             for b in ([p["binario"]] if p.get("binario") else p.get("binarios", [])):
-                ruta = os.path.join(DES_ASM, b["fichero"])
+                ruta = en_des_asm(DES_ASM, b["fichero"])
                 self.assertTrue(os.path.isfile(ruta), b["fichero"])
                 self.assertEqual(os.path.getsize(ruta), b["bytes"], b["fichero"])
                 h = hashlib.sha256()
@@ -167,7 +168,7 @@ class LosCreditos(unittest.TestCase):
                 p["binario"]["fichero"] if p.get("binario") else None)
             for c in (p.get("creditos") or []) + (p.get("metadatos_del_volcado") or []):
                 self.assertIsNotNone(origen, "%s cita sin decir de donde" % p["clave"])
-                ruta = os.path.join(DES_ASM, origen)
+                ruta = en_des_asm(DES_ASM, origen)
                 with open(ruta, "rb") as f:
                     datos = f.read()
                 off = int(c["offset"], 16)
@@ -432,7 +433,7 @@ class LasProtecciones(unittest.TestCase):
         mirados = 0
         for p in self.base:
             for e in p.get("protecciones") or []:
-                ruta = os.path.join(DES_ASM, p["directorio"], e["listado"])
+                ruta = en_des_asm(DES_ASM, p["directorio"], e["listado"])
                 if not os.path.exists(ruta):
                     continue
                 dire = e["donde"][2:].lower()

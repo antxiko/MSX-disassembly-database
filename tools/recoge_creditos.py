@@ -34,6 +34,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DATOS = os.path.join(os.path.dirname(AQUI), "datos")
@@ -73,7 +75,7 @@ def main():
         ficheros = ([p["binario"]["fichero"]] if p.get("binario")
                     else [b["fichero"] for b in p.get("binarios", [])])
         for rel in ficheros:
-            with open(os.path.join(raiz, rel), "rb") as f:
+            with open(en_des_asm(raiz, rel), "rb") as f:
                 datos = f.read()
             hallados, delvolcado, total = [], [], 0
             for off, t in tiras(datos):

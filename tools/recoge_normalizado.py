@@ -30,6 +30,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 from collections import defaultdict
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -67,7 +69,7 @@ def tira(raiz, directorio, listados, rom, org):
     """
     dirs = set()
     for a in listados:
-        ruta = os.path.join(raiz, directorio, a)
+        ruta = en_des_asm(raiz, directorio, a)
         if not os.path.isfile(ruta):
             continue
         with open(ruta, encoding="utf-8", errors="replace") as f:
@@ -125,7 +127,7 @@ def tramos(a, idx, b, minimo):
 
 
 def org_de(raiz, directorio):
-    mk = os.path.join(raiz, directorio, "Makefile")
+    mk = en_des_asm(raiz, directorio, "Makefile")
     if not os.path.isfile(mk):
         return None
     m = re.search(r"^ORG\s*[:?]?=\s*(0x[0-9A-Fa-f]+)\s*$",
@@ -149,7 +151,7 @@ def main():
                           "por": ("sin ORG en el Makefile" if b else
                                   "sin un binario unico")})
             continue
-        with open(os.path.join(raiz, b["fichero"]), "rb") as f:
+        with open(en_des_asm(raiz, b["fichero"]), "rb") as f:
             rom = f.read()
         instr, donde = tira(raiz, p["directorio"], p["listados"], rom, org)
         utiles = sum(1 for x in instr if x is not None)

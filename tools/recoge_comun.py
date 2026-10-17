@@ -44,6 +44,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 from collections import defaultdict
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -56,7 +58,7 @@ GUARDA = 5                 # cuantas tiras se guardan por pareja
 
 def origen(raiz, directorio):
     """El ORG que declara el Makefile del repositorio, o None."""
-    mk = os.path.join(raiz, directorio, "Makefile")
+    mk = en_des_asm(raiz, directorio, "Makefile")
     if not os.path.isfile(mk):
         return None
     m = re.search(r"^ORG\s*[:?]?=\s*(0x[0-9A-Fa-f]+)\s*$",
@@ -73,7 +75,7 @@ def direcciones_de_codigo(raiz, directorio, listados):
     """
     dirs = set()
     for a in listados:
-        ruta = os.path.join(raiz, directorio, a)
+        ruta = en_des_asm(raiz, directorio, a)
         if not os.path.isfile(ruta):
             continue
         with open(ruta, encoding="utf-8", errors="replace") as f:
@@ -130,7 +132,7 @@ def main():
         b = p.get("binario")
         if not b:
             continue
-        with open(os.path.join(raiz, b["fichero"]), "rb") as f:
+        with open(en_des_asm(raiz, b["fichero"]), "rb") as f:
             juegos.append({"clave": p["clave"], "titulo": p["titulo"],
                            "grupo": p.get("grupo"), "fichero": b["fichero"],
                            "sha256": b["sha256"],

@@ -35,6 +35,8 @@ import os
 import re
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 RE_INS = re.compile(r"^\t(.*?)\s*;([0-9a-f]{4})(.*)$")
 # ld (nnnn),reg -- escritura a una direccion absoluta
@@ -245,7 +247,7 @@ def main(raiz):
 
     filas, con, bios = [], 0, 0
     for p in proyectos:
-        d = os.path.join(raiz, p["directorio"])
+        d = en_des_asm(raiz, p["directorio"])
         # cartucho o cinta: lo dice la ficha, no el nombre del fichero
         meta = (p.get("meta_es") or "") + (p.get("meta_en") or "")
         cartucho = any(x in meta for x in ("cartucho", "cartridge", "MegaROM"))

@@ -12,6 +12,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 # Las variables con las que los Makefiles de la serie nombran su binario.
 VARS = ("ROM", "TSX", "CAS", "BIN", "TAPE", "CART")
@@ -40,13 +42,13 @@ def resuelve(raiz, repo, valor, variables):
     valor = valor.strip()
     if not valor:
         return None
-    cand = os.path.join(raiz, repo, valor)
+    cand = en_des_asm(raiz, repo, valor)
     if os.path.isfile(cand):
         return os.path.relpath(cand, raiz).replace("\\", "/")
     # El Makefile puede nombrarlo sin carpeta; buscarlo por nombre de fichero.
     base = os.path.basename(valor)
     for sub in ("", "dump", "rom", "roms", "bin", "build"):
-        cand = os.path.join(raiz, repo, sub, base)
+        cand = en_des_asm(raiz, repo, sub, base)
         if os.path.isfile(cand):
             return os.path.relpath(cand, raiz).replace("\\", "/")
     return None
@@ -63,10 +65,10 @@ def sha256(path):
 def main():
     raiz = sys.argv[1]
     filas = []
-    for repo in sorted(os.listdir(raiz)):
-        if not os.path.isdir(os.path.join(raiz, repo, ".git")):
+    for repo in sorted(repos_de(raiz)):
+        if not os.path.isdir(en_des_asm(raiz, repo, ".git")):
             continue
-        mk = os.path.join(raiz, repo, "Makefile")
+        mk = en_des_asm(raiz, repo, "Makefile")
         variables = lee_vars(mk)
         hallados = []
         for v in VARS:
@@ -74,7 +76,7 @@ def main():
                 continue
             rel = resuelve(raiz, repo, variables[v], variables)
             if rel:
-                p = os.path.join(raiz, rel)
+                p = en_des_asm(raiz, rel)
                 hallados.append({"var": v, "valor": variables[v],
                                  "fichero": rel, "bytes": os.path.getsize(p),
                                  "sha256": sha256(p)})

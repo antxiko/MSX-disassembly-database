@@ -26,6 +26,8 @@ import os
 import re
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DATOS = os.path.join(os.path.dirname(AQUI), "datos")
@@ -49,7 +51,7 @@ def main():
         elif p.get("binarios"):
             ficheros = [b["fichero"] for b in p["binarios"]]
         for rel in ficheros:
-            ruta = os.path.join(raiz, rel)
+            ruta = en_des_asm(raiz, rel)
             r = subprocess.run([sys.executable, RASTREADOR, ruta],
                                capture_output=True, text=True,
                                encoding="utf-8", errors="replace")

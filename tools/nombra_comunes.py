@@ -22,6 +22,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 from collections import defaultdict
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -32,7 +34,7 @@ CUANTOS = 10
 def etiqueta_en(raiz, directorio, listados, direccion):
     """La ultima etiqueta antes de `direccion`, si ahi hay una instruccion."""
     for a in listados:
-        ruta = os.path.join(raiz, directorio, a)
+        ruta = en_des_asm(raiz, directorio, a)
         if not os.path.isfile(ruta):
             continue
         et = None
@@ -49,7 +51,7 @@ def etiqueta_en(raiz, directorio, listados, direccion):
 
 
 def org_de(raiz, directorio):
-    mk = os.path.join(raiz, directorio, "Makefile")
+    mk = en_des_asm(raiz, directorio, "Makefile")
     if not os.path.isfile(mk):
         return None
     m = re.search(r"^ORG\s*[:?]?=\s*(0x[0-9A-Fa-f]+)\s*$",
@@ -81,7 +83,7 @@ def main():
     for (clave, off, ln), otros in sorted(donde.items(),
                                           key=lambda y: (-len(y[1]), -y[0][2])):
         p = base[clave]
-        with open(os.path.join(raiz, p["binario"]["fichero"]), "rb") as f:
+        with open(en_des_asm(raiz, p["binario"]["fichero"]), "rb") as f:
             f.seek(int(off, 16))
             crudo = f.read(ln)
         if crudo in vistos:
@@ -98,7 +100,7 @@ def main():
             bi = p.get("binario")
             if not bi:
                 continue
-            with open(os.path.join(raiz, bi["fichero"]), "rb") as f:
+            with open(en_des_asm(raiz, bi["fichero"]), "rb") as f:
                 datos = f.read()
             pos = datos.find(crudo)
             if pos < 0:

@@ -26,6 +26,8 @@ import os
 import re
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from donde import en_des_asm, repos_de   # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 CANONICA = os.path.join(AQUI, "densidad_canonica.py")
@@ -72,7 +74,7 @@ def corre(orden, cwd, timeout=300):
 
 def listados(raiz, repo):
     """Los .asm que el repositorio PUBLICA, segun git."""
-    salida, cod = corre(["git", "ls-files", "*.asm"], os.path.join(raiz, repo))
+    salida, cod = corre(["git", "ls-files", "*.asm"], en_des_asm(raiz, repo))
     if cod != 0:
         return []
     return sorted(l.strip() for l in salida.splitlines() if l.strip())
@@ -84,7 +86,7 @@ def mide(raiz, repo, asms):
     detalle, fallos = [], []
     for asm in asms:
         salida, cod = corre([sys.executable, CANONICA, asm],
-                            os.path.join(raiz, repo))
+                            en_des_asm(raiz, repo))
         r = suma_salida(salida)
         if cod != 0 or not r:
             fallos.append({"asm": asm, "salida": salida.strip()[:400]})
@@ -103,13 +105,13 @@ def mide(raiz, repo, asms):
 
 def declarado(raiz, repo):
     """La cifra del propio repositorio, si tiene target `densidad`."""
-    mk = os.path.join(raiz, repo, "Makefile")
+    mk = en_des_asm(raiz, repo, "Makefile")
     if not os.path.isfile(mk):
         return None
     txt = open(mk, encoding="utf-8", errors="replace").read()
     if not re.search(r"^densidad:", txt, re.M):
         return None
-    salida, cod = corre([MAKE, "densidad"], os.path.join(raiz, repo))
+    salida, cod = corre([MAKE, "densidad"], en_des_asm(raiz, repo))
     r = suma_salida(salida)
     if cod != 0 or not r:
         return {"error": salida.strip()[:400]}
@@ -123,8 +125,8 @@ def main():
     # del titulo de un juego sale roto en el JSON.
     sys.stdout.reconfigure(encoding="utf-8", newline="\n")
     filas = []
-    for repo in sorted(os.listdir(raiz)):
-        if not os.path.isdir(os.path.join(raiz, repo, ".git")):
+    for repo in sorted(repos_de(raiz)):
+        if not os.path.isdir(en_des_asm(raiz, repo, ".git")):
             continue
         asms = listados(raiz, repo)
         if not asms:
