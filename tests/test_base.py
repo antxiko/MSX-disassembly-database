@@ -20,6 +20,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 DATOS = os.path.join(RAIZ, "datos")
 DES_ASM = os.path.dirname(RAIZ)
+if os.path.basename(DES_ASM) in ("desensamblados", "parches", "web", "comun", "archivo"):
+    DES_ASM = os.path.dirname(DES_ASM)     # SERIE_DB vive en DES_ASM/comun/
 sys.path.insert(0, os.path.join(RAIZ, "tools"))
 from donde import en_des_asm, repos_de   # noqa: E402
 
@@ -194,7 +196,7 @@ class LoQueComparten(unittest.TestCase):
         for t in self.trozos:
             patron = bytes(int(x, 16) for x in t["primeros_bytes"].split())
             for a in t["apariciones"]:
-                ruta = os.path.join(DES_ASM,
+                ruta = en_des_asm(DES_ASM,
                                     self.base[a["juego"]]["binario"]["fichero"])
                 with open(ruta, "rb") as f:
                     f.seek(int(a["offset"], 16))
