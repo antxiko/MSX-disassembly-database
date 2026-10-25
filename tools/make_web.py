@@ -24,6 +24,8 @@ Las paginas son siete por idioma, y cada una responde a una pregunta:
     LO-COMPARTIDO         que bytes comparten, y con cuantos nombres
     LAS-FAMILIAS          que ARMAZON comparten, ya sin que las direcciones
                           estorben, y como se agrupan
+    LAS-RUTINAS           que rutinas comparten los Konami, instruccion por
+                          instruccion (datos/codigo_comun.json)
     COMO-SE-MIDE          de donde sale cada dato y que no se puede afirmar
 """
 import html
@@ -36,6 +38,7 @@ RAIZ = os.path.dirname(AQUI)
 DATOS = os.path.join(RAIZ, "datos")
 sys.path.insert(0, AQUI)
 from estilo_web import ESTILO                                  # noqa: E402
+from pon_en_webs import fichas                                 # noqa: E402
 
 EXTRA = """
 header.top h1{margin:0;font-size:2.1rem;letter-spacing:.04em}
@@ -63,14 +66,15 @@ PAGINAS = [("index", "index"), ("LOS-JUEGOS", "THE-GAMES"),
            ("LA-MARCA", "THE-MARK"), ("LOS-CREDITOS", "THE-CREDITS"),
            ("LO-COMPARTIDO", "WHAT-THEY-SHARE"),
            ("LAS-FAMILIAS", "THE-FAMILIES"),
+           ("LAS-RUTINAS", "THE-ROUTINES"),
            ("LAS-PROTECCIONES", "THE-PROTECTIONS"),
            ("COMO-SE-MIDE", "HOW-IT-IS-MEASURED")]
 
 MENU = {
     "es": ["Los juegos", "La marca", "Los créditos", "Lo compartido",
-           "Las familias", "Las protecciones", "Cómo se mide"],
+           "Las familias", "Las rutinas", "Las protecciones", "Cómo se mide"],
     "en": ["The games", "The mark", "The credits", "What they share",
-           "The families", "The protections", "How it is measured"],
+           "The families", "The routines", "The protections", "How it is measured"],
 }
 
 
@@ -192,6 +196,10 @@ entera de sus autores. <a href="LOS-CREDITOS.html">Los créditos</a>.</li>
 número de catálogo: Hyper Olympic 1 y 2 comparten el 67&nbsp;% de su código, y
 Athletic Land y Cabbage Patch el 44&nbsp;%.
 <a href="LAS-FAMILIAS.html">Las familias</a>.</li>
+<li><b>Y comparten rutinas aunque estén en otra dirección.</b> Comparando los
+listados instrucción por instrucción, Nemesis&nbsp;2 y Salamander tienen 210
+bloques en común, y el Pro Yakyuu y el Pennant Race&nbsp;2, 119.
+<a href="LAS-RUTINAS.html">Las rutinas</a>.</li>
 <li><b>Ninguno de los {enletra(len(des), "es")} tiene una sola rutina por debajo del
 10&nbsp;% de comentario.</b> Eso es el listón de la serie, y aquí está
 comprobado de una vez sobre los listados de hoy.</li>
@@ -232,6 +240,10 @@ list of its authors inside. <a href="THE-CREDITS.html">The credits</a>.</li>
 <li><b>Konami's cartridges fall into families</b>, and not by year or catalogue
 number: Hyper Olympic 1 and 2 share 67&nbsp;% of their code, and Athletic Land
 and Cabbage Patch 44&nbsp;%. <a href="THE-FAMILIES.html">The families</a>.</li>
+<li><b>And they share routines even at other addresses.</b> Comparing the
+listings instruction by instruction, Nemesis&nbsp;2 and Salamander have 210
+blocks in common, and Pro Yakyuu and Pennant Race&nbsp;2 have 119.
+<a href="THE-ROUTINES.html">The routines</a>.</li>
 <li><b>Not one of the {enletra(len(des), "en")} has a single routine below 10&nbsp;% commented.</b>
 That is the bar for the series, checked here in one go over today's listings.</li>
 </ul>"""
@@ -646,6 +658,120 @@ Antarctic Adventure is in the European and Japanese 1st Antarctic, and not in th
 measures. A finding can depend on which dump you look at.</p></div>"""
 
 
+def pag_rutinas(cc, fichas, idioma):
+    """El codigo que comparten los Konami, instruccion por instruccion
+    (datos/codigo_comun.json, de tools/codigo_comun.py)."""
+    es = idioma == "es"
+    juegos = cc["juegos"]
+
+    def nom(c):
+        t, w = fichas[c]
+        return '<a href="%s%s">%s</a>' % (w, "es/" if es else "", e(t))
+
+    vistos, parejas = set(), []
+    for c, j in juegos.items():
+        for v in j["comparte"]:
+            par = tuple(sorted((c, v["con"])))
+            if par not in vistos:
+                vistos.add(par)
+                parejas.append((v["rutinas"], v["instrucciones"], c, v["con"]))
+    parejas.sort(key=lambda x: (-x[0], -x[1]))
+    diez = sum(1 for p in parejas if p[0] >= 10)
+
+    filas = "".join(
+        "<tr><td>%s</td><td>%s</td><td class=n>%d</td><td class=n>%s</td></tr>"
+        % (nom(a), nom(b), n, mil(i, idioma)) for n, i, a, b in parejas[:30])
+    t1 = ("<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>"
+          % (("Cartucho", "Cartucho", "Bloques", "Instrucciones") if es else
+             ("Cartridge", "Cartridge", "Blocks", "Instructions"))) + filas
+
+    filas = []
+    for c, j in juegos.items():
+        v = j["comparte"]
+        cerca = v[0] if v else None
+        filas.append("<tr><td>%s</td><td class=n>%d</td><td>%s</td><td class=n>%s</td></tr>"
+                     % (nom(c), len(v), nom(cerca["con"]) if cerca else "&mdash;",
+                        cerca["rutinas"] if cerca else "0"))
+    t2 = ("<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>"
+          % (("Cartucho", "Con cuántos", "El que más comparte", "Bloques") if es else
+             ("Cartridge", "With how many", "The one sharing most", "Blocks"))) + "".join(filas)
+
+    filas = []
+    for x in cc["extendidas"]:
+        nombres = ", ".join("<code>%s</code>" % e(n) for n in x["nombres"][:6])
+        if len(x["nombres"]) > 6:
+            nombres += " &hellip;"
+        if x["sin_nombre"]:
+            nombres += (" y %d sin nombre" if es else " and %d unnamed") % x["sin_nombre"]
+        codigo = "<code>%s</code>" % e(" / ".join(x["codigo"][:4]) + " …")
+        filas.append("<tr><td class=n>%d</td><td class=n>%d</td><td class=n>%d</td><td>%s</td><td>%s</td></tr>"
+                     % (x["instrucciones"], len(x["juegos"]), len(x["nombres"]), codigo, nombres))
+    t3 = ("<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>"
+          % (("Instrucciones", "Cartuchos", "Nombres", "Empieza", "Cómo lo llaman") if es else
+             ("Instructions", "Cartridges", "Names", "Starts", "What they call it"))) + "".join(filas)
+
+    n = len(juegos)
+    if es:
+        return f"""
+<p>En <a href="LO-COMPARTIDO.html">Lo compartido</a> se buscan tiras de bytes
+iguales, y así una rutina compartida solo aparece si además se ensambló en la
+misma dirección. Aquí se compara el listado, <b>instrucción por instrucción</b>:
+un bloque son las instrucciones desde una etiqueta hasta su <code>ret</code> o su
+salto sin condición, al menos seis y tres que no sean <code>call</code>,
+<code>jp</code> ni <code>ret</code>, con los operandos de 16 bits y los nombres
+tapados, porque cambian de un cartucho a otro. Dos cartuchos comparten un bloque
+si está en los dos listados. Las etiquetas de dentro de un bloque compartido dan
+colas que también casan: de las que acaban en la misma instrucción solo cuenta la
+más larga.</p>
+
+<p>Son los {n} desensamblados de Konami de la serie, medidos el 25 de octubre
+de 2026 con <code>tools/codigo_comun.py</code>. De las {mil(cc["parejas"], idioma)}
+parejas posibles, <b>{mil(cc["con_algo"], idioma)} comparten al menos un bloque</b>
+y {diez} comparten diez o más. Un bloque suelto de seis instrucciones puede salir
+igual sin haberse copiado: lo que dice que dos cartuchos llevan el mismo código
+es que compartan muchos.</p>
+
+<h3>Las parejas que más comparten</h3>
+<div class="tabla"><table>{t1}</table></div>
+
+<h3>Cada cartucho y el que más se le parece</h3>
+<div class="tabla"><table>{t2}</table></div>
+
+<h3>Los bloques que están en más cartuchos</h3>
+<p>Como la lectura de mandos de <a href="LO-COMPARTIDO.html">Lo compartido</a>,
+cada repositorio les puso su nombre.</p>
+<div class="tabla"><table>{t3}</table></div>"""
+    return f"""
+<p><a href="WHAT-THEY-SHARE.html">What they share</a> looks for identical runs of
+bytes, so a shared routine only shows up there if it was also assembled at the
+same address. Here the listings are compared <b>instruction by instruction</b>: a
+block is the instructions from a label to its <code>ret</code> or its
+unconditional jump, at least six of them and three that are not
+<code>call</code>, <code>jp</code> or <code>ret</code>, with the 16-bit operands
+and the names covered, because they change from one cartridge to the next. Two
+cartridges share a block if it is in both listings. The labels inside a shared
+block give tails that match as well: of those ending at the same instruction only
+the longest counts.</p>
+
+<p>These are the {n} Konami disassemblies in the series, measured on 25 October
+2026 with <code>tools/codigo_comun.py</code>. Of the {mil(cc["parejas"], idioma)}
+possible pairs, <b>{mil(cc["con_algo"], idioma)} share at least one block</b> and
+{diez} share ten or more. A lone six-instruction block can come out the same
+without being copied: what says two cartridges carry the same code is sharing a
+lot of them.</p>
+
+<h3>The pairs that share the most</h3>
+<div class="tabla"><table>{t1}</table></div>
+
+<h3>Each cartridge and the one most like it</h3>
+<div class="tabla"><table>{t2}</table></div>
+
+<h3>The blocks found in the most cartridges</h3>
+<p>Like the joystick read in <a href="WHAT-THEY-SHARE.html">What they share</a>,
+each repository gave them its own name.</p>
+<div class="tabla"><table>{t3}</table></div>"""
+
+
 def pag_protecciones(d, idioma):
     """Las escrituras que cada cartucho hace donde la maquina no deja escribir.
 
@@ -961,9 +1087,11 @@ TITULOS = {
     "es": ["La base de datos de la serie", "Los juegos",
            "La marca oculta de Konami", "Los créditos",
            "Lo que comparten", "Las familias de cartuchos",
+           "Las rutinas que comparten",
            "Las protecciones anticopia", "Cómo se mide"],
     "en": ["The series database", "The games", "Konami's hidden mark",
            "The credits", "What they share", "The cartridge families",
+           "The routines they share",
            "The copy protections", "How it is measured"],
 }
 
@@ -974,6 +1102,8 @@ def main():
     trozos = carga("rutinas_comunes.json")["trozos"]
     fam = carga("familias.json")
     norm = carga("normalizado.json")
+    cc = carga("codigo_comun.json")
+    fich = fichas()
 
     for idioma in ("en", "es"):
         carpeta = os.path.join(RAIZ, "docs") if idioma == "en" else \
@@ -983,6 +1113,7 @@ def main():
                    pag_marca(d, idioma), pag_creditos(d, idioma),
                    pag_comun(d, comun, trozos, idioma),
                    pag_familias(fam, norm, idioma),
+                   pag_rutinas(cc, fich, idioma),
                    pag_protecciones(d, idioma), pag_metodo(d, idioma)]
         for (nes, nen), cuerpo, titulo in zip(PAGINAS, cuerpos, TITULOS[idioma]):
             nombre = nes if idioma == "es" else nen
