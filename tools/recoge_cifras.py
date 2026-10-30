@@ -162,6 +162,9 @@ def main():
         if repo in ALCANCE_DEL_REPO and medido:
             vara = mide(raiz, repo, alcance(asms, ALCANCE_DEL_REPO[repo]))[0]
             fila["medido_como_el_repo"] = vara
+            # y cada pasada sola (una por ROM): lo que publican sus fichas
+            fila["por_pasada"] = [mide(raiz, repo, alcance(asms, [pa]))[0]
+                                  for pa in ALCANCE_DEL_REPO[repo]]
         if vara and d and "error" not in d:
             fila["coteja"] = (d["instrucciones"] == vara["instrucciones"]
                               and d["comentarios"] == vara["comentarios"])

@@ -82,6 +82,11 @@ def main():
         base = {x["clave"]: x for x in json.load(f)["proyectos"]}
     with open(os.path.join(DATOS, "readmes.json"), encoding="utf-8") as f:
         readmes = {x["repo"]: x for x in json.load(f)}
+    # los repos cuyo make densidad no mide todos sus listados (recoge_cifras.
+    # ALCANCE_DEL_REPO): su ficha publica la cifra de ese alcance, o la de cada
+    # ROM por separado (King's Valley II), y se coteja con esa
+    with open(os.path.join(DATOS, "cifras.json"), encoding="utf-8") as f:
+        alcances = {x["repo"]: x for x in json.load(f) if x.get("por_pasada")}
 
     fallos, avisos, revisados = [], [], 0
     for p in make_index.DESENSAMBLADOS:
@@ -102,10 +107,17 @@ def main():
                 fallos.append("%s: la ficha dice %s bytes y el binario tiene %d"
                               % (clave, m.group(1), b["bytes"]))
 
-        m = RE_DENS.search(t)
-        if m and c and abs(numero(m.group(1)) - c["densidad"]) > 0.05:
+        dens = [numero(x) for x in RE_DENS.findall(t)]
+        al = alcances.get(reg.get("directorio"))
+        if dens and c and al:
+            pasadas = [round(100.0 * x["comentarios"] / x["instrucciones"], 1)
+                       for x in al["por_pasada"]]
+            if dens != pasadas[:len(dens)]:
+                fallos.append("%s: la ficha publica %s %% y sus ROM dan hoy %s %%"
+                              % (clave, dens, pasadas))
+        elif dens and c and abs(dens[0] - c["densidad"]) > 0.05:
             fallos.append("%s: la ficha publica %s %% y su listado da hoy %.1f %%"
-                          % (clave, m.group(1), c["densidad"]))
+                          % (clave, dens[0], c["densidad"]))
 
         m = RE_BLOQUES.search(t)
         if m and c:

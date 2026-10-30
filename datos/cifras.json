@@ -857,6 +857,15 @@
    "flojas": 0,
    "bloques": 1289
   },
+  "por_pasada": [
+   {
+    "instrucciones": 10690,
+    "comentarios": 4614,
+    "densidad": 43.2,
+    "flojas": 0,
+    "bloques": 1289
+   }
+  ],
   "coteja": true
  },
  {
@@ -2259,6 +2268,22 @@
    "flojas": 0,
    "bloques": 4428
   },
+  "por_pasada": [
+   {
+    "instrucciones": 17775,
+    "comentarios": 7115,
+    "densidad": 40.0,
+    "flojas": 0,
+    "bloques": 2194
+   },
+   {
+    "instrucciones": 18530,
+    "comentarios": 7444,
+    "densidad": 40.2,
+    "flojas": 0,
+    "bloques": 2234
+   }
+  ],
   "coteja": true
  },
  {
