@@ -119,6 +119,24 @@ def declarado(raiz, repo):
     return r
 
 
+# Lo que mide el `make densidad` de cada repo cuando no son todos sus listados
+# publicados: el cotejo se hace sobre ESE alcance, con la misma vara canonica,
+# para comparar lo mismo con lo mismo. Cada lista es una pasada que se suma.
+# Medido el 2026-10-30: con este alcance las dos cifras salen exactas.
+#   Dunk Shot: solo la ROM base (no rom_a/ ni los parches), Makefile `densidad`.
+#   King's Valley II: las dos ROM, y con cada una los bancos comunes (dos veces).
+ALCANCE_DEL_REPO = {
+    "DUNKSHOT_DISAM": [["src/dunkshot.asm"]],
+    "KINGSVALLEY2_DISAM": [["src/msx1/", "src/comun/"], ["src/msx2/", "src/comun/"]],
+}
+
+
+def alcance(asms, pasadas):
+    """Los listados de cada pasada (prefijo de ruta o fichero), en orden."""
+    return [a for pasada in pasadas for pre in pasada for a in asms
+            if a == pre or (pre.endswith("/") and a.startswith(pre))]
+
+
 def main():
     raiz = sys.argv[1]
     # La consola de Windows no es UTF-8: sin esto, un punto medio
@@ -140,9 +158,13 @@ def main():
             fila["fallos"] = fallos
         # El cotejo, calculado aqui para que no haya que rehacerlo al leer.
         d = fila["declarado"]
-        if medido and d and "error" not in d:
-            fila["coteja"] = (d["instrucciones"] == medido["instrucciones"]
-                              and d["comentarios"] == medido["comentarios"])
+        vara = medido
+        if repo in ALCANCE_DEL_REPO and medido:
+            vara = mide(raiz, repo, alcance(asms, ALCANCE_DEL_REPO[repo]))[0]
+            fila["medido_como_el_repo"] = vara
+        if vara and d and "error" not in d:
+            fila["coteja"] = (d["instrucciones"] == vara["instrucciones"]
+                              and d["comentarios"] == vara["comentarios"])
         else:
             fila["coteja"] = None
         filas.append(fila)

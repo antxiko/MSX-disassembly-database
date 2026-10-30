@@ -7,7 +7,7 @@ UNDER-THE-HOOD.md y es/POR-DENTRO.md en las webs de tres bloques). Si la
 seccion ya esta, se cambia entera: se puede volver a correr tras medir otra vez.
 Los titulos y las webs salen de la lista de la portada (make_index.py).
 
-Uso: pon_en_webs.py [clave ...]      sin claves, los 58
+Uso: pon_en_webs.py [clave ...]      sin claves, todos
 """
 import html
 import json
@@ -23,7 +23,6 @@ from codigo_comun import JUEGOS  # noqa: E402
 
 PORTADA = os.path.join(DES_ASM, "web", "ANTXIKO_GITHUB_IO", "tools", "make_index.py")
 BASE = "https://antxiko.github.io/MSX-disassembly-database/"
-HERRAMIENTA = "https://github.com/antxiko/MSX-disassembly-database/blob/main/tools/codigo_comun.py"
 
 TITULO = {"en": "## Code shared with other Konami cartridges",
           "es": "## Código compartido con otros cartuchos de Konami"}
@@ -48,17 +47,17 @@ def mil(n, idioma):
     return "{:,}".format(n).replace(",", "," if idioma == "en" else ".")
 
 
-def lado(nombre, sitio):
-    return sitio if nombre.startswith("L_") else "`%s` (%s)" % (nombre, sitio)
-
-
 def ejemplo(lista):
+    """El bloque mas largo con nombre aqui (y alli, si puede ser): la
+    direccion es solo la de aqui, que es la que esta en este listado."""
     def peso(x):
         a, _, b, _, n, _ = x
-        return (not a.startswith("L_") and not b.startswith("L_"),
-                not a.startswith("L_") or not b.startswith("L_"), n)
+        return (not a.startswith("L_"), not b.startswith("L_"), n)
     a, da, b, db, n, _ = max(lista, key=peso)
-    return "%s = %s" % (lado(a, da), lado(b, db))
+    aqui = da if a.startswith("L_") else "`%s` (%s)" % (a, da)
+    if b.startswith("L_") or b == a:
+        return aqui
+    return "%s = `%s`" % (aqui, b)
 
 
 def seccion(clave, d, fich, idioma):
@@ -96,13 +95,13 @@ def seccion(clave, d, fich, idioma):
                                                  mil(v["instrucciones"], idioma), ejemplo(v["lista"])))
     ln.append("")
     if idioma == "en":
-        ln += ["The whole matrix, the 58 cartridges against each other, is on",
-               "[The routines](%sTHE-ROUTINES.html) in the series database, and it" % BASE,
-               "is measured with [`codigo_comun.py`](%s)." % HERRAMIENTA]
+        ln += ["The whole matrix, the %d cartridges against each other, is on" % len(JUEGOS),
+               "[The routines](%sTHE-ROUTINES.html) in the series database, along" % BASE,
+               "with the method and the program that measures it."]
     else:
-        ln += ["La matriz entera, los 58 cartuchos entre sí, está en",
+        ln += ["La matriz entera, los %d cartuchos entre sí, está en" % len(JUEGOS),
                "[Las rutinas](%ses/LAS-RUTINAS.html) de la base de datos de la" % BASE,
-               "serie, y se mide con [`codigo_comun.py`](%s)." % HERRAMIENTA]
+               "serie, con el método y el programa que la mide."]
     return "\n".join(ln) + "\n"
 
 

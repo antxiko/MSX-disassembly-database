@@ -93,9 +93,17 @@ class LaBase(unittest.TestCase):
         self.assertEqual(con_flojas, [])
 
     def test_solo_3dgolf_se_queda_sin_cifras(self):
-        """Es el unico escrito en MSX-BASIC: no tiene listado en ensamblador."""
-        sin = sorted(p["clave"] for p in self.proyectos if not p.get("cifras"))
+        """Es el unico desensamblado escrito en MSX-BASIC: no tiene listado en
+        ensamblador. Los parches que se quedan sin cifras son los que publican
+        codigo nuevo escrito a mano (los cargadores del Yamanooto, el tutorial
+        de Majutsushi), no un listado desensamblado: sin direcciones, la vara
+        canonica no cuenta ninguna instruccion."""
+        sin = sorted(p["clave"] for p in self.proyectos
+                     if not p.get("cifras") and p["categoria"] != "parche")
         self.assertEqual(sin, ["3dgolf"])
+        for p in self.proyectos:
+            if p["categoria"] == "parche" and not p.get("cifras"):
+                self.assertTrue(p["listados"], p["clave"])
 
 
 class LaMarcaDeKonami(unittest.TestCase):
@@ -107,6 +115,16 @@ class LaMarcaDeKonami(unittest.TestCase):
     def setUpClass(cls):
         cls.proyectos = carga("serie.json")["proyectos"]
         cls.con = [p for p in cls.proyectos if p.get("marca_konami")]
+        # un parche que trae el binario de un cartucho de Konami tal cual (el
+        # mismo sha256) lleva su marca: se coteja con la ficha de ese cartucho
+        cls.base_de = {p["binario"]["sha256"]: p for p in cls.proyectos
+                       if p.get("grupo") == "konami" and p.get("binario")}
+
+    @classmethod
+    def ficha_de(cls, p):
+        if p.get("grupo") == "konami" or not p.get("binario"):
+            return p
+        return cls.base_de.get(p["binario"]["sha256"], p)
 
     def test_el_rc_de_la_marca_es_el_que_publica_la_ficha(self):
         """El numero que Konami escondio en el binario contra el que la serie
@@ -114,7 +132,7 @@ class LaMarcaDeKonami(unittest.TestCase):
         import re
         mal = []
         for p in self.con:
-            ficha = re.search(r"RC-\d+", p.get("meta_es") or "")
+            ficha = re.search(r"RC-\d+", self.ficha_de(p).get("meta_es") or "")
             if not ficha or ficha.group(0) != p["marca_konami"]["rc"]:
                 mal.append((p["clave"], p["marca_konami"]["rc"],
                             ficha.group(0) if ficha else None))
@@ -124,7 +142,8 @@ class LaMarcaDeKonami(unittest.TestCase):
     def test_solo_los_konami_llevan_marca(self):
         """El control del rastreador: si le encontrara marca a un juego que no
         es de Konami, es que se traga coincidencias."""
-        intrusos = [p["clave"] for p in self.con if p.get("grupo") != "konami"]
+        intrusos = [p["clave"] for p in self.con
+                    if self.ficha_de(p).get("grupo") != "konami"]
         self.assertEqual(intrusos, [])
 
     def test_hay_konami_sin_marca_y_eso_no_es_un_fallo(self):

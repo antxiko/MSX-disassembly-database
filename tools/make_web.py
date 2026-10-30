@@ -725,7 +725,7 @@ colas que también casan: de las que acaban en la misma instrucción solo cuenta
 más larga.</p>
 
 <p>Son los {n} desensamblados de Konami de la serie, medidos el 25 de octubre
-de 2026 con <code>tools/codigo_comun.py</code>. De las {mil(cc["parejas"], idioma)}
+de 2026 (Space Manbow, el 29) con <a href="https://github.com/antxiko/MSX-disassembly-database/blob/main/tools/codigo_comun.py"><code>tools/codigo_comun.py</code></a>. De las {mil(cc["parejas"], idioma)}
 parejas posibles, <b>{mil(cc["con_algo"], idioma)} comparten al menos un bloque</b>
 y {diez} comparten diez o más. Un bloque suelto de seis instrucciones puede salir
 igual sin haberse copiado: lo que dice que dos cartuchos llevan el mismo código
@@ -754,7 +754,7 @@ block give tails that match as well: of those ending at the same instruction onl
 the longest counts.</p>
 
 <p>These are the {n} Konami disassemblies in the series, measured on 25 October
-2026 with <code>tools/codigo_comun.py</code>. Of the {mil(cc["parejas"], idioma)}
+2026 (Space Manbow, on the 29th) with <a href="https://github.com/antxiko/MSX-disassembly-database/blob/main/tools/codigo_comun.py"><code>tools/codigo_comun.py</code></a>. Of the {mil(cc["parejas"], idioma)}
 possible pairs, <b>{mil(cc["con_algo"], idioma)} share at least one block</b> and
 {diez} share ten or more. A lone six-instruction block can come out the same
 without being copied: what says two cartridges carry the same code is sharing a

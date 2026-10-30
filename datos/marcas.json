@@ -5,49 +5,49 @@
    "clave": "3dgolf",
    "titulo": "3D Golf Simulation",
    "grupo": "msx-exclusive",
-   "fichero": "3DGOLF_DISAM/3dgolf.rom",
+   "fichero": "desensamblados/3DGOLF_DISAM/3dgolf.rom",
    "lleva_marca": false
   },
   {
    "clave": "bomberman",
    "titulo": "Bomber Man",
    "grupo": "msx-exclusive",
-   "fichero": "BOMBERMAN_DISAM/bomberman.rom",
+   "fichero": "desensamblados/BOMBERMAN_DISAM/bomberman.rom",
    "lleva_marca": false
   },
   {
    "clave": "timepilot",
    "titulo": "Time Pilot",
    "grupo": "konami",
-   "fichero": "TIMEPILOT_DISAM/timepilot.rom",
+   "fichero": "desensamblados/TIMEPILOT_DISAM/timepilot.rom",
    "lleva_marca": false
   },
   {
    "clave": "frogger",
    "titulo": "Frogger",
    "grupo": "konami",
-   "fichero": "FROGGER_DISAM/frogger.rom",
+   "fichero": "desensamblados/FROGGER_DISAM/frogger.rom",
    "lleva_marca": false
   },
   {
    "clave": "supercobra",
    "titulo": "Super Cobra",
    "grupo": "konami",
-   "fichero": "SUPERCOBRA_DISAM/supercobra.rom",
+   "fichero": "desensamblados/SUPERCOBRA_DISAM/supercobra.rom",
    "lleva_marca": false
   },
   {
    "clave": "athletic",
    "titulo": "Athletic Land",
    "grupo": "konami",
-   "fichero": "ATHLETIC_DISAM/athletic.rom",
+   "fichero": "desensamblados/ATHLETIC_DISAM/athletic.rom",
    "lleva_marca": false
   },
   {
    "clave": "antarctic",
    "titulo": "Antarctic Adventure",
    "grupo": "konami",
-   "fichero": "ANTARCTIC_DISAM/antarctic-jap2.rom",
+   "fichero": "desensamblados/ANTARCTIC_DISAM/antarctic-jap2.rom",
    "lleva_marca": true,
    "rc": "RC-701",
    "bytes_titulo": 20,
@@ -58,63 +58,91 @@
    "clave": "monkey",
    "titulo": "Monkey Academy",
    "grupo": "konami",
-   "fichero": "MONKEY_DISAM/monkey.rom",
+   "fichero": "desensamblados/MONKEY_DISAM/monkey.rom",
    "lleva_marca": false
   },
   {
    "clave": "billiards",
    "titulo": "Konami’s Billiards",
    "grupo": "konami",
-   "fichero": "BILLIARDS_DISAM/billiards.rom",
+   "fichero": "desensamblados/BILLIARDS_DISAM/billiards.rom",
    "lleva_marca": false
   },
   {
    "clave": "mahjong",
    "titulo": "Konami’s Mahjong Dojo",
    "grupo": "konami",
-   "fichero": "MAHJONG_DISAM/mahjong.rom",
+   "fichero": "desensamblados/MAHJONG_DISAM/mahjong.rom",
    "lleva_marca": false
   },
   {
    "clave": "hyperolympic1",
    "titulo": "Hyper Olympic 1",
    "grupo": "konami",
-   "fichero": "HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
+   "fichero": "desensamblados/HYPEROLYMPIC1_DISAM/hyperolympic1.rom",
    "lleva_marca": false
   },
   {
    "clave": "hyperolympic2",
    "titulo": "Hyper Olympic 2",
    "grupo": "konami",
-   "fichero": "HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
+   "fichero": "desensamblados/HYPEROLYMPIC2_DISAM/hyperolympic2.rom",
    "lleva_marca": false
   },
   {
    "clave": "holeinone",
    "titulo": "Hole in One",
    "grupo": "msx-exclusive",
-   "fichero": "HOLEINONE_DISAM/holeinone.rom",
+   "fichero": "desensamblados/HOLEINONE_DISAM/holeinone.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "dunkshot",
+   "titulo": "Dunk Shot",
+   "grupo": "msx-exclusive",
+   "fichero": "desensamblados/DUNKSHOT_DISAM/dunkshot.rom",
    "lleva_marca": false
   },
   {
    "clave": "holeinonepro",
    "titulo": "Hole in One Professional",
    "grupo": "msx-exclusive",
-   "fichero": "HOLEINONEPRO_DISAM/holeinonepro.rom",
+   "fichero": "desensamblados/HOLEINONEPRO_DISAM/holeinonepro.rom",
    "lleva_marca": false
   },
   {
    "clave": "casioworldopen",
    "titulo": "Casio World Open",
    "grupo": "msx-exclusive",
-   "fichero": "CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+   "fichero": "desensamblados/CASIOWORLDOPEN_DISAM/casioworldopen.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "circus",
+   "titulo": "Circus Charlie",
+   "grupo": "konami",
+   "fichero": "desensamblados/CIRCUS_DISAM/circus.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "magicaltree",
+   "titulo": "Magical Tree",
+   "grupo": "konami",
+   "fichero": "desensamblados/MAGICALTREE_DISAM/magicaltree.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "comicbakery",
+   "titulo": "Comic Bakery",
+   "grupo": "konami",
+   "fichero": "desensamblados/COMICBAKERY_DISAM/comicbakery.rom",
    "lleva_marca": false
   },
   {
    "clave": "hyperrally",
    "titulo": "Hyper Rally",
    "grupo": "konami",
-   "fichero": "HYPERRALLY_DISAM/hyperrally.rom",
+   "fichero": "desensamblados/HYPERRALLY_DISAM/hyperrally.rom",
    "lleva_marca": true,
    "rc": "RC-718",
    "bytes_titulo": 8,
@@ -125,21 +153,21 @@
    "clave": "skyjaguar",
    "titulo": "Sky Jaguar",
    "grupo": "konami",
-   "fichero": "SKYJAGUAR_DISAM/skyjaguar.rom",
+   "fichero": "desensamblados/SKYJAGUAR_DISAM/skyjaguar.rom",
    "lleva_marca": false
   },
   {
    "clave": "golf",
    "titulo": "Konami's Golf",
    "grupo": "konami",
-   "fichero": "GOLF_DISAM/golf.rom",
+   "fichero": "desensamblados/GOLF_DISAM/golf.rom",
    "lleva_marca": false
   },
   {
    "clave": "mopiranger",
    "titulo": "Mopi Ranger",
    "grupo": "konami",
-   "fichero": "MOPIRANGER_DISAM/mopiranger.rom",
+   "fichero": "desensamblados/MOPIRANGER_DISAM/mopiranger.rom",
    "lleva_marca": true,
    "rc": "RC-728",
    "bytes_titulo": 9,
@@ -150,7 +178,7 @@
    "clave": "roadfighter",
    "titulo": "Road Fighter",
    "grupo": "konami",
-   "fichero": "ROADFIGHTER_DISAM/roadfighter.rom",
+   "fichero": "desensamblados/ROADFIGHTER_DISAM/roadfighter.rom",
    "lleva_marca": true,
    "rc": "RC-730",
    "bytes_titulo": 10,
@@ -161,7 +189,7 @@
    "clave": "pingpong",
    "titulo": "Konami's Ping Pong",
    "grupo": "konami",
-   "fichero": "PINGPONG_DISAM/pingpong.rom",
+   "fichero": "desensamblados/PINGPONG_DISAM/pingpong.rom",
    "lleva_marca": true,
    "rc": "RC-731",
    "bytes_titulo": 12,
@@ -172,7 +200,7 @@
    "clave": "soccer",
    "titulo": "Konami’s Soccer",
    "grupo": "konami",
-   "fichero": "SOCCER_DISAM/soccer.rom",
+   "fichero": "desensamblados/SOCCER_DISAM/soccer.rom",
    "lleva_marca": true,
    "rc": "RC-732",
    "bytes_titulo": 10,
@@ -183,7 +211,7 @@
    "clave": "kingsvalley",
    "titulo": "King's Valley",
    "grupo": "konami",
-   "fichero": "KINGSVALLEY_DISAM/kingsvalley.rom",
+   "fichero": "desensamblados/KINGSVALLEY_DISAM/kingsvalley.rom",
    "lleva_marca": true,
    "rc": "RC-727",
    "bytes_titulo": 6,
@@ -194,7 +222,7 @@
    "clave": "baseball",
    "titulo": "Konami's Baseball",
    "grupo": "konami",
-   "fichero": "BASEBALL_DISAM/baseball.rom",
+   "fichero": "desensamblados/BASEBALL_DISAM/baseball.rom",
    "lleva_marca": true,
    "rc": "RC-724",
    "bytes_titulo": 4,
@@ -205,7 +233,7 @@
    "clave": "knightmare",
    "titulo": "Knightmare",
    "grupo": "konami",
-   "fichero": "KNIGHTMARE_DISAM/knightmare.rom",
+   "fichero": "desensamblados/KNIGHTMARE_DISAM/knightmare.rom",
    "lleva_marca": true,
    "rc": "RC-739",
    "bytes_titulo": 10,
@@ -213,10 +241,110 @@
    "titulo_en_kana": "MA SI \" yo U TE \" N SE TU"
   },
   {
+   "clave": "penguinadventure",
+   "titulo": "Penguin Adventure",
+   "grupo": "konami",
+   "fichero": "desensamblados/PENGUINADVENTURE_DISAM/penguinadventure.rom",
+   "lleva_marca": true,
+   "rc": "RC-743",
+   "bytes_titulo": 16,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "YU ME TA I RI KU   A TO \" HE \" N TI ya -"
+  },
+  {
+   "clave": "vampirekiller",
+   "titulo": "Vampire Killer",
+   "grupo": "konami",
+   "fichero": "desensamblados/VAMPIREKILLER_DISAM/vampirekiller.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "goemon",
+   "titulo": "Ganbare Goemon! Karakuri Dōchū",
+   "grupo": "konami",
+   "fichero": "desensamblados/GOEMON_DISAM/goemon.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "synthesizer",
+   "titulo": "Konami's Synthesizer",
+   "grupo": "konami",
+   "fichero": "desensamblados/SYNTHESIZER_DISAM/synth.rom",
+   "lleva_marca": true,
+   "rc": "RC-741",
+   "bytes_titulo": 8,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "SI N SE SA I SA \" -"
+  },
+  {
+   "clave": "nemesis2",
+   "titulo": "Nemesis 2",
+   "grupo": "konami",
+   "fichero": "desensamblados/NEMESIS2_DISAM/nemesis2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "usas",
+   "titulo": "The Treasure of Usas",
+   "grupo": "konami",
+   "fichero": "desensamblados/USAS_DISAM/usas.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "shalom",
+   "titulo": "Shalom: Knightmare III",
+   "grupo": "konami",
+   "fichero": "desensamblados/SHALOM_DISAM/shalom.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "metalgear",
+   "titulo": "Metal Gear",
+   "grupo": "konami",
+   "fichero": "desensamblados/METALGEAR_DISAM/metalgear.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "galious",
+   "titulo": "The Maze of Galious",
+   "grupo": "konami",
+   "fichero": "desensamblados/GALIOUS_DISAM/galious.rom",
+   "lleva_marca": true,
+   "rc": "RC-749",
+   "bytes_titulo": 13,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "<BF> <EC> <E1> <BC> <C6>   <D2>   <DB> <BB> <C0> <EA> <BC>"
+  },
+  {
+   "clave": "kingkong2",
+   "titulo": "King Kong 2: Yomigaeru Densetsu",
+   "grupo": "konami",
+   "fichero": "desensamblados/KINGKONG2_DISAM/kingkong2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "qbert",
+   "titulo": "Q*bert",
+   "grupo": "konami",
+   "fichero": "desensamblados/QBERT_DISAM/qbert.rom",
+   "lleva_marca": true,
+   "rc": "RC-746",
+   "bytes_titulo": 7,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "KI yu - HA \" - TO"
+  },
+  {
+   "clave": "hinotori",
+   "titulo": "Hinotori",
+   "grupo": "konami",
+   "fichero": "desensamblados/HINOTORI_DISAM/hinotori.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "twinbee",
    "titulo": "Twin Bee",
    "grupo": "konami",
-   "fichero": "TWINBEE_DISAM/twinbee.rom",
+   "fichero": "desensamblados/TWINBEE_DISAM/twinbee.rom",
    "lleva_marca": true,
    "rc": "RC-740",
    "bytes_titulo": 6,
@@ -227,7 +355,7 @@
    "clave": "boxing",
    "titulo": "Konami's Boxing",
    "grupo": "konami",
-   "fichero": "BOXING_DISAM/boxing.rom",
+   "fichero": "desensamblados/BOXING_DISAM/boxing.rom",
    "lleva_marca": true,
    "rc": "RC-736",
    "bytes_titulo": 13,
@@ -238,7 +366,7 @@
    "clave": "yiearkungfu2",
    "titulo": "Yie Ar Kung-Fu II",
    "grupo": "konami",
-   "fichero": "YIEARKUNGFU2_DISAM/yiear2.rom",
+   "fichero": "desensamblados/YIEARKUNGFU2_DISAM/yiear2.rom",
    "lleva_marca": true,
    "rc": "RC-737",
    "bytes_titulo": 12,
@@ -249,35 +377,35 @@
    "clave": "yiearkungfu",
    "titulo": "Yie Ar Kung-Fu",
    "grupo": "konami",
-   "fichero": "YIEARKUNGFU_DISAM/yiear.rom",
+   "fichero": "desensamblados/YIEARKUNGFU_DISAM/yiear.rom",
    "lleva_marca": false
   },
   {
    "clave": "tennis",
    "titulo": "Konami's Tennis",
    "grupo": "konami",
-   "fichero": "TENNIS_DISAM/tennis.rom",
+   "fichero": "desensamblados/TENNIS_DISAM/tennis.rom",
    "lleva_marca": false
   },
   {
    "clave": "hypersports1",
    "titulo": "Hyper Sports 1",
    "grupo": "konami",
-   "fichero": "HYPERSPORTS1_DISAM/hypersports1.rom",
+   "fichero": "desensamblados/HYPERSPORTS1_DISAM/hypersports1.rom",
    "lleva_marca": false
   },
   {
    "clave": "hypersports2",
    "titulo": "Hyper Sports 2",
    "grupo": "konami",
-   "fichero": "HYPERSPORTS2_DISAM/hypersports2.rom",
+   "fichero": "desensamblados/HYPERSPORTS2_DISAM/hypersports2.rom",
    "lleva_marca": false
   },
   {
    "clave": "hypersports3",
    "titulo": "Hyper Sports 3",
    "grupo": "konami",
-   "fichero": "HYPERSPORTS3_DISAM/hypersports3.rom",
+   "fichero": "desensamblados/HYPERSPORTS3_DISAM/hypersports3.rom",
    "lleva_marca": true,
    "rc": "RC-733",
    "bytes_titulo": 13,
@@ -288,7 +416,7 @@
    "clave": "gamemaster",
    "titulo": "Konami’s Game Master",
    "grupo": "konami",
-   "fichero": "GAMEMASTER_DISAM/gamemaster.rom",
+   "fichero": "desensamblados/GAMEMASTER_DISAM/gamemaster.rom",
    "lleva_marca": true,
    "rc": "RC-735",
    "bytes_titulo": 19,
@@ -296,10 +424,87 @@
    "titulo_en_kana": "1 0   HA \" I   TA NO SI MU   KA - TO RI tsu SI \""
   },
   {
+   "clave": "gamemaster2",
+   "titulo": "Konami’s Game Master 2",
+   "grupo": "konami",
+   "fichero": "desensamblados/GAMEMASTER2_DISAM/gamemaster2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "pennantrace",
+   "titulo": "The Pro Yakyuu Gekitotsu Pennant Race",
+   "grupo": "konami",
+   "fichero": "desensamblados/PENNANTRACE_DISAM/pennantrace.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "pennantrace2",
+   "titulo": "Gekitotsu Pennant Race 2",
+   "grupo": "konami",
+   "fichero": "desensamblados/PENNANTRACE2_DISAM/pennantrace2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "metalgear2",
+   "titulo": "Metal Gear 2: Solid Snake",
+   "grupo": "konami",
+   "fichero": "desensamblados/METALGEAR2_DISAM/metalgear2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "spacemanbow",
+   "titulo": "Space Manbow",
+   "grupo": "konami",
+   "fichero": "desensamblados/SPACEMANBOW_DISAM/spacemanbow.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "quarth",
+   "titulo": "Quarth",
+   "grupo": "konami",
+   "fichero": "desensamblados/QUARTH_DISAM/quarth.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "parodius",
+   "titulo": "Parodius",
+   "grupo": "konami",
+   "fichero": "desensamblados/PARODIUS_DISAM/parodius.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "nemesis3",
+   "titulo": "Nemesis 3 - The Eve of Destruction",
+   "grupo": "konami",
+   "fichero": "desensamblados/NEMESIS3_DISAM/nemesis3.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "majutsushi",
+   "titulo": "Hai no Majutsushi - Mahjong 2",
+   "grupo": "konami",
+   "fichero": "desensamblados/MAJUTSUSHI_DISAM/majutsushi.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "contra",
+   "titulo": "Contra",
+   "grupo": "konami",
+   "fichero": "desensamblados/CONTRA_DISAM/contra.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "salamander",
+   "titulo": "Salamander - Operation X",
+   "grupo": "konami",
+   "fichero": "desensamblados/SALAMANDER_DISAM/salamander.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "goonies",
    "titulo": "The Goonies",
    "grupo": "konami",
-   "fichero": "GOONIES_DISAM/goonies.rom",
+   "fichero": "desensamblados/GOONIES_DISAM/goonies.rom",
    "lleva_marca": true,
    "rc": "RC-734",
    "bytes_titulo": 7,
@@ -310,21 +515,21 @@
    "clave": "cabbagepatch",
    "titulo": "Cabbage Patch Kids",
    "grupo": "konami",
-   "fichero": "CABBAGEPATCH_DISAM/cabbagepatch.rom",
+   "fichero": "desensamblados/CABBAGEPATCH_DISAM/cabbagepatch.rom",
    "lleva_marca": false
   },
   {
    "clave": "pitfall",
    "titulo": "Pitfall!",
    "grupo": "ports",
-   "fichero": "PITFALL_DISAM/pitfall.rom",
+   "fichero": "desensamblados/PITFALL_DISAM/pitfall.rom",
    "lleva_marca": false
   },
   {
    "clave": "pippols",
    "titulo": "Pippols",
    "grupo": "konami",
-   "fichero": "PIPPOLS_DISAM/pippols.rom",
+   "fichero": "desensamblados/PIPPOLS_DISAM/pippols.rom",
    "lleva_marca": true,
    "rc": "RC-729",
    "bytes_titulo": 6,
@@ -335,14 +540,14 @@
    "clave": "demonia",
    "titulo": "Demonia",
    "grupo": "msx-exclusive",
-   "fichero": "DEMONIA_DISAM/demonia.cas",
+   "fichero": "desensamblados/DEMONIA_DISAM/demonia.cas",
    "lleva_marca": false
   },
   {
    "clave": "nemesis",
    "titulo": "Nemesis / Gradius",
    "grupo": "konami",
-   "fichero": "NEMESIS_DISAM/nemesis.rom",
+   "fichero": "desensamblados/NEMESIS_DISAM/nemesis.rom",
    "lleva_marca": true,
    "rc": "RC-742",
    "bytes_titulo": 8,
@@ -353,77 +558,123 @@
    "clave": "f1spirit",
    "titulo": "F-1 Spirit — The Way to Formula 1",
    "grupo": "konami",
-   "fichero": "F1SPIRIT_DISAM/f1spirit.rom",
+   "fichero": "desensamblados/F1SPIRIT_DISAM/f1spirit.rom",
    "lleva_marca": false
   },
   {
    "clave": "colt36",
    "titulo": "Colt 36",
    "grupo": "msx-exclusive",
-   "fichero": "COLT36_DISAM/colt36.tsx",
+   "fichero": "desensamblados/COLT36_DISAM/colt36.tsx",
    "lleva_marca": false
   },
   {
    "clave": "trailblazer",
    "titulo": "Trailblazer",
    "grupo": "ports",
-   "fichero": "TRAILBLAZER_DISAM/trailblazer.cas",
+   "fichero": "desensamblados/TRAILBLAZER_DISAM/trailblazer.cas",
    "lleva_marca": false
   },
   {
    "clave": "stardust",
    "titulo": "Stardust",
    "grupo": "ports",
-   "fichero": "STARDUST_DISAM/stardust.tsx",
+   "fichero": "desensamblados/STARDUST_DISAM/stardust.tsx",
    "lleva_marca": false
   },
   {
    "clave": "temptations",
    "titulo": "Temptations",
    "grupo": "msx-exclusive",
-   "fichero": "TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
+   "fichero": "desensamblados/TEMPTATIONS_DISAM/Temptations (1988)(Topo Soft)(ES)[!][RUN'CAS-'][v0.8b].tsx",
    "lleva_marca": false
   },
   {
    "clave": "alehop",
    "titulo": "Ale Hop!",
    "grupo": "msx-exclusive",
-   "fichero": "ALEHOP_DISAM/alehop.tsx",
+   "fichero": "desensamblados/ALEHOP_DISAM/alehop.tsx",
+   "lleva_marca": false
+  },
+  {
+   "clave": "rastan",
+   "titulo": "Rastan Saga",
+   "grupo": "ports",
+   "fichero": "desensamblados/RASTAN_DISAM/rastan.rom",
    "lleva_marca": false
   },
   {
    "clave": "war",
    "titulo": "War in Middle Earth",
    "grupo": "ports",
-   "fichero": "WARINMIDDLEEARTH_DISAM/war.tsx",
+   "fichero": "desensamblados/WARINMIDDLEEARTH_DISAM/war.tsx",
    "lleva_marca": false
   },
   {
    "clave": "descubrimiento",
    "titulo": "El Descubrimiento de América",
    "grupo": "msx-exclusive",
-   "fichero": "DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+   "fichero": "desensamblados/DESCUBRIMIENTO_DISAM/descubrimiento.cas",
+   "lleva_marca": false
+  },
+  {
+   "clave": "galious-yamanooto",
+   "titulo": "The Maze of Galious — saves on the Yamanooto",
+   "grupo": null,
+   "fichero": "parches/GALIOUS_YAMANOOTO/galious.rom",
+   "lleva_marca": true,
+   "rc": "RC-749",
+   "bytes_titulo": 13,
+   "cierra_en": "0xBFFF",
+   "titulo_en_kana": "<BF> <EC> <E1> <BC> <C6>   <D2>   <DB> <BB> <C0> <EA> <BC>"
+  },
+  {
+   "clave": "metalgear-yamanooto",
+   "titulo": "Metal Gear — saves on the Yamanooto",
+   "grupo": null,
+   "fichero": "parches/METALGEAR_YAMANOOTO/metalgear.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "metalgear2-yamanooto",
+   "titulo": "Metal Gear 2: Solid Snake — saves on the Yamanooto",
+   "grupo": null,
+   "fichero": "parches/METALGEAR2_YAMANOOTO/metalgear2.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "dunkshot-msx2",
+   "titulo": "Dunk Shot — MSX2 patch",
+   "grupo": null,
+   "fichero": "parches/DUNKSHOT_MSX2PATCH/dunkshot.rom",
    "lleva_marca": false
   },
   {
    "clave": "mahjong-en",
    "titulo": "Konami’s Mahjong Dojo — English patch",
    "grupo": null,
-   "fichero": "MAHJONGDOJO_ENPATCH/mahjong.rom",
+   "fichero": "parches/MAHJONGDOJO_ENPATCH/mahjong.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "majutsushi-tutorial",
+   "titulo": "Hai no Majutsushi — English translation and tutorial",
+   "grupo": null,
+   "fichero": "parches/MAJUTSUSHI_TUTORIAL/majutsushi.rom",
    "lleva_marca": false
   },
   {
    "clave": "warinmiddleearth-patch",
    "titulo": "War in Middle Earth — Araubi’s patch",
    "grupo": null,
-   "fichero": "WARINMIDDLEEARTH_PATCH/war_unificada.rom",
+   "fichero": "parches/WARINMIDDLEEARTH_PATCH/war_unificada.rom",
    "lleva_marca": false
   },
   {
    "clave": "warinmiddleearth-patch",
    "titulo": "War in Middle Earth — Araubi’s patch",
    "grupo": null,
-   "fichero": "WARINMIDDLEEARTH_PATCH/war.tsx",
+   "fichero": "parches/WARINMIDDLEEARTH_PATCH/war.tsx",
    "lleva_marca": false
   }
  ]

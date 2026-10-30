@@ -129,6 +129,60 @@
   "mapper": null
  },
  {
+  "clave": "dunkshot",
+  "titulo": "Dunk Shot",
+  "directorio": "DUNKSHOT_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x5C63",
+    "instruccion": "ld (hl),c",
+    "carga": "ld hl,04c52h  (en 0x5C5B)",
+    "destino": "0x4C52",
+    "zona": "propio",
+    "cae_en": "0x4C52",
+    "instruccion_del_destino": "ld hl,0014ah",
+    "es_el_primer_byte": true,
+    "listado": "rom_a/src/dunkshot.asm"
+   },
+   {
+    "donde": "0x7E94",
+    "instruccion": "ld (hl),000h",
+    "carga": "ld hl,06badh  (en 0x7E91)",
+    "destino": "0x6BAD",
+    "zona": "propio",
+    "cae_en": "0x6BA9",
+    "instruccion_del_destino": "jp suelta_sprites",
+    "es_el_primer_byte": false,
+    "listado": "rom_a/src/dunkshot.asm"
+   },
+   {
+    "donde": "0x6F43",
+    "instruccion": "ld (hl),c",
+    "carga": "ld hl,00022h  (en 0x6F3B)",
+    "destino": "0x0022",
+    "zona": "bios",
+    "cae_en": null,
+    "instruccion_del_destino": null,
+    "es_el_primer_byte": false,
+    "listado": "src/dunkshot.asm"
+   },
+   {
+    "donde": "0x8B3F",
+    "instruccion": "ld (hl),000h",
+    "carga": "ld hl,0785bh  (en 0x8B3C)",
+    "destino": "0x785B",
+    "zona": "propio",
+    "cae_en": "0x7857",
+    "instruccion_del_destino": "jp suelta_sprites",
+    "es_el_primer_byte": false,
+    "listado": "src/dunkshot.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
   "clave": "holeinonepro",
   "titulo": "Hole in One Professional",
   "directorio": "HOLEINONEPRO_DISAM",
@@ -141,6 +195,33 @@
   "clave": "casioworldopen",
   "titulo": "Casio World Open",
   "directorio": "CASIOWORLDOPEN_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "circus",
+  "titulo": "Circus Charlie",
+  "directorio": "CIRCUS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "magicaltree",
+  "titulo": "Magical Tree",
+  "directorio": "MAGICALTREE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "comicbakery",
+  "titulo": "Comic Bakery",
+  "directorio": "COMICBAKERY_DISAM",
   "es_cartucho": true,
   "escrituras": [],
   "nota": null,
@@ -375,6 +456,173 @@
   "mapper": null
  },
  {
+  "clave": "penguinadventure",
+  "titulo": "Penguin Adventure",
+  "directorio": "PENGUINADVENTURE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "vampirekiller",
+  "titulo": "Vampire Killer",
+  "directorio": "VAMPIREKILLER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "goemon",
+  "titulo": "Ganbare Goemon! Karakuri Dōchū",
+  "directorio": "GOEMON_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0xAAFE",
+    "instruccion": "ld (00075h),a",
+    "carga": "ld a,0e0h",
+    "destino": "0x0075",
+    "zona": "bios",
+    "cae_en": null,
+    "instruccion_del_destino": null,
+    "es_el_primer_byte": false,
+    "listado": "src/goemon_p03.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "synthesizer",
+  "titulo": "Konami's Synthesizer",
+  "directorio": "SYNTHESIZER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x56AC",
+    "instruccion": "ld (hl),080h",
+    "carga": "ld hl,08000h  (en 0x56A9)",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7134",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/synth.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "nemesis2",
+  "titulo": "Nemesis 2",
+  "directorio": "NEMESIS2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x40AD",
+    "instruccion": "ld (05000h),a",
+    "carga": "ld hl,0f0f0h",
+    "destino": "0x5000",
+    "zona": "propio",
+    "cae_en": "0x4F4B",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/nemesis2_p00.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "usas",
+  "titulo": "The Treasure of Usas",
+  "directorio": "USAS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "shalom",
+  "titulo": "Shalom: Knightmare III",
+  "directorio": "SHALOM_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "metalgear",
+  "titulo": "Metal Gear",
+  "directorio": "METALGEAR_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "galious",
+  "titulo": "The Maze of Galious",
+  "directorio": "GALIOUS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "kingkong2",
+  "titulo": "King Kong 2: Yomigaeru Densetsu",
+  "directorio": "KINGKONG2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "qbert",
+  "titulo": "Q*bert",
+  "directorio": "QBERT_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4080",
+    "instruccion": "ld (06000h),a",
+    "carga": "ld a,001h",
+    "destino": "0x6000",
+    "zona": "propio",
+    "cae_en": "0x50A5",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/qbert.asm"
+   },
+   {
+    "donde": "0x4084",
+    "instruccion": "ld (08000h),a",
+    "carga": "inc a",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFE",
+    "instruccion_del_destino": "ld hl,00000h",
+    "es_el_primer_byte": false,
+    "listado": "src/qbert.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "hinotori",
+  "titulo": "Hinotori",
+  "directorio": "HINOTORI_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
   "clave": "twinbee",
   "titulo": "Twin Bee",
   "directorio": "TWINBEE_DISAM",
@@ -549,6 +797,706 @@
   "mapper": null
  },
  {
+  "clave": "gamemaster2",
+  "titulo": "Konami’s Game Master 2",
+  "directorio": "GAMEMASTER2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x8E9E",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,002h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x8000",
+    "instruccion_del_destino": "ld hl,0f11ah",
+    "es_el_primer_byte": true,
+    "listado": "src/gamemaster2_p02.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "pennantrace",
+  "titulo": "The Pro Yakyuu Gekitotsu Pennant Race",
+  "directorio": "PENNANTRACE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x722D",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x731E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace_p13.asm"
+   },
+   {
+    "donde": "0x725A",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x731E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace_p13.asm"
+   },
+   {
+    "donde": "0x72B0",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x731E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace_p13.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "pennantrace2",
+  "titulo": "Gekitotsu Pennant Race 2",
+  "directorio": "PENNANTRACE2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x7468",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "call 08178h",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace2_p04.asm"
+   },
+   {
+    "donde": "0x7495",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "call 08178h",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace2_p04.asm"
+   },
+   {
+    "donde": "0x7505",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "call 08178h",
+    "es_el_primer_byte": false,
+    "listado": "src/pennantrace2_p04.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "metalgear2",
+  "titulo": "Metal Gear 2: Solid Snake",
+  "directorio": "METALGEAR2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x66DF",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FD3",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/metalgear2_p12.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "spacemanbow",
+  "titulo": "Space Manbow",
+  "directorio": "SPACEMANBOW_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "quarth",
+  "titulo": "Quarth",
+  "directorio": "QUARTH_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "kingsvalley2",
+  "titulo": "King's Valley II",
+  "directorio": "KINGSVALLEY2_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x6AB6",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6ADA",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6B0D",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6B39",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6B66",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6B8A",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6BBD",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6BE5",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6C0D",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6C69",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6C97",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "ld ix,0e7c0h",
+    "es_el_primer_byte": false,
+    "listado": "src/msx1/kv2_msx1_p01.asm"
+   },
+   {
+    "donde": "0x6CB5",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6CD9",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6D0C",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6D38",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6D65",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6D89",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6DBC",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6DE4",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6E0C",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6E68",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   },
+   {
+    "donde": "0x6E96",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFC",
+    "instruccion_del_destino": "jr z,$+26",
+    "es_el_primer_byte": false,
+    "listado": "src/msx2/kv2_msx2_p01.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "parodius",
+  "titulo": "Parodius",
+  "directorio": "PARODIUS_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x55B9",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x5FFE",
+    "instruccion_del_destino": "jr nz,$+9",
+    "es_el_primer_byte": false,
+    "listado": "src/parodius_p00.asm"
+   },
+   {
+    "donde": "0x55CB",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,002h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x5FFE",
+    "instruccion_del_destino": "jr nz,$+9",
+    "es_el_primer_byte": false,
+    "listado": "src/parodius_p00.asm"
+   },
+   {
+    "donde": "0x55E5",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x5FFE",
+    "instruccion_del_destino": "jr nz,$+9",
+    "es_el_primer_byte": false,
+    "listado": "src/parodius_p00.asm"
+   },
+   {
+    "donde": "0x55F6",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,002h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x5FFE",
+    "instruccion_del_destino": "jr nz,$+9",
+    "es_el_primer_byte": false,
+    "listado": "src/parodius_p00.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "nemesis3",
+  "titulo": "Nemesis 3 - The Eve of Destruction",
+  "directorio": "NEMESIS3_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x6CD0",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFF",
+    "instruccion_del_destino": "ret nz",
+    "es_el_primer_byte": false,
+    "listado": "src/nemesis3_p01.asm"
+   },
+   {
+    "donde": "0x6CF2",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,002h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFF",
+    "instruccion_del_destino": "ret nz",
+    "es_el_primer_byte": false,
+    "listado": "src/nemesis3_p01.asm"
+   },
+   {
+    "donde": "0x6D0F",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFF",
+    "instruccion_del_destino": "ret nz",
+    "es_el_primer_byte": false,
+    "listado": "src/nemesis3_p01.asm"
+   },
+   {
+    "donde": "0x6D2F",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,002h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFF",
+    "instruccion_del_destino": "ret nz",
+    "es_el_primer_byte": false,
+    "listado": "src/nemesis3_p01.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "majutsushi",
+  "titulo": "Hai no Majutsushi - Mahjong 2",
+  "directorio": "MAJUTSUSHI_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x6257",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x627B",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x62AE",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x62DA",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x6307",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x632B",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x635E",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x638A",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x63B2",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x7FFD",
+    "instruccion_del_destino": "ld (hl),000h",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p01.asm"
+   },
+   {
+    "donde": "0x6055",
+    "instruccion": "ld (0a000h),a",
+    "carga": "ld a,00eh",
+    "destino": "0xA000",
+    "zona": "propio",
+    "cae_en": "0x6D4E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p12.asm"
+   },
+   {
+    "donde": "0x6060",
+    "instruccion": "ld (0a000h),a",
+    "carga": "ld a,00fh",
+    "destino": "0xA000",
+    "zona": "propio",
+    "cae_en": "0x6D4E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p12.asm"
+   },
+   {
+    "donde": "0x627C",
+    "instruccion": "ld (0a000h),a",
+    "carga": "ld a,00fh",
+    "destino": "0xA000",
+    "zona": "propio",
+    "cae_en": "0x6D4E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p12.asm"
+   },
+   {
+    "donde": "0x62EC",
+    "instruccion": "ld (0a000h),a",
+    "carga": "ld a,00eh",
+    "destino": "0xA000",
+    "zona": "propio",
+    "cae_en": "0x6D4E",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/majutsushi_p12.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "contra",
+  "titulo": "Contra",
+  "directorio": "CONTRA_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x4DDF",
+    "instruccion": "ld (08000h),a",
+    "carga": "ld a,004h",
+    "destino": "0x8000",
+    "zona": "propio",
+    "cae_en": "0x5FFF",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/contra_p00.asm"
+   },
+   {
+    "donde": "0x4DE7",
+    "instruccion": "ld (0a000h),a",
+    "carga": "ld a,010h",
+    "destino": "0xA000",
+    "zona": "propio",
+    "cae_en": "0x5FFF",
+    "instruccion_del_destino": "ret",
+    "es_el_primer_byte": false,
+    "listado": "src/contra_p00.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
+  "clave": "salamander",
+  "titulo": "Salamander - Operation X",
+  "directorio": "SALAMANDER_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": "scc"
+ },
+ {
   "clave": "goonies",
   "titulo": "The Goonies",
   "directorio": "GOONIES_DISAM",
@@ -686,6 +1634,49 @@
   "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
  },
  {
+  "clave": "rastan",
+  "titulo": "Rastan Saga",
+  "directorio": "RASTAN_DISAM",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x6193",
+    "instruccion": "ld (077f8h),a",
+    "carga": "ld (0d191h),a",
+    "destino": "0x77F8",
+    "zona": "propio",
+    "cae_en": "0x77F7",
+    "instruccion_del_destino": "call dano",
+    "es_el_primer_byte": false,
+    "listado": "src/rastan_p06.asm"
+   },
+   {
+    "donde": "0x61CB",
+    "instruccion": "ld (077f8h),a",
+    "carga": "ld (0d191h),a",
+    "destino": "0x77F8",
+    "zona": "propio",
+    "cae_en": "0x77F7",
+    "instruccion_del_destino": "call dano",
+    "es_el_primer_byte": false,
+    "listado": "src/rastan_p06.asm"
+   },
+   {
+    "donde": "0x6200",
+    "instruccion": "ld (077f8h),a",
+    "carga": "ld (0d191h),a",
+    "destino": "0x77F8",
+    "zona": "propio",
+    "cae_en": "0x77F7",
+    "instruccion_del_destino": "call dano",
+    "es_el_primer_byte": false,
+    "listado": "src/rastan_p06.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
   "clave": "war",
   "titulo": "War in Middle Earth",
   "directorio": "WARINMIDDLEEARTH_DISAM",
@@ -702,9 +1693,76 @@
   "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
  },
  {
+  "clave": "galious-yamanooto",
+  "titulo": "The Maze of Galious — saves on the Yamanooto",
+  "directorio": "GALIOUS_YAMANOOTO",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "metalgear-yamanooto",
+  "titulo": "Metal Gear — saves on the Yamanooto",
+  "directorio": "METALGEAR_YAMANOOTO",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "metalgear2-yamanooto",
+  "titulo": "Metal Gear 2: Solid Snake — saves on the Yamanooto",
+  "directorio": "METALGEAR2_YAMANOOTO",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "dunkshot-msx2",
+  "titulo": "Dunk Shot — MSX2 patch",
+  "directorio": "DUNKSHOT_MSX2PATCH",
+  "es_cartucho": true,
+  "escrituras": [
+   {
+    "donde": "0x6F43",
+    "instruccion": "ld (hl),c",
+    "carga": "ld hl,00022h  (en 0x6F3B)",
+    "destino": "0x0022",
+    "zona": "bios",
+    "cae_en": null,
+    "instruccion_del_destino": null,
+    "es_el_primer_byte": false,
+    "listado": "src/dunkshot.asm"
+   },
+   {
+    "donde": "0x8B3F",
+    "instruccion": "ld (hl),000h",
+    "carga": "ld hl,0785bh  (en 0x8B3C)",
+    "destino": "0x785B",
+    "zona": "propio",
+    "cae_en": "0x7857",
+    "instruccion_del_destino": "jp suelta_sprites",
+    "es_el_primer_byte": false,
+    "listado": "src/dunkshot.asm"
+   }
+  ],
+  "nota": null,
+  "mapper": null
+ },
+ {
   "clave": "mahjong-en",
   "titulo": "Konami’s Mahjong Dojo — English patch",
   "directorio": "MAHJONGDOJO_ENPATCH",
+  "es_cartucho": false,
+  "escrituras": [],
+  "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"
+ },
+ {
+  "clave": "majutsushi-tutorial",
+  "titulo": "Hai no Majutsushi — English translation and tutorial",
+  "directorio": "MAJUTSUSHI_TUTORIAL",
   "es_cartucho": false,
   "escrituras": [],
   "nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa"

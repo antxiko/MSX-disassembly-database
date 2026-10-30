@@ -101,6 +101,9 @@ JUEGOS = [
     ("pippols", "PIPPOLS", "Pippols-disassembly", ["src/pippols.asm"]),
     ("nemesis", "NEMESIS", "Nemesis-disassembly", ["src/nemesis_p??.asm"]),
     ("f1spirit", "F1SPIRIT", "F1Spirit-disassembly", ["src/f1spirit_p??.asm"]),
+    ("spacemanbow", "SPACEMANBOW", "SpaceManbow-disassembly", ["src/spacemanbow_p??.asm"]),
+    ("metalgear2", "METALGEAR2", "MetalGear2-disassembly", ["src/metalgear2_p??.asm"]),
+    ("quarth", "QUARTH", "Quarth-disassembly", ["src/quarth_p??.asm"]),
 ]
 
 LINEA = re.compile(r"^\t(\S[^;]*?)\s*;([0-9a-f]{4})\b")

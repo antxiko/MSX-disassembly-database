@@ -170,6 +170,19 @@
    "aviso": null
   },
   {
+   "clave": "dunkshot",
+   "categoria": "desensamblado",
+   "grupo": "msx-exclusive",
+   "titulo": "Dunk Shot",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/DunkShot-disassembly",
+   "web_url": "https://antxiko.github.io/DunkShot-disassembly/",
+   "meta_en": "HAL Laboratory · MSX · 32 KB cartridge",
+   "meta_es": "HAL Laboratory · MSX · cartucho de 32 KB",
+   "directorio": "DUNKSHOT_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "holeinonepro",
    "categoria": "desensamblado",
    "grupo": "msx-exclusive",
@@ -193,6 +206,45 @@
    "meta_en": "Casio · MSX · 32 KB cartridge",
    "meta_es": "Casio · MSX · cartucho de 32 KB",
    "directorio": "CASIOWORLDOPEN_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "circus",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Circus Charlie",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/CircusCharlie-disassembly",
+   "web_url": "https://antxiko.github.io/CircusCharlie-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-712",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-712",
+   "directorio": "CIRCUS_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "magicaltree",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Magical Tree",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/MagicalTree-disassembly",
+   "web_url": "https://antxiko.github.io/MagicalTree-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-713",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-713",
+   "directorio": "MAGICALTREE_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "comicbakery",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Comic Bakery",
+   "anio": 1984,
+   "repo_url": "https://github.com/antxiko/ComicBakery-disassembly",
+   "web_url": "https://antxiko.github.io/ComicBakery-disassembly/",
+   "meta_en": "Konami · MSX · 16 KB cartridge · RC-714",
+   "meta_es": "Konami · MSX · cartucho de 16 KB · RC-714",
+   "directorio": "COMICBAKERY_DISAM",
    "aviso": null
   },
   {
@@ -326,6 +378,162 @@
    "aviso": null
   },
   {
+   "clave": "penguinadventure",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Penguin Adventure",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/PenguinAdventure-disassembly",
+   "web_url": "https://antxiko.github.io/PenguinAdventure-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB cartridge · RC-743",
+   "meta_es": "Konami · MSX · cartucho de 128 KB · RC-743",
+   "directorio": "PENGUINADVENTURE_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "vampirekiller",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Vampire Killer",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/VampireKiller-disassembly",
+   "web_url": "https://antxiko.github.io/VampireKiller-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-744",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-744",
+   "directorio": "VAMPIREKILLER_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "goemon",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Ganbare Goemon! Karakuri Dōchū",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/GanbareGoemon-disassembly",
+   "web_url": "https://antxiko.github.io/GanbareGoemon-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-748",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-748",
+   "directorio": "GOEMON_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "synthesizer",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami's Synthesizer",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/KonamiSynthesizer-disassembly",
+   "web_url": "https://antxiko.github.io/KonamiSynthesizer-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge with a DAC · RC-741",
+   "meta_es": "Konami · MSX · cartucho de 32 KB con DAC · RC-741",
+   "directorio": "SYNTHESIZER_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "nemesis2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Nemesis 2",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Nemesis2-disassembly",
+   "web_url": "https://antxiko.github.io/Nemesis2-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB cartridge with SCC · RC-751",
+   "meta_es": "Konami · MSX · cartucho de 128 KB con SCC · RC-751",
+   "directorio": "NEMESIS2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "usas",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "The Treasure of Usas",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/TreasureOfUsas-disassembly",
+   "web_url": "https://antxiko.github.io/TreasureOfUsas-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-753",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-753",
+   "directorio": "USAS_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "shalom",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Shalom: Knightmare III",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Shalom-disassembly",
+   "web_url": "https://antxiko.github.io/Shalom-disassembly/",
+   "meta_en": "Konami · MSX · 256 KB cartridge · RC-754",
+   "meta_es": "Konami · MSX · cartucho de 256 KB · RC-754",
+   "directorio": "SHALOM_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "metalgear",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Metal Gear",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/MetalGear-disassembly",
+   "web_url": "https://antxiko.github.io/MetalGear-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-750",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-750",
+   "directorio": "METALGEAR_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "galious",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "The Maze of Galious",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/MazeOfGalious-disassembly",
+   "web_url": "https://antxiko.github.io/MazeOfGalious-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB cartridge · RC-749",
+   "meta_es": "Konami · MSX · cartucho de 128 KB · RC-749",
+   "directorio": "GALIOUS_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "kingkong2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "King Kong 2: Yomigaeru Densetsu",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/KingKong2-disassembly",
+   "web_url": "https://antxiko.github.io/KingKong2-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-745",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-745",
+   "directorio": "KINGKONG2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "qbert",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Q*bert",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/Qbert-disassembly",
+   "web_url": "https://antxiko.github.io/Qbert-disassembly/",
+   "meta_en": "Konami · MSX · 32 KB cartridge · RC-746",
+   "meta_es": "Konami · MSX · cartucho de 32 KB · RC-746",
+   "directorio": "QBERT_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "hinotori",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hinotori",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Hinotori-disassembly",
+   "web_url": "https://antxiko.github.io/Hinotori-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB cartridge · RC-747",
+   "meta_es": "Konami · MSX2 · cartucho de 128 KB · RC-747",
+   "directorio": "HINOTORI_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "twinbee",
    "categoria": "desensamblado",
    "grupo": "konami",
@@ -440,6 +648,162 @@
    "meta_en": "Konami · MSX · 16 KB cartridge · RC-735",
    "meta_es": "Konami · MSX · cartucho de 16 KB · RC-735",
    "directorio": "GAMEMASTER_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "gamemaster2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Konami’s Game Master 2",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/GameMaster2-disassembly",
+   "web_url": "https://antxiko.github.io/GameMaster2-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB cartridge with SRAM · RC-755",
+   "meta_es": "Konami · MSX · cartucho de 128 KB con SRAM · RC-755",
+   "directorio": "GAMEMASTER2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "pennantrace",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "The Pro Yakyuu Gekitotsu Pennant Race",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/PennantRace-disassembly",
+   "web_url": "https://antxiko.github.io/PennantRace-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB MegaROM with SCC · RC-757",
+   "meta_es": "Konami · MSX2 · MegaROM de 128 KB con SCC · RC-757",
+   "directorio": "PENNANTRACE_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "pennantrace2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Gekitotsu Pennant Race 2",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/PennantRace2-disassembly",
+   "web_url": "https://antxiko.github.io/PennantRace2-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB MegaROM with SCC · RC-766",
+   "meta_es": "Konami · MSX2 · MegaROM de 128 KB con SCC · RC-766",
+   "directorio": "PENNANTRACE2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "metalgear2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Metal Gear 2: Solid Snake",
+   "anio": 1990,
+   "repo_url": "https://github.com/antxiko/MetalGear2-disassembly",
+   "web_url": "https://antxiko.github.io/MetalGear2-disassembly/",
+   "meta_en": "Konami · MSX2 · 512 KB MegaROM with SCC · RC-767",
+   "meta_es": "Konami · MSX2 · MegaROM de 512 KB con SCC · RC-767",
+   "directorio": "METALGEAR2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "spacemanbow",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Space Manbow",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/SpaceManbow-disassembly",
+   "web_url": "https://antxiko.github.io/SpaceManbow-disassembly/",
+   "meta_en": "Konami · MSX2 · 256 KB MegaROM with SCC · RC-768",
+   "meta_es": "Konami · MSX2 · MegaROM de 256 KB con SCC · RC-768",
+   "directorio": "SPACEMANBOW_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "quarth",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Quarth",
+   "anio": 1990,
+   "repo_url": "https://github.com/antxiko/Quarth-disassembly",
+   "web_url": "https://antxiko.github.io/Quarth-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB MegaROM with SCC · RC-769",
+   "meta_es": "Konami · MSX2 · MegaROM de 128 KB con SCC · RC-769",
+   "directorio": "QUARTH_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "kingsvalley2",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "King's Valley II",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/KingsValley2-disassembly",
+   "web_url": "https://antxiko.github.io/KingsValley2-disassembly/",
+   "meta_en": "Konami · MSX and MSX2 · two 128 KB MegaROMs with SCC · RC-760 and RC-761",
+   "meta_es": "Konami · MSX y MSX2 · dos MegaROM de 128 KB con SCC · RC-760 y RC-761",
+   "directorio": "KINGSVALLEY2_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "parodius",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Parodius",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/Parodius-disassembly",
+   "web_url": "https://antxiko.github.io/Parodius-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB MegaROM with SCC · RC-759",
+   "meta_es": "Konami · MSX · MegaROM de 128 KB con SCC · RC-759",
+   "directorio": "PARODIUS_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "nemesis3",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Nemesis 3 - The Eve of Destruction",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/Nemesis3-disassembly",
+   "web_url": "https://antxiko.github.io/Nemesis3-disassembly/",
+   "meta_en": "Konami · MSX · 256 KB MegaROM with SCC · RC-764",
+   "meta_es": "Konami · MSX · MegaROM de 256 KB con SCC · RC-764",
+   "directorio": "NEMESIS3_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "majutsushi",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Hai no Majutsushi - Mahjong 2",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/Majutsushi-disassembly",
+   "web_url": "https://antxiko.github.io/Majutsushi-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB MegaROM with a DAC · RC-765",
+   "meta_es": "Konami · MSX2 · MegaROM de 128 KB con DAC · RC-765",
+   "directorio": "MAJUTSUSHI_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "contra",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Contra",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/Contra-disassembly",
+   "web_url": "https://antxiko.github.io/Contra-disassembly/",
+   "meta_en": "Konami · MSX2 · 128 KB MegaROM with SCC · RC-762",
+   "meta_es": "Konami · MSX2 · MegaROM de 128 KB con SCC · RC-762",
+   "directorio": "CONTRA_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "salamander",
+   "categoria": "desensamblado",
+   "grupo": "konami",
+   "titulo": "Salamander - Operation X",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Salamander-disassembly",
+   "web_url": "https://antxiko.github.io/Salamander-disassembly/",
+   "meta_en": "Konami · MSX · 128 KB MegaROM with SCC · RC-758",
+   "meta_es": "Konami · MSX · MegaROM de 128 KB con SCC · RC-758",
+   "directorio": "SALAMANDER_DISAM",
    "aviso": null
   },
   {
@@ -599,6 +963,19 @@
    "aviso": null
   },
   {
+   "clave": "rastan",
+   "categoria": "desensamblado",
+   "grupo": "ports",
+   "titulo": "Rastan Saga",
+   "anio": 1988,
+   "repo_url": "https://github.com/antxiko/RastanSaga-disassembly",
+   "web_url": "https://antxiko.github.io/RastanSaga-disassembly/",
+   "meta_en": "Taito · MSX2 · 256 KB cartridge",
+   "meta_es": "Taito · MSX2 · cartucho de 256 KB",
+   "directorio": "RASTAN_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "war",
    "categoria": "desensamblado",
    "grupo": "ports",
@@ -625,6 +1002,58 @@
    "aviso": null
   },
   {
+   "clave": "galious-yamanooto",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "The Maze of Galious — saves on the Yamanooto",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/Galious-Yamanooto-Patch",
+   "web_url": "https://antxiko.github.io/Galious-Yamanooto-Patch/",
+   "meta_en": "Konami · MSX · 128 KB cartridge · Yamanooto patch, unofficial",
+   "meta_es": "Konami · MSX · cartucho de 128 KB · parche para el Yamanooto, extraoficial",
+   "directorio": "GALIOUS_YAMANOOTO",
+   "aviso": null
+  },
+  {
+   "clave": "metalgear-yamanooto",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "Metal Gear — saves on the Yamanooto",
+   "anio": 1987,
+   "repo_url": "https://github.com/antxiko/MetalGear-Yamanooto-Patch",
+   "web_url": "https://antxiko.github.io/MetalGear-Yamanooto-Patch/",
+   "meta_en": "Konami · MSX · 128 KB cartridge · Yamanooto patch, unofficial",
+   "meta_es": "Konami · MSX · cartucho de 128 KB · parche para el Yamanooto, extraoficial",
+   "directorio": "METALGEAR_YAMANOOTO",
+   "aviso": null
+  },
+  {
+   "clave": "metalgear2-yamanooto",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "Metal Gear 2: Solid Snake — saves on the Yamanooto",
+   "anio": 1990,
+   "repo_url": "https://github.com/antxiko/MetalGear2-Yamanooto-Patch",
+   "web_url": "https://antxiko.github.io/MetalGear2-Yamanooto-Patch/",
+   "meta_en": "Konami · MSX2 · 512 KB SCC cartridge · Yamanooto patch, unofficial",
+   "meta_es": "Konami · MSX2 · cartucho de 512 KB con SCC · parche para el Yamanooto, extraoficial",
+   "directorio": "METALGEAR2_YAMANOOTO",
+   "aviso": null
+  },
+  {
+   "clave": "dunkshot-msx2",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "Dunk Shot — MSX2 patch",
+   "anio": 1986,
+   "repo_url": "https://github.com/antxiko/DunkShot-MSX2-Patch",
+   "web_url": "https://antxiko.github.io/DunkShot-MSX2-Patch/",
+   "meta_en": "HAL Laboratory · MSX2 · 32 KB cartridge · IPS patch, unofficial",
+   "meta_es": "HAL Laboratory · MSX2 · cartucho de 32 KB · parche IPS, extraoficial",
+   "directorio": "DUNKSHOT_MSX2PATCH",
+   "aviso": null
+  },
+  {
    "clave": "mahjong-en",
    "categoria": "parche",
    "grupo": null,
@@ -635,6 +1064,19 @@
    "meta_en": "Konami · MSX · RC-707 · IPS patch, unofficial",
    "meta_es": "Konami · MSX · RC-707 · parche IPS, extraoficial",
    "directorio": "MAHJONGDOJO_ENPATCH",
+   "aviso": null
+  },
+  {
+   "clave": "majutsushi-tutorial",
+   "categoria": "parche",
+   "grupo": null,
+   "titulo": "Hai no Majutsushi — English translation and tutorial",
+   "anio": 1989,
+   "repo_url": "https://github.com/antxiko/Majutsushi-TutorialPatch",
+   "web_url": "https://antxiko.github.io/Majutsushi-TutorialPatch/",
+   "meta_en": "Konami · MSX2 · RC-765 · IPS patch, unofficial",
+   "meta_es": "Konami · MSX2 · RC-765 · parche IPS, extraoficial",
+   "directorio": "MAJUTSUSHI_TUTORIAL",
    "aviso": null
   },
   {
@@ -661,12 +1103,20 @@
    "remote": null
   },
   {
-   "directorio": "PENGUINADVENTURE_DISAM",
+   "directorio": "DRAGONSLAYER4_DISAM",
+   "remote": "github.com/antxiko/dragonslayer4-msx"
+  },
+  {
+   "directorio": "DUNKSHOT_A_DISAM",
    "remote": null
   },
   {
    "directorio": "SERIE_DB",
    "remote": "github.com/antxiko/msx-disassembly-database"
+  },
+  {
+   "directorio": "TWINBEE_ENHANCED_MSX2",
+   "remote": "github.com/antxiko/twinbee-enhanced-msx2-patch"
   }
  ]
 }
