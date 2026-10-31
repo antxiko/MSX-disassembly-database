@@ -4386,6 +4386,67 @@
    }
   },
   {
+   "clave": "pooyan",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Konami's Pooyan",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/Pooyan-disassembly",
+   "web_url": "https://antxiko.github.io/Pooyan-disassembly/",
+   "meta_en": "Konami for Hudson Soft · MSX · 16 KB Bee Card",
+   "meta_es": "Konami para Hudson Soft · MSX · Bee Card de 16 KB",
+   "directorio": "POOYAN_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/POOYAN_DISAM/pooyan.rom",
+    "bytes": 16384,
+    "sha256": "005093dea9fb4d17b3042f69d0739c513868d707c6e307c2d05643d0294ee176"
+   },
+   "cifras": {
+    "instrucciones": 3252,
+    "comentarios": 1387,
+    "densidad": 42.7,
+    "flojas": 0,
+    "bloques": 342
+   },
+   "listados": [
+    "src/pooyan.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 3252,
+    "comentarios": 1387,
+    "flojas": 0,
+    "bloques": 342,
+    "densidad": 42.7
+   },
+   "coteja": true,
+   "marca_konami": false,
+   "creditos": [
+    {
+     "offset": "0x05C0",
+     "texto": ":1985 KONAMI AND HUDSON SOFT",
+     "por": [
+      "KONAMI",
+      "HUDSON"
+     ]
+    }
+   ],
+   "creditos_del_fichero": "desensamblados/POOYAN_DISAM/pooyan.rom",
+   "protecciones": null,
+   "protecciones_nota": "no_aplica: se carga entero en RAM, escribir en su propio espacio no es una trampa",
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
+   }
+  },
+  {
    "clave": "kingsvalley2",
    "categoria": "desensamblado",
    "grupo": "konami",

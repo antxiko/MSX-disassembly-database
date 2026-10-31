@@ -768,6 +768,19 @@
    "aviso": null
   },
   {
+   "clave": "pooyan",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Konami's Pooyan",
+   "anio": 1985,
+   "repo_url": "https://github.com/antxiko/Pooyan-disassembly",
+   "web_url": "https://antxiko.github.io/Pooyan-disassembly/",
+   "meta_en": "Konami for Hudson Soft · MSX · 16 KB Bee Card",
+   "meta_es": "Konami para Hudson Soft · MSX · Bee Card de 16 KB",
+   "directorio": "POOYAN_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "kingsvalley2",
    "categoria": "desensamblado",
    "grupo": "konami",

@@ -297,6 +297,13 @@
    "instrucciones": 2611
   },
   {
+   "clave": "pooyan",
+   "titulo": "Konami's Pooyan",
+   "grupo": "konami-otros",
+   "org": 16384,
+   "instrucciones": 3241
+  },
+  {
    "clave": "goonies",
    "titulo": "The Goonies",
    "grupo": "konami",
@@ -9859,6 +9866,42 @@
    ]
   },
   {
+   "a": "bomberman",
+   "b": "pooyan",
+   "tramos": 7,
+   "instrucciones_comunes": 138,
+   "el_mayor": 22,
+   "porcentaje_de_a": 7.6,
+   "porcentaje_de_b": 4.3,
+   "detalle": [
+    {
+     "instrucciones": 22,
+     "en_a": "0x40CC",
+     "en_b": "0x452D"
+    },
+    {
+     "instrucciones": 22,
+     "en_a": "0x40CC",
+     "en_b": "0x42AC"
+    },
+    {
+     "instrucciones": 22,
+     "en_a": "0x40CC",
+     "en_b": "0x416D"
+    },
+    {
+     "instrucciones": 20,
+     "en_a": "0x40CC",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 20,
+     "en_a": "0x40CC",
+     "en_b": "0x4291"
+    }
+   ]
+  },
+  {
    "a": "mahjong",
    "b": "hypersports3",
    "tramos": 9,
@@ -11515,6 +11558,42 @@
    ]
   },
   {
+   "a": "twinbee",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 117,
+   "el_mayor": 20,
+   "porcentaje_de_a": 1.6,
+   "porcentaje_de_b": 3.6,
+   "detalle": [
+    {
+     "instrucciones": 20,
+     "en_a": "0x5F61",
+     "en_b": "0x4530"
+    },
+    {
+     "instrucciones": 20,
+     "en_a": "0x5F61",
+     "en_b": "0x42AF"
+    },
+    {
+     "instrucciones": 20,
+     "en_a": "0x5F61",
+     "en_b": "0x4170"
+    },
+    {
+     "instrucciones": 19,
+     "en_a": "0x5F61",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 19,
+     "en_a": "0x5F61",
+     "en_b": "0x4291"
+    }
+   ]
+  },
+  {
    "a": "circus",
    "b": "goonies",
    "tramos": 7,
@@ -12165,6 +12244,42 @@
      "instrucciones": 12,
      "en_a": "0xBB26",
      "en_b": "0x77F7"
+    }
+   ]
+  },
+  {
+   "a": "hypersports3",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 108,
+   "el_mayor": 18,
+   "porcentaje_de_a": 1.5,
+   "porcentaje_de_b": 3.3,
+   "detalle": [
+    {
+     "instrucciones": 18,
+     "en_a": "0xAA42",
+     "en_b": "0x4533"
+    },
+    {
+     "instrucciones": 18,
+     "en_a": "0xAA42",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 18,
+     "en_a": "0xAA42",
+     "en_b": "0x42B2"
+    },
+    {
+     "instrucciones": 18,
+     "en_a": "0xAA42",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 18,
+     "en_a": "0xAA42",
+     "en_b": "0x4173"
     }
    ]
   },
@@ -13018,6 +13133,42 @@
    ]
   },
   {
+   "a": "hyperrally",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 102,
+   "el_mayor": 17,
+   "porcentaje_de_a": 3.1,
+   "porcentaje_de_b": 3.1,
+   "detalle": [
+    {
+     "instrucciones": 17,
+     "en_a": "0x4797",
+     "en_b": "0x4536"
+    },
+    {
+     "instrucciones": 17,
+     "en_a": "0x4797",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 17,
+     "en_a": "0x4797",
+     "en_b": "0x42B5"
+    },
+    {
+     "instrucciones": 17,
+     "en_a": "0x4797",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 17,
+     "en_a": "0x4797",
+     "en_b": "0x4176"
+    }
+   ]
+  },
+  {
    "a": "golf",
    "b": "hypersports2",
    "tramos": 6,
@@ -13446,6 +13597,78 @@
      "instrucciones": 14,
      "en_a": "0x6C68",
      "en_b": "0x4B98"
+    }
+   ]
+  },
+  {
+   "a": "magicaltree",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 96,
+   "el_mayor": 16,
+   "porcentaje_de_a": 2.0,
+   "porcentaje_de_b": 3.0,
+   "detalle": [
+    {
+     "instrucciones": 16,
+     "en_a": "0x51F2",
+     "en_b": "0x4539"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x51F2",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x51F2",
+     "en_b": "0x42B8"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x51F2",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x51F2",
+     "en_b": "0x4179"
+    }
+   ]
+  },
+  {
+   "a": "mopiranger",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 96,
+   "el_mayor": 16,
+   "porcentaje_de_a": 2.5,
+   "porcentaje_de_b": 3.0,
+   "detalle": [
+    {
+     "instrucciones": 16,
+     "en_a": "0x48E3",
+     "en_b": "0x4539"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x48E3",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x48E3",
+     "en_b": "0x42B8"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x48E3",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 16,
+     "en_a": "0x48E3",
+     "en_b": "0x4179"
     }
    ]
   },
@@ -13882,6 +14105,42 @@
    ]
   },
   {
+   "a": "junofirst",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 90,
+   "el_mayor": 15,
+   "porcentaje_de_a": 3.1,
+   "porcentaje_de_b": 2.8,
+   "detalle": [
+    {
+     "instrucciones": 15,
+     "en_a": "0x06B9",
+     "en_b": "0x453C"
+    },
+    {
+     "instrucciones": 15,
+     "en_a": "0x06B9",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 15,
+     "en_a": "0x06B9",
+     "en_b": "0x42BB"
+    },
+    {
+     "instrucciones": 15,
+     "en_a": "0x06B9",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 15,
+     "en_a": "0x06B9",
+     "en_b": "0x417C"
+    }
+   ]
+  },
+  {
    "a": "mahjong",
    "b": "boxing",
    "tramos": 6,
@@ -14098,6 +14357,114 @@
    ]
   },
   {
+   "a": "soccer",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 86,
+   "el_mayor": 15,
+   "porcentaje_de_a": 0.9,
+   "porcentaje_de_b": 2.7,
+   "detalle": [
+    {
+     "instrucciones": 15,
+     "en_a": "0x5861",
+     "en_b": "0x453F"
+    },
+    {
+     "instrucciones": 15,
+     "en_a": "0x5861",
+     "en_b": "0x417F"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5861",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5861",
+     "en_b": "0x42BB"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5861",
+     "en_b": "0x4291"
+    }
+   ]
+  },
+  {
+   "a": "kingsvalley",
+   "b": "pooyan",
+   "tramos": 7,
+   "instrucciones_comunes": 85,
+   "el_mayor": 13,
+   "porcentaje_de_a": 1.6,
+   "porcentaje_de_b": 2.6,
+   "detalle": [
+    {
+     "instrucciones": 13,
+     "en_a": "0x4B33",
+     "en_b": "0x42C4"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x4B33",
+     "en_b": "0x4542"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x4B33",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x4B33",
+     "en_b": "0x42B5"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x4B33",
+     "en_b": "0x4291"
+    }
+   ]
+  },
+  {
+   "a": "qbert",
+   "b": "pooyan",
+   "tramos": 7,
+   "instrucciones_comunes": 85,
+   "el_mayor": 13,
+   "porcentaje_de_a": 1.4,
+   "porcentaje_de_b": 2.6,
+   "detalle": [
+    {
+     "instrucciones": 13,
+     "en_a": "0x68E6",
+     "en_b": "0x42C4"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x68E6",
+     "en_b": "0x4542"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x68E6",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x68E6",
+     "en_b": "0x42B5"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x68E6",
+     "en_b": "0x4291"
+    }
+   ]
+  },
+  {
    "a": "supercobra",
    "b": "hyperrally",
    "tramos": 6,
@@ -14197,6 +14564,42 @@
      "instrucciones": 17,
      "en_a": "0x79D9",
      "en_b": "0xB91F"
+    }
+   ]
+  },
+  {
+   "a": "roadfighter",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 84,
+   "el_mayor": 14,
+   "porcentaje_de_a": 2.1,
+   "porcentaje_de_b": 2.6,
+   "detalle": [
+    {
+     "instrucciones": 14,
+     "en_a": "0x5224",
+     "en_b": "0x453F"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5224",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5224",
+     "en_b": "0x42BB"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5224",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 14,
+     "en_a": "0x5224",
+     "en_b": "0x417F"
     }
    ]
   },
@@ -14485,6 +14888,32 @@
      "instrucciones": 14,
      "en_a": "0x6B7B",
      "en_b": "0x7C32"
+    }
+   ]
+  },
+  {
+   "a": "comicbakery",
+   "b": "pooyan",
+   "tramos": 3,
+   "instrucciones_comunes": 81,
+   "el_mayor": 28,
+   "porcentaje_de_a": 1.8,
+   "porcentaje_de_b": 2.5,
+   "detalle": [
+    {
+     "instrucciones": 28,
+     "en_a": "0x48CE",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 27,
+     "en_a": "0x48D4",
+     "en_b": "0x415B"
+    },
+    {
+     "instrucciones": 26,
+     "en_a": "0x48D7",
+     "en_b": "0x451E"
     }
    ]
   },
@@ -15153,6 +15582,32 @@
    ]
   },
   {
+   "a": "mahjong",
+   "b": "pooyan",
+   "tramos": 3,
+   "instrucciones_comunes": 75,
+   "el_mayor": 25,
+   "porcentaje_de_a": 1.0,
+   "porcentaje_de_b": 2.3,
+   "detalle": [
+    {
+     "instrucciones": 25,
+     "en_a": "0x7B61",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 25,
+     "en_a": "0x7B61",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 25,
+     "en_a": "0x7B61",
+     "en_b": "0x415B"
+    }
+   ]
+  },
+  {
    "a": "hyperrally",
    "b": "golf",
    "tramos": 5,
@@ -15333,6 +15788,42 @@
    ]
   },
   {
+   "a": "athletic",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 72,
+   "el_mayor": 12,
+   "porcentaje_de_a": 2.0,
+   "porcentaje_de_b": 2.2,
+   "detalle": [
+    {
+     "instrucciones": 12,
+     "en_a": "0x587E",
+     "en_b": "0x4542"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x587E",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x587E",
+     "en_b": "0x42B5"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x587E",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x587E",
+     "en_b": "0x417F"
+    }
+   ]
+  },
+  {
    "a": "hyperolympic1",
    "b": "hypersports3",
    "tramos": 5,
@@ -15401,6 +15892,42 @@
      "instrucciones": 12,
      "en_a": "0x6DD1",
      "en_b": "0x4CFE"
+    }
+   ]
+  },
+  {
+   "a": "dunkshot",
+   "b": "pooyan",
+   "tramos": 6,
+   "instrucciones_comunes": 72,
+   "el_mayor": 12,
+   "porcentaje_de_a": 0.4,
+   "porcentaje_de_b": 2.2,
+   "detalle": [
+    {
+     "instrucciones": 12,
+     "en_a": "0x40EF",
+     "en_b": "0x4542"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x40EF",
+     "en_b": "0x451E"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x40EF",
+     "en_b": "0x42B5"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x40EF",
+     "en_b": "0x4291"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x40EF",
+     "en_b": "0x417F"
     }
    ]
   },
@@ -18565,6 +19092,27 @@
    ]
   },
   {
+   "a": "pooyan",
+   "b": "mahjong-en",
+   "tramos": 2,
+   "instrucciones_comunes": 37,
+   "el_mayor": 25,
+   "porcentaje_de_a": 1.1,
+   "porcentaje_de_b": 0.5,
+   "detalle": [
+    {
+     "instrucciones": 25,
+     "en_a": "0x415B",
+     "en_b": "0x7B61"
+    },
+    {
+     "instrucciones": 12,
+     "en_a": "0x43E6",
+     "en_b": "0x5179"
+    }
+   ]
+  },
+  {
    "a": "athletic",
    "b": "synthesizer",
    "tramos": 2,
@@ -21428,6 +21976,38 @@
     {
      "instrucciones": 12,
      "en_a": "0x06B9",
+     "en_b": "0x40EF"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "cabbagepatch",
+   "tramos": 1,
+   "instrucciones_comunes": 12,
+   "el_mayor": 12,
+   "porcentaje_de_a": 0.4,
+   "porcentaje_de_b": 0.3,
+   "detalle": [
+    {
+     "instrucciones": 12,
+     "en_a": "0x415B",
+     "en_b": "0x54D5"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "dunkshot-msx2",
+   "tramos": 1,
+   "instrucciones_comunes": 12,
+   "el_mayor": 12,
+   "porcentaje_de_a": 0.4,
+   "porcentaje_de_b": 0.1,
+   "detalle": [
+    {
+     "instrucciones": 12,
+     "en_a": "0x415B",
      "en_b": "0x40EF"
     }
    ]

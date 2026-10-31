@@ -4325,6 +4325,36 @@
   "coteja": null
  },
  {
+  "repo": "POOYAN_DISAM",
+  "listados": [
+   "src/pooyan.asm"
+  ],
+  "medido": {
+   "instrucciones": 3252,
+   "comentarios": 1387,
+   "densidad": 42.7,
+   "flojas": 0,
+   "bloques": 342
+  },
+  "por_listado": [
+   {
+    "instrucciones": 3252,
+    "comentarios": 1387,
+    "flojas": 0,
+    "bloques": 342,
+    "asm": "src/pooyan.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 3252,
+   "comentarios": 1387,
+   "flojas": 0,
+   "bloques": 342,
+   "densidad": 42.7
+  },
+  "coteja": true
+ },
+ {
   "repo": "QBERT_DISAM",
   "listados": [
    "src/qbert.asm"

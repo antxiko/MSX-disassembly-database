@@ -1,7 +1,7 @@
 {
  "minimo_bytes": 32,
  "semilla": 12,
- "juegos": 85,
+ "juegos": 86,
  "parejas": [
   {
    "a": "metalgear2",
@@ -45520,6 +45520,32 @@
    ]
   },
   {
+   "a": "quarth",
+   "b": "pooyan",
+   "tiras": 2,
+   "bytes_comunes": 103,
+   "la_mas_larga": 54,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 54,
+     "en_a": "0x169AD",
+     "en_b": "0x2F41",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    },
+    {
+     "bytes": 49,
+     "en_a": "0x16956",
+     "en_b": "0x2EEA",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
    "a": "roadfighter",
    "b": "nemesis3",
    "tiras": 3,
@@ -47241,6 +47267,32 @@
      "en_b": "0x0A2E",
      "es_en_a": "codigo",
      "es_en_b": "codigo"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "stardust",
+   "tiras": 2,
+   "bytes_comunes": 82,
+   "la_mas_larga": 41,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": true,
+   "detalle": [
+    {
+     "bytes": 41,
+     "en_a": "0x1F77",
+     "en_b": "0x163FB",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    },
+    {
+     "bytes": 41,
+     "en_a": "0x1F77",
+     "en_b": "0xE4B3",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
     }
    ]
   },
@@ -51936,6 +51988,44 @@
    ]
   },
   {
+   "a": "pooyan",
+   "b": "temptations",
+   "tiras": 1,
+   "bytes_comunes": 41,
+   "la_mas_larga": 41,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": true,
+   "detalle": [
+    {
+     "bytes": 41,
+     "en_a": "0x1F77",
+     "en_b": "0xDAF8",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "alehop",
+   "tiras": 1,
+   "bytes_comunes": 41,
+   "la_mas_larga": 41,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": true,
+   "detalle": [
+    {
+     "bytes": 41,
+     "en_a": "0x1F77",
+     "en_b": "0xD4D8",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
    "a": "synthesizer",
    "b": "metalgear",
    "tiras": 1,
@@ -52810,6 +52900,329 @@
    ]
   },
   {
+   "a": "athletic",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x09B6",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "billiards",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x021E",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "mahjong",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x4499",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "magicaltree",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x06A0",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "vampirekiller",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x11E68",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "nemesis2",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x17884",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "shalom",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x90A1",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "hinotori",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x1A0E8",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "gamemaster2",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x0927",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "spacemanbow",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x25EC",
+     "en_b": "0x2F52",
+     "es_en_a": "desconocido",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "parodius",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0x120D0",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "majutsushi",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0xE0B8",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "salamander",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0x17AC9",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "cabbagepatch",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0x0B1F",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "nemesis",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0x19D6",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "mahjong-en",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0x4499",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
+   "a": "pooyan",
+   "b": "majutsushi-tutorial",
+   "tiras": 1,
+   "bytes_comunes": 38,
+   "la_mas_larga": 38,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 38,
+     "en_a": "0x2F52",
+     "en_b": "0xE0B8",
+     "es_en_a": "datos",
+     "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
    "a": "timepilot",
    "b": "contra",
    "tiras": 1,
@@ -53285,6 +53698,25 @@
    ]
   },
   {
+   "a": "hyperolympic1",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 33,
+   "la_mas_larga": 33,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 33,
+     "en_a": "0x20BA",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
    "a": "hyperolympic2",
    "b": "quarth",
    "tiras": 1,
@@ -53304,6 +53736,25 @@
    ]
   },
   {
+   "a": "hyperolympic2",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 33,
+   "la_mas_larga": 33,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 33,
+     "en_a": "0x224F",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
+    }
+   ]
+  },
+  {
    "a": "comicbakery",
    "b": "quarth",
    "tiras": 1,
@@ -53319,6 +53770,25 @@
      "en_b": "0x169BE",
      "es_en_a": "datos",
      "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "comicbakery",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 33,
+   "la_mas_larga": 33,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 33,
+     "en_a": "0x22DA",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
     }
    ]
   },
@@ -53414,6 +53884,25 @@
      "en_b": "0x169BE",
      "es_en_a": "datos",
      "es_en_b": "desconocido"
+    }
+   ]
+  },
+  {
+   "a": "tennis",
+   "b": "pooyan",
+   "tiras": 1,
+   "bytes_comunes": 33,
+   "la_mas_larga": 33,
+   "mismo_binario": false,
+   "bytes_de_codigo_en_las_guardadas": 0,
+   "mezcla_cinta_y_cartucho": false,
+   "detalle": [
+    {
+     "bytes": 33,
+     "en_a": "0x0955",
+     "en_b": "0x2F52",
+     "es_en_a": "datos",
+     "es_en_b": "datos"
     }
    ]
   },

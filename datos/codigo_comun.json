@@ -18593,7 +18593,7 @@
        "SIGUIENTE_BALA",
        "0x4704",
        6,
-       3
+       4
       ],
       [
        "repite_o_encadena",
@@ -19639,6 +19639,21 @@
      ]
     },
     {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "L_6950",
+       "0x6950",
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       6,
+       4
+      ]
+     ]
+    },
+    {
      "con": "quarth",
      "rutinas": 1,
      "instrucciones": 9,
@@ -19679,7 +19694,7 @@
        "L_681C",
        "p04:681C",
        6,
-       3
+       4
       ]
      ]
     }
@@ -28015,7 +28030,7 @@
        "L_6950",
        "0x6950",
        6,
-       3
+       4
       ],
       [
        "REPITE_O_ACABA",
@@ -29317,6 +29332,21 @@
        "p01:676B",
        6,
        37
+      ]
+     ]
+    },
+    {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "SIGUIENTE_BALA",
+       "0x4704",
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       6,
+       4
       ]
      ]
     },
@@ -89929,7 +89959,7 @@
        "L_6950",
        "0x6950",
        6,
-       3
+       4
       ]
      ]
     },
@@ -89945,6 +89975,21 @@
        "0x41FD",
        7,
        30
+      ]
+     ]
+    },
+    {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "L_681C",
+       "p04:681C",
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       6,
+       4
       ]
      ]
     }
@@ -92158,7 +92203,7 @@
        "L_6207",
        "p01:6207",
        6,
-       2
+       3
       ],
       [
        "bdos_abre",
@@ -96874,6 +96919,21 @@
        "0x77ED",
        6,
        6
+      ]
+     ]
+    },
+    {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "L_B52D",
+       "p03:B52D",
+       "sale_globo_busca",
+       "0x48D1",
+       6,
+       3
       ]
      ]
     }
@@ -165752,7 +165812,7 @@
        "L_B52D",
        "p03:B52D",
        6,
-       2
+       3
       ],
       [
        "L_8241",
@@ -169348,6 +169408,21 @@
        "0x41FD",
        7,
        30
+      ]
+     ]
+    },
+    {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "L_6207",
+       "p01:6207",
+       "sale_globo_busca",
+       "0x48D1",
+       6,
+       3
       ]
      ]
     }
@@ -177874,6 +177949,21 @@
        "0x413C",
        6,
        37
+      ]
+     ]
+    },
+    {
+     "con": "pooyan",
+     "rutinas": 1,
+     "instrucciones": 7,
+     "lista": [
+      [
+       "L_913F",
+       "p06:913F",
+       "borra_letreros",
+       "0x56F4",
+       7,
+       2
       ]
      ]
     }
@@ -271184,6 +271274,100 @@
      ]
     }
    ]
+  },
+  "pooyan": {
+   "comparte": [
+    {
+     "con": "magicaltree",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       "L_6950",
+       "0x6950",
+       6,
+       4
+      ]
+     ]
+    },
+    {
+     "con": "pennantrace",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "sale_globo_busca",
+       "0x48D1",
+       "L_6207",
+       "p01:6207",
+       6,
+       3
+      ]
+     ]
+    },
+    {
+     "con": "pennantrace2",
+     "rutinas": 1,
+     "instrucciones": 7,
+     "lista": [
+      [
+       "borra_letreros",
+       "0x56F4",
+       "L_913F",
+       "p06:913F",
+       7,
+       2
+      ]
+     ]
+    },
+    {
+     "con": "shalom",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "sale_globo_busca",
+       "0x48D1",
+       "L_B52D",
+       "p03:B52D",
+       6,
+       3
+      ]
+     ]
+    },
+    {
+     "con": "skyjaguar",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       "SIGUIENTE_BALA",
+       "0x4704",
+       6,
+       4
+      ]
+     ]
+    },
+    {
+     "con": "usas",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "pinta_puntos_aire_sigue",
+       "0x494D",
+       "L_681C",
+       "p04:681C",
+       6,
+       4
+      ]
+     ]
+    }
+   ]
   }
  },
  "extendidas": [
@@ -272061,6 +272245,6 @@
    ]
   }
  ],
- "parejas": 2016,
- "con_algo": 1392
+ "parejas": 2080,
+ "con_algo": 1398
 }

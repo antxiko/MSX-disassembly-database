@@ -487,6 +487,13 @@
    "lleva_marca": false
   },
   {
+   "clave": "pooyan",
+   "titulo": "Konami's Pooyan",
+   "grupo": "konami-otros",
+   "fichero": "desensamblados/POOYAN_DISAM/pooyan.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "parodius",
    "titulo": "Parodius",
    "grupo": "konami",

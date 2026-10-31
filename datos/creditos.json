@@ -1091,6 +1091,24 @@
   "nota": "no aparece ningun credito en ASCII"
  },
  {
+  "clave": "pooyan",
+  "titulo": "Konami's Pooyan",
+  "fichero": "desensamblados/POOYAN_DISAM/pooyan.rom",
+  "tiras_legibles": 124,
+  "creditos": [
+   {
+    "offset": "0x05C0",
+    "texto": ":1985 KONAMI AND HUDSON SOFT",
+    "por": [
+     "KONAMI",
+     "HUDSON"
+    ]
+   }
+  ],
+  "metadatos_del_volcado": [],
+  "nota": null
+ },
+ {
   "clave": "parodius",
   "titulo": "Parodius",
   "fichero": "desensamblados/PARODIUS_DISAM/parodius.rom",

@@ -1034,6 +1034,22 @@
   ]
  },
  {
+  "repo": "POOYAN_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/POOYAN_DISAM/pooyan.rom",
+    "bytes": 16384,
+    "sha256": "005093dea9fb4d17b3042f69d0739c513868d707c6e307c2d05643d0294ee176"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
   "repo": "QBERT_DISAM",
   "makefile": true,
   "binarios": [

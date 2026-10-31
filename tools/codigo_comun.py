@@ -107,6 +107,7 @@ JUEGOS = [
     ("sparkie", "SPARKIE", "Sparkie-disassembly", ["src/sparkie.asm"]),
     ("junofirst", "JUNOFIRST", "JunoFirst-disassembly", ["src/junofirst.asm"]),
     ("crazytrain", "CRAZYTRAIN", "CrazyTrain-disassembly", ["src/crazytrain.asm"]),
+    ("pooyan", "POOYAN", "Pooyan-disassembly", ["src/pooyan.asm"]),
 ]
 
 LINEA = re.compile(r"^\t(\S[^;]*?)\s*;([0-9a-f]{4})\b")
