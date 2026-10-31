@@ -130,9 +130,9 @@ leaves the game broken somewhere it never returns from.</p>
 (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) in his disassembly of
 King&#x27;s Valley (RC-727), where he named the two routines
 <code>ReadKeys_AC</code> and <code>VRAM_writeAC</code>. What is here is that same
-pattern, looked for across the 75 cartridges in the series.</p></div>
+pattern, looked for across the 76 cartridges in the series.</p></div>
 
-<p><b>28 of the 75</b> write inside their own space, and all
+<p><b>28 of the 76</b> write inside their own space, and all
 28 are Konami. The family always repeats the same two, in the same
 two start-up routines: one puts a <code>pop hl</code> and a <code>ret</code> over
 a <b><code>djnz</code></b> in the presentation chain, the other leaves a zero in
@@ -153,8 +153,8 @@ to the BIOS does not make a write a protection: <b>4</b> turn up, and each is ei
 <h3>The ones checked that carry none</h3>
 <p>Of Konami's, <b>34</b> cartridges write neither to their own
 space nor to the BIOS: Athletic Land, Cabbage Patch Kids, Circus Charlie, Comic Bakery, F-1 Spirit — The Way to Formula 1, Frogger, Hinotori, Hyper Olympic 1, Hyper Olympic 2, Hyper Sports 1, Hyper Sports 2, King Kong 2: Yomigaeru Densetsu, Konami's Baseball, Konami's Golf, Konami’s Billiards, Konami’s Game Master, Konami’s Mahjong Dojo, Magical Tree, Metal Gear, Monkey Academy, Nemesis / Gradius, Penguin Adventure, Quarth, Road Fighter, Salamander - Operation X, Shalom: Knightmare III, Sky Jaguar, Space Manbow, Super Cobra, The Maze of Galious, The Treasure of Usas, Time Pilot, Vampire Killer, Yie Ar Kung-Fu.</p>
-<p>And none of the <b>14</b> cartridges that are not Konami's carries
-any of this (3D Golf Simulation, Bomber Man, Hole in One, Dunk Shot, Hole in One Professional, Casio World Open, Sparkie, Juno First, Pitfall!, Rastan Saga, The Maze of Galious — saves on the Yamanooto, Metal Gear — saves on the Yamanooto, Metal Gear 2: Solid Snake — saves on the Yamanooto, Dunk Shot — MSX2 patch). That is the control: if the sweep swallowed
+<p>And none of the <b>15</b> cartridges that are not Konami's carries
+any of this (3D Golf Simulation, Bomber Man, Hole in One, Dunk Shot, Hole in One Professional, Casio World Open, Sparkie, Juno First, Crazy Train, Pitfall!, Rastan Saga, The Maze of Galious — saves on the Yamanooto, Metal Gear — saves on the Yamanooto, Metal Gear 2: Solid Snake — saves on the Yamanooto, Dunk Shot — MSX2 patch). That is the control: if the sweep swallowed
 coincidences, they would show up there too.</p>
 <p>The two MegaROMs, The Pro Yakyuu Gekitotsu Pennant Race (SCC), Gekitotsu Pennant Race 2 (SCC), Metal Gear 2: Solid Snake (SCC), Space Manbow (SCC), Quarth (SCC), King's Valley II (SCC), Parodius (SCC), Nemesis 3 - The Eve of Destruction (SCC), Hai no Majutsushi - Mahjong 2 (SCC), Contra (SCC), Salamander - Operation X (SCC), Nemesis / Gradius (KONAMI), F-1 Spirit — The Way to Formula 1 (SCC), are checked differently: their listing goes bank by
 bank, so their own space is the whole window, <code>0x4000</code>–<code>0xBFFF</code>,

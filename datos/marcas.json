@@ -480,6 +480,13 @@
    "lleva_marca": false
   },
   {
+   "clave": "crazytrain",
+   "titulo": "Crazy Train",
+   "grupo": "konami-otros",
+   "fichero": "desensamblados/CRAZYTRAIN_DISAM/crazytrain.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "parodius",
    "titulo": "Parodius",
    "grupo": "konami",

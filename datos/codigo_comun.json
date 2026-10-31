@@ -79,7 +79,7 @@
        "PINTA_LA_PANTALLA_DE_TITULO",
        "0x461C",
        8,
-       4
+       5
       ],
       [
        "SIGUIENTE_JUGADOR",
@@ -135,7 +135,38 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
+      ]
+     ]
+    },
+    {
+     "con": "crazytrain",
+     "rutinas": 3,
+     "instrucciones": 29,
+     "lista": [
+      [
+       "PINTA_LA_PANTALLA_FIJA",
+       "0x4A62",
+       "pinta_menu",
+       "0x1142",
+       8,
+       5
+      ],
+      [
+       "ESCRIBE_ROTULO_BUCLE",
+       "0x4A78",
+       "texto_letra",
+       "0x0797",
+       15,
+       2
+      ],
+      [
+       "ESPERA",
+       "0x4CB0",
+       "espera",
+       "0x10FF",
+       6,
+       8
       ]
      ]
     },
@@ -150,7 +181,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AEE",
        8,
-       4
+       5
       ],
       [
        "ESPERA",
@@ -158,7 +189,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ]
      ]
     },
@@ -173,7 +204,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AED",
        8,
-       4
+       5
       ],
       [
        "ESPERA",
@@ -181,7 +212,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ]
      ]
     },
@@ -196,7 +227,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ]
      ]
     },
@@ -211,7 +242,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ]
      ]
     },
@@ -241,7 +272,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ]
      ]
     }
@@ -324,7 +355,7 @@
        "PINTA_LA_PANTALLA_FIJA",
        "0x4A62",
        8,
-       4
+       5
       ],
       [
        "PASA_AL_OTRO_JUGADOR",
@@ -380,7 +411,46 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
+      ]
+     ]
+    },
+    {
+     "con": "crazytrain",
+     "rutinas": 4,
+     "instrucciones": 47,
+     "lista": [
+      [
+       "CUENTA_DE_FOTOGRAMAS",
+       "0x40FC",
+       "relojes",
+       "0x00EE",
+       15,
+       2
+      ],
+      [
+       "MIRA_QUE_TECLA",
+       "0x42FB",
+       "elige_opcion",
+       "0x024D",
+       18,
+       2
+      ],
+      [
+       "PINTA_LA_PANTALLA_DE_TITULO",
+       "0x461C",
+       "pinta_menu",
+       "0x1142",
+       8,
+       5
+      ],
+      [
+       "ESPERA",
+       "0x4733",
+       "espera",
+       "0x10FF",
+       6,
+       8
       ]
      ]
     },
@@ -403,7 +473,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AEE",
        8,
-       4
+       5
       ],
       [
        "ESPERA",
@@ -411,7 +481,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ],
       [
        "BORRA_BC_BYTES",
@@ -442,7 +512,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AED",
        8,
-       4
+       5
       ],
       [
        "ESPERA",
@@ -450,7 +520,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ],
       [
        "BORRA_BC_BYTES",
@@ -481,7 +551,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ],
       [
        "BORRA_BC_BYTES",
@@ -512,7 +582,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ],
       [
        "BORRA_BC_BYTES",
@@ -543,7 +613,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ],
       [
        "BORRA_BC_BYTES",
@@ -9607,7 +9677,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AED",
        8,
-       4
+       5
       ],
       [
        "GUION_CORTO",
@@ -9687,7 +9757,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ],
       [
        "MONTA_UN_ROTULO",
@@ -10494,7 +10564,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ],
       [
        "ORDEN_DE_BYTES",
@@ -10669,7 +10739,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ],
       [
        "SUBE_CODIGOS_CORRELATIVOS",
@@ -10844,7 +10914,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ],
       [
        "SUBE_CODIGOS_CORRELATIVOS",
@@ -11253,7 +11323,7 @@
        "PINTA_LA_PANTALLA_DE_TITULO",
        "0x461C",
        8,
-       4
+       5
       ],
       [
        "ESPERA_PUNTOS",
@@ -11261,7 +11331,7 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
       ],
       [
        "LIMPIA_MEMORIA",
@@ -11584,6 +11654,29 @@
      ]
     },
     {
+     "con": "crazytrain",
+     "rutinas": 2,
+     "instrucciones": 14,
+     "lista": [
+      [
+       "PINTA_EL_MARCO_DEL_MENU",
+       "0x4AEE",
+       "pinta_menu",
+       "0x1142",
+       8,
+       5
+      ],
+      [
+       "ESPERA_PUNTOS",
+       "0x4C40",
+       "espera",
+       "0x10FF",
+       6,
+       8
+      ]
+     ]
+    },
+    {
      "con": "kingsvalley",
      "rutinas": 2,
      "instrucciones": 18,
@@ -11686,7 +11779,7 @@
        "PINTA_LA_PANTALLA_FIJA",
        "0x4A62",
        8,
-       4
+       5
       ],
       [
        "ESPERA_PUNTOS",
@@ -11694,7 +11787,7 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
       ]
      ]
     },
@@ -11949,7 +12042,7 @@
        "PINTA_EL_MARCO_DEL_MENU",
        "0x4AEE",
        8,
-       4
+       5
       ],
       [
        "GUION_CORTO",
@@ -12029,7 +12122,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ],
       [
        "MONTA_UN_ROTULO",
@@ -12836,7 +12929,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ],
       [
        "ORDEN_DE_BYTES",
@@ -13003,7 +13096,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ],
       [
        "SUBE_CODIGOS_CORRELATIVOS",
@@ -13170,7 +13263,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ],
       [
        "SUBE_CODIGOS_CORRELATIVOS",
@@ -13579,7 +13672,7 @@
        "PINTA_LA_PANTALLA_DE_TITULO",
        "0x461C",
        8,
-       4
+       5
       ],
       [
        "ESPERA_PUNTOS",
@@ -13587,7 +13680,7 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
       ],
       [
        "LIMPIA_MEMORIA",
@@ -13910,6 +14003,29 @@
      ]
     },
     {
+     "con": "crazytrain",
+     "rutinas": 2,
+     "instrucciones": 14,
+     "lista": [
+      [
+       "PINTA_EL_MARCO_DEL_MENU",
+       "0x4AED",
+       "pinta_menu",
+       "0x1142",
+       8,
+       5
+      ],
+      [
+       "ESPERA_PUNTOS",
+       "0x4C29",
+       "espera",
+       "0x10FF",
+       6,
+       8
+      ]
+     ]
+    },
+    {
      "con": "kingsvalley",
      "rutinas": 2,
      "instrucciones": 18,
@@ -14012,7 +14128,7 @@
        "PINTA_LA_PANTALLA_FIJA",
        "0x4A62",
        8,
-       4
+       5
       ],
       [
        "ESPERA_PUNTOS",
@@ -14020,7 +14136,7 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
       ]
      ]
     },
@@ -29282,7 +29398,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ],
       [
        "pinta_tiles_correlativos",
@@ -29545,7 +29661,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ],
       [
        "pinta_tiles_correlativos",
@@ -29768,7 +29884,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ],
       [
        "pinta_tiles_correlativos",
@@ -29927,7 +30043,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ],
       [
        "pinta_tiles_correlativos",
@@ -30304,7 +30420,7 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
       ],
       [
        "borra_memoria",
@@ -30593,6 +30709,21 @@
      ]
     },
     {
+     "con": "crazytrain",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "espera_al_reloj",
+       "0x434B",
+       "espera",
+       "0x10FF",
+       6,
+       8
+      ]
+     ]
+    },
+    {
      "con": "junofirst",
      "rutinas": 1,
      "instrucciones": 6,
@@ -30723,7 +30854,7 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
       ]
      ]
     },
@@ -50692,7 +50823,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ],
       [
        "escribe_tiles_correlativos",
@@ -50987,7 +51118,7 @@
        "manda_orden",
        "0x4456",
        6,
-       7
+       8
       ],
       [
        "escribe_tiles_correlativos",
@@ -51242,7 +51373,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ],
       [
        "escribe_tiles_correlativos",
@@ -51393,7 +51524,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ],
       [
        "escribe_tiles_correlativos",
@@ -51754,7 +51885,7 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
       ],
       [
        "borra_bloque_de_ram",
@@ -52043,6 +52174,21 @@
      ]
     },
     {
+     "con": "crazytrain",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "espera_pasos_de_contador",
+       "0x44AE",
+       "espera",
+       "0x10FF",
+       6,
+       8
+      ]
+     ]
+    },
+    {
      "con": "junofirst",
      "rutinas": 1,
      "instrucciones": 6,
@@ -52158,7 +52304,7 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
       ]
      ]
     },
@@ -136808,7 +136954,7 @@
        "espera_pasos_de_contador",
        "0x44AE",
        6,
-       7
+       8
       ],
       [
        "escribe_tira",
@@ -137039,7 +137185,7 @@
        "espera_al_reloj",
        "0x434B",
        6,
-       7
+       8
       ],
       [
        "escribe_tira",
@@ -137270,7 +137416,7 @@
        "ESPERA_PUNTOS",
        "0x4C40",
        6,
-       7
+       8
       ],
       [
        "guion_bytes_crudos",
@@ -137453,7 +137599,7 @@
        "ESPERA_PUNTOS",
        "0x4C29",
        6,
-       7
+       8
       ],
       [
        "guion_bytes_crudos",
@@ -137822,7 +137968,7 @@
        "ESPERA",
        "0x4733",
        6,
-       7
+       8
       ],
       [
        "borra_ram",
@@ -138134,6 +138280,21 @@
      ]
     },
     {
+     "con": "crazytrain",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "manda_orden",
+       "0x4456",
+       "espera",
+       "0x10FF",
+       6,
+       8
+      ]
+     ]
+    },
+    {
      "con": "goemon",
      "rutinas": 1,
      "instrucciones": 6,
@@ -138264,7 +138425,7 @@
        "ESPERA",
        "0x4CB0",
        6,
-       7
+       8
       ]
      ]
     },
@@ -270858,6 +271019,171 @@
      ]
     }
    ]
+  },
+  "crazytrain": {
+   "comparte": [
+    {
+     "con": "frogger",
+     "rutinas": 4,
+     "instrucciones": 47,
+     "lista": [
+      [
+       "relojes",
+       "0x00EE",
+       "CUENTA_DE_FOTOGRAMAS",
+       "0x40FC",
+       15,
+       2
+      ],
+      [
+       "elige_opcion",
+       "0x024D",
+       "MIRA_QUE_TECLA",
+       "0x42FB",
+       18,
+       2
+      ],
+      [
+       "pinta_menu",
+       "0x1142",
+       "PINTA_LA_PANTALLA_DE_TITULO",
+       "0x461C",
+       8,
+       5
+      ],
+      [
+       "espera",
+       "0x10FF",
+       "ESPERA",
+       "0x4733",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "timepilot",
+     "rutinas": 3,
+     "instrucciones": 29,
+     "lista": [
+      [
+       "pinta_menu",
+       "0x1142",
+       "PINTA_LA_PANTALLA_FIJA",
+       "0x4A62",
+       8,
+       5
+      ],
+      [
+       "texto_letra",
+       "0x0797",
+       "ESCRIBE_ROTULO_BUCLE",
+       "0x4A78",
+       15,
+       2
+      ],
+      [
+       "espera",
+       "0x10FF",
+       "ESPERA",
+       "0x4CB0",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "hyperolympic1",
+     "rutinas": 2,
+     "instrucciones": 14,
+     "lista": [
+      [
+       "pinta_menu",
+       "0x1142",
+       "PINTA_EL_MARCO_DEL_MENU",
+       "0x4AEE",
+       8,
+       5
+      ],
+      [
+       "espera",
+       "0x10FF",
+       "ESPERA_PUNTOS",
+       "0x4C40",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "hyperolympic2",
+     "rutinas": 2,
+     "instrucciones": 14,
+     "lista": [
+      [
+       "pinta_menu",
+       "0x1142",
+       "PINTA_EL_MARCO_DEL_MENU",
+       "0x4AED",
+       8,
+       5
+      ],
+      [
+       "espera",
+       "0x10FF",
+       "ESPERA_PUNTOS",
+       "0x4C29",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "baseball",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "espera",
+       "0x10FF",
+       "espera_pasos_de_contador",
+       "0x44AE",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "golf",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "espera",
+       "0x10FF",
+       "espera_al_reloj",
+       "0x434B",
+       6,
+       8
+      ]
+     ]
+    },
+    {
+     "con": "tennis",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "espera",
+       "0x10FF",
+       "manda_orden",
+       "0x4456",
+       6,
+       8
+      ]
+     ]
+    }
+   ]
   }
  },
  "extendidas": [
@@ -271735,6 +272061,6 @@
    ]
   }
  ],
- "parejas": 1953,
- "con_algo": 1385
+ "parejas": 2016,
+ "con_algo": 1392
 }

@@ -136,24 +136,24 @@ instructions</b>, and the byte comparison found them only 39. Golf and Tennis:
 its address in front, so the sorted addresses <b>are</b> the code, and an
 instruction's length is the distance to the next one. When that distance exceeds
 four bytes — the Z80 maximum — there is data in between, and the run is cut
-there. 37 cartridges are measured; the other 12 stay
+there. 48 cartridges are measured; the other 39 stay
 out and say why: tapes and MegaROMs declare no single origin.</p></div>
 
 <h3>And then families do appear</h3>
-<div class='tabla'><table><tr><th>cartridges</th><th>years</th><th>closest pair</th><th>which ones</th></tr><tr><td class='n'><b>20</b></td><td class='n'>1983–1986</td><td>athletic / cabbagepatch &middot; 44.5 % and 40.8 %</td><td><code>athletic, billiards, boxing, cabbagepatch, goonies, hyperrally, hypersports1, hypersports2, hypersports3, kingsvalley, knightmare, monkey, mopiranger, pingpong, pippols, roadfighter, skyjaguar, supercobra, yiearkungfu, yiearkungfu2</code></td></tr><tr><td class='n'><b>5</b></td><td class='n'>1984–1985</td><td>hyperolympic1 / hyperolympic2 &middot; 67.3 % and 63.4 %</td><td><code>baseball, golf, hyperolympic1, hyperolympic2, tennis</code></td></tr><tr><td class='n'><b>2</b></td><td class='n'>1983–1983</td><td>timepilot / frogger &middot; 7.4 % and 14.9 %</td><td><code>frogger, timepilot</code></td></tr></table></div>
+<div class='tabla'><table><tr><th>cartridges</th><th>years</th><th>closest pair</th><th>which ones</th></tr><tr><td class='n'><b>24</b></td><td class='n'>1983–1986</td><td>athletic / cabbagepatch &middot; 44.5 % and 40.8 %</td><td><code>athletic, billiards, boxing, cabbagepatch, circus, comicbakery, goonies, hyperrally, hypersports1, hypersports2, hypersports3, kingsvalley, knightmare, magicaltree, mahjong, monkey, mopiranger, pingpong, pippols, roadfighter, skyjaguar, supercobra, yiearkungfu, yiearkungfu2</code></td></tr><tr><td class='n'><b>5</b></td><td class='n'>1984–1985</td><td>hyperolympic1 / hyperolympic2 &middot; 67.3 % and 63.4 %</td><td><code>baseball, golf, hyperolympic1, hyperolympic2, tennis</code></td></tr><tr><td class='n'><b>2</b></td><td class='n'>1983–1983</td><td>timepilot / frogger &middot; 7.4 % and 14.9 %</td><td><code>frogger, timepilot</code></td></tr></table></div>
 
 <p><b>The split does not follow the year.</b> The large family spans 1983 to 1986
 and the five sports titles run from 1984 to 1985: they overlap. Nor does it
 follow the catalogue number.</p>
 
-<p>On their own, reaching the threshold with nobody: <code>antarctic, gamemaster, mahjong, soccer, twinbee</code>.</p>
+<p>On their own, reaching the threshold with nobody: <code>antarctic, gamemaster, qbert, soccer, synthesizer, twinbee</code>.</p>
 
 <h3>Why 5 %, and not some other number</h3>
 <p>A pair is joined when the shared code is at least that share of <b>both</b> —
 the lower of the two, not the average: Road Fighter sharing 10&nbsp;% of its own
 code with Soccer means nothing if for Soccer it is 4&nbsp;%. Sweeping the
 threshold shows the split is not a whim:</p>
-<div class='tabla'><table><tr><th>threshold</th><th>pairs</th><th>group sizes</th></tr><tr><td class='n'>2 %</td><td class='n'>202</td><td><code>28 + 2 + 1 + 1</code></td></tr><tr><td class='n'>3 %</td><td class='n'>144</td><td><code>28 + 2 + 1 + 1</code></td></tr><tr><td class='n'>4 %</td><td class='n'>99</td><td><code>22 + 5 + 2 + 1 + 1 + 1</code></td></tr><tr><td class='n'>5 %</td><td class='n'>60</td><td><code>20 + 5 + 2 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>6 %</td><td class='n'>33</td><td><code>16 + 5 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>8 %</td><td class='n'>14</td><td><code>5 + 3 + 2 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>10 %</td><td class='n'>8</td><td><code>5 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr></table></div>
+<div class='tabla'><table><tr><th>threshold</th><th>pairs</th><th>group sizes</th></tr><tr><td class='n'>2 %</td><td class='n'>286</td><td><code>34 + 2 + 1</code></td></tr><tr><td class='n'>3 %</td><td class='n'>206</td><td><code>33 + 2 + 1 + 1</code></td></tr><tr><td class='n'>4 %</td><td class='n'>133</td><td><code>26 + 5 + 2 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>5 %</td><td class='n'>79</td><td><code>24 + 5 + 2 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>6 %</td><td class='n'>47</td><td><code>19 + 5 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>8 %</td><td class='n'>24</td><td><code>8 + 5 + 2 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr><tr><td class='n'>10 %</td><td class='n'>15</td><td><code>6 + 5 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</code></td></tr></table></div>
 <p>The group of five and the group of two <b>are the same from 4 to 8&nbsp;%</b>,
 while the large family gradually falls apart. That is what tells a family from an
 artefact of the threshold.</p>

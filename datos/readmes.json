@@ -169,6 +169,17 @@
   "tests": null
  },
  {
+  "repo": "CRAZYTRAIN_DISAM",
+  "readme": "README.es.md",
+  "densidad": null,
+  "comentarios": null,
+  "instrucciones": null,
+  "rutinas": null,
+  "flojas": null,
+  "etiquetas_con_nombre": null,
+  "tests": null
+ },
+ {
   "repo": "DEMONIA_DISAM",
   "readme": "README.es.md",
   "densidad": null,

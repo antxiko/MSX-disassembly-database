@@ -130,9 +130,9 @@ escritura sí cuela y deja el juego tocado en un sitio del que no se vuelve.</p>
 (<a href="https://github.com/gdx2">@ManuelPazosMSX</a>) en su desensamblado de
 King&#x27;s Valley (RC-727), donde llamó a las dos rutinas <code>ReadKeys_AC</code>
 y <code>VRAM_writeAC</code>. Lo que hay aquí es ese mismo patrón, buscado en los
-75 cartuchos de la serie.</p></div>
+76 cartuchos de la serie.</p></div>
 
-<p><b>28 de los 75</b> escriben en su propio espacio, y los
+<p><b>28 de los 76</b> escriben en su propio espacio, y los
 28 son de Konami. La familia repite siempre las mismas dos, en las
 mismas dos rutinas del arranque: una deja un <code>pop hl</code> y un
 <code>ret</code> encima de un <b><code>djnz</code></b> de la cadena de
@@ -153,8 +153,8 @@ Pero ir a la BIOS no convierte una escritura en protección: aparecen <b>4</b>, 
 <h3>Los que se miraron y no llevan ninguna</h3>
 <p>De Konami, <b>34</b> cartuchos no escriben ni en su espacio ni
 en la BIOS: Athletic Land, Cabbage Patch Kids, Circus Charlie, Comic Bakery, F-1 Spirit — The Way to Formula 1, Frogger, Hinotori, Hyper Olympic 1, Hyper Olympic 2, Hyper Sports 1, Hyper Sports 2, King Kong 2: Yomigaeru Densetsu, Konami's Baseball, Konami's Golf, Konami’s Billiards, Konami’s Game Master, Konami’s Mahjong Dojo, Magical Tree, Metal Gear, Monkey Academy, Nemesis / Gradius, Penguin Adventure, Quarth, Road Fighter, Salamander - Operation X, Shalom: Knightmare III, Sky Jaguar, Space Manbow, Super Cobra, The Maze of Galious, The Treasure of Usas, Time Pilot, Vampire Killer, Yie Ar Kung-Fu.</p>
-<p>Y ninguno de los <b>14</b> cartuchos que no son de Konami lleva
-nada de esto (3D Golf Simulation, Bomber Man, Hole in One, Dunk Shot, Hole in One Professional, Casio World Open, Sparkie, Juno First, Pitfall!, Rastan Saga, The Maze of Galious — saves on the Yamanooto, Metal Gear — saves on the Yamanooto, Metal Gear 2: Solid Snake — saves on the Yamanooto, Dunk Shot — MSX2 patch). Es el control: si el rastreador se tragara
+<p>Y ninguno de los <b>15</b> cartuchos que no son de Konami lleva
+nada de esto (3D Golf Simulation, Bomber Man, Hole in One, Dunk Shot, Hole in One Professional, Casio World Open, Sparkie, Juno First, Crazy Train, Pitfall!, Rastan Saga, The Maze of Galious — saves on the Yamanooto, Metal Gear — saves on the Yamanooto, Metal Gear 2: Solid Snake — saves on the Yamanooto, Dunk Shot — MSX2 patch). Es el control: si el rastreador se tragara
 coincidencias, saldrían también ahí.</p>
 <p>Las dos MegaROM, The Pro Yakyuu Gekitotsu Pennant Race (SCC), Gekitotsu Pennant Race 2 (SCC), Metal Gear 2: Solid Snake (SCC), Space Manbow (SCC), Quarth (SCC), King's Valley II (SCC), Parodius (SCC), Nemesis 3 - The Eve of Destruction (SCC), Hai no Majutsushi - Mahjong 2 (SCC), Contra (SCC), Salamander - Operation X (SCC), Nemesis / Gradius (KONAMI), F-1 Spirit — The Way to Formula 1 (SCC), se miran distinto: su listado va por bancos, así
 que el espacio propio es la ventana entera, <code>0x4000</code>–<code>0xBFFF</code>,

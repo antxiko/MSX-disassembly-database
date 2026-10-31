@@ -755,6 +755,19 @@
    "aviso": null
   },
   {
+   "clave": "crazytrain",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Crazy Train",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/CrazyTrain-disassembly",
+   "web_url": "https://antxiko.github.io/CrazyTrain-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "CRAZYTRAIN_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "kingsvalley2",
    "categoria": "desensamblado",
    "grupo": "konami",

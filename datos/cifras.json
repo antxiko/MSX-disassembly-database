@@ -567,6 +567,36 @@
   "coteja": true
  },
  {
+  "repo": "CRAZYTRAIN_DISAM",
+  "listados": [
+   "src/crazytrain.asm"
+  ],
+  "medido": {
+   "instrucciones": 2612,
+   "comentarios": 1103,
+   "densidad": 42.2,
+   "flojas": 0,
+   "bloques": 280
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2612,
+    "comentarios": 1103,
+    "flojas": 0,
+    "bloques": 280,
+    "asm": "src/crazytrain.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 2612,
+   "comentarios": 1103,
+   "flojas": 0,
+   "bloques": 280,
+   "densidad": 42.2
+  },
+  "coteja": true
+ },
+ {
   "repo": "DEMONIA_DISAM",
   "listados": [
    "debugger/driver.asm",

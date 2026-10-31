@@ -4335,6 +4335,57 @@
    }
   },
   {
+   "clave": "crazytrain",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Crazy Train",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/CrazyTrain-disassembly",
+   "web_url": "https://antxiko.github.io/CrazyTrain-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "CRAZYTRAIN_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/CRAZYTRAIN_DISAM/crazytrain.rom",
+    "bytes": 32768,
+    "sha256": "8cf0f8a22d9161d37d39cc48bc40b952b6f756df465f0d0c9afb69dac8a5d6ee"
+   },
+   "cifras": {
+    "instrucciones": 2612,
+    "comentarios": 1103,
+    "densidad": 42.2,
+    "flojas": 0,
+    "bloques": 280
+   },
+   "listados": [
+    "src/crazytrain.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 2612,
+    "comentarios": 1103,
+    "flojas": 0,
+    "bloques": 280,
+    "densidad": 42.2
+   },
+   "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
+   "creditos_del_fichero": "desensamblados/CRAZYTRAIN_DISAM/crazytrain.rom",
+   "protecciones": [],
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
+   }
+  },
+  {
    "clave": "kingsvalley2",
    "categoria": "desensamblado",
    "grupo": "konami",

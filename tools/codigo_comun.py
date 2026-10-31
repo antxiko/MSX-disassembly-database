@@ -106,6 +106,7 @@ JUEGOS = [
     ("quarth", "QUARTH", "Quarth-disassembly", ["src/quarth_p??.asm"]),
     ("sparkie", "SPARKIE", "Sparkie-disassembly", ["src/sparkie.asm"]),
     ("junofirst", "JUNOFIRST", "JunoFirst-disassembly", ["src/junofirst.asm"]),
+    ("crazytrain", "CRAZYTRAIN", "CrazyTrain-disassembly", ["src/crazytrain.asm"]),
 ]
 
 LINEA = re.compile(r"^\t(\S[^;]*?)\s*;([0-9a-f]{4})\b")

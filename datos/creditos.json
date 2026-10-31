@@ -1082,6 +1082,15 @@
   "nota": "no aparece ningun credito en ASCII"
  },
  {
+  "clave": "crazytrain",
+  "titulo": "Crazy Train",
+  "fichero": "desensamblados/CRAZYTRAIN_DISAM/crazytrain.rom",
+  "tiras_legibles": 232,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
   "clave": "parodius",
   "titulo": "Parodius",
   "fichero": "desensamblados/PARODIUS_DISAM/parodius.rom",

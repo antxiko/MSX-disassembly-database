@@ -236,6 +236,22 @@
   ]
  },
  {
+  "repo": "CRAZYTRAIN_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/CRAZYTRAIN_DISAM/crazytrain.rom",
+    "bytes": 32768,
+    "sha256": "8cf0f8a22d9161d37d39cc48bc40b952b6f756df465f0d0c9afb69dac8a5d6ee"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
   "repo": "DEMONIA_DISAM",
   "makefile": true,
   "binarios": [
