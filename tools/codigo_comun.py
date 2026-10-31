@@ -104,6 +104,8 @@ JUEGOS = [
     ("spacemanbow", "SPACEMANBOW", "SpaceManbow-disassembly", ["src/spacemanbow_p??.asm"]),
     ("metalgear2", "METALGEAR2", "MetalGear2-disassembly", ["src/metalgear2_p??.asm"]),
     ("quarth", "QUARTH", "Quarth-disassembly", ["src/quarth_p??.asm"]),
+    ("sparkie", "SPARKIE", "Sparkie-disassembly", ["src/sparkie.asm"]),
+    ("junofirst", "JUNOFIRST", "JunoFirst-disassembly", ["src/junofirst.asm"]),
 ]
 
 LINEA = re.compile(r"^\t(\S[^;]*?)\s*;([0-9a-f]{4})\b")

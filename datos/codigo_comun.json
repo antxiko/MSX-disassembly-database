@@ -216,6 +216,21 @@
      ]
     },
     {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "ESCRIBE_PSG_BUCLE",
+       "0x4CD2",
+       "pareja_psg",
+       "0x12D3",
+       6,
+       2
+      ]
+     ]
+    },
+    {
      "con": "tennis",
      "rutinas": 1,
      "instrucciones": 6,
@@ -404,7 +419,7 @@
        "LIMPIA_MEMORIA",
        "0x4DE6",
        6,
-       6
+       7
       ]
      ]
     },
@@ -443,7 +458,7 @@
        "LIMPIA_MEMORIA",
        "0x4DCF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -474,7 +489,7 @@
        "borra_bloque_de_ram",
        "0x45CC",
        6,
-       6
+       7
       ]
      ]
     },
@@ -505,7 +520,7 @@
        "borra_memoria",
        "0x43C4",
        6,
-       6
+       7
       ]
      ]
     },
@@ -536,7 +551,30 @@
        "borra_ram",
        "0x4524",
        6,
-       6
+       7
+      ]
+     ]
+    },
+    {
+     "con": "junofirst",
+     "rutinas": 2,
+     "instrucciones": 12,
+     "lista": [
+      [
+       "BORRA_BC_BYTES",
+       "0x57EF",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
+      ],
+      [
+       "HASTA_EL_0xFF",
+       "0x5809",
+       "salta_tabla",
+       "0x15C2",
+       6,
+       2
       ]
      ]
     }
@@ -9769,7 +9807,7 @@
        "LIMPIA_MEMORIA",
        "0x4DCF",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -10512,7 +10550,7 @@
        "borra_ram",
        "0x4524",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -10647,7 +10685,7 @@
        "borra_memoria",
        "0x43C4",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -10822,7 +10860,7 @@
        "borra_bloque_de_ram",
        "0x45CC",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -11231,7 +11269,7 @@
        "BORRA_BC_BYTES",
        "0x57EF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -11699,6 +11737,21 @@
      ]
     },
     {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "LIMPIA_MEMORIA",
+       "0x4DE6",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
+      ]
+     ]
+    },
+    {
      "con": "supercobra",
      "rutinas": 1,
      "instrucciones": 8,
@@ -12096,7 +12149,7 @@
        "LIMPIA_MEMORIA",
        "0x4DE6",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -12839,7 +12892,7 @@
        "borra_ram",
        "0x4524",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -12966,7 +13019,7 @@
        "borra_memoria",
        "0x43C4",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -13133,7 +13186,7 @@
        "borra_bloque_de_ram",
        "0x45CC",
        6,
-       6
+       7
       ],
       [
        "FIJA_ESCRITURA_CON_CANDADO",
@@ -13542,7 +13595,7 @@
        "BORRA_BC_BYTES",
        "0x57EF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -14006,6 +14059,21 @@
        "0x5C97",
        11,
        23
+      ]
+     ]
+    },
+    {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "LIMPIA_MEMORIA",
+       "0x4DCF",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
       ]
      ]
     },
@@ -29246,7 +29314,7 @@
        "borra_bloque_de_ram",
        "0x45CC",
        6,
-       6
+       7
       ],
       [
        "parpadea_el_rotulo",
@@ -29493,7 +29561,7 @@
        "borra_ram",
        "0x4524",
        6,
-       6
+       7
       ],
       [
        "parpadea_el_rotulo",
@@ -29716,7 +29784,7 @@
        "LIMPIA_MEMORIA",
        "0x4DE6",
        6,
-       6
+       7
       ],
       [
        "abre_la_vram_para_escribir",
@@ -29875,7 +29943,7 @@
        "LIMPIA_MEMORIA",
        "0x4DCF",
        6,
-       6
+       7
       ],
       [
        "abre_la_vram_para_escribir",
@@ -30244,7 +30312,7 @@
        "BORRA_BC_BYTES",
        "0x57EF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -30521,6 +30589,21 @@
        "0x78C2",
        6,
        12
+      ]
+     ]
+    },
+    {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "borra_memoria",
+       "0x43C4",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
       ]
      ]
     },
@@ -50641,7 +50724,7 @@
        "borra_memoria",
        "0x43C4",
        6,
-       6
+       7
       ],
       [
        "dibuja_parpadeando",
@@ -50920,7 +51003,7 @@
        "borra_ram",
        "0x4524",
        6,
-       6
+       7
       ],
       [
        "dibuja_parpadeando",
@@ -51175,7 +51258,7 @@
        "LIMPIA_MEMORIA",
        "0x4DE6",
        6,
-       6
+       7
       ],
       [
        "arma_escritura_con_candado",
@@ -51326,7 +51409,7 @@
        "LIMPIA_MEMORIA",
        "0x4DCF",
        6,
-       6
+       7
       ],
       [
        "arma_escritura_con_candado",
@@ -51679,7 +51762,7 @@
        "BORRA_BC_BYTES",
        "0x57EF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -51956,6 +52039,21 @@
        "0x78C2",
        6,
        12
+      ]
+     ]
+    },
+    {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "borra_bloque_de_ram",
+       "0x45CC",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
       ]
      ]
     },
@@ -136726,7 +136824,7 @@
        "borra_bloque_de_ram",
        "0x45CC",
        6,
-       6
+       7
       ],
       [
        "espera_confirmacion",
@@ -136957,7 +137055,7 @@
        "borra_memoria",
        "0x43C4",
        6,
-       6
+       7
       ],
       [
        "espera_confirmacion",
@@ -137228,7 +137326,7 @@
        "LIMPIA_MEMORIA",
        "0x4DE6",
        6,
-       6
+       7
       ],
       [
        "pon_escritura_con_reintento",
@@ -137411,7 +137509,7 @@
        "LIMPIA_MEMORIA",
        "0x4DCF",
        6,
-       6
+       7
       ],
       [
        "pon_escritura_con_reintento",
@@ -137732,7 +137830,7 @@
        "BORRA_BC_BYTES",
        "0x57EF",
        6,
-       6
+       7
       ]
      ]
     },
@@ -138062,6 +138160,21 @@
        "p00:4879",
        6,
        4
+      ]
+     ]
+    },
+    {
+     "con": "junofirst",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "borra_ram",
+       "0x4524",
+       "rellena_cero",
+       "0x0760",
+       6,
+       7
       ]
      ]
     },
@@ -270625,6 +270738,126 @@
      ]
     }
    ]
+  },
+  "sparkie": {
+   "comparte": []
+  },
+  "junofirst": {
+   "comparte": [
+    {
+     "con": "frogger",
+     "rutinas": 2,
+     "instrucciones": 12,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "BORRA_BC_BYTES",
+       "0x57EF",
+       6,
+       7
+      ],
+      [
+       "salta_tabla",
+       "0x15C2",
+       "HASTA_EL_0xFF",
+       "0x5809",
+       6,
+       2
+      ]
+     ]
+    },
+    {
+     "con": "baseball",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "borra_bloque_de_ram",
+       "0x45CC",
+       6,
+       7
+      ]
+     ]
+    },
+    {
+     "con": "golf",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "borra_memoria",
+       "0x43C4",
+       6,
+       7
+      ]
+     ]
+    },
+    {
+     "con": "hyperolympic1",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "LIMPIA_MEMORIA",
+       "0x4DE6",
+       6,
+       7
+      ]
+     ]
+    },
+    {
+     "con": "hyperolympic2",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "LIMPIA_MEMORIA",
+       "0x4DCF",
+       6,
+       7
+      ]
+     ]
+    },
+    {
+     "con": "tennis",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "rellena_cero",
+       "0x0760",
+       "borra_ram",
+       "0x4524",
+       6,
+       7
+      ]
+     ]
+    },
+    {
+     "con": "timepilot",
+     "rutinas": 1,
+     "instrucciones": 6,
+     "lista": [
+      [
+       "pareja_psg",
+       "0x12D3",
+       "ESCRIBE_PSG_BUCLE",
+       "0x4CD2",
+       6,
+       2
+      ]
+     ]
+    }
+   ]
   }
  },
  "extendidas": [
@@ -271502,6 +271735,6 @@
    ]
   }
  ],
- "parejas": 1830,
- "con_algo": 1378
+ "parejas": 1953,
+ "con_algo": 1385
 }

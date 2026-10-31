@@ -466,6 +466,20 @@
    "lleva_marca": false
   },
   {
+   "clave": "sparkie",
+   "titulo": "Sparkie",
+   "grupo": "konami-otros",
+   "fichero": "desensamblados/SPARKIE_DISAM/sparkie.rom",
+   "lleva_marca": false
+  },
+  {
+   "clave": "junofirst",
+   "titulo": "Juno First",
+   "grupo": "konami-otros",
+   "fichero": "desensamblados/JUNOFIRST_DISAM/junofirst.rom",
+   "lleva_marca": false
+  },
+  {
    "clave": "parodius",
    "titulo": "Parodius",
    "grupo": "konami",

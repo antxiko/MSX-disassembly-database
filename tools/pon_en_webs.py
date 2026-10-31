@@ -38,7 +38,7 @@ def fichas():
     s = open(PORTADA, encoding="utf-8").read()
     blk = s[s.index("DESENSAMBLADOS = ["):s.index("GRUPOS = [")]
     res = {}
-    for m in re.finditer(r'clave="([^"]+)",\s*grupo="konami",\s*titulo="([^"]+)".*?web="([^"]+)"', blk, re.S):
+    for m in re.finditer(r'clave="([^"]+)",\s*grupo="konami(?:-otros)?",\s*titulo="([^"]+)".*?web="([^"]+)"', blk, re.S):
         res[m.group(1)] = (html.unescape(m.group(2)), m.group(3))
     return res
 
@@ -67,6 +67,25 @@ def seccion(clave, d, fich, idioma):
     if len(filas) < FILAS_MIN:
         filas = vec[:FILAS_MIN]
     ln = [TITULO[idioma], ""]
+    if not vec:
+        if idioma == "en":
+            ln += ["This disassembly has been compared, instruction by instruction, with",
+                   "every other Konami one in the series (at least six instructions from",
+                   "a label to its `ret` or its unconditional jump, addresses aside). Of",
+                   "the other %d, **none** shares a single block with this one." % otros, "",
+                   "The whole matrix, the %d cartridges against each other, is on" % len(JUEGOS),
+                   "[The routines](%sTHE-ROUTINES.html) in the series database, along" % BASE,
+                   "with the method and the program that measures it."]
+        else:
+            ln += ["Este desensamblado se ha comparado, instrucción por instrucción, con",
+                   "todos los demás de Konami de la serie (al menos seis instrucciones",
+                   "desde una etiqueta hasta su `ret` o su salto sin condición, sin mirar",
+                   "las direcciones). De los otros %d, **ninguno** comparte un solo" % otros,
+                   "bloque con este.", "",
+                   "La matriz entera, los %d cartuchos entre sí, está en" % len(JUEGOS),
+                   "[Las rutinas](%ses/LAS-RUTINAS.html) de la base de datos de la" % BASE,
+                   "serie, con el método y el programa que la mide."]
+        return "\n".join(ln) + "\n"
     if idioma == "en":
         ln += ["This disassembly has been compared, instruction by instruction, with",
                "every other Konami one in the series. A block counts when the same",

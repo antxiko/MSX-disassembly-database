@@ -1946,6 +1946,36 @@
   "coteja": true
  },
  {
+  "repo": "JUNOFIRST_DISAM",
+  "listados": [
+   "src/junofirst.asm"
+  ],
+  "medido": {
+   "instrucciones": 2915,
+   "comentarios": 1219,
+   "densidad": 41.8,
+   "flojas": 0,
+   "bloques": 359
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2915,
+    "comentarios": 1219,
+    "flojas": 0,
+    "bloques": 359,
+    "asm": "src/junofirst.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 2915,
+   "comentarios": 1219,
+   "flojas": 0,
+   "bloques": 359,
+   "densidad": 41.8
+  },
+  "coteja": true
+ },
+ {
   "repo": "KINGKONG2_DISAM",
   "listados": [
    "src/kingkong2_p00.asm",
@@ -5284,6 +5314,36 @@
     "salida": "---- 0 rutinas por debajo del 10 %, de 0\nTraceback (most recent call last):\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\comun\\SERIE_DB\\tools\\densidad_canonica.py\", line 46, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Antxiko\\Documents\\DES_ASM\\comun\\SERIE_DB\\tools\\densidad_canonica.py\", line 43, in main\n    % (tot_n, tot_c, 100.0 * tot_c / tot_n))\n                     ~~~~~~~~~~~~~~^~~~~~~\nZe"
    }
   ],
+  "coteja": true
+ },
+ {
+  "repo": "SPARKIE_DISAM",
+  "listados": [
+   "src/sparkie.asm"
+  ],
+  "medido": {
+   "instrucciones": 2736,
+   "comentarios": 1114,
+   "densidad": 40.7,
+   "flojas": 0,
+   "bloques": 393
+  },
+  "por_listado": [
+   {
+    "instrucciones": 2736,
+    "comentarios": 1114,
+    "flojas": 0,
+    "bloques": 393,
+    "asm": "src/sparkie.asm"
+   }
+  ],
+  "declarado": {
+   "instrucciones": 2736,
+   "comentarios": 1114,
+   "flojas": 0,
+   "bloques": 393,
+   "densidad": 40.7
+  },
   "coteja": true
  },
  {

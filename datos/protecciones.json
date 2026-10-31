@@ -943,6 +943,24 @@
   "mapper": "scc"
  },
  {
+  "clave": "sparkie",
+  "titulo": "Sparkie",
+  "directorio": "SPARKIE_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
+  "clave": "junofirst",
+  "titulo": "Juno First",
+  "directorio": "JUNOFIRST_DISAM",
+  "es_cartucho": true,
+  "escrituras": [],
+  "nota": null,
+  "mapper": null
+ },
+ {
   "clave": "kingsvalley2",
   "titulo": "King's Valley II",
   "directorio": "KINGSVALLEY2_DISAM",

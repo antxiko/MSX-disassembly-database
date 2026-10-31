@@ -1064,6 +1064,24 @@
   "nota": "no aparece ningun credito en ASCII"
  },
  {
+  "clave": "sparkie",
+  "titulo": "Sparkie",
+  "fichero": "desensamblados/SPARKIE_DISAM/sparkie.rom",
+  "tiras_legibles": 224,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
+  "clave": "junofirst",
+  "titulo": "Juno First",
+  "fichero": "desensamblados/JUNOFIRST_DISAM/junofirst.rom",
+  "tiras_legibles": 200,
+  "creditos": [],
+  "metadatos_del_volcado": [],
+  "nota": "no aparece ningun credito en ASCII"
+ },
+ {
   "clave": "parodius",
   "titulo": "Parodius",
   "fichero": "desensamblados/PARODIUS_DISAM/parodius.rom",

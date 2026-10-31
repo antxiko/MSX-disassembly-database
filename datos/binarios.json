@@ -610,6 +610,22 @@
   ]
  },
  {
+  "repo": "JUNOFIRST_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/JUNOFIRST_DISAM/junofirst.rom",
+    "bytes": 32768,
+    "sha256": "74dc23783f420de80d8716f813e045b7a35c4ae4863825d4f964014f914db600"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
   "repo": "KINGKONG2_DISAM",
   "makefile": true,
   "binarios": [
@@ -1145,6 +1161,22 @@
     "fichero": "desensamblados/SPACEMANBOW_DISAM/spacemanbow.rom",
     "bytes": 262144,
     "sha256": "058f5768ad39a74dafc2dd4e3d7558b82117aee0b6735a02be379f1018694dc9"
+   }
+  ],
+  "declaradas": [
+   "ROM"
+  ]
+ },
+ {
+  "repo": "SPARKIE_DISAM",
+  "makefile": true,
+  "binarios": [
+   {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/SPARKIE_DISAM/sparkie.rom",
+    "bytes": 32768,
+    "sha256": "fc4a86f64ea035ac2c93e450d9e00a60940b7d67210c8fdddf0e02abb8c25fdd"
    }
   ],
   "declaradas": [

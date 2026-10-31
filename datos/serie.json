@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-30",
+ "generado": "2026-10-31",
  "proyectos": [
   {
    "clave": "3dgolf",
@@ -4221,6 +4221,108 @@
    "creditos_del_fichero": "desensamblados/QUARTH_DISAM/quarth.rom",
    "protecciones": [],
    "protecciones_mapper": "scc",
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
+   }
+  },
+  {
+   "clave": "sparkie",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Sparkie",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/Sparkie-disassembly",
+   "web_url": "https://antxiko.github.io/Sparkie-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "SPARKIE_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/SPARKIE_DISAM/sparkie.rom",
+    "bytes": 32768,
+    "sha256": "fc4a86f64ea035ac2c93e450d9e00a60940b7d67210c8fdddf0e02abb8c25fdd"
+   },
+   "cifras": {
+    "instrucciones": 2736,
+    "comentarios": 1114,
+    "densidad": 40.7,
+    "flojas": 0,
+    "bloques": 393
+   },
+   "listados": [
+    "src/sparkie.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 2736,
+    "comentarios": 1114,
+    "flojas": 0,
+    "bloques": 393,
+    "densidad": 40.7
+   },
+   "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
+   "creditos_del_fichero": "desensamblados/SPARKIE_DISAM/sparkie.rom",
+   "protecciones": [],
+   "fuentes": {
+    "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
+    "binario": "el Makefile del repositorio",
+    "cifras": "tools/densidad_canonica.py sobre git ls-files *.asm",
+    "cifras_del_repo": "make densidad del repositorio, si tiene ese target",
+    "marca_konami": "tools/marca_konami_canonica.py sobre el binario (hallazgo de Manuel Pazos, 2021)",
+    "creditos": "tiras ASCII del binario, filtradas por palabra clave",
+    "creditos_del_fichero": "el binario concreto del que se leyeron",
+    "protecciones": "tools/recoge_protecciones.py sobre el listado (el patron lo identifico Manuel Pazos, RC-727)"
+   }
+  },
+  {
+   "clave": "junofirst",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Juno First",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/JunoFirst-disassembly",
+   "web_url": "https://antxiko.github.io/JunoFirst-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "JUNOFIRST_DISAM",
+   "binario": {
+    "var": "ROM",
+    "valor": "$(JUEGO).rom",
+    "fichero": "desensamblados/JUNOFIRST_DISAM/junofirst.rom",
+    "bytes": 32768,
+    "sha256": "74dc23783f420de80d8716f813e045b7a35c4ae4863825d4f964014f914db600"
+   },
+   "cifras": {
+    "instrucciones": 2915,
+    "comentarios": 1219,
+    "densidad": 41.8,
+    "flojas": 0,
+    "bloques": 359
+   },
+   "listados": [
+    "src/junofirst.asm"
+   ],
+   "cifras_del_repo": {
+    "instrucciones": 2915,
+    "comentarios": 1219,
+    "flojas": 0,
+    "bloques": 359,
+    "densidad": 41.8
+   },
+   "coteja": true,
+   "marca_konami": false,
+   "creditos": [],
+   "creditos_del_fichero": "desensamblados/JUNOFIRST_DISAM/junofirst.rom",
+   "protecciones": [],
    "fuentes": {
     "identidad": "ANTXIKO_GITHUB_IO/tools/make_index.py",
     "binario": "el Makefile del repositorio",

@@ -729,6 +729,32 @@
    "aviso": null
   },
   {
+   "clave": "sparkie",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Sparkie",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/Sparkie-disassembly",
+   "web_url": "https://antxiko.github.io/Sparkie-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "SPARKIE_DISAM",
+   "aviso": null
+  },
+  {
+   "clave": "junofirst",
+   "categoria": "desensamblado",
+   "grupo": "konami-otros",
+   "titulo": "Juno First",
+   "anio": 1983,
+   "repo_url": "https://github.com/antxiko/JunoFirst-disassembly",
+   "web_url": "https://antxiko.github.io/JunoFirst-disassembly/",
+   "meta_en": "Konami for Sony · MSX · 8 KB cartridge in page 0",
+   "meta_es": "Konami para Sony · MSX · cartucho de 8 KB en la página 0",
+   "directorio": "JUNOFIRST_DISAM",
+   "aviso": null
+  },
+  {
    "clave": "kingsvalley2",
    "categoria": "desensamblado",
    "grupo": "konami",
